@@ -38,6 +38,7 @@ LIBS:tps63060
 LIBS:max1704xx
 LIBS:gp-635tsmd
 LIBS:fgpmmopa6h
+LIBS:sk6812
 LIBS:fk-core-cache
 EELAYER 25 0
 EELAYER END
