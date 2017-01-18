@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name SOJ-4)(type KiCad)(uri C:\Life\conservify\fk-core\hardware\kicad\SOJ-4.pretty)(options "")(descr ""))
+  (lib (name WSON-10)(type KiCad)(uri C:\Life\conservify\fk-core\hardware\kicad\WSON-10.pretty)(options "")(descr ""))
+)
