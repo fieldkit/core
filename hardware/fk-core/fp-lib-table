@@ -1,4 +1,7 @@
 (fp_lib_table
   (lib (name SOJ-4)(type KiCad)(uri C:\Life\conservify\fk-core\hardware\kicad\SOJ-4.pretty)(options "")(descr ""))
   (lib (name WSON-10)(type KiCad)(uri C:\Life\conservify\fk-core\hardware\kicad\WSON-10.pretty)(options "")(descr ""))
+  (lib (name FGPMMOPA6H)(type KiCad)(uri C:\Life\conservify\fk-core\hardware\kicad\FGPMMOPA6H.pretty)(options "")(descr ""))
+  (lib (name CUI-PJ-002AH-SMT_dc-barrel-jack)(type KiCad)(uri C:\Life\conservify\fk-core\hardware\kicad\CUI-PJ-002AH-SMT_dc-barrel-jack.pretty)(options "")(descr ""))
+  (lib (name microsd)(type KiCad)(uri C:\Life\conservify\fk-core\hardware\kicad\microsd.pretty)(options "")(descr ""))
 )

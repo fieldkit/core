@@ -1,4 +1,4 @@
-update=1/18/2017 4:04:41 PM
+update=1/18/2017 5:24:10 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -67,3 +67,4 @@ LibName35=xtal32x15
 LibName36=tps63060
 LibName37=max1704xx
 LibName38=gp-635tsmd
+LibName39=fgpmmopa6h
