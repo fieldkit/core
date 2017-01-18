@@ -36,6 +36,7 @@ LIBS:pcf8523t
 LIBS:xtal32x15
 LIBS:tps63060
 LIBS:max1704xx
+LIBS:gp-635tsmd
 LIBS:fk-core-cache
 EELAYER 25 0
 EELAYER END
