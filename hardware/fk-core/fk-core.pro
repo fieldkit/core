@@ -1,4 +1,4 @@
-update=1/18/2017 6:04:51 PM
+update=1/19/2017 9:45:35 AM
 version=1
 last_client=kicad
 [pcbnew]
@@ -63,9 +63,10 @@ LibName31=ina219
 LibName32=mcp73871
 LibName33=microsd
 LibName34=pcf8523t
-LibName35=xtal32x15
-LibName36=tps63060
-LibName37=max1704xx
-LibName38=gp-635tsmd
-LibName39=fgpmmopa6h
-LibName40=sk6812
+LibName35=tps63060
+LibName36=max1704xx
+LibName37=gp-635tsmd
+LibName38=fgpmmopa6h
+LibName39=sk6812
+LibName40=dcbarrelsmt
+LibName41=xtal-3.2x1

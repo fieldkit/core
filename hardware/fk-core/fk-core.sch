@@ -33,12 +33,13 @@ LIBS:ina219
 LIBS:mcp73871
 LIBS:microsd
 LIBS:pcf8523t
-LIBS:xtal32x15
 LIBS:tps63060
 LIBS:max1704xx
 LIBS:gp-635tsmd
 LIBS:fgpmmopa6h
 LIBS:sk6812
+LIBS:dcbarrelsmt
+LIBS:xtal-3.2x1
 LIBS:fk-core-cache
 EELAYER 25 0
 EELAYER END

@@ -33,12 +33,13 @@ LIBS:ina219
 LIBS:mcp73871
 LIBS:microsd
 LIBS:pcf8523t
-LIBS:xtal32x15
 LIBS:tps63060
 LIBS:max1704xx
 LIBS:gp-635tsmd
 LIBS:fgpmmopa6h
 LIBS:sk6812
+LIBS:dcbarrelsmt
+LIBS:xtal-3.2x1
 LIBS:fk-core-cache
 EELAYER 25 0
 EELAYER END
@@ -519,9 +520,7 @@ Wire Wire Line
 Wire Wire Line
 	8450 1900 8450 2450
 Wire Wire Line
-	8000 1750 8450 1750
-Wire Wire Line
-	8450 1750 8800 1750
+	8000 1750 8800 1750
 Wire Wire Line
 	8450 1750 8450 1250
 Wire Wire Line
@@ -544,9 +543,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 4000 8450 4000
 Wire Wire Line
-	8000 3850 8450 3850
-Wire Wire Line
-	8450 3850 8800 3850
+	8000 3850 8800 3850
 Wire Wire Line
 	8450 3850 8450 3350
 Wire Wire Line
@@ -565,9 +562,7 @@ Wire Wire Line
 Wire Wire Line
 	6750 1700 6750 1750
 Wire Wire Line
-	5500 1700 5600 1700
-Wire Wire Line
-	5600 1700 6750 1700
+	5500 1700 6750 1700
 Wire Wire Line
 	5500 1800 5600 1800
 Wire Wire Line
@@ -582,22 +577,16 @@ Wire Wire Line
 Wire Wire Line
 	6200 3500 6200 3450
 Wire Wire Line
-	5950 3000 5950 3050
-Wire Wire Line
-	5950 3050 5950 3150
+	5950 3000 5950 3150
 Wire Wire Line
 	6200 3150 6200 3050
 Wire Wire Line
 	6200 3050 5950 3050
 Connection ~ 5950 3050
 Wire Wire Line
-	5500 2400 5600 2400
+	5500 2400 6750 2400
 Wire Wire Line
-	5600 2400 6750 2400
-Wire Wire Line
-	5600 2200 5600 2300
-Wire Wire Line
-	5600 2300 5600 2400
+	5600 2200 5600 2400
 Wire Wire Line
 	5600 2200 5500 2200
 Connection ~ 5600 2300
@@ -611,15 +600,11 @@ Wire Wire Line
 	6750 2400 6750 3100
 Connection ~ 5600 2400
 Wire Wire Line
-	4900 2950 4900 3050
-Wire Wire Line
-	4900 3050 4900 3300
+	4900 2950 4900 3300
 Wire Wire Line
 	5000 3050 5000 2950
 Wire Wire Line
-	4800 3050 4900 3050
-Wire Wire Line
-	4900 3050 5000 3050
+	4800 3050 5000 3050
 Connection ~ 4900 3050
 Wire Wire Line
 	4800 3050 4800 2950
@@ -636,9 +621,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 2600 4200 2600
 Wire Wire Line
-	3300 1150 3400 1150
-Wire Wire Line
-	3400 1150 3450 1150
+	3300 1150 3450 1150
 Wire Wire Line
 	4200 1500 3400 1500
 Wire Wire Line
@@ -649,15 +632,9 @@ Wire Wire Line
 Wire Wire Line
 	3950 1150 3750 1150
 Wire Wire Line
-	2900 2100 4100 2100
+	2900 2100 4200 2100
 Wire Wire Line
-	4100 2100 4200 2100
-Wire Wire Line
-	4100 2100 4100 2200
-Wire Wire Line
-	4100 2200 4100 2300
-Wire Wire Line
-	4100 2300 4100 2400
+	4100 2100 4100 2400
 Wire Wire Line
 	4100 2200 4200 2200
 Connection ~ 4100 2100
@@ -684,23 +661,11 @@ Wire Wire Line
 Wire Wire Line
 	2900 1150 3000 1150
 Wire Wire Line
-	2900 1000 2900 1150
-Wire Wire Line
-	2900 1150 2900 2100
+	2900 1000 2900 2100
 Connection ~ 2900 1000
 Connection ~ 2900 1150
 Wire Wire Line
-	1000 1000 1800 1000
-Wire Wire Line
-	1800 1000 2200 1000
-Wire Wire Line
-	2200 1000 2550 1000
-Wire Wire Line
-	2550 1000 2900 1000
-Wire Wire Line
-	2900 1000 4850 1000
-Wire Wire Line
-	4850 1000 4950 1000
+	1000 1000 4950 1000
 Wire Wire Line
 	1800 1650 1800 1000
 Wire Wire Line
@@ -708,9 +673,7 @@ Wire Wire Line
 Connection ~ 2200 1000
 Connection ~ 1800 1000
 Wire Wire Line
-	9600 3200 10200 3200
-Wire Wire Line
-	10200 3200 10950 3200
+	9600 3200 10950 3200
 Wire Wire Line
 	9600 3200 9600 3250
 Wire Wire Line
@@ -721,15 +684,11 @@ Connection ~ 9900 2950
 Wire Wire Line
 	9600 1150 9600 1100
 Wire Wire Line
-	9600 1100 10200 1100
-Wire Wire Line
-	10200 1100 10950 1100
+	9600 1100 10950 1100
 Wire Wire Line
 	9300 1150 9300 850 
 Wire Wire Line
-	9300 850  9900 850 
-Wire Wire Line
-	9900 850  10950 850 
+	9300 850  10950 850 
 Wire Wire Line
 	9900 950  9900 850 
 Connection ~ 9900 850 
@@ -737,9 +696,7 @@ Wire Wire Line
 	10200 950  10200 1100
 Connection ~ 10200 1100
 Wire Wire Line
-	9300 2950 9900 2950
-Wire Wire Line
-	9900 2950 10950 2950
+	9300 2950 10950 2950
 Text Label 6750 1700 2    60   ~ 0
 LOAD
 $Comp
@@ -785,18 +742,6 @@ F 4 "609-4613-1-ND" H 7200 6150 60  0001 C CNN "SPN"
 	1    7200 6150
 	0    -1   -1   0   
 $EndComp
-$Comp
-L DCBARRELSMT CN1
-U 1 1 5880AA9C
-P 7250 5300
-F 0 "CN1" H 7050 5500 45  0000 L BNN
-F 1 "DCBARRELSMT" H 7050 5100 45  0000 L BNN
-F 2 "CUI-PJ-002AH-SMT_dc-barrel-jack:CUI-PJ-002AH-SMT_dc-barrel-jack" H 7280 5450 20  0001 C CNN
-F 3 "" H 7250 5300 60  0001 C CNN
-F 4 "CP-002AHPJCT-ND" H 7250 5300 60  0001 C CNN "SPN"
-	1    7250 5300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7500 6150 8250 6150
 Wire Wire Line
@@ -809,9 +754,7 @@ NoConn ~ 7500 6050
 Wire Wire Line
 	7350 5400 7650 5400
 Wire Wire Line
-	7650 5400 7650 5650
-Wire Wire Line
-	7650 5650 7650 5950
+	7650 5400 7650 5950
 Wire Wire Line
 	7650 5950 7500 5950
 $Comp
@@ -826,9 +769,7 @@ F 3 "" H 8300 5400 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7350 5200 7500 5200
-Wire Wire Line
-	7500 5200 8300 5200
+	7350 5200 8300 5200
 Text Label 8300 5200 2    60   ~ 0
 VPANEL_RAW
 Wire Wire Line
@@ -962,17 +903,11 @@ $EndComp
 Wire Wire Line
 	4450 7050 4600 7050
 Wire Wire Line
-	4600 7050 4600 7400
-Wire Wire Line
-	4600 7400 4600 7450
+	4600 7050 4600 7450
 Wire Wire Line
 	3050 7050 2900 7050
 Wire Wire Line
-	2900 6850 2900 7050
-Wire Wire Line
-	2900 7050 2900 7400
-Wire Wire Line
-	2900 7400 2900 7450
+	2900 6850 2900 7450
 $Comp
 L R R13
 U 1 1 588159EA
@@ -988,15 +923,7 @@ $EndComp
 Wire Wire Line
 	3050 6650 2650 6650
 Wire Wire Line
-	800  6550 1400 6550
-Wire Wire Line
-	1400 6550 1700 6550
-Wire Wire Line
-	1700 6550 2000 6550
-Wire Wire Line
-	2000 6550 2250 6550
-Wire Wire Line
-	2250 6550 3050 6550
+	800  6550 3050 6550
 $Comp
 L C C13
 U 1 1 58816027
@@ -1044,9 +971,7 @@ Wire Wire Line
 	1400 6550 1400 6700
 Connection ~ 1700 6550
 Wire Wire Line
-	1400 7000 1400 7400
-Wire Wire Line
-	1400 7400 1400 7450
+	1400 7000 1400 7450
 Connection ~ 1700 7400
 Wire Wire Line
 	2650 6750 3050 6750
@@ -1065,13 +990,7 @@ Wire Wire Line
 	2000 7400 2000 7000
 Connection ~ 2000 7400
 Wire Wire Line
-	1400 7400 1700 7400
-Wire Wire Line
-	1700 7400 2000 7400
-Wire Wire Line
-	2000 7400 2650 7400
-Wire Wire Line
-	2650 7400 2900 7400
+	1400 7400 2900 7400
 $Comp
 L C C16
 U 1 1 588180B1
@@ -1131,13 +1050,9 @@ Wire Wire Line
 Wire Wire Line
 	4900 7000 4900 6850
 Wire Wire Line
-	4450 6850 4900 6850
+	4450 6850 5250 6850
 Wire Wire Line
-	4900 6850 5250 6850
-Wire Wire Line
-	5250 6700 5250 6850
-Wire Wire Line
-	5250 6850 5250 7000
+	5250 6700 5250 7000
 Connection ~ 4900 6850
 Connection ~ 5250 6850
 Wire Wire Line
@@ -1190,35 +1105,15 @@ F 4 "490-1718-1-ND" H 6250 6850 60  0001 C CNN "SPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6250 7000 6250 7400
-Wire Wire Line
-	6250 7400 6250 7450
+	6250 7000 6250 7450
 Connection ~ 6250 7400
 Wire Wire Line
 	6250 6250 6250 6700
 Connection ~ 6250 6250
 Wire Wire Line
-	4550 6250 4900 6250
+	4550 6250 6500 6250
 Wire Wire Line
-	4900 6250 5250 6250
-Wire Wire Line
-	5250 6250 5550 6250
-Wire Wire Line
-	5550 6250 5900 6250
-Wire Wire Line
-	5900 6250 6250 6250
-Wire Wire Line
-	6250 6250 6500 6250
-Wire Wire Line
-	4600 7400 4900 7400
-Wire Wire Line
-	4900 7400 5250 7400
-Wire Wire Line
-	5250 7400 5550 7400
-Wire Wire Line
-	5550 7400 5900 7400
-Wire Wire Line
-	5900 7400 6250 7400
+	4600 7400 6250 7400
 Wire Wire Line
 	5900 7000 5900 7400
 Connection ~ 5900 7400
@@ -1282,11 +1177,7 @@ $EndComp
 Wire Wire Line
 	2750 4850 3000 4850
 Wire Wire Line
-	2750 4750 2750 4850
-Wire Wire Line
-	2750 4850 2750 4950
-Wire Wire Line
-	2750 4950 2750 5300
+	2750 4750 2750 5300
 Wire Wire Line
 	2750 4950 3000 4950
 Connection ~ 2750 4950
@@ -1402,15 +1293,9 @@ F 4 "1276-1007-1-ND" H 2650 7200 60  0001 C CNN "SPN"
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2750 4550 2850 4550
+	2750 4550 3000 4550
 Wire Wire Line
-	2850 4550 3000 4550
-Wire Wire Line
-	1700 4650 1850 4650
-Wire Wire Line
-	1850 4650 2300 4650
-Wire Wire Line
-	2300 4650 3000 4650
+	1700 4650 3000 4650
 $Comp
 L PWR_FLAG #FLG049
 U 1 1 587FFF90
@@ -1549,4 +1434,15 @@ Wire Wire Line
 	10000 4500 9500 4500
 Wire Wire Line
 	9500 4600 10000 4600
+$Comp
+L DCBARRELSMT CN1
+U 1 1 5880D794
+P 7250 5300
+F 0 "CN1" H 7050 5500 45  0000 L BNN
+F 1 "DCBARRELSMT" H 7050 5100 45  0000 L BNN
+F 2 "CUI-PJ-002AH-SMT_dc-barrel-jack:CUI-PJ-002AH-SMT_dc-barrel-jack" H 7280 5450 20  0001 C CNN
+F 3 "" H 7250 5300 60  0001 C CNN
+	1    7250 5300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
