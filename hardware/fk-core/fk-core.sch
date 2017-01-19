@@ -40,6 +40,8 @@ LIBS:fgpmmopa6h
 LIBS:sk6812
 LIBS:dcbarrelsmt
 LIBS:xtal-3.2x1
+LIBS:rfm9xw
+LIBS:rf-sma-edge
 LIBS:fk-core-cache
 EELAYER 25 0
 EELAYER END

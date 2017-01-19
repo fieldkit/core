@@ -1,4 +1,4 @@
-update=1/19/2017 9:45:35 AM
+update=1/19/2017 4:24:57 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -70,3 +70,5 @@ LibName38=fgpmmopa6h
 LibName39=sk6812
 LibName40=dcbarrelsmt
 LibName41=xtal-3.2x1
+LibName42=rfm9xw
+LibName43=rf-sma-edge
