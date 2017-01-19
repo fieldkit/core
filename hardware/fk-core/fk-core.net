@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Life/conservify/fk-core/hardware/fk-core/fk-core.sch)
-    (date "1/19/2017 9:47:48 AM")
+    (date "1/19/2017 9:57:40 AM")
     (tool "Eeschema 4.0.5")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -536,6 +536,7 @@
       (tstamp 58809DE8))
     (comp (ref AE1)
       (value Antenna_Dipole)
+      (footprint SMA:SMA)
       (fields
         (field (name SPN) H11891CT-ND))
       (libsource (lib device) (part Antenna_Dipole))
