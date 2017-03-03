@@ -1,4 +1,4 @@
-update=1/20/2017 9:00:22 AM
+update=3/3/2017 12:44:54 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -44,3 +44,4 @@ LibName1=MINI-ULTRA-PRO-cache
 LibName2=fgpmmopa6h
 LibName3=microsd
 LibName4=max1704xx
+LibName5=conn_01x05
