@@ -4,6 +4,7 @@ LIBS:fgpmmopa6h
 LIBS:microsd
 LIBS:max1704xx
 LIBS:conn_01x05
+LIBS:ws2812
 EELAYER 25 0
 EELAYER END
 $Descr A3 16535 11693
@@ -2024,8 +2025,6 @@ Wire Notes Line
 	15900 10000 15900 8300
 Wire Notes Line
 	15900 8300 11800 8300
-Text Notes 5750 5550 0    180  ~ 36
-LOGO
 Text Notes 3250 5550 0    180  ~ 36
 MOUNTING 
 Text Notes 3250 7100 0    180  ~ 36

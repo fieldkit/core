@@ -1,4 +1,4 @@
-update=3/3/2017 12:44:54 PM
+update=3/3/2017 4:21:58 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -45,3 +45,4 @@ LibName2=fgpmmopa6h
 LibName3=microsd
 LibName4=max1704xx
 LibName5=conn_01x05
+LibName6=ws2812
