@@ -1,7 +1,3 @@
 (fp_lib_table
-  (lib (name FGPMMOPA6H)(type KiCad)(uri "$(KIPRJMOD)\\FGPMMOPA6H.pretty")(options "")(descr ""))
-  (lib (name microsd)(type KiCad)(uri "$(KIPRJMOD)\\microsd.pretty")(options "")(descr ""))
-  (lib (name RocketScreamKicadLibrary)(type KiCad)(uri C:\Users\jlewallen\OneDrive\EE\osh\RocketScreamKicadLibrary\RocketScreamKicadLibrary.pretty)(options "")(descr ""))
-  (lib (name fk-core-mini-ultra-pro)(type KiCad)(uri "$(KIPRJMOD)")(options "")(descr ""))
-  (lib (name logos)(type KiCad)(uri "$(KIPRJMOD)\\logos.pretty")(options "")(descr ""))
+  (lib (name RocketScreamKicadLibrary)(type KiCad)(uri C:/Users/jlewallen/OneDrive/EE/osh/RocketScreamKicadLibrary/RocketScreamKicadLibrary.pretty)(options "")(descr ""))
 )

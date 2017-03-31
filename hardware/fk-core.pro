@@ -1,4 +1,4 @@
-update=3/5/2017 8:19:05 AM
+update=3/31/2017 4:40:29 PM
 version=1
 last_client=kicad
 [cvpcb]
@@ -38,10 +38,6 @@ LabSize=60
 ERC_TestSimilarLabels=1
 [eeschema]
 version=1
-LibDir=
+LibDir=../../kicad
 [eeschema/libraries]
-LibName1=fk-core
-LibName2=fgpmmopa6h
-LibName3=microsd
-LibName4=max1704xx
-LibName5=conn_01x05
+LibName1=D:/Life/conservify/kicad/conservify
