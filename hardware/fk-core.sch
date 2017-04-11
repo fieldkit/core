@@ -1638,8 +1638,8 @@ F 0 "M7" H 12150 12800 45  0001 C CNN
 F 1 "MICROSD" H 12150 12800 45  0001 C CNN
 F 2 "conservify:MICROSD" H 12180 12950 20  0001 C CNN
 F 3 "" H 12150 12800 60  0001 C CNN
-F 4 "517-2908-05WB-MG" H 0   0   50  0001 C CNN "spn1"
-F 5 "mouser" H 0   0   50  0001 C CNN "supplier1"
+F 4 "3M5607CT-ND" H 0   0   50  0001 C CNN "spn1"
+F 5 "digikey" H 0   0   50  0001 C CNN "supplier1"
 	1    12150 12800
 	1    0    0    -1  
 $EndComp
