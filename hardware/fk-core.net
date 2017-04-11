@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source D:/Life/conservify/fk-core/hardware/fk-core.sch)
-    (date "4/11/2017 9:40:59 AM")
+    (date "4/11/2017 10:14:58 AM")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -90,7 +90,7 @@
       (tstamp 56090E26))
     (comp (ref SW1)
       (value SPNO)
-      (footprint RocketScreamKicadLibrary:TS-018)
+      (footprint conservify:SW_SPST_WURTH_1)
       (fields
         (field (name spn1) 732-7055-1-ND)
         (field (name supplier1) digikey))
@@ -539,7 +539,7 @@
       (value "1uF 10V X5R")
       (footprint RocketScreamKicadLibrary:DIO-0603)
       (fields
-        (field (name spn1) 810-C1005X5R1E105K)
+        (field (name spn1) 581-0603YD105K)
         (field (name supplier1) mouser))
       (libsource (lib fk-core-cache) (part CAPACITOR-CERAMIC))
       (sheetpath (names /) (tstamps /))
@@ -548,7 +548,7 @@
       (value 180)
       (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
-        (field (name spn1) 603-RC0402FR-07180RL)
+        (field (name spn1) 603-RC0603FR-07180RL)
         (field (name supplier1) mouser))
       (libsource (lib fk-core-cache) (part RESISTOR))
       (sheetpath (names /) (tstamps /))
@@ -557,7 +557,7 @@
       (value 1k)
       (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
-        (field (name spn1) 603-RC0402FR-071KL)
+        (field (name spn1) 603-RC0603FR-071KL)
         (field (name supplier1) mouser))
       (libsource (lib fk-core-cache) (part RESISTOR))
       (sheetpath (names /) (tstamps /))
@@ -636,7 +636,7 @@
       (value 10nF)
       (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
-        (field (name spn1) 810-C1005X5R1E105K)
+        (field (name spn1) 581-06035G103Z)
         (field (name supplier1) mouser))
       (libsource (lib fk-core-cache) (part CAPACITOR-CERAMIC))
       (sheetpath (names /) (tstamps /))
