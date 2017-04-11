@@ -2037,10 +2037,6 @@ Text Label 10950 4250 0    50   ~ 0
 SDA
 Text Label 10950 4650 0    50   ~ 0
 SCL
-Text Label 2550 3800 0    50   ~ 0
-SD_CS
-Text Label 3450 10500 0    50   ~ 0
-SD_CS
 Wire Wire Line
 	2850 2300 2550 2300
 Wire Wire Line
@@ -2074,7 +2070,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 3900 2550 3900
 Wire Wire Line
-	2850 4000 2550 4000
+	2200 4000 2850 4000
 Wire Wire Line
 	2850 4100 2550 4100
 Wire Wire Line
@@ -2528,8 +2524,6 @@ Wire Wire Line
 Wire Wire Line
 	3750 10400 3950 10400
 Wire Wire Line
-	3450 10500 3950 10500
-Wire Wire Line
 	3750 10600 3950 10600
 Wire Wire Line
 	3750 10700 3950 10700
@@ -2937,4 +2931,10 @@ Wire Wire Line
 	14000 3650 13800 3650
 Wire Wire Line
 	13800 3650 13800 3750
+Text Label 2200 4000 0    50   ~ 0
+SD_CS
+Text Label 2550 3800 0    50   ~ 0
+D13
+Wire Wire Line
+	3750 10500 3950 10500
 $EndSCHEMATC
