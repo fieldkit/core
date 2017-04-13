@@ -7,7 +7,7 @@
 
 const uint8_t PIN_RADIO_CS = 5;
 const uint8_t PIN_RADIO_DIO0 = 2;
-const uint8_t PIN_SD_CS = 2;
+const uint8_t PIN_SD_CS = 13;
 const uint8_t PIN_FLASH_CS = 4;
 
 class Check {
@@ -163,6 +163,8 @@ public:
     void sdCard() {
         Serial.println("test: Checking SD...");
 
+        setup();
+
         if (SD.begin(PIN_SD_CS)) {
             Serial.println("test: SD PASSED");
         }
@@ -188,18 +190,12 @@ public:
 void setup() {
     Serial.begin(115200);
 
-    pinMode(13, OUTPUT);
-
-    digitalWrite(13, LOW);
-
     Check check;
     check.setup();
 
     while (!Serial && millis() < 2 * 1000) {
         delay(100);
     }
-
-    digitalWrite(13, HIGH);
 
     delay(100);
 
