@@ -44,7 +44,7 @@
   )
 
   (setup
-    (last_trace_width 0.2032)
+    (last_trace_width 0.254)
     (user_trace_width 0.2032)
     (user_trace_width 0.254)
     (user_trace_width 0.381)
@@ -3754,12 +3754,12 @@
     )
   )
 
-  (module conservify:SW_SPST_WURTH_1 (layer F.Cu) (tedit 58DEEECC) (tstamp 58ED110C)
+  (module conservify:SW_SPST_WURTH_1 (layer F.Cu) (tedit 58EFBDF7) (tstamp 58ED110C)
     (at 152.219 70.826 90)
     (descr "Light Touch Switch")
     (path /56091122)
     (attr smd)
-    (fp_text reference SW1 (at 0 -2.75 90) (layer F.SilkS)
+    (fp_text reference SW1 (at 0 -2.75 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value SPNO (at 0 3 90) (layer F.Fab)
@@ -4395,7 +4395,7 @@
   (gr_text Serial (at 148.336 80.264 90) (layer F.SilkS) (tstamp 564B4D6A)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
-  (gr_text RST (at 150.85 67.5) (layer F.SilkS) (tstamp 564B35B1)
+  (gr_text RST (at 149.7584 70.5104 90) (layer F.SilkS) (tstamp 564B35B1)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
   (gr_text GND (at 130.048 121.92 90) (layer F.SilkS) (tstamp 564B3574)
