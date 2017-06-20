@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source D:/Life/conservify/fk-core/hardware/fk-core.sch)
-    (date "6/20/2017 3:18:27 PM")
+    (date "6/20/2017 3:26:22 PM")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -438,7 +438,8 @@
       (value CONN-HDR-2x5)
       (footprint Socket_Strips:Socket_Strip_Straight_2x05_Pitch1.27mm_SMD)
       (fields
-        (field (name supplier1) mouser))
+        (field (name supplier1) mouser)
+        (field (name spn1) 649-202112100010C4LF))
       (libsource (lib fk-core-cache) (part CONN-HDR-2x5))
       (sheetpath (names /) (tstamps /))
       (tstamp 56110A84))

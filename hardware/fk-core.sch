@@ -1233,6 +1233,7 @@ F 1 "CONN-HDR-2x5" H 6100 9500 60  0001 C CNN
 F 2 "Socket_Strips:Socket_Strip_Straight_2x05_Pitch1.27mm_SMD" H 6100 9400 60  0001 C CNN
 F 3 "" H 6100 9750 60  0000 C CNN
 F 4 "mouser" H 0   0   50  0001 C CNN "supplier1"
+F 5 "649-202112100010C4LF" H 6100 9900 60  0001 C CNN "spn1"
 	1    6100 9900
 	1    0    0    -1  
 $EndComp
