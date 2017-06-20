@@ -2896,13 +2896,13 @@
       (xy 2.530928 -0.782067) (xy 2.7432 -0.78399) (xy 2.7432 -0.486228)) (layer F.SilkS) (width 0.01))
   )
 
-  (module Housings_DFN_QFN:DFN-8-1EP_3x2mm_Pitch0.5mm (layer F.Cu) (tedit 59499AA6) (tstamp 593B775C)
+  (module Housings_DFN_QFN:DFN-8-1EP_3x2mm_Pitch0.5mm (layer F.Cu) (tedit 5949AB6B) (tstamp 593B775C)
     (at 146.6145 120.763)
     (descr "8-Lead Plastic Dual Flat, No Lead Package (MC) - 2x3x0.9 mm Body [DFN] (see Microchip Packaging Specification 00000049BS.pdf)")
     (tags "DFN 0.5")
     (path /58823820)
     (attr smd)
-    (fp_text reference U6 (at 0 -2.05) (layer F.SilkS)
+    (fp_text reference U6 (at 0 -2.05) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MAX1704XX (at 1.3151 0.395) (layer F.Fab) hide
