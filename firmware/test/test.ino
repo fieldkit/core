@@ -3,12 +3,18 @@
 #include <SPI.h>
 #include <RH_RF95.h>
 #include <SerialFlash.h>
+#include <WiFi101.h>
 #include <SD.h>
 
 const uint8_t PIN_RADIO_CS = 5;
 const uint8_t PIN_RADIO_DIO0 = 2;
-const uint8_t PIN_SD_CS = 13;
+const uint8_t PIN_SD_CS = 12;
 const uint8_t PIN_FLASH_CS = 4;
+const uint8_t PIN_WINC_CS = 7;
+const uint8_t PIN_WINC_IRQ = 9;
+const uint8_t PIN_WINC_RST = 10;
+const uint8_t PIN_WINC_EN = 11;
+const uint8_t PIN_WINC_WAKE = 8;
 
 class Check {
 private:
@@ -76,6 +82,10 @@ public:
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
         pinMode(PIN_RADIO_CS, INPUT_PULLUP);
         pinMode(PIN_SD_CS, INPUT_PULLUP);
+        pinMode(PIN_WINC_CS, INPUT_PULLUP);
+
+        pinMode(PIN_WINC_EN, OUTPUT);
+        digitalWrite(PIN_WINC_EN, HIGH);
 
         SPI.begin();
     }
@@ -185,6 +195,42 @@ public:
             Serial.println("test: Radio PASSED");
         }
     }
+
+    void wifi() {
+        Serial.println("test: Checking wifi...");
+
+        WiFi.setPins(PIN_WINC_CS, PIN_WINC_IRQ, PIN_WINC_RST);
+
+        digitalWrite(PIN_WINC_EN, LOW);
+        delay(50);
+
+        digitalWrite(PIN_WINC_EN, HIGH);
+
+        if (WiFi.status() == WL_NO_SHIELD) {
+            Serial.println("test: Wifi FAILED");
+        }
+        else {
+            String fv = WiFi.firmwareVersion();
+            String latestFv;
+            Serial.print("test: Wifi firmware version: ");
+            Serial.println(fv);
+
+            int32_t status = 0;
+            uint32_t started = millis();
+            while (WiFi.status() != WL_CONNECTED) {
+                Serial.println("test: Wifi attempting");
+
+                status = WiFi.begin("Conservify", "Okavang0");
+
+                uint8_t seconds = 10;
+                while (seconds > 0 && (WiFi.status() != WL_CONNECTED)) {
+                    seconds--;
+                    delay(1000);
+                }
+            }
+            Serial.println("test: Wifi PASSED");
+        }
+    }
 };
 
 void setup() {
@@ -192,6 +238,16 @@ void setup() {
 
     Check check;
     check.setup();
+
+    pinMode(13, OUTPUT);
+    pinMode(A3, OUTPUT);
+    pinMode(A4, OUTPUT);
+    pinMode(A5, OUTPUT);
+
+    digitalWrite(13, HIGH);
+    digitalWrite(A3, HIGH);
+    digitalWrite(A4, HIGH);
+    digitalWrite(A5, HIGH);
 
     while (!Serial && millis() < 2 * 1000) {
         delay(100);
@@ -204,6 +260,7 @@ void setup() {
     check.gps();
     check.sdCard();
     check.fuelGauge();
+    check.wifi();
 
     while (true) {
         delay(100);

@@ -26,7 +26,8 @@ model {
                 "https://github.com/PaulStoffregen/RadioHead.git",
                 "https://github.com/Conservify/max1704x.git",
                 "https://github.com/adafruit/RTClib.git",
-                "https://github.com/PaulStoffregen/SerialFlash.git"
+                "https://github.com/PaulStoffregen/SerialFlash.git",
+                "https://github.com/arduino-libraries/WiFi101.git",
             ]
         }
     }
