@@ -2,8 +2,8 @@
 
   (general
     (links 266)
-    (no_connects 0)
-    (area 125.724999 47.724999 154.575001 155.275001)
+    (no_connects 84)
+    (area 104.521 37.608199 174.451 168.690001)
     (thickness 1.6)
     (drawings 71)
     (tracks 1249)
@@ -4223,7 +4223,7 @@
   (gr_text SDA (at 149.15 140.632 90) (layer F.SilkS) (tstamp 58BDB44A)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
-  (gr_text v0.3 (at 148.5392 154.2288) (layer F.SilkS)
+  (gr_text v0.4 (at 148.5392 154.2288) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
   (gr_text LED-D13 (at 147.066 102.87 90) (layer F.SilkS) (tstamp 564C1710)
