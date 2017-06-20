@@ -1,7 +1,7 @@
 (export (version D)
   (design
-    (source D:/Life/conservify/fk-core/hardware/fk-core.sch)
-    (date "6/9/2017 4:20:06 PM")
+    (source D:\Life\conservify\fk-core\hardware\fk-core.sch)
+    (date "6/20/2017 11:55:17 AM")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -108,7 +108,7 @@
       (tstamp 560BBDAF))
     (comp (ref C2)
       (value 18pF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 581-04025A180J)
         (field (name supplier1) mouser))
@@ -117,7 +117,7 @@
       (tstamp 560BC402))
     (comp (ref C1)
       (value 18pF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 581-04025A180J)
         (field (name supplier1) mouser))
@@ -126,7 +126,7 @@
       (tstamp 560BC473))
     (comp (ref C3)
       (value 100nF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 81-GCM155R71H104KE2D)
         (field (name supplier1) mouser))
@@ -135,7 +135,7 @@
       (tstamp 560C00D4))
     (comp (ref C7)
       (value 100nF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 81-GCM155R71H104KE2D)
         (field (name supplier1) mouser))
@@ -144,7 +144,7 @@
       (tstamp 560C0195))
     (comp (ref C8)
       (value 100nF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 81-GCM155R71H104KE2D)
         (field (name supplier1) mouser))
@@ -153,7 +153,7 @@
       (tstamp 560C021E))
     (comp (ref C5)
       (value "1uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 810-C1005X5R1E105K)
         (field (name supplier1) mouser))
@@ -162,7 +162,7 @@
       (tstamp 560C02A4))
     (comp (ref L2)
       (value BKP1005TS121-T)
-      (footprint RocketScreamKicadLibrary:IND-0402)
+      (footprint RocketScreamKicadLibrary:DIO-0603)
       (fields
         (field (name spn1) 963-BKP1005TS121-T)
         (field (name supplier1) mouser))
@@ -171,7 +171,7 @@
       (tstamp 560C1F6B))
     (comp (ref C4)
       (value 100nF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 81-GCM155R71H104KE2D)
         (field (name supplier1) mouser))
@@ -180,7 +180,7 @@
       (tstamp 560C23D4))
     (comp (ref R1)
       (value 2K2)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-072K2L)
         (field (name supplier1) mouser))
@@ -198,7 +198,7 @@
       (tstamp 560C558F))
     (comp (ref R13)
       (value 2K2)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-072K2L)
         (field (name supplier1) mouser))
@@ -207,7 +207,7 @@
       (tstamp 560C8CA8))
     (comp (ref R12)
       (value 10K)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-0710KL)
         (field (name supplier1) mouser))
@@ -216,7 +216,7 @@
       (tstamp 560C9080))
     (comp (ref R6)
       (value 1K18)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 667-ERJ-2RKF1181X)
         (field (name supplier1) mouser))
@@ -225,7 +225,7 @@
       (tstamp 560C9E77))
     (comp (ref R7)
       (value 46K4)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 667-ERJ-2RKF4642X)
         (field (name supplier1) mouser))
@@ -234,7 +234,7 @@
       (tstamp 560CA47F))
     (comp (ref R9)
       (value 2K94)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 667-ERJ-2RKF2941X)
         (field (name supplier1) mouser))
@@ -243,7 +243,7 @@
       (tstamp 560CA50A))
     (comp (ref R10)
       (value 2K2)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-072K2L)
         (field (name supplier1) mouser))
@@ -261,7 +261,7 @@
       (tstamp 560CB746))
     (comp (ref R8)
       (value 10K)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-0710KL)
         (field (name supplier1) mouser))
@@ -270,7 +270,7 @@
       (tstamp 560CD578))
     (comp (ref C16)
       (value "4.7uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 581-0402ZD475MAT2A)
         (field (name supplier1) mouser))
@@ -279,7 +279,7 @@
       (tstamp 560CDDF7))
     (comp (ref C17)
       (value "4.7uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 581-0402ZD475MAT2A)
         (field (name supplier1) mouser))
@@ -288,7 +288,7 @@
       (tstamp 560CE392))
     (comp (ref C15)
       (value "1uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 810-C1005X5R1E105K)
         (field (name supplier1) mouser))
@@ -297,7 +297,7 @@
       (tstamp 560D084D))
     (comp (ref C19)
       (value "1uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 810-C1005X5R1E105K)
         (field (name supplier1) mouser))
@@ -315,7 +315,7 @@
       (tstamp 560D85A2))
     (comp (ref L1)
       (value BKP1005TS121-T)
-      (footprint RocketScreamKicadLibrary:IND-0402)
+      (footprint RocketScreamKicadLibrary:IND-0603)
       (fields
         (field (name spn1) 963-BKP1005TS121-T)
         (field (name supplier1) mouser))
@@ -333,7 +333,7 @@
       (tstamp 560DCC57))
     (comp (ref R3)
       (value 330R)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-07330RL)
         (field (name supplier1) mouser))
@@ -342,7 +342,7 @@
       (tstamp 560E040F))
     (comp (ref C13)
       (value 100nF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 81-GCM155R71H104KE2D)
         (field (name supplier1) mouser))
@@ -351,7 +351,7 @@
       (tstamp 560E2594))
     (comp (ref C11)
       (value "4.7uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 581-0402ZD475MAT2A)
         (field (name supplier1) mouser))
@@ -360,7 +360,7 @@
       (tstamp 560E34A2))
     (comp (ref C12)
       (value 100nF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 81-GCM155R71H104KE2D)
         (field (name supplier1) mouser))
@@ -369,7 +369,7 @@
       (tstamp 560E3BD4))
     (comp (ref C18)
       (value "4.7nF 25V X7R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 603-AC402KRX7R8BB472)
         (field (name supplier1) mouser))
@@ -378,7 +378,7 @@
       (tstamp 560E4075))
     (comp (ref R5)
       (value 1M)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 603-RC0402FR-071ML)
         (field (name supplier1) mouser))
@@ -387,7 +387,7 @@
       (tstamp 560E4592))
     (comp (ref R11)
       (value 100K)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-07100KL)
         (field (name supplier1) mouser))
@@ -396,7 +396,7 @@
       (tstamp 560F96EB))
     (comp (ref R4)
       (value 10K)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-0710KL)
         (field (name supplier1) mouser))
@@ -405,7 +405,7 @@
       (tstamp 560FC4FC))
     (comp (ref C6)
       (value 100nF)
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 81-GCM155R71H104KE2D)
         (field (name supplier1) mouser))
@@ -414,7 +414,7 @@
       (tstamp 56101EA7))
     (comp (ref C14)
       (value "4.7uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 581-0402ZD475MAT2A)
         (field (name supplier1) mouser))
@@ -447,7 +447,7 @@
       (tstamp 560F6D00))
     (comp (ref J6)
       (value CONN-HDR-2x5)
-      (footprint RocketScreamKicadLibrary:HDR_2x5_Pitch1.27mm)
+      (footprint Socket_Strips:Socket_Strip_Straight_2x05_Pitch1.27mm_SMD)
       (fields
         (field (name supplier1) mouser))
       (libsource (lib fk-core-cache) (part CONN-HDR-2x5))
@@ -455,7 +455,7 @@
       (tstamp 56110A84))
     (comp (ref R2)
       (value 330R)
-      (footprint RocketScreamKicadLibrary:RES-0402)
+      (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name spn1) 603-RC0402FR-07330RL)
         (field (name supplier1) mouser))
@@ -464,7 +464,7 @@
       (tstamp 56116504))
     (comp (ref C10)
       (value "4.7uF 10V X5R")
-      (footprint RocketScreamKicadLibrary:CAP-0402)
+      (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name spn1) 581-0402ZD475MAT2A)
         (field (name supplier1) mouser))
