@@ -79,13 +79,36 @@ private:
 
 public:
     void setup() {
+        pinMode(13, OUTPUT);
+        pinMode(A3, OUTPUT);
+        pinMode(A4, OUTPUT);
+        pinMode(A5, OUTPUT);
+
+        digitalWrite(13, LOW);
+        digitalWrite(A3, LOW);
+        digitalWrite(A4, LOW);
+        digitalWrite(A5, LOW);
+
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
         pinMode(PIN_RADIO_CS, INPUT_PULLUP);
         pinMode(PIN_SD_CS, INPUT_PULLUP);
         pinMode(PIN_WINC_CS, INPUT_PULLUP);
 
         pinMode(PIN_WINC_EN, OUTPUT);
-        digitalWrite(PIN_WINC_EN, HIGH);
+        digitalWrite(PIN_WINC_EN, LOW);
+
+        pinMode(PIN_WINC_RST, OUTPUT);
+        digitalWrite(PIN_WINC_RST, LOW);
+
+        pinMode(PIN_FLASH_CS, OUTPUT);
+        pinMode(PIN_RADIO_CS, OUTPUT);
+        pinMode(PIN_SD_CS, OUTPUT);
+        pinMode(PIN_WINC_CS, OUTPUT);
+
+        digitalWrite(PIN_FLASH_CS, HIGH);
+        digitalWrite(PIN_RADIO_CS, HIGH);
+        digitalWrite(PIN_SD_CS, HIGH);
+        digitalWrite(PIN_WINC_CS, HIGH);
 
         SPI.begin();
     }
@@ -164,6 +187,9 @@ public:
 
         if (charactersRead < 100) {
             Serial.println("test: GPS FAILED");
+            digitalWrite(A3, HIGH);
+            digitalWrite(A4, HIGH);
+            digitalWrite(A5, HIGH);
         }
         else {
             Serial.println("test: GPS PASSED");
@@ -173,12 +199,12 @@ public:
     void sdCard() {
         Serial.println("test: Checking SD...");
 
-        setup();
-
         if (SD.begin(PIN_SD_CS)) {
             Serial.println("test: SD PASSED");
         }
         else {
+            digitalWrite(PIN_SD_CS, HIGH);
+
             Serial.println("test: SD FAILED");
         }
     }
@@ -192,12 +218,18 @@ public:
             Serial.println("test: Radio FAILED");
         }
         else {
+            digitalWrite(PIN_RADIO_CS, HIGH);
+
             Serial.println("test: Radio PASSED");
         }
     }
 
     void wifi() {
         Serial.println("test: Checking wifi...");
+
+        delay(500);
+
+        digitalWrite(PIN_WINC_RST, HIGH);
 
         WiFi.setPins(PIN_WINC_CS, PIN_WINC_IRQ, PIN_WINC_RST);
 
@@ -206,13 +238,15 @@ public:
 
         digitalWrite(PIN_WINC_EN, HIGH);
 
+        delay(50);
+
         if (WiFi.status() == WL_NO_SHIELD) {
             Serial.println("test: Wifi FAILED");
         }
         else {
-            String fv = WiFi.firmwareVersion();
-            String latestFv;
             Serial.print("test: Wifi firmware version: ");
+
+            String fv = WiFi.firmwareVersion();
             Serial.println(fv);
 
             int32_t status = 0;
@@ -238,16 +272,6 @@ void setup() {
 
     Check check;
     check.setup();
-
-    pinMode(13, OUTPUT);
-    pinMode(A3, OUTPUT);
-    pinMode(A4, OUTPUT);
-    pinMode(A5, OUTPUT);
-
-    digitalWrite(13, HIGH);
-    digitalWrite(A3, HIGH);
-    digitalWrite(A4, HIGH);
-    digitalWrite(A5, HIGH);
 
     while (!Serial && millis() < 2 * 1000) {
         delay(100);
