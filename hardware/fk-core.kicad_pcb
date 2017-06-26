@@ -3,9 +3,9 @@
   (general
     (links 267)
     (no_connects 0)
-    (area 104.521 37.608199 174.451 174.110552)
+    (area 125.724999 47.724999 154.575001 155.275001)
     (thickness 1.6)
-    (drawings 62)
+    (drawings 61)
     (tracks 1315)
     (zones 0)
     (modules 93)
@@ -1729,11 +1729,11 @@
   )
 
   (module logos:conservify_text_negative_5000 (layer F.Cu) (tedit 0) (tstamp 58BDB8DA)
-    (at 108.204 143.002 270)
-    (fp_text reference G*** (at 0 0 270) (layer F.SilkS) hide
+    (at 149.86 59.563 90)
+    (fp_text reference G*** (at 0 0 90) (layer F.SilkS) hide
       (effects (font (thickness 0.3)))
     )
-    (fp_text value LOGO (at 0.75 0 270) (layer F.SilkS) hide
+    (fp_text value LOGO (at 0.75 0 90) (layer F.SilkS) hide
       (effects (font (thickness 0.3)))
     )
     (fp_poly (pts (xy -5.169353 -2.019174) (xy -5.12465 -2.018697) (xy -5.086161 -2.017722) (xy -5.051911 -2.016103)
@@ -2852,11 +2852,11 @@
   )
 
   (module conservify:fk_negative_2500 (layer F.Cu) (tedit 0) (tstamp 593B3329)
-    (at 106.426 142.748 270)
-    (fp_text reference G*** (at 0 0 270) (layer F.SilkS) hide
+    (at 152.4 58.928 90)
+    (fp_text reference G*** (at 0 0 90) (layer F.SilkS) hide
       (effects (font (thickness 0.3)))
     )
-    (fp_text value LOGO (at 0.75 0 270) (layer F.SilkS) hide
+    (fp_text value LOGO (at 0.75 0 90) (layer F.SilkS) hide
       (effects (font (thickness 0.3)))
     )
     (fp_poly (pts (xy -1.568308 -0.402711) (xy -1.513875 -0.398714) (xy -1.466354 -0.391939) (xy -1.440954 -0.386006)
@@ -4256,9 +4256,6 @@
       (net 116 "Net-(D11-Pad1)"))
   )
 
-  (gr_text SDA (at 149.606 130.2248 90) (layer F.SilkS) (tstamp 560FE2D7)
-    (effects (font (size 0.8 0.8) (thickness 0.15)))
-  )
   (gr_text SCL (at 149.606 119.4308 90) (layer F.SilkS) (tstamp 560FE2DD)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
