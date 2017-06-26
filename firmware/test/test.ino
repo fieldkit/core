@@ -84,10 +84,10 @@ public:
         pinMode(A4, OUTPUT);
         pinMode(A5, OUTPUT);
 
-        digitalWrite(13, LOW);
-        digitalWrite(A3, LOW);
-        digitalWrite(A4, LOW);
-        digitalWrite(A5, LOW);
+        digitalWrite(13, HIGH);
+        digitalWrite(A3, HIGH);
+        digitalWrite(A4, HIGH);
+        digitalWrite(A5, HIGH);
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
         pinMode(PIN_RADIO_CS, INPUT_PULLUP);
