@@ -1,4 +1,4 @@
-update=3/31/2017 4:50:59 PM
+update=Fri 17 Nov 2017 03:12:54 PM PST
 version=1
 last_client=kicad
 [cvpcb]
@@ -40,4 +40,4 @@ ERC_TestSimilarLabels=1
 version=1
 LibDir=../../kicad
 [eeschema/libraries]
-LibName1=D:/Life/conservify/kicad/conservify
+LibName1=/home/jlewallen/conservify/kicad/conservify
