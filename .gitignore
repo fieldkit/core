@@ -4,9 +4,7 @@
 *.bak
 *.kicad_pcb-bak
 *_saved_*.sch
-gitdeps
-firmwaretool.properties
-.gradle
-firmware/*/build
-log.txt
 *.swp
+gitdeps
+log.txt
+build

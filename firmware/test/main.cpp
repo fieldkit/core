@@ -249,12 +249,10 @@ public:
             String fv = WiFi.firmwareVersion();
             Serial.println(fv);
 
-            int32_t status = 0;
-            uint32_t started = millis();
             while (WiFi.status() != WL_CONNECTED) {
                 Serial.println("test: Wifi attempting");
 
-                status = WiFi.begin("Conservify", "Okavang0");
+                WiFi.begin("Conservify", "Okavang0");
 
                 uint8_t seconds = 10;
                 while (seconds > 0 && (WiFi.status() != WL_CONNECTED)) {
