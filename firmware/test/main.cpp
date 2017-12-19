@@ -1,3 +1,5 @@
+#include <cstdarg>
+
 #include <Wire.h>
 #include <FuelGauge.h>
 #include <SPI.h>
@@ -15,6 +17,34 @@ const uint8_t PIN_WINC_IRQ = 9;
 const uint8_t PIN_WINC_RST = 10;
 const uint8_t PIN_WINC_EN = 11;
 const uint8_t PIN_WINC_WAKE = 8;
+
+#define DEBUG_LINE_MAX 256
+
+void debugf(const char *f, ...) {
+    char buffer[DEBUG_LINE_MAX];
+    va_list args;
+
+    va_start(args, f);
+    vsnprintf(buffer, DEBUG_LINE_MAX, f, args);
+    va_end(args);
+
+    Serial1.print(buffer);
+}
+
+void debugfln(const char *f, ...) {
+    char buffer[DEBUG_LINE_MAX];
+    va_list args;
+
+    va_start(args, f);
+    auto w = vsnprintf(buffer, DEBUG_LINE_MAX - 2, f, args);
+    va_end(args);
+
+    buffer[w] = '\r';
+    buffer[w + 1] = '\n';
+    buffer[w + 2] = 0;
+
+    Serial1.print(buffer);
+}
 
 class Check {
 private:
@@ -84,10 +114,7 @@ public:
         pinMode(A4, OUTPUT);
         pinMode(A5, OUTPUT);
 
-        digitalWrite(13, HIGH);
-        digitalWrite(A3, HIGH);
-        digitalWrite(A4, HIGH);
-        digitalWrite(A5, HIGH);
+        leds(true);
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
         pinMode(PIN_RADIO_CS, INPUT_PULLUP);
@@ -113,23 +140,30 @@ public:
         SPI.begin();
     }
 
+    void leds(bool on) {
+        digitalWrite(13, on ? HIGH : LOW);
+        digitalWrite(A3, on ? HIGH : LOW);
+        digitalWrite(A4, on ? HIGH : LOW);
+        digitalWrite(A5, on ? HIGH : LOW);
+    }
+
     void fuelGauge() {
         FuelGauge gauge;
 
-        Serial.println("test: Checking gauge...");
+        debugfln("test: Checking gauge...");
 
         Wire.begin();
 
         gauge.powerOn();
 
-        Serial.println("test: Gauge PASSED");
+        debugfln("test: Gauge PASSED");
     }
 
     void flashMemory() {
-        Serial.println("test: Checking flash memory...");
+        debugfln("test: Checking flash memory...");
 
         if (!SerialFlash.begin(PIN_FLASH_CS)) {
-            Serial.println("test: Flash memory FAILED");
+            debugfln("test: Flash memory FAILED");
             return;
         }
 
@@ -137,39 +171,27 @@ public:
 
         SerialFlash.readID(buffer);
         if (buffer[0] == 0) {
-            Serial.println("test: Flash memory FAILED");
+            debugfln("test: Flash memory FAILED");
             return;
         }
 
         uint32_t chipSize = SerialFlash.capacity(buffer);
         if (chipSize == 0) {
-            Serial.println("test: Flash memory FAILED");
+            debugfln("test: Flash memory FAILED");
             return;
         }
 
-        Serial.println("Read Chip Identification:");
-        Serial.print("  JEDEC ID:     ");
-        Serial.print(buffer[0], HEX);
-        Serial.print(" ");
-        Serial.print(buffer[1], HEX);
-        Serial.print(" ");
-        Serial.println(buffer[2], HEX);
-        Serial.print("  Part Nummber: ");
-        Serial.println(id2chip(buffer));
-        Serial.print("  Memory Size:  ");
-        Serial.print(chipSize);
-        Serial.println(" bytes");
-        Serial.print("  Block Size:   ");
-        uint32_t blockSize = SerialFlash.blockSize();
-        Serial.print(blockSize);
-        Serial.println(" bytes");
-
-        Serial.println("test: Flash memory PASSED");
+        debugfln("Read Chip Identification:");
+        debugf("  JEDEC ID:     %x %x %x", buffer[0], buffer[1], buffer[2]);
+        debugfln("  Part Nummber: %s", id2chip(buffer));
+        debugfln("  Memory Size:  %d bytes Block Size: %d bytes", chipSize, SerialFlash.blockSize());
+        debugfln("test: Flash memory PASSED");
     }
 
     void gps() {
-        Serial.println("test: Checking gps...");
+        debugfln("test: Checking gps...");
 
+        Serial1.end();
         Serial1.begin(9600);
 
         uint32_t charactersRead = 0;
@@ -182,50 +204,51 @@ public:
         }
 
         Serial1.end();
+        Serial1.begin(115200);
 
-        Serial.println();
+        debugfln("");
 
         if (charactersRead < 100) {
-            Serial.println("test: GPS FAILED");
+            debugfln("test: GPS FAILED");
             digitalWrite(A3, HIGH);
             digitalWrite(A4, HIGH);
             digitalWrite(A5, HIGH);
         }
         else {
-            Serial.println("test: GPS PASSED");
+            debugfln("test: GPS PASSED");
         }
     }
 
     void sdCard() {
-        Serial.println("test: Checking SD...");
+        debugfln("test: Checking SD...");
 
         if (SD.begin(PIN_SD_CS)) {
-            Serial.println("test: SD PASSED");
+            debugfln("test: SD PASSED");
         }
         else {
             digitalWrite(PIN_SD_CS, HIGH);
 
-            Serial.println("test: SD FAILED");
+            debugfln("test: SD FAILED");
         }
     }
 
     void radio() {
-        Serial.println("test: Checking radio...");
+        debugfln("test: Checking radio...");
 
         RH_RF95 rf95(PIN_RADIO_CS, PIN_RADIO_DIO0);
 
         if (!rf95.init()) {
-            Serial.println("test: Radio FAILED");
+            debugfln("test: Radio FAILED");
         }
         else {
             digitalWrite(PIN_RADIO_CS, HIGH);
 
-            Serial.println("test: Radio PASSED");
+            debugfln("test: Radio PASSED");
         }
     }
 
     void wifi() {
-        Serial.println("test: Checking wifi...");
+        debugfln("test: Checking wifi...");
 
         delay(500);
 
@@ -241,16 +264,16 @@ public:
         delay(50);
 
         if (WiFi.status() == WL_NO_SHIELD) {
-            Serial.println("test: Wifi FAILED");
+            debugfln("test: Wifi FAILED");
         }
         else {
-            Serial.print("test: Wifi firmware version: ");
+            debugfln("test: Wifi firmware version: ");
 
             String fv = WiFi.firmwareVersion();
-            Serial.println(fv);
+            debugfln("Version: %s", fv.c_str());
 
             while (WiFi.status() != WL_CONNECTED) {
-                Serial.println("test: Wifi attempting");
+                debugfln("test: Wifi attempting");
 
                 WiFi.begin("Conservify", "Okavang0");
 
@@ -260,7 +283,7 @@ public:
                     delay(1000);
                 }
             }
-            Serial.println("test: Wifi PASSED");
+            debugfln("test: Wifi PASSED");
         }
     }
 };
@@ -268,8 +291,11 @@ public:
 void setup() {
     Serial.begin(115200);
 
+    Serial1.begin(115200);
+
     Check check;
     check.setup();
+    check.leds(false);
 
     while (!Serial && millis() < 2 * 1000) {
         delay(100);
@@ -286,6 +312,9 @@ void setup() {
 
     while (true) {
         delay(100);
+        check.leds(false);
+        delay(100);
+        check.leds(true);
     }
 }
 
