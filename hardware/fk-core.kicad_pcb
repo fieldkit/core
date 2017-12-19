@@ -1,9 +1,9 @@
 (kicad_pcb (version 4) (host pcbnew 4.0.7-e2-6376~58~ubuntu16.04.1)
 
   (general
-    (links 0)
-    (no_connects 87)
-    (area 125.725993 47.722663 154.578177 155.279215)
+    (links 274)
+    (no_connects 0)
+    (area 104.521 37.608199 174.451 163.222783)
     (thickness 1.6)
     (drawings 59)
     (tracks 1355)
@@ -4313,7 +4313,7 @@
   (gr_text ANT (at 127.254 51.9938) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.1)))
   )
-  (gr_text v0.4 (at 153.7208 153.2382 90) (layer F.SilkS)
+  (gr_text v0.5 (at 153.7208 153.2382 90) (layer F.SilkS)
     (effects (font (size 0.8 0.8) (thickness 0.15)))
   )
   (gr_text D13 (at 146.939 104.4575) (layer F.SilkS) (tstamp 564C1710)
