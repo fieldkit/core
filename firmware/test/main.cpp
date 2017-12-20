@@ -268,21 +268,8 @@ public:
         }
         else {
             debugfln("test: Wifi firmware version: ");
-
             String fv = WiFi.firmwareVersion();
             debugfln("Version: %s", fv.c_str());
-
-            while (WiFi.status() != WL_CONNECTED) {
-                debugfln("test: Wifi attempting");
-
-                WiFi.begin("Conservify", "Okavang0");
-
-                uint8_t seconds = 10;
-                while (seconds > 0 && (WiFi.status() != WL_CONNECTED)) {
-                    seconds--;
-                    delay(1000);
-                }
-            }
             debugfln("test: Wifi PASSED");
         }
     }
