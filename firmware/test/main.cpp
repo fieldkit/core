@@ -28,7 +28,7 @@ void debugf(const char *f, ...) {
     vsnprintf(buffer, DEBUG_LINE_MAX, f, args);
     va_end(args);
 
-    Serial1.print(buffer);
+    Serial5.print(buffer);
 }
 
 void debugfln(const char *f, ...) {
@@ -43,7 +43,7 @@ void debugfln(const char *f, ...) {
     buffer[w + 1] = '\n';
     buffer[w + 2] = 0;
 
-    Serial1.print(buffer);
+    Serial5.print(buffer);
 }
 
 class Check {
@@ -191,20 +191,16 @@ public:
     void gps() {
         debugfln("test: Checking gps...");
 
-        Serial1.end();
         Serial1.begin(9600);
 
         uint32_t charactersRead = 0;
         uint32_t start = millis();
         while (millis() - start < 5 * 1000 && charactersRead < 100)  {
             while (Serial1.available()) {
-                Serial.print((char)Serial1.read());
+                Serial5.print((char)Serial1.read());
                 charactersRead++;
             }
         }
-
-        Serial1.end();
-        Serial1.begin(115200);
 
         debugfln("");
 
@@ -278,7 +274,7 @@ public:
 void setup() {
     Serial.begin(115200);
 
-    Serial1.begin(115200);
+    Serial5.begin(115200);
 
     Check check;
     check.setup();
