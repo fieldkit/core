@@ -101,15 +101,15 @@ $EndComp
 $Comp
 L RF-SMA-EDGE J3
 U 1 1 56090E26
-P 8750 10050
-F 0 "J3" H 8750 10300 60  0000 C CNN
-F 1 "RF-SMA-EDGE" V 9050 10050 60  0000 C CNN
-F 2 "RocketScreamKicadLibrary:RF-SMA-EDGE" H 8750 9500 60  0001 C CNN
-F 3 "" H 8700 10000 60  0000 C CNN
-F 4 "1.2" H 8750 10400 50  0001 C CNN "price"
-F 5 "S01-SJEDM-11BS05" H 0   0   50  0001 C CNN "spn1"
-F 6 "rf supplier" H 0   0   50  0001 C CNN "supplier1"
-	1    8750 10050
+P 8150 10050
+F 0 "J3" H 8150 10300 60  0000 C CNN
+F 1 "RF-SMA-EDGE" V 8450 10050 60  0000 C CNN
+F 2 "RocketScreamKicadLibrary:RF-SMA-EDGE" H 8150 9500 60  0001 C CNN
+F 3 "" H 8100 10000 60  0000 C CNN
+F 4 "1.2" H 8150 10400 50  0001 C CNN "price"
+F 5 "S01-SJEDM-11BS05" H -600 0   50  0001 C CNN "spn1"
+F 6 "rf supplier" H -600 0   50  0001 C CNN "supplier1"
+	1    8150 10050
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1017,12 +1017,12 @@ $EndComp
 $Comp
 L GND #PWR041
 U 1 1 560F5E0A
-P 8750 10600
-F 0 "#PWR041" H 8750 10350 50  0001 C CNN
-F 1 "GND" H 8750 10450 50  0001 C CNN
-F 2 "" H 8750 10600 60  0000 C CNN
-F 3 "" H 8750 10600 60  0000 C CNN
-	1    8750 10600
+P 8150 10600
+F 0 "#PWR041" H 8150 10350 50  0001 C CNN
+F 1 "GND" H 8150 10450 50  0001 C CNN
+F 2 "" H 8150 10600 60  0000 C CNN
+F 3 "" H 8150 10600 60  0000 C CNN
+	1    8150 10600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1827,7 +1827,7 @@ L ATWINC1500-MR210PA U8
 U 1 1 58ED3A27
 P 850 13500
 F 0 "U8" H 250 15100 50  0000 L CNN
-F 1 "ATWINC1500-MR210PA" H 250 11500 50  0000 L CNN
+F 1 "ATWINC1500-MR210PA" H 450 11650 50  0000 L CNN
 F 2 "conservify:ATMEL_ATWINC1500-MR210PA" H 850 13500 50  0001 L CNN
 F 3 "" H 850 13500 60  0001 C CNN
 F 4 "17.69" H 250 15200 50  0001 C CNN "price"
@@ -2194,8 +2194,6 @@ F 3 "" H -2250 10400 50  0001 C CNN
 	1    -2250 10400
 	-1   0    0    1   
 $EndComp
-Text Label 2550 2300 0    50   ~ 0
-A0
 Text Label 2550 2500 0    50   ~ 0
 A3
 Text Label 2550 2600 0    50   ~ 0
@@ -2208,28 +2206,10 @@ Text Label 2550 2900 0    50   ~ 0
 D4
 Text Label 2550 3000 0    50   ~ 0
 D3
-Text Label 2550 3100 0    50   ~ 0
-D1
-Text Label 2550 3200 0    50   ~ 0
-D0
 Text Label 2550 3300 0    50   ~ 0
 MISO
 Text Label 2550 3400 0    50   ~ 0
 ATN
-Text Label 2550 3500 0    50   ~ 0
-D2
-Text Label 2550 3600 0    50   ~ 0
-D5
-Text Label 2550 3700 0    50   ~ 0
-D11
-Text Label 2550 3900 0    50   ~ 0
-D10
-Text Label 2550 4000 0    50   ~ 0
-D12
-Text Label 2550 4100 0    50   ~ 0
-D6
-Text Label 2550 4200 0    50   ~ 0
-D7
 Text Label 2550 4300 0    50   ~ 0
 SDA
 Text Label 2550 4400 0    50   ~ 0
@@ -2276,8 +2256,6 @@ Text Label 14350 6950 0    50   ~ 0
 SCK
 Text Label 13100 6850 0    50   ~ 0
 MISO
-Text Label 1550 9100 0    50   ~ 0
-A0
 Text Label 1550 9200 0    50   ~ 0
 A1
 Text Label 1550 9300 0    50   ~ 0
@@ -2298,26 +2276,12 @@ Text Label 1550 10000 0    50   ~ 0
 ATN
 Text Label 3800 8900 0    50   ~ 0
 RST
-Text Label 3800 9200 0    50   ~ 0
-D0
-Text Label 3800 9300 0    50   ~ 0
-D1
 Text Label 3800 9500 0    50   ~ 0
 D3
-Text Label 3800 9800 0    50   ~ 0
-D6
-Text Label 3800 9900 0    50   ~ 0
-D7
 Text Label 3800 10000 0    50   ~ 0
 D8
 Text Label 3800 10100 0    50   ~ 0
 D9
-Text Label 3800 10200 0    50   ~ 0
-D10
-Text Label 3800 10300 0    50   ~ 0
-D11
-Text Label 3800 10400 0    50   ~ 0
-D12
 Text Label 3800 10500 0    50   ~ 0
 D13
 Text Label 3800 10600 0    50   ~ 0
@@ -2332,10 +2296,10 @@ Text Label 6400 10100 0    50   ~ 0
 RST
 Text Label 4100 1650 0    50   ~ 0
 RST
-Text Label 9250 9900 0    50   ~ 0
-D2
+Text Label 9000 9900 0    50   ~ 0
+RADIO_D0
 Text Label 10450 10000 0    50   ~ 0
-D5
+RADIO_CS
 Text Label 13100 6750 0    50   ~ 0
 D4
 Text Notes 3250 5550 0    180  ~ 36
@@ -2382,12 +2346,8 @@ Text Label 11100 2000 1    60   ~ 0
 PG
 Text Label 11200 2000 1    60   ~ 0
 CHG
-Text Label 3800 9400 0    50   ~ 0
-D2
 Text Label 3800 9600 0    50   ~ 0
 D4
-Text Label 3800 9700 0    50   ~ 0
-D5
 Text Notes 7600 2500 0    60   ~ 0
 VIN:5-10.5V\n(OVP up to 28V)
 Text Notes 13400 8650 0    180  ~ 36
@@ -2434,12 +2394,12 @@ Text Label 15500 4200 0    50   ~ 0
 SDA
 Text Label 15500 4300 0    50   ~ 0
 SCL
-Text Label 6900 12150 0    50   ~ 0
-A0
+Text Label 6750 12150 0    50   ~ 0
+GPS_RESET
 Text Label 6900 12850 0    50   ~ 0
-D0
+GPS_TX
 Text Label 6900 12950 0    50   ~ 0
-D1
+GPS_RX
 Text Label 7150 12450 0    50   ~ 0
 A1
 Text Notes 6750 12950 0    50   ~ 0
@@ -2462,21 +2422,21 @@ Text Label 2000 4000 0    50   ~ 0
 SD_CS
 Text Label 2550 3800 0    50   ~ 0
 D13
-Text Label -350 12700 0    60   ~ 0
+Text Label -500 12700 0    60   ~ 0
 WIFI_EN
-Text Label -350 12500 0    60   ~ 0
+Text Label -500 12500 0    60   ~ 0
 WIFI_RST
-Text Label -350 12900 0    60   ~ 0
+Text Label -500 12900 0    60   ~ 0
 SCK
 Text Label 1750 13200 0    60   ~ 0
 MISO
-Text Label -350 13100 0    60   ~ 0
+Text Label -500 13100 0    60   ~ 0
 WIFI_CS
-Text Label -350 13200 0    60   ~ 0
+Text Label -500 13200 0    60   ~ 0
 MOSI
 Text Label 1750 12800 0    60   ~ 0
 WIFI_IRQ
-Text Label -350 12600 0    60   ~ 0
+Text Label -500 12600 0    60   ~ 0
 WIFI_WAKE
 Text Label 2000 2700 0    60   ~ 0
 WIFI_WAKE
@@ -2505,7 +2465,7 @@ SDA
 Text Label 3600 12700 0    50   ~ 0
 SCL
 Wire Wire Line
-	2850 2300 2550 2300
+	2000 2300 2850 2300
 Wire Wire Line
 	900  2400 2850 2400
 Wire Wire Line
@@ -2521,17 +2481,17 @@ Wire Wire Line
 Wire Wire Line
 	2850 3000 2550 3000
 Wire Wire Line
-	2850 3100 2550 3100
+	2000 3100 2850 3100
 Wire Wire Line
-	2850 3200 2550 3200
+	2000 3200 2850 3200
 Wire Wire Line
 	2850 3300 2550 3300
 Wire Wire Line
 	2850 3400 2550 3400
 Wire Wire Line
-	2850 3500 2550 3500
+	2000 3500 2850 3500
 Wire Wire Line
-	2850 3600 2550 3600
+	2000 3600 2850 3600
 Wire Wire Line
 	2000 3700 2850 3700
 Wire Wire Line
@@ -2867,29 +2827,29 @@ Wire Wire Line
 Wire Wire Line
 	9300 10500 9300 10600
 Wire Wire Line
-	9150 9800 9400 9800
+	8550 9800 9400 9800
 Wire Wire Line
-	8600 10400 8600 10500
+	8000 10400 8000 10500
 Wire Wire Line
-	8600 10500 8900 10500
+	8000 10500 8300 10500
 Wire Wire Line
-	8700 10500 8700 10400
+	8100 10500 8100 10400
 Wire Wire Line
-	8800 10500 8800 10400
+	8200 10500 8200 10400
 Wire Wire Line
-	8900 10250 8900 10150
+	8300 10250 8300 10150
 Wire Wire Line
-	8750 10500 8750 10600
+	8150 10500 8150 10600
 Wire Wire Line
-	10450 10000 10650 10000
+	10450 10000 10800 10000
 Wire Wire Line
-	10450 10100 10650 10100
+	10450 10100 10800 10100
 Wire Wire Line
-	10450 10200 10650 10200
+	10450 10200 10800 10200
 Wire Wire Line
-	10450 10300 10650 10300
+	10450 10300 10800 10300
 Wire Wire Line
-	9400 9900 9200 9900
+	9000 9900 9400 9900
 Wire Wire Line
 	9250 7450 9250 7550
 Wire Wire Line
@@ -2917,7 +2877,7 @@ Wire Wire Line
 Wire Wire Line
 	1750 9000 1750 8900
 Wire Wire Line
-	1550 9100 1750 9100
+	1550 9100 1950 9100
 Wire Wire Line
 	1750 9200 1550 9200
 Wire Wire Line
@@ -2965,31 +2925,31 @@ Wire Wire Line
 Wire Wire Line
 	-750 10650 -750 10550
 Wire Wire Line
-	3950 9200 3750 9200
+	3400 9200 3950 9200
 Wire Wire Line
-	3750 9300 3950 9300
+	3400 9300 3950 9300
 Wire Wire Line
-	3750 9400 3950 9400
+	3400 9400 3950 9400
 Wire Wire Line
 	3750 9500 3950 9500
 Wire Wire Line
 	3750 9600 3950 9600
 Wire Wire Line
-	3750 9700 3950 9700
+	3400 9700 3950 9700
 Wire Wire Line
-	3750 9800 3950 9800
+	3400 9800 3950 9800
 Wire Wire Line
-	3750 9900 3950 9900
+	3400 9900 3950 9900
 Wire Wire Line
 	3750 10000 3950 10000
 Wire Wire Line
 	3750 10100 3950 10100
 Wire Wire Line
-	3750 10200 3950 10200
+	3400 10200 3950 10200
 Wire Wire Line
-	3750 10300 3950 10300
+	3400 10300 3950 10300
 Wire Wire Line
-	3750 10400 3950 10400
+	3400 10400 3950 10400
 Wire Wire Line
 	3750 10600 3950 10600
 Wire Wire Line
@@ -3207,7 +3167,7 @@ Wire Wire Line
 Wire Wire Line
 	15650 4300 15400 4300
 Wire Wire Line
-	9150 9800 9150 10050
+	8550 9800 8550 10050
 Wire Wire Line
 	9500 13100 9500 12950
 Wire Wire Line
@@ -3401,9 +3361,9 @@ Connection ~ 14450 6750
 Connection ~ 10550 9450
 Connection ~ 10050 9450
 Connection ~ 10550 10500
-Connection ~ 8700 10500
-Connection ~ 8800 10500
-Connection ~ 8750 10500
+Connection ~ 8100 10500
+Connection ~ 8200 10500
+Connection ~ 8150 10500
 Connection ~ 10550 9150
 Connection ~ 4050 1650
 Connection ~ 900  2400
@@ -3882,4 +3842,34 @@ Text Label 18400 1850 0    60   ~ 0
 ISL_VIN
 Text Label 2000 4100 0    50   ~ 0
 USER_SW
+Text Label 2000 3500 0    50   ~ 0
+RADIO_D0
+Text Label 2000 3600 0    50   ~ 0
+RADIO_CS
+Text Label 3400 9400 0    50   ~ 0
+RADIO_D0
+Text Label 3400 9700 0    50   ~ 0
+RADIO_CS
+Text Label 2000 3100 0    50   ~ 0
+GPS_RX
+Text Label 2000 3200 0    50   ~ 0
+GPS_TX
+Text Label 1550 9100 0    50   ~ 0
+GPS_RESET
+Text Label 2000 2300 0    50   ~ 0
+GPS_RESET
+Text Label 3400 9300 0    50   ~ 0
+GPS_RX
+Text Label 3400 9200 0    50   ~ 0
+GPS_TX
+Text Label 3400 9900 0    60   ~ 0
+WIFI_CS
+Text Label 3400 10200 0    60   ~ 0
+WIFI_RST
+Text Label 3400 10300 0    60   ~ 0
+WIFI_EN
+Text Label 3400 9800 0    50   ~ 0
+USER_SW
+Text Label 3400 10400 0    50   ~ 0
+SD_CS
 $EndSCHEMATC
