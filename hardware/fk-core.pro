@@ -1,4 +1,4 @@
-update=Fri 17 Nov 2017 03:12:54 PM PST
+update=Thu 21 Dec 2017 03:33:41 PM PST
 version=1
 last_client=kicad
 [cvpcb]
@@ -40,4 +40,5 @@ ERC_TestSimilarLabels=1
 version=1
 LibDir=../../kicad
 [eeschema/libraries]
-LibName1=/home/jlewallen/conservify/kicad/conservify
+LibName1=fk-core-rescue
+LibName2=/home/jlewallen/conservify/kicad/conservify
