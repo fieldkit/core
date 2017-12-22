@@ -147,7 +147,7 @@ public:
         digitalWrite(A5, on ? HIGH : LOW);
     }
 
-    void fuelGauge() {
+    bool fuelGauge() {
         FuelGauge gauge;
 
         debugfln("test: Checking gauge...");
@@ -157,14 +157,16 @@ public:
         gauge.powerOn();
 
         debugfln("test: Gauge PASSED");
+
+        return true;
     }
 
-    void flashMemory() {
+    bool flashMemory() {
         debugfln("test: Checking flash memory...");
 
         if (!SerialFlash.begin(PIN_FLASH_CS)) {
             debugfln("test: Flash memory FAILED");
-            return;
+            return false;
         }
 
         uint8_t buffer[256];
@@ -172,13 +174,13 @@ public:
         SerialFlash.readID(buffer);
         if (buffer[0] == 0) {
             debugfln("test: Flash memory FAILED");
-            return;
+            return false;
         }
 
         uint32_t chipSize = SerialFlash.capacity(buffer);
         if (chipSize == 0) {
             debugfln("test: Flash memory FAILED");
-            return;
+            return false;
         }
 
         debugfln("Read Chip Identification:");
@@ -186,9 +188,11 @@ public:
         debugfln("  Part Nummber: %s", id2chip(buffer));
         debugfln("  Memory Size:  %d bytes Block Size: %d bytes", chipSize, SerialFlash.blockSize());
         debugfln("test: Flash memory PASSED");
+
+        return true;
     }
 
-    void gps() {
+    bool gps() {
         debugfln("test: Checking gps...");
 
         Serial1.begin(9600);
@@ -206,44 +210,45 @@ public:
 
         if (charactersRead < 100) {
             debugfln("test: GPS FAILED");
-            digitalWrite(A3, HIGH);
-            digitalWrite(A4, HIGH);
-            digitalWrite(A5, HIGH);
+            return false;
         }
-        else {
-            debugfln("test: GPS PASSED");
-        }
+
+        debugfln("test: GPS PASSED");
+
+        return true;
     }
 
-    void sdCard() {
+    bool sdCard() {
         debugfln("test: Checking SD...");
 
-        if (SD.begin(PIN_SD_CS)) {
-            debugfln("test: SD PASSED");
-        }
-        else {
-            digitalWrite(PIN_SD_CS, HIGH);
-
+        if (!SD.begin(PIN_SD_CS)) {
             debugfln("test: SD FAILED");
+            return false;
         }
+
+        digitalWrite(PIN_SD_CS, HIGH);
+        debugfln("test: SD PASSED");
+
+        return true;
     }
 
-    void radio() {
+    bool radio() {
         debugfln("test: Checking radio...");
 
         RH_RF95 rf95(PIN_RADIO_CS, PIN_RADIO_DIO0);
 
         if (!rf95.init()) {
             debugfln("test: Radio FAILED");
+            return false;
         }
-        else {
-            digitalWrite(PIN_RADIO_CS, HIGH);
 
-            debugfln("test: Radio PASSED");
-        }
+        digitalWrite(PIN_RADIO_CS, HIGH);
+        debugfln("test: Radio PASSED");
+
+        return true;
     }
 
-    void wifi() {
+    bool wifi() {
         debugfln("test: Checking wifi...");
 
         delay(500);
@@ -261,13 +266,28 @@ public:
 
         if (WiFi.status() == WL_NO_SHIELD) {
             debugfln("test: Wifi FAILED");
+            return false;
         }
-        else {
-            debugfln("test: Wifi firmware version: ");
-            String fv = WiFi.firmwareVersion();
-            debugfln("Version: %s", fv.c_str());
-            debugfln("test: Wifi PASSED");
-        }
+
+        debugfln("test: Wifi firmware version: ");
+        auto fv = WiFi.firmwareVersion();
+        debugfln("Version: %s", fv);
+        debugfln("test: Wifi PASSED");
+
+        return true;
+    }
+
+    bool check() {
+        auto success = true;
+
+        success = flashMemory() && success;
+        success = radio() && success;
+        success = gps() && success;
+        success = sdCard() && success;
+        success = fuelGauge() && success;
+        success = wifi() && success;
+
+        return success;
     }
 };
 
@@ -286,18 +306,19 @@ void setup() {
 
     delay(100);
 
-    check.flashMemory();
-    check.radio();
-    check.gps();
-    check.sdCard();
-    check.fuelGauge();
-    check.wifi();
+    if (!check.check()) {
+        while (true) {
+            delay(100);
+            check.leds(true);
+            delay(100);
+            check.leds(false);
+        }
+    }
+
+    check.leds(false);
 
     while (true) {
-        delay(100);
-        check.leds(false);
-        delay(100);
-        check.leds(true);
+        delay(10);
     }
 }
 
