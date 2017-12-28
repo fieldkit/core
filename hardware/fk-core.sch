@@ -1432,17 +1432,6 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L CONN-HDR-1x19 J5
-U 1 1 564AF061
-P 4550 9650
-F 0 "J5" H 4550 10700 60  0000 C CNN
-F 1 "CONN-HDR-1x19" V 4550 9650 60  0000 C CNN
-F 2 "RocketScreamKicadLibrary:HDR_1x19_Pitch2.54mm_WithoutSilk" H 4550 8400 60  0001 C CNN
-F 3 "" H 4550 10050 60  0000 C CNN
-	1    4550 9650
-	-1   0    0    -1  
-$EndComp
-$Comp
 L MAX1704XX U6
 U 1 1 58823820
 P 20050 9500
@@ -2236,15 +2225,11 @@ Text Label 1250 9650 0    50   ~ 0
 SCK
 Text Label 1250 9750 0    50   ~ 0
 MISO
-Text Label 4150 8750 0    50   ~ 0
-RST
-Text Label 4150 9350 0    50   ~ 0
+Text Label 2000 9550 0    50   ~ 0
 D3
-Text Label 4150 10350 0    50   ~ 0
-D13
-Text Label 4150 10450 0    50   ~ 0
+Text Label 2000 9650 0    50   ~ 0
 SCL
-Text Label 4150 10550 0    50   ~ 0
+Text Label 2000 9750 0    50   ~ 0
 SDA
 Text Label 6400 9700 0    50   ~ 0
 SWDIO
@@ -2296,9 +2281,9 @@ Text Notes 2350 3200 0    50   ~ 0
 RX1
 Text Notes 2350 3100 0    50   ~ 0
 TX1
-Text Label 4150 8950 0    50   ~ 0
+Text Label 2000 9450 0    50   ~ 0
 D30
-Text Label 4150 8850 0    50   ~ 0
+Text Label 2000 9350 0    50   ~ 0
 D31
 Text Label 11100 2000 1    60   ~ 0
 PG
@@ -2314,8 +2299,6 @@ Text Notes 13400 7350 0    60   ~ 0
 16Mbit = 2Mbytes
 Text Notes 3750 6200 0    60   ~ 0
 M2.5 size
-Text Notes 4800 10250 1    60   ~ 0
-2.54 mm (0.1") breakout
 Text Notes 5700 10400 0    60   ~ 0
 1.27 mm (0.05")
 Text Notes 7500 4375 0    60   ~ 0
@@ -2865,36 +2848,6 @@ Wire Wire Line
 Wire Wire Line
 	2550 10850 2550 10750
 Wire Wire Line
-	3750 9050 4300 9050
-Wire Wire Line
-	3750 9150 4300 9150
-Wire Wire Line
-	3750 9250 4300 9250
-Wire Wire Line
-	4100 9350 4300 9350
-Wire Wire Line
-	3750 9450 4300 9450
-Wire Wire Line
-	3750 9550 4300 9550
-Wire Wire Line
-	3750 9650 4300 9650
-Wire Wire Line
-	3750 9750 4300 9750
-Wire Wire Line
-	3750 9850 4300 9850
-Wire Wire Line
-	3750 9950 4300 9950
-Wire Wire Line
-	3750 10050 4300 10050
-Wire Wire Line
-	3750 10150 4300 10150
-Wire Wire Line
-	3750 10250 4300 10250
-Wire Wire Line
-	4100 10450 4300 10450
-Wire Wire Line
-	4100 10550 4300 10550
-Wire Wire Line
 	5750 9600 5750 9700
 Wire Wire Line
 	5750 9700 5850 9700
@@ -3038,12 +2991,6 @@ Wire Wire Line
 	8200 2350 8400 2350
 Wire Wire Line
 	11350 6650 11350 6750
-Wire Wire Line
-	4300 8750 4100 8750
-Wire Wire Line
-	4300 8850 4100 8850
-Wire Wire Line
-	4300 8950 4100 8950
 Wire Notes Line
 	11800 5200 11800 8200
 Wire Notes Line
@@ -3172,8 +3119,6 @@ Wire Wire Line
 	19400 8700 19200 8700
 Wire Wire Line
 	19200 8700 19200 8800
-Wire Wire Line
-	4100 10350 4300 10350
 Wire Wire Line
 	1600 14300 1600 14200
 Wire Wire Line
@@ -3765,30 +3710,12 @@ Text Label 2000 3500 0    50   ~ 0
 RADIO_D0
 Text Label 2000 3600 0    50   ~ 0
 RADIO_CS
-Text Label 3750 9250 0    50   ~ 0
-RADIO_D0
-Text Label 3750 9550 0    50   ~ 0
-RADIO_CS
 Text Label 2000 3100 0    50   ~ 0
 GPS_RX
 Text Label 2000 3200 0    50   ~ 0
 GPS_TX
 Text Label 2000 2300 0    50   ~ 0
 GPS_RESET
-Text Label 3750 9150 0    50   ~ 0
-GPS_RX
-Text Label 3750 9050 0    50   ~ 0
-GPS_TX
-Text Label 3750 9750 0    60   ~ 0
-WIFI_CS
-Text Label 3750 10050 0    60   ~ 0
-WIFI_RST
-Text Label 3750 10150 0    60   ~ 0
-WIFI_EN
-Text Label 3750 9650 0    50   ~ 0
-USER_SW
-Text Label 3750 10250 0    50   ~ 0
-SD_CS
 Wire Notes Line
 	600  11200 5000 11200
 Wire Notes Line
@@ -3859,10 +3786,6 @@ Text Notes 13000 10400 0    180  ~ 36
 I2C PULLUP\n
 Text Notes 18500 8600 0    180  ~ 36
 LIPO GAUGE
-Text Label 3750 9950 0    60   ~ 0
-WIFI_IRQ
-Text Label 3750 9850 0    60   ~ 0
-WIFI_WAKE
 $Comp
 L GND #PWR094
 U 1 1 5A442057
@@ -3923,8 +3846,6 @@ Wire Wire Line
 	21400 9550 21400 9650
 Text Label 2000 2900 0    50   ~ 0
 FLASH_CS
-Text Label 3750 9450 0    50   ~ 0
-FLASH_CS
 $Comp
 L GND #PWR096
 U 1 1 5A4675B3
@@ -3962,4 +3883,55 @@ F 3 "" H 1450 9300 60  0000 C CNN
 $EndComp
 Wire Wire Line
 	1450 9300 1450 9450
+$Comp
+L GND #PWR098
+U 1 1 5A477A48
+P 2050 9950
+F 0 "#PWR098" H 2050 9700 50  0001 C CNN
+F 1 "GND" H 2050 9800 50  0001 C CNN
+F 2 "" H 2050 9950 60  0000 C CNN
+F 3 "" H 2050 9950 60  0000 C CNN
+	1    2050 9950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x07 J5
+U 1 1 5A477CD1
+P 2450 9550
+F 0 "J5" H 2450 9950 50  0000 C CNN
+F 1 "Conn_01x07" H 2450 9150 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x07_Pitch2.54mm" H 2450 9550 50  0001 C CNN
+F 3 "" H 2450 9550 50  0001 C CNN
+	1    2450 9550
+	1    0    0    1   
+$EndComp
+$Comp
+L GND #PWR099
+U 1 1 5A478879
+P 2050 9100
+F 0 "#PWR099" H 2050 8850 50  0001 C CNN
+F 1 "GND" H 2050 8950 50  0001 C CNN
+F 2 "" H 2050 9100 60  0000 C CNN
+F 3 "" H 2050 9100 60  0000 C CNN
+	1    2050 9100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2050 9100 2050 9250
+Wire Wire Line
+	2050 9250 2250 9250
+Wire Wire Line
+	2250 9350 2000 9350
+Wire Wire Line
+	2000 9450 2250 9450
+Wire Wire Line
+	2000 9550 2250 9550
+Wire Wire Line
+	2250 9650 2000 9650
+Wire Wire Line
+	2000 9750 2250 9750
+Wire Wire Line
+	2050 9950 2050 9850
+Wire Wire Line
+	2050 9850 2250 9850
 $EndSCHEMATC
