@@ -28,7 +28,7 @@ void debugf(const char *f, ...) {
     vsnprintf(buffer, DEBUG_LINE_MAX, f, args);
     va_end(args);
 
-    Serial5.print(buffer);
+    Serial.print(buffer);
 }
 
 void debugfln(const char *f, ...) {
@@ -43,7 +43,7 @@ void debugfln(const char *f, ...) {
     buffer[w + 1] = '\n';
     buffer[w + 2] = 0;
 
-    Serial5.print(buffer);
+    Serial.print(buffer);
 }
 
 class Check {
@@ -147,9 +147,13 @@ public:
         digitalWrite(A5, on ? HIGH : LOW);
     }
 
-    bool fuelGauge() {
-        FuelGauge gauge;
+    FuelGauge gauge;
 
+    FuelGauge &getFuelGauge() {
+        return gauge;
+    }
+
+    bool fuelGauge() {
         debugfln("test: Checking gauge...");
 
         Wire.begin();
@@ -201,7 +205,7 @@ public:
         uint32_t start = millis();
         while (millis() - start < 5 * 1000 && charactersRead < 100)  {
             while (Serial1.available()) {
-                Serial5.print((char)Serial1.read());
+                Serial.print((char)Serial1.read());
                 charactersRead++;
             }
         }
@@ -317,8 +321,15 @@ void setup() {
 
     check.leds(false);
 
+    auto gauge = check.getFuelGauge();
+
     while (true) {
-        delay(10);
+        delay(1000);
+
+        float voltage = gauge.cellVoltage();
+        float stateOfCharge = gauge.stateOfCharge();
+
+        debugfln("test: Battery: %f %f", stateOfCharge, voltage);
     }
 }
 
