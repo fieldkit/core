@@ -46,6 +46,30 @@ void debugfln(const char *f, ...) {
     Serial.print(buffer);
 }
 
+class MacEeprom {
+private:
+    uint8_t address;
+
+public:
+    MacEeprom() : address(0x50) {
+    }
+
+public:
+    bool read128bMac(uint8_t *id) {
+        Wire.beginTransmission(address);
+        Wire.write(0xf8);
+        Wire.endTransmission();
+        Wire.requestFrom(address, 8);
+
+        uint8_t index = 0;
+        while (Wire.available()){
+            id[index++] = Wire.read();
+        }
+
+        return true;
+    }
+};
+
 class Check {
 private:
     const char * id2chip(const unsigned char *id) {
@@ -159,6 +183,11 @@ public:
         Wire.begin();
 
         gauge.powerOn();
+
+        if (gauge.version() != 3) {
+            debugfln("test: Gauge FAILED");
+            return true;
+        }
 
         debugfln("test: Gauge PASSED");
 
@@ -281,6 +310,23 @@ public:
         return true;
     }
 
+    bool macEeprom() {
+        MacEeprom macEeprom;
+        uint8_t id[8] = { 0 };
+
+        auto success = macEeprom.read128bMac(id);
+        if (!success) {
+            debugfln("test: 128bMAC FAILED");
+            return false;
+        }
+
+        debugfln("test: 128bMAC: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x", id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7]);
+
+        debugfln("test: 128bMAC PASSED");
+
+        return success;
+    }
+
     bool check() {
         auto success = true;
 
@@ -290,6 +336,7 @@ public:
         success = sdCard() && success;
         success = fuelGauge() && success;
         success = wifi() && success;
+        success = macEeprom() && success;
 
         return success;
     }
@@ -324,7 +371,7 @@ void setup() {
     auto gauge = check.getFuelGauge();
 
     while (true) {
-        delay(1000);
+        delay(5000);
 
         float voltage = gauge.cellVoltage();
         float stateOfCharge = gauge.stateOfCharge();
