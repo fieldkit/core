@@ -366,7 +366,7 @@ void setup() {
         }
     }
 
-    check.leds(false);
+    check.leds(true);
 
     auto gauge = check.getFuelGauge();
 
