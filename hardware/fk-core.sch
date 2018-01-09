@@ -2219,12 +2219,6 @@ Text Label 14350 6950 0    50   ~ 0
 SCK
 Text Label 12950 6850 0    50   ~ 0
 MISO
-Text Label 1250 9550 0    50   ~ 0
-MOSI
-Text Label 1250 9650 0    50   ~ 0
-SCK
-Text Label 1250 9750 0    50   ~ 0
-MISO
 Text Label 2950 9500 0    50   ~ 0
 D3
 Text Label 2950 9600 0    50   ~ 0
@@ -2809,16 +2803,6 @@ Wire Wire Line
 	1200 2900 1200 2800
 Wire Wire Line
 	1050 3000 1050 2900
-Wire Wire Line
-	1450 9450 1250 9450
-Wire Wire Line
-	1450 9550 1250 9550
-Wire Wire Line
-	1450 9650 1250 9650
-Wire Wire Line
-	1450 9750 1250 9750
-Wire Wire Line
-	1450 9850 1250 9850
 Wire Wire Line
 	1250 10350 1550 10350
 Wire Wire Line
@@ -3846,43 +3830,6 @@ Wire Wire Line
 	21400 9550 21400 9650
 Text Label 2000 2900 0    50   ~ 0
 FLASH_CS
-$Comp
-L GND #PWR096
-U 1 1 5A4675B3
-P 1450 9900
-F 0 "#PWR096" H 1450 9650 50  0001 C CNN
-F 1 "GND" H 1450 9750 50  0001 C CNN
-F 2 "" H 1450 9900 60  0000 C CNN
-F 3 "" H 1450 9900 60  0000 C CNN
-	1    1450 9900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	1450 9850 1450 9900
-$Comp
-L Conn_01x05 J4
-U 1 1 5A468287
-P 1050 9650
-F 0 "J4" H 1050 9950 50  0000 C CNN
-F 1 "Conn_01x05" H 1050 9350 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x05_Pitch2.54mm" H 1050 9650 50  0001 C CNN
-F 3 "" H 1050 9650 50  0001 C CNN
-	1    1050 9650
-	-1   0    0    1   
-$EndComp
-$Comp
-L GND #PWR097
-U 1 1 5A468CD1
-P 1450 9300
-F 0 "#PWR097" H 1450 9050 50  0001 C CNN
-F 1 "GND" H 1450 9150 50  0001 C CNN
-F 2 "" H 1450 9300 60  0000 C CNN
-F 3 "" H 1450 9300 60  0000 C CNN
-	1    1450 9300
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	1450 9300 1450 9450
 $Comp
 L GND #PWR098
 U 1 1 5A477A48
