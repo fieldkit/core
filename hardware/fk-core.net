@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/jlewallen/fieldkit/core/hardware/fk-core.sch)
-    (date "Wed 10 Jan 2018 11:26:10 AM PST")
+    (date "Wed 10 Jan 2018 12:02:07 PM PST")
     (tool "Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -915,10 +915,11 @@
       (tstamp 5A3BF9D0))
     (comp (ref L3)
       (value 22uH)
-      (footprint Inductors_SMD:L_6.3x6.3_H3)
+      (footprint conservify:WURTH_L_6.0x6.0)
       (fields
         (field (name price) 0.1)
-        (field (name supplier1) mouser))
+        (field (name supplier1) mouser)
+        (field (name spn1) 710-74404064220))
       (libsource (lib fk-core-cache) (part INDUCTOR))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A3C4281))
@@ -967,7 +968,8 @@
       (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name price) 0.1)
-        (field (name supplier1) mouser))
+        (field (name supplier1) mouser)
+        (field (name spn1) 581-06035C101K))
       (libsource (lib fk-core-cache) (part CAPACITOR-CERAMIC))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A3D31DE))
@@ -976,7 +978,8 @@
       (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name price) 0.1)
-        (field (name supplier1) mouser))
+        (field (name supplier1) mouser)
+        (field (name spn1) 963-LMK107BBJ106KALT))
       (libsource (lib fk-core-cache) (part CAPACITOR-CERAMIC))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A3E7325))
@@ -985,7 +988,8 @@
       (footprint RocketScreamKicadLibrary:CAP-0603)
       (fields
         (field (name price) 0.1)
-        (field (name supplier1) mouser))
+        (field (name supplier1) mouser)
+        (field (name spn1) 963-LMK107BBJ106KALT))
       (libsource (lib fk-core-cache) (part CAPACITOR-CERAMIC))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A3E82DD))
@@ -994,7 +998,8 @@
       (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name price) 0.1)
-        (field (name supplier1) mouser))
+        (field (name supplier1) mouser)
+        (field (name spn1) 603-RC0603FR-0722KL))
       (libsource (lib fk-core-cache) (part RESISTOR))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A3E8434))
@@ -1003,7 +1008,8 @@
       (footprint RocketScreamKicadLibrary:RES-0603)
       (fields
         (field (name price) 0.1)
-        (field (name supplier1) mouser))
+        (field (name supplier1) mouser)
+        (field (name spn1) 603-RC0603FR-07100KL))
       (libsource (lib fk-core-cache) (part RESISTOR))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A3E8605))
@@ -1584,12 +1590,12 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
-    (library (logical fk-core-cache)
-      (uri /home/jlewallen/fieldkit/core/hardware/fk-core-cache.lib))
     (library (logical conservify)
       (uri /home/jlewallen/conservify/kicad/conservify.lib))
     (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib)))
+      (uri /usr/share/kicad/library/conn.lib))
+    (library (logical fk-core-cache)
+      (uri /home/jlewallen/fieldkit/core/hardware/fk-core-cache.lib)))
   (nets
     (net (code 1) (name "Net-(D11-Pad1)")
       (node (ref R13) (pin 2))
