@@ -2,7 +2,7 @@
 
   (general
     (links 295)
-    (no_connects 0)
+    (no_connects 94)
     (area 96.35445 87.276732 203.911002 116.128916)
     (thickness 1.6)
     (drawings 37)
@@ -497,7 +497,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -587,6 +587,11 @@
       (net 52 "Net-(J2-Pad8)"))
     (pad 9 thru_hole circle (at 3.625 1.125 90) (size 1.7 1.7) (drill oval 1.1) (layers *.Cu *.Mask F.Paste)
       (net 53 "Net-(J2-Pad9)"))
+    (model Connectors_USB.3dshapes/USB_Micro-B_Molex_47346-0001.wrl
+      (at (xyz 0 -0.05 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module conservify:MICROSD (layer B.Cu) (tedit 58EFA9B6) (tstamp 58DEEC86)
@@ -990,6 +995,11 @@
       (net 6 3V3))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 1 "Net-(D1-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:SOT-1016 (layer F.Cu) (tedit 59499AA2) (tstamp 5642D5CF)
@@ -1051,6 +1061,11 @@
       (net 50 "Net-(J1-Pad3)"))
     (pad 4 smd rect (at 3.35 2.8 90) (size 1.5 3.4) (layers F.Cu F.Paste F.Mask)
       (net 51 "Net-(J1-Pad4)"))
+    (model Connectors_JST.3dshapes/JST_PH_S2B-PH-K_02x2.00mm_Angled.wrl
+      (at (xyz -0.05 0.05 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:CAP-0603 (layer F.Cu) (tedit 5657C38B) (tstamp 5656AA16)
@@ -1077,7 +1092,7 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 36 VEXT))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1158,10 +1173,10 @@
       (net 3 GND))
     (pad 3 smd rect (at 0 -1.15 90) (size 0.65 1.05) (layers F.Cu F.Paste F.Mask)
       (net 45 "Net-(Q1-Pad3)"))
-    (model Housings_SOT-23_SOT-143_TSOT-6.3dshapes/SOT-23.wrl
+    (model TO_SOT_Packages_SMD.3dshapes/SOT-23.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 270))
     )
   )
 
@@ -1257,6 +1272,11 @@
       (net 118 /GPS_FIX))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 48 "Net-(D5-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RF-SMA-EDGE (layer B.Cu) (tedit 58B9DBEF) (tstamp 58B9D8E5)
@@ -1316,6 +1336,11 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 27 /SDA))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 58EEA5A5) (tstamp 58BAAE65)
@@ -1342,6 +1367,11 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 28 /SCL))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module logos:osh_negative_3000 (layer F.Cu) (tedit 0) (tstamp 58BDB852)
@@ -1802,7 +1832,7 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 79 "Net-(C21-Pad2)"))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -1833,6 +1863,11 @@
       (net 10 VBAT))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 47 "Net-(C20-Pad1)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module conservify:SW_SPST_WURTH_1 (layer F.Cu) (tedit 59480C9C) (tstamp 58ED110C)
@@ -1903,6 +1938,11 @@
       (net 6 3V3))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 81 "Net-(D6-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:LED-0603 (layer F.Cu) (tedit 58EEA58B) (tstamp 58ED34D0)
@@ -1932,6 +1972,11 @@
       (net 6 3V3))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 82 "Net-(D7-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 58EEA575) (tstamp 58EE64D8)
@@ -1958,6 +2003,11 @@
       (net 83 "Net-(R21-Pad1)"))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 81 "Net-(D6-Pad1)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 58EEA579) (tstamp 58EE64DD)
@@ -1984,6 +2034,11 @@
       (net 84 "Net-(R22-Pad1)"))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 82 "Net-(D7-Pad1)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 58EEA581) (tstamp 58EE8605)
@@ -2010,6 +2065,11 @@
       (net 113 /WIFI_RST))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 58EEA57D) (tstamp 58EE860A)
@@ -2036,6 +2096,11 @@
       (net 116 /WIFI_EN))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:LED-0603 (layer F.Cu) (tedit 58EFAF3A) (tstamp 58EFB082)
@@ -2065,6 +2130,11 @@
       (net 6 3V3))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 92 "Net-(D8-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:LED-0603 (layer F.Cu) (tedit 58EFAF31) (tstamp 58EFB088)
@@ -2094,6 +2164,11 @@
       (net 6 3V3))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 93 "Net-(D9-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:LED-0603 (layer F.Cu) (tedit 58EFAF44) (tstamp 58EFB08E)
@@ -2123,6 +2198,11 @@
       (net 6 3V3))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 94 "Net-(D10-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:SOT-23 (layer F.Cu) (tedit 58EFAF33) (tstamp 58EFB095)
@@ -2152,10 +2232,10 @@
       (net 3 GND))
     (pad 3 smd rect (at 0 -1.15 270) (size 0.65 1.05) (layers F.Cu F.Paste F.Mask)
       (net 95 "Net-(Q2-Pad3)"))
-    (model Housings_SOT-23_SOT-143_TSOT-6.3dshapes/SOT-23.wrl
+    (model TO_SOT_Packages_SMD.3dshapes/SOT-23W.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 270))
     )
   )
 
@@ -2186,10 +2266,10 @@
       (net 3 GND))
     (pad 3 smd rect (at 0 -1.15 270) (size 0.65 1.05) (layers F.Cu F.Paste F.Mask)
       (net 96 "Net-(Q3-Pad3)"))
-    (model Housings_SOT-23_SOT-143_TSOT-6.3dshapes/SOT-23.wrl
+    (model TO_SOT_Packages_SMD.3dshapes/SOT-23.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 270))
     )
   )
 
@@ -2220,10 +2300,10 @@
       (net 3 GND))
     (pad 3 smd rect (at 0 -1.15 270) (size 0.65 1.05) (layers F.Cu F.Paste F.Mask)
       (net 97 "Net-(Q4-Pad3)"))
-    (model Housings_SOT-23_SOT-143_TSOT-6.3dshapes/SOT-23.wrl
+    (model TO_SOT_Packages_SMD.3dshapes/SOT-23.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz 0 0 270))
     )
   )
 
@@ -2251,6 +2331,11 @@
       (net 92 "Net-(D8-Pad1)"))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 95 "Net-(Q2-Pad3)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 58EFAF42) (tstamp 58EFB0AF)
@@ -2277,6 +2362,11 @@
       (net 93 "Net-(D9-Pad1)"))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 96 "Net-(Q3-Pad3)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 58EFAF49) (tstamp 58EFB0B5)
@@ -2303,6 +2393,11 @@
       (net 94 "Net-(D10-Pad1)"))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 97 "Net-(Q4-Pad3)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module conservify:fk_negative_2500 (layer F.Cu) (tedit 0) (tstamp 593B3329)
@@ -2544,7 +2639,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2575,7 +2670,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2606,7 +2701,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2637,7 +2732,7 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 225) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 4 "Net-(C1-Pad2)"))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2668,7 +2763,7 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 45) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 5 "Net-(C2-Pad2)"))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2699,6 +2794,11 @@
       (net 14 /RESET))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 37 /RST))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 59486D8B) (tstamp 59486F32)
@@ -2725,6 +2825,11 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 37 /RST))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:CAP-0603 (layer F.Cu) (tedit 59486DEF) (tstamp 59486FD9)
@@ -2751,7 +2856,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2782,7 +2887,7 @@
       (net 8 "Net-(C5-Pad1)"))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2813,7 +2918,7 @@
       (net 7 "Net-(C4-Pad1)"))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2844,7 +2949,7 @@
       (net 35 AREF))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2875,7 +2980,7 @@
       (net 35 AREF))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -2906,6 +3011,11 @@
       (net 1 "Net-(D1-Pad1)"))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 45 "Net-(Q1-Pad3)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 594969F5) (tstamp 59496B1D)
@@ -2932,6 +3042,11 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 16 "Net-(R7-Pad2)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 594969ED) (tstamp 59496B22)
@@ -2958,6 +3073,11 @@
       (net 46 "Net-(R8-Pad1)"))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 594969F8) (tstamp 59496B27)
@@ -2984,6 +3104,11 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 17 "Net-(R9-Pad2)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 594969F1) (tstamp 59496B2C)
@@ -3010,6 +3135,11 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 18 "Net-(R10-Pad2)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:CAP-0603 (layer F.Cu) (tedit 59496AAC) (tstamp 59496C3E)
@@ -3036,7 +3166,7 @@
       (net 44 5V0))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3067,7 +3197,7 @@
       (net 10 VBAT))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3129,7 +3259,7 @@
       (net 9 VBUS))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3160,7 +3290,7 @@
       (net 9 VBUS))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3191,6 +3321,11 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 15 "Net-(R6-Pad2)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:CAP-0603 (layer F.Cu) (tedit 59496CA3) (tstamp 59496E47)
@@ -3217,7 +3352,7 @@
       (net 11 "Net-(C18-Pad1)"))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3248,7 +3383,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3279,7 +3414,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3310,6 +3445,11 @@
       (net 39 "Net-(J2-Pad4)"))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 34 /USB_ID))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 594992BA) (tstamp 59497062)
@@ -3336,6 +3476,11 @@
       (net 39 "Net-(J2-Pad4)"))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 6 3V3))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:CAP-0603 (layer F.Cu) (tedit 59496F31) (tstamp 594970D2)
@@ -3362,7 +3507,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3393,6 +3538,11 @@
       (net 42 /PG))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 98 "Net-(D2-Pad1)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 59496FD6) (tstamp 59497203)
@@ -3419,6 +3569,11 @@
       (net 43 /CHG))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 99 "Net-(D11-Pad1)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:LED-0603 (layer F.Cu) (tedit 59499F69) (tstamp 5949A000)
@@ -3448,6 +3603,11 @@
       (net 9 VBUS))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 98 "Net-(D2-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:LED-0603 (layer F.Cu) (tedit 59499F6C) (tstamp 5949A006)
@@ -3477,6 +3637,11 @@
       (net 9 VBUS))
     (pad 1 smd rect (at -0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 99 "Net-(D11-Pad1)"))
+    (model LEDs.3dshapes/LED_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:CAP-0603 (layer F.Cu) (tedit 5A38466E) (tstamp 5A0F6F07)
@@ -3503,7 +3668,7 @@
       (net 47 "Net-(C20-Pad1)"))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -3565,6 +3730,11 @@
       (net 11 "Net-(C18-Pad1)"))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 5A384671) (tstamp 5A0F6F16)
@@ -3591,6 +3761,11 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 79 "Net-(C21-Pad2)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 5A3845A3) (tstamp 5A0F6F1B)
@@ -3617,6 +3792,11 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 270) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 48 "Net-(D5-Pad1)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module conservify:HDR_2x5_Pitch1.27mm_SMD_JTAG_SWD (layer F.Cu) (tedit 581B07D3) (tstamp 5A3973E4)
@@ -3680,6 +3860,11 @@
       (net 115 /USER_SW))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 101 "Net-(R26-Pad2)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 5A397845) (tstamp 5A397A04)
@@ -3706,6 +3891,11 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 101 "Net-(R26-Pad2)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module conservify:SW_SPST_WURTH_1 (layer F.Cu) (tedit 5A397825) (tstamp 5A397A0C)
@@ -4189,7 +4379,7 @@
       (net 9 VBUS))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4220,7 +4410,7 @@
       (net 102 "Net-(C24-Pad1)"))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 107 /ISL_VIN))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4251,7 +4441,7 @@
       (net 103 "Net-(C25-Pad1)"))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4282,7 +4472,7 @@
       (net 104 "Net-(C26-Pad1)"))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 6 3V3))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4313,7 +4503,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4344,7 +4534,7 @@
       (net 6 3V3))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
-    (model RocketScreamKicadLibrary.3dshapes/CAP-0603.wrl
+    (model Capacitors_SMD.3dshapes/C_0603.wrl
       (at (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -4375,6 +4565,11 @@
       (net 105 "Net-(R28-Pad1)"))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 9 VBUS))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 5A3BEFFD) (tstamp 5A3BF132)
@@ -4401,6 +4596,11 @@
       (net 104 "Net-(C26-Pad1)"))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 6 3V3))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 5A3BF003) (tstamp 5A3BF138)
@@ -4427,6 +4627,11 @@
       (net 3 GND))
     (pad 2 smd rect (at 0.85 0 90) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 104 "Net-(C26-Pad1)"))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Housings_DFN_QFN:DFN-12-1EP_3x4mm_Pitch0.5mm (layer F.Cu) (tedit 5A3BEFC6) (tstamp 5A3BF150)
@@ -4523,6 +4728,11 @@
       (net 121 "Net-(R31-Pad1)"))
     (pad 2 smd rect (at 0.85 0 180) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 6 3V3))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module RocketScreamKicadLibrary:RES-0603 (layer F.Cu) (tedit 5A44128B) (tstamp 5A44159B)
@@ -4549,6 +4759,11 @@
       (net 122 "Net-(R32-Pad1)"))
     (pad 2 smd rect (at 0.85 0) (size 1.1 1) (layers F.Cu F.Paste F.Mask)
       (net 3 GND))
+    (model Resistors_SMD.3dshapes/R_0603.wrl
+      (at (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (module Socket_Strips:Socket_Strip_Straight_1x07_Pitch2.54mm (layer F.Cu) (tedit 5A452D3E) (tstamp 5A454CA0)
@@ -4724,11 +4939,6 @@
       (net 107 /ISL_VIN))
     (pad 2 smd rect (at 2.3368 0 270) (size 1.8 5.7) (layers F.Cu F.Paste F.Mask)
       (net 6 3V3))
-    (model ${KISYS3DMOD}/Inductors_SMD.3dshapes/L_6.3x6.3_H3.wrl
-      (at (xyz 0 0 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
   )
 
   (gr_text GND (at 136.3726 91.4146) (layer F.SilkS) (tstamp 5A467BD6)
