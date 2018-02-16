@@ -5,13 +5,13 @@
 ../fkfs
 https://github.com/nanopb/nanopb.git
 https://github.com/arduino-libraries/RTCZero.git
-https://github.com/PaulStoffregen/OneWire.git
-https://github.com/adafruit/Adafruit_ASFcore.git
-https://github.com/Conservify/AtSamd.git
-https://github.com/Conservify/Adafruit_SleepyDog.git
-https://github.com/PaulStoffregen/RadioHead.git
-https://github.com/Conservify/max1704x.git
-https://github.com/adafruit/RTClib.git
-https://github.com/PaulStoffregen/SerialFlash.git
-https://github.com/arduino-libraries/WiFi101.git
-https://github.com/mikalhart/TinyGPS.git
+https://github.com/PaulStoffregen/OneWire.git ac0ea9a7fc266b2d709532fcb1269ffe5fcbbb46
+https://github.com/adafruit/Adafruit_ASFcore.git 99f9be5465caad6e368102b5465b30aa9b07a26e
+https://github.com/Conservify/AtSamd.git 60a93e97c87e31e6095af12e0036b43755867c52
+https://github.com/Conservify/Adafruit_SleepyDog.git 571e4342f0252dd0a21a343d797c97e57956d224
+https://github.com/PaulStoffregen/RadioHead.git 3d02f09670eb3880067e989998309dcfa2aa7a68
+https://github.com/Conservify/max1704x.git c597e032ca7113cfbe899fe60839ae83ecc3ca45
+https://github.com/adafruit/RTClib.git 82d00a1a15bcf738b001e42bf26a3d1f1a15be32
+https://github.com/PaulStoffregen/SerialFlash.git 754e1d025c08d98a2dc744547885b3c5db2a914b
+https://github.com/arduino-libraries/WiFi101.git c049a73cd4898f1eafd013dc15db173fb4171645
+https://github.com/mikalhart/TinyGPS.git db4ef9c97af767e7345f5ccb277ac3bd1a2eb81f
