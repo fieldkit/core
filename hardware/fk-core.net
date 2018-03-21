@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/jlewallen/fieldkit/core/hardware/fk-core.sch)
-    (date "Wed 10 Jan 2018 12:02:07 PM PST")
+    (date "Wed 21 Mar 2018 10:21:23 AM PDT")
     (tool "Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -27,7 +27,7 @@
       (tstamp 560909E6))
     (comp (ref J2)
       (value MICRO-USB)
-      (footprint RocketScreamKicadLibrary:MICRO-USB)
+      (footprint conservify:MICRO-USB)
       (fields
         (field (name price) 0.7)
         (field (name spn1) 798-ZX62D-B-5PA830)
@@ -1040,6 +1040,9 @@
     (comp (ref J9)
       (value Conn_01x03)
       (footprint conservify:Molex_CLIK-Mate_502382-0370_1x03_P1.25mm_Vertical)
+      (fields
+        (field (name spn1) 538-502382-0370)
+        (field (name supplier1) mouser))
       (libsource (lib conn) (part Conn_01x03))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A553994))
@@ -1052,6 +1055,9 @@
     (comp (ref J4)
       (value Conn_01x05)
       (footprint conservify:Molex_CLIK-Mate_502382-0570_1x05_P1.25mm_Vertical)
+      (fields
+        (field (name spn1) 538-502382-0570)
+        (field (name supplier1) mouser))
       (libsource (lib conn) (part Conn_01x05))
       (sheetpath (names /) (tstamps /))
       (tstamp 5A56A1D0)))
@@ -1590,12 +1596,12 @@
         (pin (num 1) (name ~) (type passive))
         (pin (num 2) (name ~) (type passive)))))
   (libraries
+    (library (logical fk-core-cache)
+      (uri /home/jlewallen/fieldkit/core/hardware/fk-core-cache.lib))
     (library (logical conservify)
       (uri /home/jlewallen/conservify/kicad/conservify.lib))
     (library (logical conn)
-      (uri /usr/share/kicad/library/conn.lib))
-    (library (logical fk-core-cache)
-      (uri /home/jlewallen/fieldkit/core/hardware/fk-core-cache.lib)))
+      (uri /usr/share/kicad/library/conn.lib)))
   (nets
     (net (code 1) (name "Net-(D11-Pad1)")
       (node (ref R13) (pin 2))
