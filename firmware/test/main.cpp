@@ -255,7 +255,7 @@ public:
         debugfln("test: Checking SD...");
 
         if (!SD.begin(PIN_SD_CS)) {
-            debugfln("test: SD FAILED");
+            debugfln("test: SD FAILED (Try non-fkfs card?)");
             return false;
         }
 
