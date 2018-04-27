@@ -3,6 +3,7 @@
 ../app-protocol
 ../data-protocol
 ../fkfs
+../lwstreams
 https://github.com/nanopb/nanopb.git
 https://github.com/arduino-libraries/RTCZero.git
 https://github.com/PaulStoffregen/OneWire.git ac0ea9a7fc266b2d709532fcb1269ffe5fcbbb46
