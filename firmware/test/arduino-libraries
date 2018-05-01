@@ -4,8 +4,8 @@
 ../data-protocol
 ../fkfs
 ../lwstreams
-https://github.com/nanopb/nanopb.git
-https://github.com/arduino-libraries/RTCZero.git
+https://github.com/nanopb/nanopb.git 2b0db997d7e85b2cc4ae4ee5654e63f6426b18a1
+https://github.com/arduino-libraries/RTCZero.git 618d53117e94c85141b362c121497c0acf07ce29
 https://github.com/Conservify/RadioHead.git 1af5fd0bfa32389d1348114d93e88211f39f4f6c
 https://github.com/PaulStoffregen/OneWire.git ac0ea9a7fc266b2d709532fcb1269ffe5fcbbb46
 https://github.com/adafruit/Adafruit_ASFcore.git 99f9be5465caad6e368102b5465b30aa9b07a26e
