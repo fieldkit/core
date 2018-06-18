@@ -3522,11 +3522,6 @@ Wire Wire Line
 Wire Wire Line
 	1200 9650 1350 9650
 Wire Wire Line
-	1350 9450 1200 9450
-Wire Wire Line
-	1200 9450 1200 9350
-Connection ~ 1200 9350
-Wire Wire Line
 	1350 9250 1200 9250
 Wire Wire Line
 	1200 9250 1200 9150
@@ -4040,4 +4035,17 @@ Wire Wire Line
 Wire Wire Line
 	800  14300 1600 14300
 Connection ~ 1600 14300
+$Comp
+L VBUS #PWR?
+U 1 1 5B28222B
+P 800 9450
+F 0 "#PWR?" H 800 9300 50  0001 C CNN
+F 1 "VBUS" H 800 9590 50  0000 C CNN
+F 2 "" H 800 9450 60  0000 C CNN
+F 3 "" H 800 9450 60  0000 C CNN
+	1    800  9450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1350 9450 800  9450
 $EndSCHEMATC
