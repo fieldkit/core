@@ -3,6 +3,7 @@
 ../app-protocol
 ../data-protocol
 ../fkfs
+../phylum
 ../arduino-logging
 ../lwstreams
 https://github.com/nanopb/nanopb.git 2b0db997d7e85b2cc4ae4ee5654e63f6426b18a1
