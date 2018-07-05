@@ -1,22 +1,65 @@
 #include <cstdarg>
 
 #include <Wire.h>
+#include <wiring_private.h>
 #include <FuelGauge.h>
 #include <SPI.h>
 #include <RH_RF95.h>
 #include <SerialFlash.h>
 #include <WiFi101.h>
-#include <SD.h>
 
-const uint8_t PIN_RADIO_CS = 5;
-const uint8_t PIN_RADIO_DIO0 = 2;
-const uint8_t PIN_SD_CS = 12;
-const uint8_t PIN_FLASH_CS = 4;
-const uint8_t PIN_WINC_CS = 7;
-const uint8_t PIN_WINC_IRQ = 9;
-const uint8_t PIN_WINC_RST = 10;
-const uint8_t PIN_WINC_EN = 11;
-const uint8_t PIN_WINC_WAKE = 8;
+#include <phylum/phylum.h>
+#include <backends/arduino_sd/arduino_sd.h>
+
+#ifdef FK_CORE_GENERATION_1
+
+static constexpr uint8_t PIN_RADIO_CS = 5;
+static constexpr uint8_t PIN_RADIO_DIO0 = 2;
+static constexpr uint8_t PIN_SD_CS = 12;
+static constexpr uint8_t PIN_FLASH_CS = 4;
+static constexpr uint8_t PIN_WINC_CS = 7;
+static constexpr uint8_t PIN_WINC_IRQ = 9;
+static constexpr uint8_t PIN_WINC_RST = 10;
+static constexpr uint8_t PIN_WINC_EN = 11;
+static constexpr uint8_t PIN_WINC_WAKE = 8;
+
+Uart& gpsSerial = Serial1;
+
+void gpsSerialBegin(int32_t baud) {
+    Serial1.begin(9600);
+}
+
+#else
+
+static constexpr uint8_t PIN_RADIO_CS = 5;
+static constexpr uint8_t PIN_RADIO_DIO0 = 2;
+static constexpr uint8_t PIN_SD_CS = 12;
+static constexpr uint8_t PIN_WINC_CS = 7;
+static constexpr uint8_t PIN_WINC_IRQ = 16;
+static constexpr uint8_t PIN_WINC_RST = 15;
+static constexpr uint8_t PIN_WINC_EN = 38;
+static constexpr uint8_t PIN_WINC_WAKE = 8;
+static constexpr uint8_t PIN_PERIPH_ENABLE = (25u); // PIN_LED_RXL;
+static constexpr uint8_t PIN_FLASH_CS = (26u); // PIN_LED_TXL;
+
+Uart Serial2(&sercom1, 11, 10, SERCOM_RX_PAD_0, UART_TX_PAD_2);
+
+void SERCOM1_Handler()
+{
+    Serial2.IrqHandler();
+}
+
+void gpsSerialBegin(int32_t baud) {
+    Serial2.begin(baud);
+
+    // Order is very important here. This has to happen after the call to begin.
+    pinPeripheral(10, PIO_SERCOM);
+    pinPeripheral(11, PIO_SERCOM);
+}
+
+Uart& gpsSerial = Serial2;
+
+#endif
 
 #define DEBUG_LINE_MAX 256
 
@@ -228,13 +271,13 @@ public:
     bool gps() {
         debugfln("test: Checking gps...");
 
-        Serial1.begin(9600);
+        gpsSerialBegin(9600);
 
         uint32_t charactersRead = 0;
         uint32_t start = millis();
         while (millis() - start < 5 * 1000 && charactersRead < 100)  {
-            while (Serial1.available()) {
-                Serial.print((char)Serial1.read());
+            while (gpsSerial.available()) {
+                Serial.print((char)gpsSerial.read());
                 charactersRead++;
             }
         }
@@ -254,8 +297,15 @@ public:
     bool sdCard() {
         debugfln("test: Checking SD...");
 
-        if (!SD.begin(PIN_SD_CS)) {
-            debugfln("test: SD FAILED (Try non-fkfs card?)");
+        phylum::Geometry g;
+        phylum::ArduinoSdBackend storage;
+        if (!storage.initialize(g, PIN_SD_CS)) {
+            debugfln("test: SD FAILED (to open)");
+            return false;
+        }
+
+        if (!storage.open()) {
+            debugfln("test: SD FAILED");
             return false;
         }
 
@@ -354,6 +404,14 @@ void setup() {
     while (!Serial && millis() < 2 * 1000) {
         delay(100);
     }
+
+    #ifdef PIN_PERIPH_ENABLE
+    pinMode(PIN_PERIPH_ENABLE, OUTPUT);
+    digitalWrite(PIN_PERIPH_ENABLE, LOW);
+    delay(500);
+    digitalWrite(PIN_PERIPH_ENABLE, HIGH);
+    delay(500);
+    #endif
 
     delay(100);
 

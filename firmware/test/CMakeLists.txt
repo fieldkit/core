@@ -5,7 +5,6 @@ set(SOURCE_FILES
 set(LIBRARIES
   Wire
   SPI
-  SD
 )
 
 arduino(fk-core-test "${SOURCE_FILES}" "${LIBRARIES}")
