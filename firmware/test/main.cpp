@@ -11,25 +11,7 @@
 #include <phylum/phylum.h>
 #include <backends/arduino_sd/arduino_sd.h>
 
-#ifdef FK_CORE_GENERATION_1
-
-static constexpr uint8_t PIN_RADIO_CS = 5;
-static constexpr uint8_t PIN_RADIO_DIO0 = 2;
-static constexpr uint8_t PIN_SD_CS = 12;
-static constexpr uint8_t PIN_FLASH_CS = 4;
-static constexpr uint8_t PIN_WINC_CS = 7;
-static constexpr uint8_t PIN_WINC_IRQ = 9;
-static constexpr uint8_t PIN_WINC_RST = 10;
-static constexpr uint8_t PIN_WINC_EN = 11;
-static constexpr uint8_t PIN_WINC_WAKE = 8;
-
-Uart& gpsSerial = Serial1;
-
-void gpsSerialBegin(int32_t baud) {
-    Serial1.begin(9600);
-}
-
-#else
+#ifdef FK_CORE_GENERATION_2
 
 static constexpr uint8_t PIN_RADIO_CS = 5;
 static constexpr uint8_t PIN_RADIO_DIO0 = 2;
@@ -58,6 +40,24 @@ void gpsSerialBegin(int32_t baud) {
 }
 
 Uart& gpsSerial = Serial2;
+
+#else
+
+static constexpr uint8_t PIN_RADIO_CS = 5;
+static constexpr uint8_t PIN_RADIO_DIO0 = 2;
+static constexpr uint8_t PIN_SD_CS = 12;
+static constexpr uint8_t PIN_FLASH_CS = 4;
+static constexpr uint8_t PIN_WINC_CS = 7;
+static constexpr uint8_t PIN_WINC_IRQ = 9;
+static constexpr uint8_t PIN_WINC_RST = 10;
+static constexpr uint8_t PIN_WINC_EN = 11;
+static constexpr uint8_t PIN_WINC_WAKE = 8;
+
+Uart& gpsSerial = Serial1;
+
+void gpsSerialBegin(int32_t baud) {
+    Serial1.begin(9600);
+}
 
 #endif
 
@@ -184,7 +184,9 @@ public:
         leds(true);
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
+        #ifdef FK_ENABLE_RADIO
         pinMode(PIN_RADIO_CS, INPUT_PULLUP);
+        #endif
         pinMode(PIN_SD_CS, INPUT_PULLUP);
         pinMode(PIN_WINC_CS, INPUT_PULLUP);
 
@@ -195,12 +197,16 @@ public:
         digitalWrite(PIN_WINC_RST, LOW);
 
         pinMode(PIN_FLASH_CS, OUTPUT);
+        #ifdef FK_ENABLE_RADIO
         pinMode(PIN_RADIO_CS, OUTPUT);
+        #endif
         pinMode(PIN_SD_CS, OUTPUT);
         pinMode(PIN_WINC_CS, OUTPUT);
 
         digitalWrite(PIN_FLASH_CS, HIGH);
+        #ifdef FK_ENABLE_RADIO
         digitalWrite(PIN_RADIO_CS, HIGH);
+        #endif
         digitalWrite(PIN_SD_CS, HIGH);
         digitalWrite(PIN_WINC_CS, HIGH);
 
@@ -381,7 +387,11 @@ public:
         auto success = true;
 
         success = flashMemory() && success;
+        #ifdef FK_ENABLE_RADIO
         success = radio() && success;
+        #else
+        debugfln("test: Radio disabled");
+        #endif
         success = gps() && success;
         success = sdCard() && success;
         success = fuelGauge() && success;
@@ -405,17 +415,24 @@ void setup() {
         delay(100);
     }
 
-    #ifdef PIN_PERIPH_ENABLE
+    #ifdef FK_CORE_GENERATION_2
+    debugfln("test: Enabling peripherals!");
     pinMode(PIN_PERIPH_ENABLE, OUTPUT);
     digitalWrite(PIN_PERIPH_ENABLE, LOW);
     delay(500);
     digitalWrite(PIN_PERIPH_ENABLE, HIGH);
     delay(500);
+    #else
+    debugfln("test: Peripherals should always be on.");
     #endif
 
     delay(100);
 
     if (!check.check()) {
+        #ifdef FK_CORE_GENERATION_2
+        digitalWrite(PIN_PERIPH_ENABLE, LOW);
+        #endif
+
         while (true) {
             delay(100);
             check.leds(true);
