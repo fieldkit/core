@@ -387,6 +387,13 @@ public:
         auto success = true;
 
         success = flashMemory() && success;
+        success = fuelGauge() && success;
+        success = macEeprom() && success;
+
+        if (success) {
+            debugfln("test: Top PASSED");
+        }
+
         #ifdef FK_ENABLE_RADIO
         success = radio() && success;
         #else
@@ -394,9 +401,7 @@ public:
         #endif
         success = gps() && success;
         success = sdCard() && success;
-        success = fuelGauge() && success;
         success = wifi() && success;
-        success = macEeprom() && success;
 
         return success;
     }
