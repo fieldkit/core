@@ -1,6 +1,7 @@
-EESchema Schematic File Version 4
+EESchema Schematic File Version 2
+LIBS:conservify
 LIBS:fk-core-cache
-EELAYER 26 0
+EELAYER 25 0
 EELAYER END
 $Descr A2 23386 16535
 encoding utf-8
@@ -15,7 +16,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L conservify:MCP1700T-XXX2E U8
+L MCP1700T-XXX2E U8
 U 1 1 5A5961D3
 P 14750 2250
 F 0 "U8" H 14600 1900 60  0000 C CNN
@@ -29,7 +30,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:MICRO-USB J9
+L MICRO-USB J9
 U 1 1 5A5961D4
 P 10550 6450
 F 0 "J9" H 10550 6800 60  0000 C CNN
@@ -43,7 +44,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:S2B-PH-SM4-TB J10
+L S2B-PH-SM4-TB J10
 U 1 1 5A5961D5
 P 12650 2800
 F 0 "J10" H 12550 3000 60  0000 C CNN
@@ -57,7 +58,7 @@ F 6 "digikey" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:BQ24074 U6
+L BQ24074 U6
 U 1 1 5A5961D6
 P 11150 2600
 F 0 "U6" H 10850 3100 60  0000 C CNN
@@ -71,7 +72,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:S25FL1xxK0XM U5
+L S25FL1xxK0XM U5
 U 1 1 5A5961D7
 P 10150 9350
 F 0 "U5" H 10150 9650 60  0000 C CNN
@@ -85,7 +86,7 @@ F 6 "mouser" H -3650 2450 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:TACT-SWITCH_2Pins SW1
+L TACT-SWITCH_2Pins SW1
 U 1 1 5A5961DA
 P 3700 1650
 F 0 "SW1" H 3700 1800 60  0000 C CNN
@@ -99,7 +100,7 @@ F 6 "digikey" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR01
+L GND #PWR01
 U 1 1 5A5961DB
 P 3700 4850
 F 0 "#PWR01" H 3700 4600 50  0001 C CNN
@@ -110,7 +111,7 @@ F 3 "" H 3700 4850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CRYSTAL Y1
+L CRYSTAL Y1
 U 1 1 5A5961DC
 P 2400 1650
 F 0 "Y1" H 2400 1800 50  0000 C CNN
@@ -124,7 +125,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C4
+L CAPACITOR-CERAMIC C4
 U 1 1 5A5961DD
 P 2750 1400
 F 0 "C4" H 2775 1500 50  0000 L CNN
@@ -138,7 +139,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C3
+L CAPACITOR-CERAMIC C3
 U 1 1 5A5961DE
 P 2050 1400
 F 0 "C3" H 2075 1500 50  0000 L CNN
@@ -152,7 +153,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR02
+L GND #PWR02
 U 1 1 5A5961DF
 P 1850 1250
 F 0 "#PWR02" H 1850 1000 50  0001 C CNN
@@ -163,7 +164,7 @@ F 3 "" H 1850 1250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C5
+L CAPACITOR-CERAMIC C5
 U 1 1 5A5961E0
 P 5150 1900
 F 0 "C5" V 5000 1850 50  0000 L CNN
@@ -177,7 +178,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C8
+L CAPACITOR-CERAMIC C8
 U 1 1 5A5961E1
 P 5950 1900
 F 0 "C8" V 5800 1850 50  0000 L CNN
@@ -191,7 +192,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C9
+L CAPACITOR-CERAMIC C9
 U 1 1 5A5961E2
 P 6350 1900
 F 0 "C9" V 6200 1850 50  0000 L CNN
@@ -205,7 +206,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C6
+L CAPACITOR-CERAMIC C6
 U 1 1 5A5961E3
 P 5550 1900
 F 0 "C6" V 5400 1850 50  0000 L CNN
@@ -219,7 +220,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR03
+L GND #PWR03
 U 1 1 5A5961E4
 P 5150 2150
 F 0 "#PWR03" H 5150 1900 50  0001 C CNN
@@ -230,7 +231,7 @@ F 3 "" H 5150 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR04
+L GND #PWR04
 U 1 1 5A5961E5
 P 5550 2150
 F 0 "#PWR04" H 5550 1900 50  0001 C CNN
@@ -241,7 +242,7 @@ F 3 "" H 5550 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR05
+L GND #PWR05
 U 1 1 5A5961E6
 P 5950 2150
 F 0 "#PWR05" H 5950 1900 50  0001 C CNN
@@ -252,7 +253,7 @@ F 3 "" H 5950 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR06
+L GND #PWR06
 U 1 1 5A5961E7
 P 6350 2150
 F 0 "#PWR06" H 6350 1900 50  0001 C CNN
@@ -263,7 +264,7 @@ F 3 "" H 6350 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR07
+L 3V3 #PWR07
 U 1 1 5A5961E8
 P 5150 1550
 F 0 "#PWR07" H 5150 1400 50  0001 C CNN
@@ -274,7 +275,7 @@ F 3 "" H 5150 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR08
+L 3V3 #PWR08
 U 1 1 5A5961E9
 P 5950 1550
 F 0 "#PWR08" H 5950 1400 50  0001 C CNN
@@ -285,7 +286,7 @@ F 3 "" H 5950 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR09
+L 3V3 #PWR09
 U 1 1 5A5961EA
 P 6350 1550
 F 0 "#PWR09" H 6350 1400 50  0001 C CNN
@@ -296,7 +297,7 @@ F 3 "" H 6350 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR010
+L 3V3 #PWR010
 U 1 1 5A5961EB
 P 6350 2500
 F 0 "#PWR010" H 6350 2350 50  0001 C CNN
@@ -307,7 +308,7 @@ F 3 "" H 6350 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:INDUCTOR L1
+L INDUCTOR L1
 U 1 1 5A5961EC
 P 5950 2600
 F 0 "L1" H 5950 2550 50  0000 C CNN
@@ -321,7 +322,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C7
+L CAPACITOR-CERAMIC C7
 U 1 1 5A5961ED
 P 5550 2850
 F 0 "C7" H 5350 2850 50  0000 L CNN
@@ -335,7 +336,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR011
+L GND #PWR011
 U 1 1 5A5961EE
 P 5550 3100
 F 0 "#PWR011" H 5550 2850 50  0001 C CNN
@@ -346,7 +347,7 @@ F 3 "" H 5550 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR012
+L 3V3 #PWR012
 U 1 1 5A5961EF
 P 5400 7300
 F 0 "#PWR012" H 5400 7150 50  0001 C CNN
@@ -357,7 +358,7 @@ F 3 "" H 5400 7300 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R3
+L RESISTOR R3
 U 1 1 5A5961F0
 P 6250 7300
 F 0 "R3" V 6250 7500 60  0000 C CNN
@@ -371,7 +372,7 @@ F 6 "mouser" H 4550 550 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:MOSFET-N Q1
+L MOSFET-N Q1
 U 1 1 5A5961F1
 P 6600 7650
 F 0 "Q1" H 6850 7700 50  0000 R CNN
@@ -385,7 +386,7 @@ F 6 "mouser" H 4900 300 50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR013
+L GND #PWR013
 U 1 1 5A5961F2
 P 6600 8000
 F 0 "#PWR013" H 6600 7750 50  0001 C CNN
@@ -396,7 +397,7 @@ F 3 "" H 6600 8000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VIN #PWR014
+L VIN #PWR014
 U 1 1 5A5961F3
 P 8200 2250
 F 0 "#PWR014" H 8200 2100 50  0001 C CNN
@@ -407,7 +408,7 @@ F 3 "" H 8200 2250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR015
+L GND #PWR015
 U 1 1 5A5961F4
 P 10550 3050
 F 0 "#PWR015" H 10550 2800 50  0001 C CNN
@@ -418,7 +419,7 @@ F 3 "" H 10550 3050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBUS #PWR016
+L VBUS #PWR016
 U 1 1 5A5961F5
 P 10350 2950
 F 0 "#PWR016" H 10350 2800 50  0001 C CNN
@@ -429,7 +430,7 @@ F 3 "" H 10350 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R33
+L RESISTOR R33
 U 1 1 5A5961F6
 P 11550 1900
 F 0 "R33" H 11650 2000 60  0000 C CNN
@@ -443,7 +444,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R32
+L RESISTOR R32
 U 1 1 5A5961F7
 P 11550 1700
 F 0 "R32" H 11650 1800 60  0000 C CNN
@@ -457,7 +458,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R21
+L RESISTOR R21
 U 1 1 5A5961F8
 P 9400 3050
 F 0 "R21" H 9250 3150 60  0000 C CNN
@@ -471,7 +472,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R22
+L RESISTOR R22
 U 1 1 5A5961F9
 P 9600 3050
 F 0 "R22" H 9450 3150 60  0000 C CNN
@@ -485,7 +486,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R24
+L RESISTOR R24
 U 1 1 5A5961FA
 P 9800 3050
 F 0 "R24" H 9650 3150 60  0000 C CNN
@@ -499,7 +500,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R25
+L RESISTOR R25
 U 1 1 5A5961FB
 P 10000 3050
 F 0 "R25" H 9875 3150 60  0000 C CNN
@@ -513,7 +514,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:GND #PWR017
+L GND #PWR017
 U 1 1 5A5961FC
 P 9800 3500
 F 0 "#PWR017" H 9800 3250 50  0001 C CNN
@@ -524,7 +525,7 @@ F 3 "" H 9800 3500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C12
+L CAPACITOR-CERAMIC C12
 U 1 1 5A5961FD
 P 9100 2500
 F 0 "C12" H 9250 2500 50  0000 L CNN
@@ -538,7 +539,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR018
+L GND #PWR018
 U 1 1 5A5961FE
 P 9100 2750
 F 0 "#PWR018" H 9100 2500 50  0001 C CNN
@@ -549,7 +550,7 @@ F 3 "" H 9100 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR019
+L GND #PWR019
 U 1 1 5A5961FF
 P 11150 3400
 F 0 "#PWR019" H 11150 3150 50  0001 C CNN
@@ -560,7 +561,7 @@ F 3 "" H 11150 3400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R34
+L RESISTOR R34
 U 1 1 5A596200
 P 11750 3300
 F 0 "R34" V 11750 3150 60  0000 C CNN
@@ -574,7 +575,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR020
+L GND #PWR020
 U 1 1 5A596201
 P 11750 3650
 F 0 "#PWR020" H 11750 3400 50  0001 C CNN
@@ -585,7 +586,7 @@ F 3 "" H 11750 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C19
+L CAPACITOR-CERAMIC C19
 U 1 1 5A596202
 P 12050 3000
 F 0 "C19" H 12100 3100 50  0000 L CNN
@@ -599,7 +600,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR021
+L GND #PWR021
 U 1 1 5A596203
 P 12050 3250
 F 0 "#PWR021" H 12050 3000 50  0001 C CNN
@@ -610,7 +611,7 @@ F 3 "" H 12050 3250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C20
+L CAPACITOR-CERAMIC C20
 U 1 1 5A596204
 P 13000 2500
 F 0 "C20" H 13100 2500 50  0000 L CNN
@@ -624,7 +625,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR022
+L GND #PWR022
 U 1 1 5A596205
 P 12250 2950
 F 0 "#PWR022" H 12250 2700 50  0001 C CNN
@@ -635,7 +636,7 @@ F 3 "" H 12250 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR023
+L GND #PWR023
 U 1 1 5A596206
 P 13000 2750
 F 0 "#PWR023" H 13000 2500 50  0001 C CNN
@@ -646,7 +647,7 @@ F 3 "" H 13000 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBAT #PWR024
+L VBAT #PWR024
 U 1 1 5A596207
 P 12050 2650
 F 0 "#PWR024" H 12050 2500 50  0001 C CNN
@@ -657,7 +658,7 @@ F 3 "" H 12050 2650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBUS #PWR025
+L VBUS #PWR025
 U 1 1 5A596208
 P 13000 2150
 F 0 "#PWR025" H 13000 2000 50  0001 C CNN
@@ -668,7 +669,7 @@ F 3 "" H 13000 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C21
+L CAPACITOR-CERAMIC C21
 U 1 1 5A596209
 P 14300 2500
 F 0 "C21" H 14050 2500 50  0000 L CNN
@@ -682,7 +683,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR026
+L GND #PWR026
 U 1 1 5A59620A
 P 14300 2750
 F 0 "#PWR026" H 14300 2500 50  0001 C CNN
@@ -693,7 +694,7 @@ F 3 "" H 14300 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR027
+L GND #PWR027
 U 1 1 5A59620B
 P 14750 2800
 F 0 "#PWR027" H 14750 2550 50  0001 C CNN
@@ -704,7 +705,7 @@ F 3 "" H 14750 2800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C23
+L CAPACITOR-CERAMIC C23
 U 1 1 5A59620C
 P 15200 2500
 F 0 "C23" H 15300 2500 50  0000 L CNN
@@ -718,7 +719,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR028
+L GND #PWR028
 U 1 1 5A59620D
 P 15200 2750
 F 0 "#PWR028" H 15200 2500 50  0001 C CNN
@@ -729,7 +730,7 @@ F 3 "" H 15200 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR029
+L 3V3 #PWR029
 U 1 1 5A59620E
 P 15200 2150
 F 0 "#PWR029" H 15200 2000 50  0001 C CNN
@@ -740,7 +741,7 @@ F 3 "" H 15200 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FUSE F1
+L FUSE F1
 U 1 1 5A59620F
 P 8600 6250
 F 0 "F1" H 8600 6100 50  0000 C CNN
@@ -754,7 +755,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:INDUCTOR L2
+L INDUCTOR L2
 U 1 1 5A596210
 P 7900 6250
 F 0 "L2" H 7900 6200 50  0000 C CNN
@@ -768,7 +769,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR030
+L GND #PWR030
 U 1 1 5A596211
 P 7500 6750
 F 0 "#PWR030" H 7500 6500 50  0001 C CNN
@@ -779,7 +780,7 @@ F 3 "" H 7500 6750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:PRTR5V0U2X D8
+L PRTR5V0U2X D8
 U 1 1 5A596212
 P 9150 6750
 F 0 "D8" H 9200 7100 60  0000 C CNN
@@ -793,7 +794,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR031
+L GND #PWR031
 U 1 1 5A596213
 P 9000 7300
 F 0 "#PWR031" H 9000 7050 50  0001 C CNN
@@ -804,7 +805,7 @@ F 3 "" H 9000 7300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR032
+L GND #PWR032
 U 1 1 5A596214
 P 10050 6750
 F 0 "#PWR032" H 10050 6500 50  0001 C CNN
@@ -815,7 +816,7 @@ F 3 "" H 10050 6750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R30
+L RESISTOR R30
 U 1 1 5A596215
 P 10300 7550
 F 0 "R30" H 10300 7650 60  0000 C CNN
@@ -829,7 +830,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C18
+L CAPACITOR-CERAMIC C18
 U 1 1 5A596216
 P 11050 9200
 F 0 "C18" V 10900 9150 50  0000 L CNN
@@ -843,7 +844,7 @@ F 6 "mouser" H -3650 2450 50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C14
+L CAPACITOR-CERAMIC C14
 U 1 1 5A596219
 P 11050 7000
 F 0 "C14" H 10800 7000 50  0000 L CNN
@@ -857,7 +858,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R31
+L RESISTOR R31
 U 1 1 5A59621A
 P 11350 7000
 F 0 "R31" V 11350 7150 60  0000 C CNN
@@ -871,7 +872,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR033
+L GND #PWR033
 U 1 1 5A59621B
 P 11200 7450
 F 0 "#PWR033" H 11200 7200 50  0001 C CNN
@@ -882,7 +883,7 @@ F 3 "" H 11200 7450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R23
+L RESISTOR R23
 U 1 1 5A596225
 P 9600 7550
 F 0 "R23" H 9600 7450 60  0000 C CNN
@@ -896,7 +897,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR034
+L 3V3 #PWR034
 U 1 1 5A596226
 P 9250 7450
 F 0 "#PWR034" H 9250 7300 50  0001 C CNN
@@ -907,7 +908,7 @@ F 3 "" H 9250 7450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R8
+L RESISTOR R8
 U 1 1 5A596227
 P 4050 1300
 F 0 "R8" V 4000 1100 60  0000 C CNN
@@ -921,7 +922,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR035
+L GND #PWR035
 U 1 1 5A596228
 P 3350 1750
 F 0 "#PWR035" H 3350 1500 50  0001 C CNN
@@ -932,7 +933,7 @@ F 3 "" H 3350 1750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR036
+L 3V3 #PWR036
 U 1 1 5A596229
 P 4050 950
 F 0 "#PWR036" H 4050 800 50  0001 C CNN
@@ -943,7 +944,7 @@ F 3 "" H 4050 950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:AREF #PWR037
+L AREF #PWR037
 U 1 1 5A59622A
 P 900 2300
 F 0 "#PWR037" H 900 2150 50  0001 C CNN
@@ -954,7 +955,7 @@ F 3 "" H 900 2300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR038
+L GND #PWR038
 U 1 1 5A59622D
 P 900 2950
 F 0 "#PWR038" H 900 2700 50  0001 C CNN
@@ -965,7 +966,7 @@ F 3 "" H 900 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VEXT #PWR039
+L VEXT #PWR039
 U 1 1 5A59622E
 P 9100 2150
 F 0 "#PWR039" H 9100 2000 50  0001 C CNN
@@ -976,7 +977,7 @@ F 3 "" H 9100 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M1
+L MOUNT_HOLE M1
 U 1 1 5A59622F
 P 3500 6000
 F 0 "M1" H 3500 6150 50  0000 C CNN
@@ -987,7 +988,7 @@ F 3 "" H 3500 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M3
+L MOUNT_HOLE M3
 U 1 1 5A596230
 P 3800 6000
 F 0 "M3" H 3800 6150 50  0000 C CNN
@@ -998,7 +999,7 @@ F 3 "" H 3800 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M4
+L MOUNT_HOLE M4
 U 1 1 5A596231
 P 4100 6000
 F 0 "M4" H 4100 6150 50  0000 C CNN
@@ -1009,7 +1010,7 @@ F 3 "" H 4100 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M6
+L MOUNT_HOLE M6
 U 1 1 5A596232
 P 4400 6000
 F 0 "M6" H 4400 6150 50  0000 C CNN
@@ -1020,7 +1021,7 @@ F 3 "" H 4400 6000 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CONN-HDR-2x5 J7
+L CONN-HDR-2x5 J7
 U 1 1 5A596238
 P 6100 9900
 F 0 "J7" H 6100 10250 60  0000 C CNN
@@ -1034,7 +1035,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR040
+L 3V3 #PWR040
 U 1 1 5A596239
 P 5750 9600
 F 0 "#PWR040" H 5750 9450 50  0001 C CNN
@@ -1045,7 +1046,7 @@ F 3 "" H 5750 9600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR041
+L GND #PWR041
 U 1 1 5A59623A
 P 5750 10200
 F 0 "#PWR041" H 5750 9950 50  0001 C CNN
@@ -1056,7 +1057,7 @@ F 3 "" H 5750 10200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R9
+L RESISTOR R9
 U 1 1 5A59623B
 P 4500 1650
 F 0 "R9" H 4500 1550 60  0000 C CNN
@@ -1070,7 +1071,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C10
+L CAPACITOR-CERAMIC C10
 U 1 1 5A59623C
 P 7500 6500
 F 0 "C10" H 7650 6500 50  0000 L CNN
@@ -1084,7 +1085,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:ATSAMD21G18A-AU U2
+L ATSAMD21G18A-AU U2
 U 1 1 5A59623F
 P 3700 3250
 F 0 "U2" H 3050 4550 60  0000 C CNN
@@ -1098,7 +1099,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VUSB #PWR042
+L VUSB #PWR042
 U 1 1 5A596240
 P 10050 6150
 F 0 "#PWR042" H 10050 6000 50  0001 C CNN
@@ -1109,7 +1110,7 @@ F 3 "" H 10050 6150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:LED-SINGLE D1
+L LED-SINGLE D1
 U 1 1 5A596241
 P 5700 7300
 F 0 "D1" V 5750 7100 50  0000 C CNN
@@ -1123,7 +1124,7 @@ F 6 "mouser" H 4000 1100 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:5V0 #PWR043
+L 5V0 #PWR043
 U 1 1 5A596242
 P 8300 2050
 F 0 "#PWR043" H 8300 1900 50  0001 C CNN
@@ -1134,7 +1135,7 @@ F 3 "" H 8300 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:5V0 #PWR044
+L 5V0 #PWR044
 U 1 1 5A596243
 P 7500 6150
 F 0 "#PWR044" H 7500 6000 50  0001 C CNN
@@ -1145,7 +1146,7 @@ F 3 "" H 7500 6150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:DIODE_DUAL_Schottky D7
+L DIODE_DUAL_Schottky D7
 U 1 1 5A596245
 P 8700 2250
 F 0 "D7" H 8900 2250 50  0000 C CNN
@@ -1159,7 +1160,7 @@ F 6 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:MAX1704XX U11
+L MAX1704XX U11
 U 1 1 5A596246
 P 20050 9500
 F 0 "U11" H 20050 9300 60  0000 C CNN
@@ -1173,7 +1174,7 @@ F 6 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR045
+L GND #PWR045
 U 1 1 5A596247
 P 19150 9750
 F 0 "#PWR045" H 19150 9500 50  0001 C CNN
@@ -1184,7 +1185,7 @@ F 3 "" H 19150 9750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C27
+L CAPACITOR-CERAMIC C27
 U 1 1 5A596248
 P 18850 9550
 F 0 "C27" H 18900 9650 50  0000 L CNN
@@ -1198,7 +1199,7 @@ F 6 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR046
+L GND #PWR046
 U 1 1 5A596249
 P 18850 9750
 F 0 "#PWR046" H 18850 9500 50  0001 C CNN
@@ -1209,7 +1210,7 @@ F 3 "" H 18850 9750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R41
+L RESISTOR R41
 U 1 1 5A59624A
 P 18850 9250
 F 0 "R41" H 18725 9350 60  0000 C CNN
@@ -1223,7 +1224,7 @@ F 6 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R40
+L RESISTOR R40
 U 1 1 5A59624B
 P 18100 9350
 F 0 "R40" H 17975 9450 60  0000 C CNN
@@ -1237,7 +1238,7 @@ F 6 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBAT #PWR047
+L VBAT #PWR047
 U 1 1 5A59624C
 P 17500 9350
 F 0 "#PWR047" H 17500 9200 50  0001 C CNN
@@ -1248,7 +1249,7 @@ F 3 "" H 17500 9350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR048
+L 3V3 #PWR048
 U 1 1 5A59624D
 P 18400 9200
 F 0 "#PWR048" H 18400 9050 50  0001 C CNN
@@ -1259,7 +1260,7 @@ F 3 "" H 18400 9200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FGPMMOPA6H U10
+L FGPMMOPA6H U10
 U 1 1 5A59624E
 P 19900 6600
 F 0 "U10" H 19900 6450 60  0000 C CNN
@@ -1272,7 +1273,7 @@ F 5 "various" H 11450 -5900 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:RF-SMA-EDGE J11
+L RF-SMA-EDGE J11
 U 1 1 5A59624F
 P 20950 7600
 F 0 "J11" H 20950 7850 60  0000 C CNN
@@ -1286,7 +1287,7 @@ F 6 "rf supplier" H 11450 -5900 50  0001 C CNN "supplier1"
 	0    -1   1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR049
+L GND #PWR049
 U 1 1 5A596250
 P 21350 8000
 F 0 "#PWR049" H 21350 7750 50  0001 C CNN
@@ -1297,7 +1298,7 @@ F 3 "" H 21350 8000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR050
+L GND #PWR050
 U 1 1 5A596251
 P 17600 7100
 F 0 "#PWR050" H 17600 6850 50  0001 C CNN
@@ -1308,7 +1309,7 @@ F 3 "" H 17600 7100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R39
+L RESISTOR R39
 U 1 1 5A596253
 P 17900 6550
 F 0 "R39" H 17900 6650 60  0000 C CNN
@@ -1322,7 +1323,7 @@ F 6 "mouser" H 11450 -5900 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:LED-SINGLE D11
+L LED-SINGLE D11
 U 1 1 5A596254
 P 18400 6550
 F 0 "D11" V 18450 6350 50  0000 C CNN
@@ -1336,7 +1337,7 @@ F 6 "mouser" H 11450 -5900 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:MICROSD M7
+L MICROSD M7
 U 1 1 5A596255
 P 6400 13500
 F 0 "M7" H 6400 13500 45  0001 C CNN
@@ -1350,7 +1351,7 @@ F 6 "digikey" H -5750 700 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R35
+L RESISTOR R35
 U 1 1 5A596258
 P 12500 7650
 F 0 "R35" H 12400 7500 60  0000 C CNN
@@ -1364,7 +1365,7 @@ F 6 "mouser" H 1100 3400 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:RESISTOR R36
+L RESISTOR R36
 U 1 1 5A596259
 P 12500 8050
 F 0 "R36" H 12400 7900 60  0000 C CNN
@@ -1378,7 +1379,7 @@ F 6 "mouser" H 1100 3400 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR051
+L 3V3 #PWR051
 U 1 1 5A59625A
 P 12850 7650
 F 0 "#PWR051" H 12850 7500 50  0001 C CNN
@@ -1389,7 +1390,7 @@ F 3 "" H 12850 7650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR052
+L 3V3 #PWR052
 U 1 1 5A59625B
 P 12850 8050
 F 0 "#PWR052" H 12850 7900 50  0001 C CNN
@@ -1400,7 +1401,7 @@ F 3 "" H 12850 8050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C28
+L CAPACITOR-CERAMIC C28
 U 1 1 5A59625D
 P 19200 8950
 F 0 "C28" H 19250 9050 50  0000 L CNN
@@ -1414,7 +1415,7 @@ F 6 "mouser" H 5750 4450 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR053
+L GND #PWR053
 U 1 1 5A59625E
 P 19400 8700
 F 0 "#PWR053" H 19400 8450 50  0001 C CNN
@@ -1425,7 +1426,7 @@ F 3 "" H 19400 8700 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R2
+L RESISTOR R2
 U 1 1 5A596260
 P 1600 13950
 F 0 "R2" H 1600 14050 60  0000 C CNN
@@ -1439,7 +1440,7 @@ F 6 "mouser" H -4850 1500 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R1
+L RESISTOR R1
 U 1 1 5A596262
 P 800 13500
 F 0 "R1" H 800 13600 60  0000 C CNN
@@ -1453,7 +1454,7 @@ F 6 "mouser" H -5650 1050 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L fk-core-rescue:ATWINC1500-MR210PA U1
+L ATWINC1500-MR210PA U1
 U 1 1 5A596263
 P 3500 13700
 F 0 "U1" H 2900 15300 50  0000 L CNN
@@ -1469,7 +1470,7 @@ F 8 "digikey" H 3500 13700 60  0001 C CNN "supplier2"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R5
+L RESISTOR R5
 U 1 1 5A596266
 P 2450 14350
 F 0 "R5" H 2450 14450 60  0000 C CNN
@@ -1483,7 +1484,7 @@ F 6 "mouser" H -4000 1900 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L fk-core-rescue:LED-SINGLE D3
+L LED-SINGLE D3
 U 1 1 5A596267
 P 2450 14900
 F 0 "D3" V 2500 14700 50  0000 C CNN
@@ -1497,7 +1498,7 @@ F 6 "mouser" H 750 8700 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R4
+L RESISTOR R4
 U 1 1 5A596269
 P 2150 14350
 F 0 "R4" H 2150 14450 60  0000 C CNN
@@ -1511,7 +1512,7 @@ F 6 "mouser" H -4300 1900 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L fk-core-rescue:LED-SINGLE D2
+L LED-SINGLE D2
 U 1 1 5A59626A
 P 2150 14900
 F 0 "D2" V 2200 14700 50  0000 C CNN
@@ -1525,7 +1526,7 @@ F 6 "mouser" H 450 8700 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L fk-core-rescue:LED-SINGLE D9
+L LED-SINGLE D9
 U 1 1 5A59627C
 P 12200 1700
 F 0 "D9" V 12250 1500 50  0000 C CNN
@@ -1539,7 +1540,7 @@ F 6 "mouser" H 10500 -4500 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:LED-SINGLE D10
+L LED-SINGLE D10
 U 1 1 5A59627D
 P 12200 1900
 F 0 "D10" V 12250 1700 50  0000 C CNN
@@ -1553,7 +1554,7 @@ F 6 "mouser" H 10500 -4300 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:24AA02E64 U4
+L 24AA02E64 U4
 U 1 1 5A59627E
 P 10200 12250
 F 0 "U4" H 10200 12150 60  0000 C CNN
@@ -1766,7 +1767,7 @@ NoConn ~ 2700 14200
 NoConn ~ 2700 13900
 NoConn ~ 16650 6950
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C11
+L CAPACITOR-CERAMIC C11
 U 1 1 5A596280
 P 8700 12400
 F 0 "C11" V 8550 12350 50  0000 L CNN
@@ -1780,7 +1781,7 @@ F 6 "mouser" H -6000 5650 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:3V3 #PWR054
+L 3V3 #PWR054
 U 1 1 5A596281
 P 8950 12350
 F 0 "#PWR054" H 8950 12200 50  0001 C CNN
@@ -1791,7 +1792,7 @@ F 3 "" H 8950 12350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR055
+L GND #PWR055
 U 1 1 5A596282
 P 9250 12200
 F 0 "#PWR055" H 9250 11950 50  0001 C CNN
@@ -1802,7 +1803,7 @@ F 3 "" H 9250 12200 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR056
+L GND #PWR056
 U 1 1 5A596283
 P 8300 12400
 F 0 "#PWR056" H 8300 12150 50  0001 C CNN
@@ -1813,7 +1814,7 @@ F 3 "" H 8300 12400 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L fk-core-rescue:TACT-SWITCH_2Pins SW2
+L TACT-SWITCH_2Pins SW2
 U 1 1 5A596284
 P 6550 4200
 F 0 "SW2" H 6550 4350 60  0000 C CNN
@@ -1827,7 +1828,7 @@ F 6 "digikey" H 2850 2550 50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R17
+L RESISTOR R17
 U 1 1 5A596285
 P 6200 3850
 F 0 "R17" V 6150 3650 60  0000 C CNN
@@ -1841,7 +1842,7 @@ F 6 "mouser" H 2150 2550 50  0001 C CNN "supplier1"
 	0    -1   1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R10
+L RESISTOR R10
 U 1 1 5A596286
 P 5750 4200
 F 0 "R10" H 5750 4100 60  0000 C CNN
@@ -1855,7 +1856,7 @@ F 6 "mouser" H 1250 2550 50  0001 C CNN "supplier1"
 	1    0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR057
+L 3V3 #PWR057
 U 1 1 5A596287
 P 6200 3500
 F 0 "#PWR057" H 6200 3350 50  0001 C CNN
@@ -1866,7 +1867,7 @@ F 3 "" H 6200 3500 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR058
+L GND #PWR058
 U 1 1 5A596288
 P 7000 4250
 F 0 "#PWR058" H 7000 4000 50  0001 C CNN
@@ -1879,7 +1880,7 @@ $EndComp
 Text Label 5200 4200 0    50   ~ 0
 USER_SW
 $Comp
-L fk-core-rescue:ISL8541x U9
+L ISL8541x U9
 U 1 1 5A596289
 P 19050 2800
 F 0 "U9" H 19050 2700 60  0000 C CNN
@@ -1890,7 +1891,7 @@ F 3 "" H 19050 2800 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:INDUCTOR L5
+L INDUCTOR L5
 U 1 1 5A59628A
 P 19000 2050
 F 0 "L5" H 19000 2000 50  0000 C CNN
@@ -1904,7 +1905,7 @@ F 6 "710-74404064220" H 19000 2050 60  0001 C CNN "spn1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C26
+L CAPACITOR-CERAMIC C26
 U 1 1 5A59628B
 P 17950 2950
 F 0 "C26" V 17800 2900 50  0000 L CNN
@@ -1918,7 +1919,7 @@ F 6 "mouser" H 11600 1050 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C25
+L CAPACITOR-CERAMIC C25
 U 1 1 5A59628C
 P 16800 3100
 F 0 "C25" H 16850 3200 50  0000 L CNN
@@ -1932,7 +1933,7 @@ F 6 "mouser" H 4750 100 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R38
+L RESISTOR R38
 U 1 1 5A59628D
 P 17250 2600
 F 0 "R38" H 17250 2700 60  0000 C CNN
@@ -1946,7 +1947,7 @@ F 6 "mouser" H 10800 -9850 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C29
+L CAPACITOR-CERAMIC C29
 U 1 1 5A59628E
 P 20300 2750
 F 0 "C29" H 20400 2750 50  0000 L CNN
@@ -1960,7 +1961,7 @@ F 6 "mouser" H 5100 250 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C30
+L CAPACITOR-CERAMIC C30
 U 1 1 5A59628F
 P 21150 2750
 F 0 "C30" V 21000 2700 50  0000 L CNN
@@ -1974,7 +1975,7 @@ F 6 "581-06035C101K" V 21150 2750 60  0001 C CNN "spn1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C31
+L CAPACITOR-CERAMIC C31
 U 1 1 5A596290
 P 21950 2850
 F 0 "C31" H 22050 2850 50  0000 L CNN
@@ -1988,7 +1989,7 @@ F 6 "963-LMK107BBJ106KALT" H 21950 2850 60  0001 C CNN "spn1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C32
+L CAPACITOR-CERAMIC C32
 U 1 1 5A596291
 P 22350 2850
 F 0 "C32" H 22450 2850 50  0000 L CNN
@@ -2002,7 +2003,7 @@ F 6 "963-LMK107BBJ106KALT" H 22350 2850 60  0001 C CNN "spn1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R45
+L RESISTOR R45
 U 1 1 5A596292
 P 21500 3350
 F 0 "R45" H 21500 3450 60  0000 C CNN
@@ -2016,7 +2017,7 @@ F 6 "603-RC0603FR-0722KL" H 21500 3350 60  0001 C CNN "spn1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R44
+L RESISTOR R44
 U 1 1 5A596293
 P 21500 2500
 F 0 "R44" H 21500 2600 60  0000 C CNN
@@ -2030,7 +2031,7 @@ F 6 "603-RC0603FR-07100KL" H 21500 2500 60  0001 C CNN "spn1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:VBUS #PWR059
+L VBUS #PWR059
 U 1 1 5A596294
 P 16350 2500
 F 0 "#PWR059" H 16350 2350 50  0001 C CNN
@@ -2041,7 +2042,7 @@ F 3 "" H 16350 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR060
+L 3V3 #PWR060
 U 1 1 5A596295
 P 22350 2050
 F 0 "#PWR060" H 22350 1900 50  0001 C CNN
@@ -2052,7 +2053,7 @@ F 3 "" H 22350 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR061
+L GND #PWR061
 U 1 1 5A596296
 P 19500 3750
 F 0 "#PWR061" H 19500 3500 50  0001 C CNN
@@ -2089,7 +2090,7 @@ I2C PULLUP\n
 Text Notes 18500 8600 0    180  ~ 36
 LIPO GAUGE
 $Comp
-L conservify:GND #PWR062
+L GND #PWR062
 U 1 1 5A596297
 P 21700 9550
 F 0 "#PWR062" H 21700 9300 50  0001 C CNN
@@ -2100,7 +2101,7 @@ F 3 "" H 21700 9550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R43
+L RESISTOR R43
 U 1 1 5A596298
 P 21400 9450
 F 0 "R43" H 21275 9550 60  0000 C CNN
@@ -2113,7 +2114,7 @@ F 5 "mouser" H 8700 5150 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R42
+L RESISTOR R42
 U 1 1 5A596299
 P 21150 9550
 F 0 "R42" H 21025 9650 60  0000 C CNN
@@ -2126,7 +2127,7 @@ F 5 "mouser" H 8450 5250 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR063
+L 3V3 #PWR063
 U 1 1 5A59629A
 P 21400 9650
 F 0 "#PWR063" H 21400 9500 50  0001 C CNN
@@ -2139,7 +2140,7 @@ $EndComp
 Text Label 4550 3800 0    50   ~ 0
 FLASH_CS
 $Comp
-L conservify:GND #PWR064
+L GND #PWR064
 U 1 1 5A59629F
 P 1100 10050
 F 0 "#PWR064" H 1100 9800 50  0001 C CNN
@@ -2154,7 +2155,7 @@ D31
 Text Label 1100 10300 0    50   ~ 0
 D30
 $Comp
-L fk-core-rescue:Conn_01x05 J6
+L Conn_01x05 J6
 U 1 1 5A5962A1
 P 1550 9450
 F 0 "J6" H 1550 9750 50  0000 C CNN
@@ -2171,7 +2172,7 @@ SDA
 Text Label 1200 9550 0    50   ~ 0
 SCL
 $Comp
-L conservify:GND #PWR065
+L GND #PWR065
 U 1 1 5A5962A2
 P 1100 9350
 F 0 "#PWR065" H 1100 9100 50  0001 C CNN
@@ -2182,7 +2183,7 @@ F 3 "" H 1100 9350 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:3V3 #PWR066
+L 3V3 #PWR066
 U 1 1 5A5962A3
 P 1200 9150
 F 0 "#PWR066" H 1200 9000 50  0001 C CNN
@@ -2235,7 +2236,7 @@ Wire Wire Line
 Wire Wire Line
 	3550 4650 3550 4750
 Wire Wire Line
-	3550 4750 3650 4750
+	3550 4750 3850 4750
 Wire Wire Line
 	3650 4750 3650 4650
 Wire Wire Line
@@ -2247,25 +2248,25 @@ Wire Wire Line
 Wire Wire Line
 	2750 2100 2850 2100
 Wire Wire Line
-	2750 1550 2750 1650
+	2750 1550 2750 2100
 Wire Wire Line
 	2750 1650 2650 1650
 Wire Wire Line
 	2050 2200 2850 2200
 Wire Wire Line
-	2050 1550 2050 1650
+	2050 1550 2050 2200
 Wire Wire Line
 	2050 1650 2150 1650
 Wire Wire Line
 	2050 1250 2050 1150
 Wire Wire Line
-	1850 1150 2050 1150
+	1850 1150 2750 1150
 Wire Wire Line
 	2750 1150 2750 1250
 Wire Wire Line
 	1850 1150 1850 1250
 Wire Wire Line
-	900  2300 900  2400
+	900  2300 900  2500
 Wire Wire Line
 	4550 4000 4850 4000
 Wire Wire Line
@@ -2297,7 +2298,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 1650 5150 1650
 Wire Wire Line
-	5150 1550 5150 1650
+	5150 1550 5150 1750
 Wire Wire Line
 	4550 2300 5350 2300
 Wire Wire Line
@@ -2313,7 +2314,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 1650 5950 1650
 Wire Wire Line
-	5950 1550 5950 1650
+	5950 1550 5950 1750
 Wire Wire Line
 	4550 2500 6150 2500
 Wire Wire Line
@@ -2321,7 +2322,7 @@ Wire Wire Line
 Wire Wire Line
 	6150 1650 6350 1650
 Wire Wire Line
-	6350 1550 6350 1650
+	6350 1550 6350 1750
 Wire Wire Line
 	5150 2050 5150 2150
 Wire Wire Line
@@ -2345,7 +2346,7 @@ Wire Wire Line
 Wire Wire Line
 	6900 7650 7100 7650
 Wire Wire Line
-	9000 2250 9100 2250
+	9000 2250 10650 2250
 Wire Wire Line
 	10650 2950 10550 2950
 Wire Wire Line
@@ -2375,9 +2376,9 @@ Wire Wire Line
 Wire Wire Line
 	11750 2350 11750 2250
 Wire Wire Line
-	11650 2250 11750 2250
+	11650 2250 14400 2250
 Wire Wire Line
-	12600 1700 12600 1900
+	12600 1700 12600 2250
 Wire Wire Line
 	12400 1900 12600 1900
 Wire Wire Line
@@ -2387,11 +2388,11 @@ Wire Wire Line
 Wire Wire Line
 	10200 2750 10200 3400
 Wire Wire Line
-	10200 3400 10000 3400
+	10200 3400 9400 3400
 Wire Wire Line
 	10000 3400 10000 3300
 Wire Wire Line
-	9800 3300 9800 3400
+	9800 3300 9800 3500
 Wire Wire Line
 	9600 3400 9600 3300
 Wire Wire Line
@@ -2415,11 +2416,11 @@ Wire Wire Line
 Wire Wire Line
 	9100 2650 9100 2750
 Wire Wire Line
-	9100 2150 9100 2250
+	9100 2150 9100 2350
 Wire Wire Line
 	11100 3200 11100 3300
 Wire Wire Line
-	11100 3300 11150 3300
+	11100 3300 11200 3300
 Wire Wire Line
 	11200 3300 11200 3200
 Wire Wire Line
@@ -2429,7 +2430,7 @@ Wire Wire Line
 Wire Wire Line
 	11750 2850 11750 2750
 Wire Wire Line
-	11650 2750 11750 2750
+	11650 2750 12350 2750
 Wire Wire Line
 	11650 2950 11750 2950
 Wire Wire Line
@@ -2441,11 +2442,11 @@ Wire Wire Line
 Wire Wire Line
 	12250 2850 12250 2950
 Wire Wire Line
-	12050 2650 12050 2750
+	12050 2650 12050 2850
 Wire Wire Line
 	12050 3150 12050 3250
 Wire Wire Line
-	13000 2150 13000 2250
+	13000 2150 13000 2350
 Wire Wire Line
 	13000 2650 13000 2750
 Wire Wire Line
@@ -2457,7 +2458,7 @@ Wire Wire Line
 Wire Wire Line
 	15100 2250 15200 2250
 Wire Wire Line
-	15200 2150 15200 2250
+	15200 2150 15200 2350
 Wire Wire Line
 	15200 2650 15200 2750
 Wire Wire Line
@@ -2489,7 +2490,7 @@ Wire Wire Line
 Wire Wire Line
 	11050 7150 11050 7350
 Wire Wire Line
-	11050 7350 11200 7350
+	11050 7350 11350 7350
 Wire Wire Line
 	11350 7350 11350 7250
 Wire Wire Line
@@ -2497,9 +2498,9 @@ Wire Wire Line
 Wire Wire Line
 	10800 9300 10700 9300
 Wire Wire Line
-	10800 8900 10800 9200
+	10800 8900 10800 9300
 Wire Wire Line
-	10700 9200 10800 9200
+	10700 9200 10900 9200
 Wire Wire Line
 	10700 9400 10900 9400
 Wire Wire Line
@@ -2523,7 +2524,7 @@ Wire Wire Line
 Wire Wire Line
 	9250 7450 9250 7550
 Wire Wire Line
-	3950 1650 4050 1650
+	3950 1650 4250 1650
 Wire Wire Line
 	4050 1650 4050 1550
 Wire Wire Line
@@ -2539,7 +2540,7 @@ Wire Wire Line
 Wire Wire Line
 	5850 9800 5750 9800
 Wire Wire Line
-	5750 9800 5750 9900
+	5750 9800 5750 10200
 Wire Wire Line
 	5850 10100 5750 10100
 Wire Wire Line
@@ -2557,7 +2558,7 @@ Wire Wire Line
 Wire Wire Line
 	11050 6550 11050 6850
 Wire Wire Line
-	8900 6250 9000 6250
+	8900 6250 10150 6250
 Wire Wire Line
 	8200 6250 8300 6250
 Wire Notes Line
@@ -2641,11 +2642,11 @@ Wire Notes Line
 Wire Notes Line
 	11700 5200 7300 5200
 Wire Wire Line
-	7500 6150 7500 6250
+	7500 6150 7500 6350
 Wire Wire Line
 	7500 6250 7600 6250
 Wire Wire Line
-	9850 7550 9950 7550
+	9850 7550 10050 7550
 Wire Wire Line
 	9250 7550 9350 7550
 Wire Wire Line
@@ -2655,7 +2656,7 @@ Wire Wire Line
 Wire Wire Line
 	4550 2700 4850 2700
 Wire Wire Line
-	4550 2600 5550 2600
+	4550 2600 5650 2600
 Wire Wire Line
 	10050 6150 10050 6250
 Wire Wire Line
@@ -2699,19 +2700,19 @@ Wire Notes Line
 Wire Wire Line
 	19150 9650 19300 9650
 Wire Wire Line
-	19150 9450 19150 9550
+	19150 9450 19150 9750
 Wire Wire Line
 	19300 9550 19150 9550
 Wire Wire Line
 	19300 9450 19150 9450
 Wire Wire Line
-	18350 9350 18850 9350
+	18350 9350 19300 9350
 Wire Wire Line
 	18850 9350 18850 9400
 Wire Wire Line
 	18850 9700 18850 9750
 Wire Wire Line
-	19100 9250 19200 9250
+	19100 9250 19300 9250
 Wire Wire Line
 	17850 9350 17500 9350
 Wire Wire Line
@@ -2729,7 +2730,7 @@ Wire Wire Line
 Wire Wire Line
 	21350 7450 21300 7450
 Wire Wire Line
-	21350 6250 21350 6950
+	21350 6250 21350 8000
 Wire Wire Line
 	21350 7550 21300 7550
 Wire Wire Line
@@ -2749,7 +2750,7 @@ Wire Wire Line
 Wire Wire Line
 	18200 6250 18900 6250
 Wire Wire Line
-	17600 6350 17600 6550
+	17600 6350 17600 7100
 Wire Wire Line
 	18200 6950 18900 6950
 Wire Wire Line
@@ -2763,7 +2764,7 @@ Wire Wire Line
 Wire Wire Line
 	5700 14200 5450 14200
 Wire Wire Line
-	5450 14000 5450 14200
+	5450 14000 5450 14700
 Wire Wire Line
 	5700 14300 5450 14300
 Wire Wire Line
@@ -2795,7 +2796,9 @@ Wire Wire Line
 Wire Wire Line
 	19200 8700 19200 8800
 Wire Wire Line
-	1600 14200 1600 14300
+	1600 14200 1600 15750
+Wire Wire Line
+	1600 12900 1600 13700
 Wire Wire Line
 	800  12700 2700 12700
 Wire Wire Line
@@ -2805,13 +2808,13 @@ Wire Wire Line
 Wire Wire Line
 	4300 15200 4450 15200
 Wire Wire Line
-	4450 15200 4450 15300
+	4450 15200 4450 15750
 Wire Wire Line
 	4450 15400 4300 15400
 Wire Wire Line
 	4300 15300 4450 15300
 Wire Wire Line
-	4400 11900 4400 12300
+	4400 11900 4400 12400
 Wire Wire Line
 	4400 12400 4300 12400
 Wire Wire Line
@@ -2831,7 +2834,7 @@ Wire Wire Line
 Wire Wire Line
 	2450 14100 2700 14100
 Wire Wire Line
-	2150 15100 2150 15250
+	2150 15100 2150 15800
 Wire Wire Line
 	2150 14700 2150 14600
 Wire Wire Line
@@ -2898,11 +2901,13 @@ Connection ~ 17600 6550
 Connection ~ 5450 14300
 Connection ~ 5450 14200
 Connection ~ 19200 9250
+Connection ~ 800  12700
+Connection ~ 1600 13600
 Connection ~ 4450 15300
 Connection ~ 4400 12300
 Connection ~ 4450 15400
 Wire Wire Line
-	8850 12400 8950 12400
+	8850 12400 9500 12400
 Wire Wire Line
 	8950 12350 8950 12400
 Connection ~ 8950 12400
@@ -2911,14 +2916,14 @@ Wire Wire Line
 Wire Wire Line
 	8550 12400 8300 12400
 Wire Wire Line
-	6000 4200 6200 4200
+	6000 4200 6300 4200
 Wire Wire Line
-	6200 4100 6200 4200
+	6200 4100 6200 4550
 Connection ~ 6200 4200
 Wire Wire Line
 	6200 3500 6200 3600
 Wire Wire Line
-	6800 4200 6900 4200
+	6800 4200 7000 4200
 Wire Wire Line
 	7000 4200 7000 4250
 Wire Wire Line
@@ -2928,7 +2933,7 @@ Wire Wire Line
 Wire Wire Line
 	17700 2950 17800 2950
 Wire Wire Line
-	17700 2050 17700 2850
+	17700 2050 17700 2950
 Wire Wire Line
 	17700 2850 18200 2850
 Wire Wire Line
@@ -2937,7 +2942,7 @@ Connection ~ 17700 2850
 Wire Wire Line
 	18200 2600 17500 2600
 Wire Wire Line
-	16350 2500 16800 2500
+	16350 2500 18200 2500
 Wire Wire Line
 	16900 2500 16900 2600
 Wire Wire Line
@@ -2948,22 +2953,22 @@ Connection ~ 16900 2500
 Wire Wire Line
 	18200 3200 18150 3200
 Wire Wire Line
-	18150 3100 18150 3200
+	18150 3100 18150 3600
 Wire Wire Line
 	18200 3100 18150 3100
 Connection ~ 18150 3200
 Wire Wire Line
-	16800 3600 18150 3600
+	16800 3600 22350 3600
 Wire Wire Line
 	16800 3600 16800 3250
 Wire Wire Line
-	19300 2050 21150 2050
+	19300 2050 22350 2050
 Wire Wire Line
 	19950 2800 19800 2800
 Wire Wire Line
-	19950 2500 19950 2600
+	19950 2500 19950 2800
 Wire Wire Line
-	19800 2500 19950 2500
+	19800 2500 20300 2500
 Wire Wire Line
 	19950 2600 19800 2600
 Connection ~ 19950 2600
@@ -2979,14 +2984,14 @@ Connection ~ 18150 3600
 Wire Wire Line
 	21150 2900 21150 3050
 Wire Wire Line
-	19800 3050 21150 3050
+	19800 3050 21500 3050
 Wire Wire Line
 	19800 2900 19950 2900
 Wire Wire Line
 	19950 2900 19950 3600
 Connection ~ 19950 3600
 Wire Wire Line
-	21500 2750 21500 3050
+	21500 2750 21500 3100
 Connection ~ 21150 3050
 Connection ~ 21500 3050
 Wire Wire Line
@@ -3094,7 +3099,7 @@ Wire Wire Line
 Text Notes 13400 8650 0    180  ~ 36
 NOTES
 $Comp
-L conservify:PCF8523 U7
+L PCF8523 U7
 U 1 1 5A5E1669
 P 13400 5950
 F 0 "U7" H 13400 6250 60  0000 C CNN
@@ -3107,7 +3112,7 @@ F 5 "mouser" H 13400 5950 60  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CRYSTAL Y2
+L CRYSTAL Y2
 U 1 1 5A5E2970
 P 12450 5600
 F 0 "Y2" H 12450 5750 50  0000 C CNN
@@ -3121,7 +3126,7 @@ F 6 "mouser" H 10050 3950 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C24
+L CAPACITOR-CERAMIC C24
 U 1 1 5A5E5236
 P 15400 5950
 F 0 "C24" V 15250 5900 50  0000 L CNN
@@ -3135,7 +3140,7 @@ F 6 "mouser" H 3000 3850 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C22
+L CAPACITOR-CERAMIC C22
 U 1 1 5A5E5890
 P 14550 5950
 F 0 "C22" V 14400 5900 50  0000 L CNN
@@ -3149,7 +3154,7 @@ F 6 "mouser" H 2150 3850 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:Battery_Cell BT1
+L Battery_Cell BT1
 U 1 1 5A5E75DB
 P 12200 6550
 F 0 "BT1" H 12300 6650 50  0000 L CNN
@@ -3174,7 +3179,7 @@ Wire Wire Line
 Wire Wire Line
 	12200 6000 12850 6000
 $Comp
-L conservify:GND #PWR067
+L GND #PWR067
 U 1 1 5A5E9631
 P 12200 6800
 F 0 "#PWR067" H 12200 6550 50  0001 C CNN
@@ -3185,15 +3190,15 @@ F 3 "" H 12200 6800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	12200 6650 12200 6700
+	12200 6650 12200 6800
 Wire Wire Line
-	12200 6700 12850 6700
+	12200 6700 15400 6700
 Wire Wire Line
 	12850 6700 12850 6100
 Connection ~ 12200 6700
 NoConn ~ 13950 5900
 $Comp
-L conservify:RESISTOR R37
+L RESISTOR R37
 U 1 1 5A5EB7C2
 P 14950 5800
 F 0 "R37" H 14950 5900 60  0000 C CNN
@@ -3211,7 +3216,7 @@ SDA
 Text Label 14000 6000 0    50   ~ 0
 SCL
 Wire Wire Line
-	13950 5800 14550 5800
+	13950 5800 14700 5800
 Wire Wire Line
 	15400 5800 15200 5800
 Connection ~ 14550 5800
@@ -3266,7 +3271,7 @@ Wire Notes Line
 Wire Notes Line
 	7300 12800 7300 11450
 $Comp
-L conservify:3V3 #PWR068
+L 3V3 #PWR068
 U 1 1 5A5A35CC
 P 15400 5700
 F 0 "#PWR068" H 15400 5550 50  0001 C CNN
@@ -3279,7 +3284,7 @@ $EndComp
 Wire Wire Line
 	15400 5800 15400 5700
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C1
+L CAPACITOR-CERAMIC C1
 U 1 1 5A59CEFB
 P 900 2650
 F 0 "C1" V 750 2600 50  0000 L CNN
@@ -3295,7 +3300,7 @@ $EndComp
 Wire Wire Line
 	900  2800 900  2950
 $Comp
-L conservify:RFM9xW U3
+L RFM9xW U3
 U 1 1 5AA2375A
 P 16800 15000
 F 0 "U3" H 16450 15500 60  0000 C CNN
@@ -3308,7 +3313,7 @@ F 5 "various" H 6850 4850 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:RF-SMA-EDGE J1
+L RF-SMA-EDGE J1
 U 1 1 5AA2375B
 P 15000 14900
 F 0 "J1" H 15000 15150 60  0000 C CNN
@@ -3322,7 +3327,7 @@ F 6 "rf supplier" H 6250 4850 50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C2
+L CAPACITOR-CERAMIC C2
 U 1 1 5AA23799
 P 17150 14000
 F 0 "C2" V 16900 13950 50  0000 L CNN
@@ -3336,7 +3341,7 @@ F 6 "mouser" H 6850 4850 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C13
+L CAPACITOR-CERAMIC C13
 U 1 1 5AA2379A
 P 17150 14300
 F 0 "C13" V 17000 14250 50  0000 L CNN
@@ -3350,7 +3355,7 @@ F 6 "mouser" H 6850 4850 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR069
+L GND #PWR069
 U 1 1 5AA237A2
 P 17400 15450
 F 0 "#PWR069" H 17400 15200 50  0001 C CNN
@@ -3361,7 +3366,7 @@ F 3 "" H 17400 15450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR070
+L GND #PWR070
 U 1 1 5AA237A3
 P 16900 14400
 F 0 "#PWR070" H 16900 14150 50  0001 C CNN
@@ -3372,7 +3377,7 @@ F 3 "" H 16900 14400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR071
+L GND #PWR071
 U 1 1 5AA237A4
 P 16150 15450
 F 0 "#PWR071" H 16150 15200 50  0001 C CNN
@@ -3383,7 +3388,7 @@ F 3 "" H 16150 15450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR072
+L GND #PWR072
 U 1 1 5AA237A5
 P 15000 15450
 F 0 "#PWR072" H 15000 15200 50  0001 C CNN
@@ -3394,7 +3399,7 @@ F 3 "" H 15000 15450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR073
+L 3V3 #PWR073
 U 1 1 5AA237A6
 P 17400 13900
 F 0 "#PWR073" H 17400 13750 50  0001 C CNN
@@ -3423,7 +3428,7 @@ NoConn ~ 16250 15150
 NoConn ~ 16250 15250
 NoConn ~ 17300 14750
 $Comp
-L fk-core-rescue:Conn_01x01 J4
+L Conn_01x01 J4
 U 1 1 5AA23822
 P 15550 14350
 F 0 "J4" H 15550 14450 50  0000 C CNN
@@ -3436,13 +3441,13 @@ $EndComp
 Wire Wire Line
 	17000 14000 16900 14000
 Wire Wire Line
-	16900 14000 16900 14300
+	16900 14000 16900 14400
 Wire Wire Line
 	16900 14300 17000 14300
 Wire Wire Line
 	17400 14300 17300 14300
 Wire Wire Line
-	17400 13900 17400 14000
+	17400 13900 17400 14650
 Wire Wire Line
 	17400 14000 17300 14000
 Wire Wire Line
@@ -3450,7 +3455,7 @@ Wire Wire Line
 Wire Wire Line
 	17300 15350 17400 15350
 Wire Wire Line
-	17400 15250 17400 15350
+	17400 15250 17400 15450
 Wire Wire Line
 	17300 15250 17400 15250
 Wire Wire Line
@@ -3458,11 +3463,11 @@ Wire Wire Line
 Wire Wire Line
 	16150 15350 16150 15450
 Wire Wire Line
-	15400 14650 15550 14650
+	15400 14650 16250 14650
 Wire Wire Line
 	14850 15250 14850 15350
 Wire Wire Line
-	14850 15350 14950 15350
+	14850 15350 15150 15350
 Wire Wire Line
 	14950 15350 14950 15250
 Wire Wire Line
@@ -3502,7 +3507,7 @@ Wire Wire Line
 	15550 14550 15550 14650
 Connection ~ 15550 14650
 $Comp
-L conservify:RESISTOR R6
+L RESISTOR R6
 U 1 1 5AF0C200
 P 10600 14100
 F 0 "R6" H 10400 14050 60  0000 C CNN
@@ -3520,7 +3525,7 @@ PERIPH_EN
 Text Label 8050 15200 0    60   ~ 0
 PERIPH_3V3
 $Comp
-L fk-core-rescue:Conn_01x02 J2
+L Conn_01x02 J2
 U 1 1 5AF12C1F
 P 7800 15300
 F 0 "J2" H 7800 15400 50  0000 C CNN
@@ -3538,7 +3543,7 @@ Wire Wire Line
 	800  14300 1600 14300
 Connection ~ 1600 14300
 $Comp
-L conservify:VBUS #PWR074
+L VBUS #PWR074
 U 1 1 5B28222B
 P 800 9450
 F 0 "#PWR074" H 800 9300 50  0001 C CNN
@@ -3551,7 +3556,7 @@ $EndComp
 Wire Wire Line
 	1350 9450 800  9450
 $Comp
-L conservify:FIDUCIAL M2
+L FIDUCIAL M2
 U 1 1 5B2838D8
 P 3200 7800
 F 0 "M2" H 3200 7950 60  0000 C CNN
@@ -3562,7 +3567,7 @@ F 3 "" H 3200 7800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M5
+L FIDUCIAL M5
 U 1 1 5B283A60
 P 3650 7800
 F 0 "M5" H 3650 7950 60  0000 C CNN
@@ -3573,7 +3578,7 @@ F 3 "" H 3650 7800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M8
+L FIDUCIAL M8
 U 1 1 5B283BE0
 P 4100 7800
 F 0 "M8" H 4100 7950 60  0000 C CNN
@@ -3586,11 +3591,11 @@ $EndComp
 Text Notes 3250 7000 0    180  ~ 36
 FIDUCIALS
 Wire Wire Line
-	10950 6550 11050 6550
+	10950 6550 11350 6550
 Connection ~ 11050 6550
 NoConn ~ 10950 6650
 $Comp
-L conservify:FIDUCIAL M9
+L FIDUCIAL M9
 U 1 1 5B352D1B
 P 3200 7300
 F 0 "M9" H 3200 7450 60  0000 C CNN
@@ -3601,7 +3606,7 @@ F 3 "" H 3200 7300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M10
+L FIDUCIAL M10
 U 1 1 5B352D21
 P 3650 7300
 F 0 "M10" H 3650 7450 60  0000 C CNN
@@ -3612,7 +3617,7 @@ F 3 "" H 3650 7300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M11
+L FIDUCIAL M11
 U 1 1 5B352D27
 P 4100 7300
 F 0 "M11" H 4100 7450 60  0000 C CNN
@@ -3623,7 +3628,7 @@ F 3 "" H 4100 7300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:S2B-PH-SM4-TB J3
+L S2B-PH-SM4-TB J3
 U 1 1 5B36FB86
 P 8700 1300
 F 0 "J3" H 8600 1500 60  0000 C CNN
@@ -3637,7 +3642,7 @@ F 6 "digikey" H -3950 -1500 50  0001 C CNN "supplier1"
 	1    0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR075
+L GND #PWR075
 U 1 1 5B37042D
 P 9150 1200
 F 0 "#PWR075" H 9150 950 50  0001 C CNN
@@ -3658,7 +3663,7 @@ Wire Wire Line
 NoConn ~ 8700 1000
 NoConn ~ 8700 1600
 $Comp
-L conservify:VIN #PWR076
+L VIN #PWR076
 U 1 1 5B372483
 P 9150 1450
 F 0 "#PWR076" H 9150 1300 50  0001 C CNN
@@ -3669,7 +3674,7 @@ F 3 "" H 9150 1450 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR077
+L GND #PWR077
 U 1 1 5B3EEF35
 P 4450 15750
 F 0 "#PWR077" H 4450 15500 50  0001 C CNN
@@ -3680,7 +3685,7 @@ F 3 "" H 4450 15750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR078
+L GND #PWR078
 U 1 1 5B3EFE71
 P 5450 14700
 F 0 "#PWR078" H 5450 14450 50  0001 C CNN
@@ -3691,7 +3696,7 @@ F 3 "" H 5450 14700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR079
+L GND #PWR079
 U 1 1 5B3F3D2A
 P 9500 9800
 F 0 "#PWR079" H 9500 9550 50  0001 C CNN
@@ -3702,7 +3707,7 @@ F 3 "" H 9500 9800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR080
+L GND #PWR080
 U 1 1 5B3F3EA1
 P 11300 9800
 F 0 "#PWR080" H 11300 9550 50  0001 C CNN
@@ -3713,7 +3718,7 @@ F 3 "" H 11300 9800 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR081
+L GND #PWR081
 U 1 1 5B3F644E
 P 1600 15750
 F 0 "#PWR081" H 1600 15500 50  0001 C CNN
@@ -3724,7 +3729,7 @@ F 3 "" H 1600 15750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR082
+L 3V3 #PWR082
 U 1 1 5B3FC692
 P 8050 15350
 F 0 "#PWR082" H 8050 15200 50  0001 C CNN
@@ -3762,7 +3767,7 @@ PERIPH_3V3
 Text Label 11200 14800 0    60   ~ 0
 PERIPH_3V3
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C16
+L CAPACITOR-CERAMIC C16
 U 1 1 5B41717D
 P 11350 14200
 F 0 "C16" V 11200 14150 50  0000 L CNN
@@ -3776,7 +3781,7 @@ F 6 "mouser" H -3350 7450 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C17
+L CAPACITOR-CERAMIC C17
 U 1 1 5B41D47B
 P 11750 14200
 F 0 "C17" H 11850 14200 50  0000 L CNN
@@ -3796,7 +3801,7 @@ Wire Wire Line
 Wire Wire Line
 	11750 14350 11350 14350
 $Comp
-L conservify:GND #PWR083
+L GND #PWR083
 U 1 1 5B41EDF9
 P 11750 14550
 F 0 "#PWR083" H 11750 14300 50  0001 C CNN
@@ -3809,7 +3814,7 @@ $EndComp
 Wire Wire Line
 	11750 14350 11750 14550
 $Comp
-L conservify:3V3 #PWR084
+L 3V3 #PWR084
 U 1 1 5B420B7E
 P 10900 14100
 F 0 "#PWR084" H 10900 13950 50  0001 C CNN
@@ -3826,7 +3831,7 @@ Wire Wire Line
 Wire Wire Line
 	6500 7300 6600 7300
 $Comp
-L conservify:SK6812 U13
+L SK6812 U13
 U 1 1 5B568D4B
 P 6350 6350
 F 0 "U13" H 6350 6300 60  0000 C CNN
@@ -3837,7 +3842,7 @@ F 3 "" H 6350 6650 60  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR085
+L GND #PWR085
 U 1 1 5B569369
 P 6600 6850
 F 0 "#PWR085" H 6600 6600 50  0001 C CNN
@@ -3848,7 +3853,7 @@ F 3 "" H 6600 6850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR086
+L 3V3 #PWR086
 U 1 1 5B56953C
 P 6600 5750
 F 0 "#PWR086" H 6600 5600 50  0001 C CNN
@@ -3867,7 +3872,7 @@ Wire Wire Line
 Wire Wire Line
 	5750 6500 5900 6500
 $Comp
-L conservify:CONN_01x03_SERIAL J5
+L CONN_01x03_SERIAL J5
 U 1 1 5B56F81E
 P 1550 10200
 F 0 "J5" H 1550 10400 50  0000 C CNN
@@ -3878,7 +3883,7 @@ F 3 "" H 1550 10200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_01x02 J8
+L CONN_01x02 J8
 U 1 1 5B572177
 P 6600 4750
 F 0 "J8" H 6600 4850 50  0000 C CNN
@@ -3898,7 +3903,7 @@ Connection ~ 6900 4200
 Text Label 8250 14150 0    60   ~ 0
 GPS_EN
 $Comp
-L conservify:RESISTOR R7
+L RESISTOR R7
 U 1 1 5B56D4CE
 P 10600 14400
 F 0 "R7" H 10400 14350 60  0000 C CNN
@@ -3912,7 +3917,7 @@ F 6 "mouser" H -1150 11100 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR087
+L 3V3 #PWR087
 U 1 1 5B57030B
 P 10900 14400
 F 0 "#PWR087" H 10900 14250 50  0001 C CNN
@@ -3931,14 +3936,14 @@ Wire Wire Line
 Wire Wire Line
 	10200 14400 10350 14400
 Wire Wire Line
-	10200 14000 11350 14000
+	10200 14000 11750 14000
 Connection ~ 11350 14000
 Wire Wire Line
 	10200 14300 11150 14300
 Wire Wire Line
 	11150 14300 11150 14800
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C33
+L CAPACITOR-CERAMIC C33
 U 1 1 5B5738BD
 P 11350 15000
 F 0 "C33" V 11200 14950 50  0000 L CNN
@@ -3952,7 +3957,7 @@ F 6 "mouser" H -3350 8250 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C34
+L CAPACITOR-CERAMIC C34
 U 1 1 5B5738C6
 P 11750 15000
 F 0 "C34" H 11850 15000 50  0000 L CNN
@@ -3972,7 +3977,7 @@ Wire Wire Line
 Wire Wire Line
 	11750 15150 11350 15150
 $Comp
-L conservify:GND #PWR088
+L GND #PWR088
 U 1 1 5B5738CF
 P 11750 15350
 F 0 "#PWR088" H 11750 15100 50  0001 C CNN
@@ -3985,7 +3990,7 @@ $EndComp
 Wire Wire Line
 	11750 15150 11750 15350
 Wire Wire Line
-	11150 14800 11350 14800
+	11150 14800 11750 14800
 Connection ~ 11350 14800
 Text Label 11200 14000 0    60   ~ 0
 GPS_3V3
@@ -3994,7 +3999,7 @@ Wire Wire Line
 Wire Wire Line
 	8800 14250 8250 14250
 $Comp
-L conservify:GND #PWR089
+L GND #PWR089
 U 1 1 5B57926E
 P 8050 14800
 F 0 "#PWR089" H 8050 14550 50  0001 C CNN
@@ -4005,11 +4010,11 @@ F 3 "" H 8050 14800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7950 14650 8050 14650
+	7950 14650 8800 14650
 Wire Wire Line
 	8050 14650 8050 14800
 $Comp
-L conservify:3V3 #PWR090
+L 3V3 #PWR090
 U 1 1 5B57A74D
 P 7750 14000
 F 0 "#PWR090" H 7750 13850 50  0001 C CNN
@@ -4020,9 +4025,9 @@ F 3 "" H 7750 14000 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	7750 14000 7950 14000
+	7750 14000 8800 14000
 $Comp
-L fk-core-rescue:CAPACITOR-CERAMIC C15
+L CAPACITOR-CERAMIC C15
 U 1 1 5B57B6B6
 P 7950 14300
 F 0 "C15" V 7800 14250 50  0000 L CNN
@@ -4042,7 +4047,7 @@ Wire Wire Line
 	7950 14450 7950 14650
 Connection ~ 8050 14650
 $Comp
-L fk-core-rescue:Conn_01x02 J12
+L Conn_01x02 J12
 U 1 1 5B57CC94
 P 8850 15300
 F 0 "J12" H 8850 15400 50  0000 C CNN
@@ -4053,7 +4058,7 @@ F 3 "" H 8850 15300 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR091
+L 3V3 #PWR091
 U 1 1 5B57CC9A
 P 9100 15350
 F 0 "#PWR091" H 9100 15200 50  0001 C CNN
@@ -4086,7 +4091,7 @@ GPS_3V3
 Text Label 2150 2600 0    60   ~ 0
 GPS_EN
 $Comp
-L conservify:TPS2052B U12
+L TPS2052B U12
 U 1 1 5B56CC9D
 P 9500 14350
 F 0 "U12" H 9100 13900 60  0000 C CNN
@@ -4096,196 +4101,4 @@ F 3 "" H 9500 14550 60  0001 C CNN
 	1    9500 14350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3650 4750 3700 4750
-Wire Wire Line
-	3750 4750 3850 4750
-Wire Wire Line
-	3700 4750 3750 4750
-Wire Wire Line
-	2050 1650 2050 2200
-Wire Wire Line
-	2750 1650 2750 2100
-Wire Wire Line
-	2050 1150 2750 1150
-Wire Wire Line
-	5150 1650 5150 1750
-Wire Wire Line
-	5950 1650 5950 1750
-Wire Wire Line
-	6350 1650 6350 1750
-Wire Wire Line
-	5550 2600 5650 2600
-Wire Wire Line
-	11750 2250 12600 2250
-Wire Wire Line
-	12600 1900 12600 2250
-Wire Wire Line
-	10000 3400 9800 3400
-Wire Wire Line
-	9800 3400 9800 3500
-Wire Wire Line
-	9800 3400 9600 3400
-Wire Wire Line
-	9600 3400 9400 3400
-Wire Wire Line
-	9100 2250 10650 2250
-Wire Wire Line
-	9100 2250 9100 2350
-Wire Wire Line
-	11150 3300 11200 3300
-Wire Wire Line
-	11750 2750 12050 2750
-Wire Wire Line
-	12050 2750 12050 2850
-Wire Wire Line
-	12050 2750 12350 2750
-Wire Wire Line
-	12600 2250 13000 2250
-Wire Wire Line
-	13000 2250 13000 2350
-Wire Wire Line
-	13000 2250 14300 2250
-Wire Wire Line
-	14300 2250 14400 2250
-Wire Wire Line
-	15200 2250 15200 2350
-Wire Wire Line
-	9000 6250 10050 6250
-Wire Wire Line
-	11200 7350 11350 7350
-Wire Wire Line
-	10800 9200 10800 9300
-Wire Wire Line
-	10800 9200 10900 9200
-Wire Wire Line
-	4050 1650 4250 1650
-Wire Wire Line
-	900  2400 900  2500
-Wire Wire Line
-	5750 10100 5750 10200
-Wire Wire Line
-	5750 9900 5750 10100
-Wire Wire Line
-	7500 6250 7500 6350
-Wire Wire Line
-	9950 7550 10050 7550
-Wire Wire Line
-	10050 6250 10150 6250
-Wire Wire Line
-	19150 9650 19150 9750
-Wire Wire Line
-	19150 9550 19150 9650
-Wire Wire Line
-	18850 9350 19300 9350
-Wire Wire Line
-	21350 7550 21350 7650
-Wire Wire Line
-	21350 7650 21350 7750
-Wire Wire Line
-	21350 7450 21350 7550
-Wire Wire Line
-	21350 6950 21350 7450
-Wire Wire Line
-	21350 7750 21350 8000
-Wire Wire Line
-	17600 6850 17600 7100
-Wire Wire Line
-	17600 6550 17600 6850
-Wire Wire Line
-	5450 14300 5450 14700
-Wire Wire Line
-	5450 14200 5450 14300
-Wire Wire Line
-	19200 9250 19300 9250
-Wire Wire Line
-	4450 15300 4450 15400
-Wire Wire Line
-	4400 12300 4400 12400
-Wire Wire Line
-	4450 15400 4450 15750
-Wire Wire Line
-	8950 12400 9500 12400
-Wire Wire Line
-	6200 4200 6300 4200
-Wire Wire Line
-	6200 4200 6200 4550
-Wire Wire Line
-	17700 2850 17700 2950
-Wire Wire Line
-	16900 2500 18200 2500
-Wire Wire Line
-	18150 3200 18150 3600
-Wire Wire Line
-	19950 2600 19950 2700
-Wire Wire Line
-	19950 2700 19950 2800
-Wire Wire Line
-	19950 2500 20300 2500
-Wire Wire Line
-	18150 3600 19500 3600
-Wire Wire Line
-	19950 3600 20300 3600
-Wire Wire Line
-	21150 3050 21500 3050
-Wire Wire Line
-	21500 3050 21500 3100
-Wire Wire Line
-	21500 2050 21950 2050
-Wire Wire Line
-	20300 3600 21500 3600
-Wire Wire Line
-	21950 2050 22350 2050
-Wire Wire Line
-	21500 3600 21950 3600
-Wire Wire Line
-	21950 3600 22350 3600
-Wire Wire Line
-	16800 2500 16900 2500
-Wire Wire Line
-	19500 3600 19950 3600
-Wire Wire Line
-	21150 2050 21500 2050
-Wire Wire Line
-	12200 6700 12200 6800
-Wire Wire Line
-	14550 5800 14700 5800
-Wire Wire Line
-	12850 6700 14550 6700
-Wire Wire Line
-	14550 6700 15400 6700
-Wire Wire Line
-	17400 14300 17400 14650
-Wire Wire Line
-	16900 14300 16900 14400
-Wire Wire Line
-	17400 15350 17400 15450
-Wire Wire Line
-	14950 15350 15000 15350
-Wire Wire Line
-	15050 15350 15150 15350
-Wire Wire Line
-	15000 15350 15050 15350
-Wire Wire Line
-	17400 14000 17400 14300
-Wire Wire Line
-	15550 14650 16250 14650
-Wire Wire Line
-	1600 14300 1600 15750
-Wire Wire Line
-	11050 6550 11350 6550
-Wire Wire Line
-	2150 15250 2150 15800
-Wire Wire Line
-	6900 4200 7000 4200
-Wire Wire Line
-	11350 14000 11750 14000
-Wire Wire Line
-	11350 14800 11750 14800
-Wire Wire Line
-	7950 14000 8800 14000
-Wire Wire Line
-	8050 14650 8800 14650
-Wire Wire Line
-	1600 12900 1600 13700
 $EndSCHEMATC
