@@ -5,7 +5,7 @@
     (drawings 28)
     (tracks 1514)
     (zones 0)
-    (modules 124)
+    (modules 125)
     (nets 139)
   )
 
@@ -41,7 +41,7 @@
   )
 
   (setup
-    (last_trace_width 0.381)
+    (last_trace_width 0.254)
     (user_trace_width 0.2032)
     (user_trace_width 0.254)
     (user_trace_width 0.381)
@@ -5113,6 +5113,17 @@
       (scale (xyz 0.3937 0.3937 0.3937))
       (rotate (xyz 0 0 0))
     )
+  )
+
+  (module conservify:PCB-LABEL-10x5 (layer B.Cu) (tedit 5B5F86C4) (tstamp 5B5FCAB0)
+    (at 131.7498 141.2367)
+    (fp_text reference REF** (at 0 -0.85) (layer B.SilkS) hide
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    )
+    (fp_text value PCB-LABEL-10x5 (at 0 0.5) (layer B.Fab)
+      (effects (font (size 1 1) (thickness 0.15)) (justify mirror))
+    )
+    (fp_poly (pts (xy -10 5) (xy 10 5) (xy 10 0) (xy -10 0)) (layer B.SilkS) (width 0.15))
   )
 
   (gr_text PERIPH_3V3 (at 115.2271 143.9672 270) (layer B.SilkS) (tstamp 5B5F9E58)
