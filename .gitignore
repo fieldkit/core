@@ -8,3 +8,4 @@
 gitdeps
 log.txt
 build
+dependencies.cmake
