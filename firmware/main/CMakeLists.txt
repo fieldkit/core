@@ -1,3 +1,5 @@
+include(ArduinoMinimal)
+
 set(SOURCE_FILES main.cpp)
 set(LIBRARIES Wire)
 

@@ -1,3 +1,5 @@
+include(ArduinoMinimal)
+
 option(FK_CORE_GENERATION_2 "Enable Generation 2 Core hardware profile. (see harware.h)")
 if(FK_CORE_GENERATION_2)
   add_definitions(-DFK_CORE_GENERATION_2)
