@@ -23,6 +23,7 @@ static constexpr uint8_t PIN_WINC_RST = 15;
 static constexpr uint8_t PIN_WINC_EN = 38;
 static constexpr uint8_t PIN_WINC_WAKE = 8;
 static constexpr uint8_t PIN_PERIPH_ENABLE = (25u); // PIN_LED_RXL;
+static constexpr uint8_t PIN_GPS_ENABLE = A4;
 static constexpr uint8_t PIN_FLASH_CS = (26u); // PIN_LED_TXL;
 
 Uart Serial2(&sercom1, 11, 10, SERCOM_RX_PAD_0, UART_TX_PAD_2);
@@ -423,10 +424,13 @@ void setup() {
     #ifdef FK_CORE_GENERATION_2
     debugfln("test: Enabling peripherals!");
     pinMode(PIN_PERIPH_ENABLE, OUTPUT);
+    pinMode(PIN_GPS_ENABLE, OUTPUT);
     digitalWrite(PIN_PERIPH_ENABLE, LOW);
+    digitalWrite(PIN_GPS_ENABLE, LOW);
     digitalWrite(A4, LOW);
     delay(500);
     digitalWrite(PIN_PERIPH_ENABLE, HIGH);
+    digitalWrite(PIN_GPS_ENABLE, HIGH);
     digitalWrite(A4, HIGH);
     delay(500);
     #else
@@ -437,7 +441,8 @@ void setup() {
 
     if (!check.check()) {
         #ifdef FK_CORE_GENERATION_2
-        // digitalWrite(PIN_PERIPH_ENABLE, LOW);
+        digitalWrite(PIN_PERIPH_ENABLE, LOW);
+        digitalWrite(PIN_GPS_ENABLE, LOW);
         #endif
 
         while (true) {
