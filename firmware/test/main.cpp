@@ -424,8 +424,10 @@ void setup() {
     debugfln("test: Enabling peripherals!");
     pinMode(PIN_PERIPH_ENABLE, OUTPUT);
     digitalWrite(PIN_PERIPH_ENABLE, LOW);
+    digitalWrite(A4, LOW);
     delay(500);
     digitalWrite(PIN_PERIPH_ENABLE, HIGH);
+    digitalWrite(A4, HIGH);
     delay(500);
     #else
     debugfln("test: Peripherals should always be on.");
@@ -435,7 +437,7 @@ void setup() {
 
     if (!check.check()) {
         #ifdef FK_CORE_GENERATION_2
-        digitalWrite(PIN_PERIPH_ENABLE, LOW);
+        // digitalWrite(PIN_PERIPH_ENABLE, LOW);
         #endif
 
         while (true) {
