@@ -1,4 +1,4 @@
-../firmware-common/src
+../firmware-common
 ../module-protocol
 ../app-protocol
 ../data-protocol
@@ -19,3 +19,4 @@ https://github.com/adafruit/RTClib.git 82d00a1a15bcf738b001e42bf26a3d1f1a15be32
 https://github.com/PaulStoffregen/SerialFlash.git a3508c30be8d8a3c705572d0bfc8d048adcd29ff
 https://github.com/Conservify/WiFi101.git 3d1280655ef8e663a909d5d6f27e596bc171125f
 https://github.com/mikalhart/TinyGPS.git db4ef9c97af767e7345f5ccb277ac3bd1a2eb81f
+https://github.com/adafruit/Adafruit_NeoPixel.git

@@ -7,6 +7,7 @@
 #include <RH_RF95.h>
 #include <SerialFlash.h>
 #include <WiFi101.h>
+#include <Adafruit_NeoPixel.h>
 
 #include <phylum/phylum.h>
 #include <backends/arduino_sd/arduino_sd.h>
@@ -177,11 +178,13 @@ private:
 public:
     void setup() {
         pinMode(13, OUTPUT);
-        pinMode(A3, OUTPUT);
-        pinMode(A4, OUTPUT);
-        pinMode(A5, OUTPUT);
 
         leds(true);
+
+        Adafruit_NeoPixel pixels(1, A3, NEO_GRB + NEO_KHZ400);
+        pixels.begin();
+        pixels.setPixelColor(0, pixels.Color(0,150,0));
+        pixels.show();
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
         #ifdef FK_ENABLE_RADIO
@@ -215,9 +218,6 @@ public:
 
     void leds(bool on) {
         digitalWrite(13, on ? HIGH : LOW);
-        digitalWrite(A3, on ? HIGH : LOW);
-        digitalWrite(A4, on ? HIGH : LOW);
-        digitalWrite(A5, on ? HIGH : LOW);
     }
 
     FuelGauge gauge;
