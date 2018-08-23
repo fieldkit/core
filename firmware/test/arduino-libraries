@@ -2,7 +2,6 @@
 ../module-protocol
 ../app-protocol
 ../data-protocol
-../fkfs
 ../phylum
 ../arduino-logging
 ../lwstreams
