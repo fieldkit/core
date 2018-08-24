@@ -10,8 +10,8 @@ all: $(BUILD) gitdeps
 	cd $(BUILD) && make
 
 gitdeps:
-	simple-deps --config firmware/main/arduino-libraries
-	simple-deps --config firmware/test/arduino-libraries
+	simple-deps --config firmware/main/dependencies.sd
+	simple-deps --config firmware/test/dependencies.sd
 
 clean:
 	rm -rf $(BUILD)
