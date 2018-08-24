@@ -3580,7 +3580,7 @@ $EndComp
 Text Label 2000 2500 0    50   ~ 0
 A3
 Text Label 2000 2600 0    50   ~ 0
-A4
+A4_GPS_EN
 Text Label 2000 3300 0    50   ~ 0
 MISO
 Text Label 2000 4300 0    50   ~ 0
@@ -3613,7 +3613,7 @@ Text Label 10700 9500 0    50   ~ 0
 MOSI
 Text Label 10700 9400 0    50   ~ 0
 SCK
-Text Label 9300 9300 0    50   ~ 0
+Text Label 9000 9300 0    50   ~ 0
 MISO
 Text Label 6400 9700 0    50   ~ 0
 SWDIO
@@ -3623,8 +3623,8 @@ Text Label 6400 10100 0    50   ~ 0
 RST
 Text Label 4100 1650 0    50   ~ 0
 RST
-Text Label 9300 9200 0    50   ~ 0
-FLASH_CS
+Text Label 9000 9200 0    50   ~ 0
+D26_FLASH_CS
 Text Notes 3250 5550 0    180  ~ 36
 MOUNTING 
 Text Notes 5400 8650 0    180  ~ 36
@@ -3703,48 +3703,48 @@ Text Notes 18200 7050 0    50   ~ 0
 TX1
 Text Notes 18200 6950 0    50   ~ 0
 RX1
-Text Label 5450 13300 0    50   ~ 0
+Text Label 5250 13300 0    50   ~ 0
 MOSI
-Text Label 5450 13200 0    50   ~ 0
+Text Label 5250 13200 0    50   ~ 0
 MISO
-Text Label 5450 13400 0    50   ~ 0
+Text Label 5250 13400 0    50   ~ 0
 SCK
-Text Label 5450 13500 0    50   ~ 0
-SD_CS
+Text Label 5250 13500 0    50   ~ 0
+D12_SD_CS
 Text Label 12050 7650 0    50   ~ 0
 SDA
 Text Label 12050 8050 0    50   ~ 0
 SCL
 Text Label 2000 4000 0    50   ~ 0
-SD_CS
+D12_SD_CS
 Text Label 2000 3800 0    50   ~ 0
 D13
-Text Label 2150 12900 0    60   ~ 0
-WIFI_EN
-Text Label 2150 12700 0    60   ~ 0
-WIFI_RST
-Text Label 2150 13100 0    60   ~ 0
+Text Label 2050 12900 0    60   ~ 0
+D2_WIFI_EN
+Text Label 2050 12700 0    60   ~ 0
+A1_WIFI_RST
+Text Label 2050 13100 0    60   ~ 0
 SCK
 Text Label 4400 13400 0    60   ~ 0
 MISO
-Text Label 2150 13300 0    60   ~ 0
-WIFI_CS
-Text Label 2150 13400 0    60   ~ 0
+Text Label 2050 13300 0    60   ~ 0
+D7_WIFI_CS
+Text Label 2050 13400 0    60   ~ 0
 MOSI
 Text Label 4400 13000 0    60   ~ 0
-WIFI_IRQ
-Text Label 2150 12800 0    60   ~ 0
-WIFI_WAKE
+A2_WIFI_IRQ
+Text Label 2050 12800 0    60   ~ 0
+D8_WIFI_WAKE
 Text Label 2000 2700 0    50   ~ 0
-WIFI_WAKE
+D8_WIFI_WAKE
 Text Label 4550 3100 0    50   ~ 0
-WIFI_IRQ
+A2_WIFI_IRQ
 Text Label 4550 3200 0    50   ~ 0
-WIFI_RST
+A1_WIFI_RST
 Text Label 2000 3400 0    50   ~ 0
-WIFI_EN
+D2_WIFI_EN
 Text Label 2000 4200 0    50   ~ 0
-WIFI_CS
+D7_WIFI_CS
 Text Notes 5200 5550 0    180  ~ 36
 LEDS
 Text Label 9300 12300 0    50   ~ 0
@@ -3756,13 +3756,13 @@ SDA
 Text Label 9300 12100 0    50   ~ 0
 SCL
 Text Label 5200 4200 0    50   ~ 0
-USER_SW
+D6_USER_SW
 Text Label 2000 4100 0    50   ~ 0
-USER_SW
+D6_USER_SW
 Text Label 2000 3500 0    50   ~ 0
-RADIO_D0
+D2_RADIO_D0
 Text Label 2000 3600 0    50   ~ 0
-RADIO_CS
+D5_RADIO_CS
 Text Label 2000 3900 0    50   ~ 0
 GPS_RX
 Text Label 2000 3700 0    50   ~ 0
@@ -3782,7 +3782,7 @@ I2C PULLUP\n
 Text Notes 18500 8600 0    180  ~ 36
 LIPO GAUGE
 Text Label 4550 3800 0    50   ~ 0
-FLASH_CS
+D26_FLASH_CS
 Text Label 1100 10200 0    50   ~ 0
 D31
 Text Label 1100 10300 0    50   ~ 0
@@ -3817,10 +3817,10 @@ Text Label 17300 15050 0    50   ~ 0
 MOSI
 Text Label 17300 14950 0    50   ~ 0
 SCK
-Text Label 15850 14750 0    50   ~ 0
-RADIO_D0
+Text Label 15700 14750 0    50   ~ 0
+D2_RADIO_D0
 Text Label 17300 14850 0    50   ~ 0
-RADIO_CS
+D5_RADIO_CS
 Text Notes 15350 13500 0    180  ~ 36
 RFM95W\n
 Text Label 8250 14250 0    60   ~ 0
@@ -3831,9 +3831,9 @@ Text Label 4550 3300 0    60   ~ 0
 PERIPH_EN
 Text Notes 3250 7000 0    180  ~ 36
 FIDUCIALS
-Text Label 9150 8900 0    60   ~ 0
+Text Label 8950 8900 0    60   ~ 0
 PERIPH_3V3
-Text Label 5300 13850 1    60   ~ 0
+Text Label 5300 14450 1    60   ~ 0
 PERIPH_3V3
 Text Label 3400 11900 2    60   ~ 0
 PERIPH_3V3
@@ -3846,7 +3846,7 @@ PERIPH_3V3
 Text Label 5750 6500 0    50   ~ 0
 A3
 Text Label 8250 14150 0    60   ~ 0
-GPS_EN
+A4_GPS_EN
 Text Label 11200 14000 0    60   ~ 0
 GPS_3V3
 Text Label 9250 15200 0    60   ~ 0
@@ -3855,8 +3855,6 @@ Text Notes 8700 13500 0    180  ~ 36
 PERIPHERALS
 Text Label 18200 6150 0    60   ~ 0
 GPS_3V3
-Text Label 2150 2600 0    60   ~ 0
-GPS_EN
 Text Label 16600 6050 0    60   ~ 0
 GPS_3V3
 Text Label 16600 5850 0    50   ~ 0
@@ -3865,18 +3863,18 @@ Text Label 16600 5950 0    50   ~ 0
 GPS_RX
 Text Label 16600 5750 0    60   ~ 0
 BAT_BACKUP
-Text Label 15850 14850 0    50   ~ 0
-RADIO_D1
-Text Label 15850 14950 0    50   ~ 0
-RADIO_D2
+Text Label 15700 14850 0    50   ~ 0
+D1_RADIO_D1
+Text Label 15700 14950 0    50   ~ 0
+D0_RADIO_D2
 Text Label 2000 3100 0    50   ~ 0
-RADIO_D1
+D1_RADIO_D1
 Text Label 2000 3200 0    50   ~ 0
-RADIO_D2
+D0_RADIO_D2
 Text Label 2000 2800 0    50   ~ 0
-MODULE_EN
-Text Label 16750 3450 0    50   ~ 0
-MODULE_EN
+D9_MODULE_EN
+Text Label 16650 3450 0    50   ~ 0
+D9_MODULE_EN
 Text Label 20350 3350 0    60   ~ 0
 MODULE_3V3
 Text Label 800  9250 0    60   ~ 0
@@ -3956,27 +3954,9 @@ Wire Wire Line
 Wire Wire Line
 	1850 1150 1850 1250
 Wire Wire Line
-	4550 4000 4850 4000
+	5100 3400 4550 3400
 Wire Wire Line
-	4850 3900 4550 3900
-Wire Wire Line
-	4850 3800 4550 3800
-Wire Wire Line
-	4850 3700 4550 3700
-Wire Wire Line
-	4850 3600 4550 3600
-Wire Wire Line
-	4850 3500 4550 3500
-Wire Wire Line
-	4850 3400 4550 3400
-Wire Wire Line
-	4850 3200 4550 3200
-Wire Wire Line
-	4850 3100 4550 3100
-Wire Wire Line
-	4850 3000 4550 3000
-Wire Wire Line
-	4850 2900 4550 2900
+	5100 3200 4550 3200
 Wire Wire Line
 	4850 2100 4550 2100
 Wire Wire Line
@@ -4182,13 +4162,13 @@ Wire Wire Line
 Wire Wire Line
 	10900 9500 10700 9500
 Wire Wire Line
-	9300 9200 9600 9200
+	9000 9200 9600 9200
 Wire Wire Line
-	9300 9300 9600 9300
+	9000 9300 9600 9300
 Wire Wire Line
-	9150 9400 9600 9400
+	8950 9400 9600 9400
 Wire Wire Line
-	9150 8900 9150 9400
+	8950 8900 8950 9400
 Wire Wire Line
 	9600 9500 9500 9500
 Wire Wire Line
@@ -4328,10 +4308,6 @@ Wire Wire Line
 Wire Wire Line
 	10550 7550 10850 7550
 Wire Wire Line
-	4550 2800 4850 2800
-Wire Wire Line
-	4550 2700 4850 2700
-Wire Wire Line
 	4550 2600 5550 2600
 Wire Wire Line
 	10050 6150 10050 6250
@@ -4448,14 +4424,6 @@ Wire Wire Line
 Wire Wire Line
 	5300 13900 5700 13900
 Wire Wire Line
-	5700 13400 5400 13400
-Wire Wire Line
-	5400 13300 5700 13300
-Wire Wire Line
-	5400 13200 5700 13200
-Wire Wire Line
-	5400 13500 5700 13500
-Wire Wire Line
 	12250 8050 12050 8050
 Wire Wire Line
 	12050 7650 12250 7650
@@ -4498,10 +4466,6 @@ Wire Wire Line
 Wire Wire Line
 	2700 12800 1600 12800
 Wire Wire Line
-	4300 13400 4800 13400
-Wire Wire Line
-	4800 13000 4300 13000
-Wire Wire Line
 	2450 15250 2450 15100
 Wire Wire Line
 	2450 14700 2450 14600
@@ -4516,11 +4480,11 @@ Wire Wire Line
 Wire Wire Line
 	2150 14000 2150 14100
 Wire Wire Line
-	2150 13100 2700 13100
+	2050 13100 2700 13100
 Wire Wire Line
-	2150 13300 2700 13300
+	2050 13300 2700 13300
 Wire Wire Line
-	2150 13400 2700 13400
+	2050 13400 2700 13400
 Wire Wire Line
 	1900 13200 1900 13850
 Wire Wire Line
@@ -4720,15 +4684,7 @@ Wire Wire Line
 Wire Wire Line
 	15000 15350 15000 15450
 Wire Wire Line
-	17300 14850 17650 14850
-Wire Wire Line
-	17300 14950 17650 14950
-Wire Wire Line
-	17300 15050 17650 15050
-Wire Wire Line
-	17300 15150 17650 15150
-Wire Wire Line
-	15850 14750 16250 14750
+	15700 14750 16250 14750
 Wire Notes Line
 	14150 13150 18550 13150
 Wire Notes Line
@@ -4742,7 +4698,7 @@ Wire Wire Line
 Wire Wire Line
 	15550 14550 15550 14650
 Wire Wire Line
-	4550 3300 5050 3300
+	4550 3300 5100 3300
 Wire Wire Line
 	800  14300 1600 14300
 Wire Wire Line
@@ -4764,9 +4720,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 15200 8600 15200
 Wire Wire Line
-	9150 8900 10800 8900
-Wire Wire Line
-	5300 13900 5300 13300
+	8950 8900 10800 8900
 Wire Wire Line
 	2850 11900 4400 11900
 Wire Wire Line
@@ -5012,9 +4966,9 @@ Wire Wire Line
 Wire Wire Line
 	17200 6200 17200 6150
 Wire Wire Line
-	15850 14850 16250 14850
+	15700 14850 16250 14850
 Wire Wire Line
-	16250 14950 15850 14950
+	16250 14950 15700 14950
 Wire Wire Line
 	17200 1700 17000 1700
 Wire Wire Line
@@ -5107,8 +5061,6 @@ Wire Wire Line
 	18000 4000 18050 4000
 Wire Wire Line
 	16600 3350 17200 3350
-Wire Wire Line
-	16750 3450 17200 3450
 Wire Wire Line
 	20250 3350 20900 3350
 Wire Wire Line
@@ -5253,7 +5205,7 @@ NoConn ~ 10950 6650
 NoConn ~ 8700 1000
 NoConn ~ 8700 1600
 NoConn ~ 16550 5650
-NoConn ~ 4850 3400
+NoConn ~ 5100 3400
 NoConn ~ 2000 2900
 NoConn ~ 2000 3000
 $Comp
@@ -5388,4 +5340,50 @@ NoConn ~ 3650 7950
 NoConn ~ 4100 7950
 Wire Wire Line
 	15150 15250 15150 15350
+Wire Wire Line
+	16650 3450 17200 3450
+Wire Wire Line
+	17300 14850 17800 14850
+Wire Wire Line
+	17300 14950 17800 14950
+Wire Wire Line
+	17300 15050 17800 15050
+Wire Wire Line
+	17300 15150 17800 15150
+Wire Wire Line
+	5300 14450 5300 13900
+Wire Wire Line
+	5250 13500 5700 13500
+Wire Wire Line
+	5250 13400 5700 13400
+Wire Wire Line
+	5250 13300 5700 13300
+Wire Wire Line
+	5250 13200 5700 13200
+Wire Wire Line
+	4300 13000 4950 13000
+Wire Wire Line
+	4300 13400 4950 13400
+Wire Wire Line
+	4550 3800 5100 3800
+Wire Wire Line
+	4550 3900 5100 3900
+Wire Wire Line
+	4550 4000 5100 4000
+Wire Wire Line
+	4550 3700 5100 3700
+Wire Wire Line
+	4550 3600 5100 3600
+Wire Wire Line
+	4550 3500 5100 3500
+Wire Wire Line
+	4550 3100 5100 3100
+Wire Wire Line
+	4550 3000 5100 3000
+Wire Wire Line
+	4550 2900 5100 2900
+Wire Wire Line
+	4550 2800 5100 2800
+Wire Wire Line
+	4550 2700 5100 2700
 $EndSCHEMATC
