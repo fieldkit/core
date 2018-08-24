@@ -1,9 +1,13 @@
-include(ArduinoMinimal)
+include(Arduino)
 
-set(SOURCE_FILES main.cpp)
-set(LIBRARIES Wire)
+enable_arduino_toolchain()
 
-arduino(fk-core "${SOURCE_FILES}" "${LIBRARIES}")
+set(sources main.cpp)
 
-add_definitions(-DPHYLUM_ENABLE_SERIAL_FLASH)
-target_compile_options(arduino_zero_phylum PUBLIC -DPHYLUM_ENABLE_SERIAL_FLASH -DPHYLUM_ENABLE_SD)
+add_arduino_library(fk-core "${sources}")
+
+find_package(FkCore)
+
+fk_configure_core(fk-core)
+
+add_arduino_firmware(fk-core)

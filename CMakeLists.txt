@@ -1,11 +1,7 @@
+cmake_minimum_required(VERSION 3.5)
 project(core)
-cmake_minimum_required(VERSION 2.6)
 
-set(ARDUINO_IDE "${CMAKE_CURRENT_SOURCE_DIR}/../arduino-1.8.3") 
-set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/../arduino-cmake-minimal/cmake/")
-
-set(EXTRA_CXX_FLAGS_PROJECT "-Wall -Werror")
-set(Adafruit_ZeroDMA_RECURSE True)
+set(CMAKE_MODULE_PATH $ENV{CMAKE_MODULE_PATH})
 
 add_subdirectory(firmware/test)
 add_subdirectory(firmware/main)
