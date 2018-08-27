@@ -10,7 +10,10 @@ find_package(phylum)
 target_link_libraries(fk-core-test phylum)
 
 find_package(FkCore)
+
 fk_configure_core(fk-core-test)
+
+fk_core_apply_configuration(fk-core-test)
 
 find_package(Adafruit_NeoPixel)
 target_link_libraries(fk-core-test Adafruit_NeoPixel)

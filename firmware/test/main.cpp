@@ -184,7 +184,7 @@ public:
 
         Adafruit_NeoPixel pixels(1, A3, NEO_GRB + NEO_KHZ400);
         pixels.begin();
-        pixels.setPixelColor(0, pixels.Color(0,150,0));
+        pixels.setPixelColor(0, pixels.Color(0, 32, 0));
         pixels.show();
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
@@ -463,7 +463,7 @@ void setup() {
         float voltage = gauge.cellVoltage();
         float stateOfCharge = gauge.stateOfCharge();
 
-        debugfln("test: Battery: %f %f", stateOfCharge, voltage);
+        sdebug() << "test: Battery: " << stateOfCharge << " " << voltage << endl;
     }
 }
 
