@@ -9,6 +9,8 @@
 #include <WiFi101.h>
 #include <Adafruit_NeoPixel.h>
 
+#include <alogging/alogging.h>
+
 #include <phylum/phylum.h>
 #include <backends/arduino_sd/arduino_sd.h>
 
@@ -28,8 +30,7 @@ static constexpr uint8_t PIN_FLASH_CS = (26u); // PIN_LED_TXL;
 
 Uart Serial2(&sercom1, 11, 10, SERCOM_RX_PAD_0, UART_TX_PAD_2);
 
-void SERCOM1_Handler()
-{
+void SERCOM1_Handler() {
     Serial2.IrqHandler();
 }
 
@@ -63,33 +64,9 @@ void gpsSerialBegin(int32_t baud) {
 
 #endif
 
-#define DEBUG_LINE_MAX 256
+constexpr const char LogName[] = "Check";
 
-void debugf(const char *f, ...) {
-    char buffer[DEBUG_LINE_MAX];
-    va_list args;
-
-    va_start(args, f);
-    vsnprintf(buffer, DEBUG_LINE_MAX, f, args);
-    va_end(args);
-
-    Serial.print(buffer);
-}
-
-void debugfln(const char *f, ...) {
-    char buffer[DEBUG_LINE_MAX];
-    va_list args;
-
-    va_start(args, f);
-    auto w = vsnprintf(buffer, DEBUG_LINE_MAX - 2, f, args);
-    va_end(args);
-
-    buffer[w] = '\r';
-    buffer[w + 1] = '\n';
-    buffer[w + 2] = 0;
-
-    Serial.print(buffer);
-}
+using Log = SimpleLog<LogName>;
 
 class MacEeprom {
 private:
@@ -228,27 +205,27 @@ public:
     }
 
     bool fuelGauge() {
-        debugfln("test: Checking gauge...");
+        Log::info("test: Checking gauge...");
 
         Wire.begin();
 
         gauge.powerOn();
 
         if (gauge.version() != 3) {
-            debugfln("test: Gauge FAILED");
+            Log::info("test: Gauge FAILED");
             return true;
         }
 
-        debugfln("test: Gauge PASSED");
+        Log::info("test: Gauge PASSED");
 
         return true;
     }
 
     bool flashMemory() {
-        debugfln("test: Checking flash memory...");
+        Log::info("test: Checking flash memory...");
 
         if (!SerialFlash.begin(PIN_FLASH_CS)) {
-            debugfln("test: Flash memory FAILED");
+            Log::info("test: Flash memory FAILED");
             return false;
         }
 
@@ -256,27 +233,27 @@ public:
 
         SerialFlash.readID(buffer);
         if (buffer[0] == 0) {
-            debugfln("test: Flash memory FAILED");
+            Log::info("test: Flash memory FAILED");
             return false;
         }
 
         uint32_t chipSize = SerialFlash.capacity(buffer);
         if (chipSize == 0) {
-            debugfln("test: Flash memory FAILED");
+            Log::info("test: Flash memory FAILED");
             return false;
         }
 
-        debugfln("Read Chip Identification:");
-        debugf("  JEDEC ID:     %x %x %x", buffer[0], buffer[1], buffer[2]);
-        debugfln("  Part Nummber: %s", id2chip(buffer));
-        debugfln("  Memory Size:  %d bytes Block Size: %d bytes", chipSize, SerialFlash.blockSize());
-        debugfln("test: Flash memory PASSED");
+        Log::info("Read Chip Identification:");
+        Log::info("  JEDEC ID:     %x %x %x", buffer[0], buffer[1], buffer[2]);
+        Log::info("  Part Nummber: %s", id2chip(buffer));
+        Log::info("  Memory Size:  %d bytes Block Size: %d bytes", chipSize, SerialFlash.blockSize());
+        Log::info("test: Flash memory PASSED");
 
         return true;
     }
 
     bool gps() {
-        debugfln("test: Checking gps...");
+        Log::info("test: Checking gps...");
 
         gpsSerialBegin(9600);
 
@@ -289,57 +266,57 @@ public:
             }
         }
 
-        debugfln("");
+        Log::info("");
 
         if (charactersRead < 100) {
-            debugfln("test: GPS FAILED");
+            Log::info("test: GPS FAILED");
             return false;
         }
 
-        debugfln("test: GPS PASSED");
+        Log::info("test: GPS PASSED");
 
         return true;
     }
 
     bool sdCard() {
-        debugfln("test: Checking SD...");
+        Log::info("test: Checking SD...");
 
         phylum::Geometry g;
         phylum::ArduinoSdBackend storage;
         if (!storage.initialize(g, PIN_SD_CS)) {
-            debugfln("test: SD FAILED (to open)");
+            Log::info("test: SD FAILED (to open)");
             return false;
         }
 
         if (!storage.open()) {
-            debugfln("test: SD FAILED");
+            Log::info("test: SD FAILED");
             return false;
         }
 
         digitalWrite(PIN_SD_CS, HIGH);
-        debugfln("test: SD PASSED");
+        Log::info("test: SD PASSED");
 
         return true;
     }
 
     bool radio() {
-        debugfln("test: Checking radio...");
+        Log::info("test: Checking radio...");
 
         RH_RF95 rf95(PIN_RADIO_CS, PIN_RADIO_DIO0);
 
         if (!rf95.init()) {
-            debugfln("test: Radio FAILED");
+            Log::info("test: Radio FAILED");
             return false;
         }
 
         digitalWrite(PIN_RADIO_CS, HIGH);
-        debugfln("test: Radio PASSED");
+        Log::info("test: Radio PASSED");
 
         return true;
     }
 
     bool wifi() {
-        debugfln("test: Checking wifi...");
+        Log::info("test: Checking wifi...");
 
         delay(500);
 
@@ -355,14 +332,14 @@ public:
         delay(50);
 
         if (WiFi.status() == WL_NO_SHIELD) {
-            debugfln("test: Wifi FAILED");
+            Log::info("test: Wifi FAILED");
             return false;
         }
 
-        debugfln("test: Wifi firmware version: ");
+        Log::info("test: Wifi firmware version: ");
         auto fv = WiFi.firmwareVersion();
-        debugfln("Version: %s", fv);
-        debugfln("test: Wifi PASSED");
+        Log::info("Version: %s", fv);
+        Log::info("test: Wifi PASSED");
 
         return true;
     }
@@ -373,13 +350,13 @@ public:
 
         auto success = macEeprom.read128bMac(id);
         if (!success) {
-            debugfln("test: 128bMAC FAILED");
+            Log::info("test: 128bMAC FAILED");
             return false;
         }
 
-        debugfln("test: 128bMAC: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x", id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7]);
+        Log::info("test: 128bMAC: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x", id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7]);
 
-        debugfln("test: 128bMAC PASSED");
+        Log::info("test: 128bMAC PASSED");
 
         return success;
     }
@@ -392,13 +369,13 @@ public:
         success = macEeprom() && success;
 
         if (success) {
-            debugfln("test: Top PASSED");
+            Log::info("test: Top PASSED");
         }
 
         #ifdef FK_ENABLE_RADIO
         success = radio() && success;
         #else
-        debugfln("test: Radio disabled");
+        Log::info("test: Radio disabled");
         #endif
         success = gps() && success;
         success = sdCard() && success;
@@ -422,7 +399,7 @@ void setup() {
     }
 
     #ifdef FK_CORE_GENERATION_2
-    debugfln("test: Enabling peripherals!");
+    Log::info("test: Enabling peripherals!");
     pinMode(PIN_PERIPH_ENABLE, OUTPUT);
     pinMode(PIN_GPS_ENABLE, OUTPUT);
     digitalWrite(PIN_PERIPH_ENABLE, LOW);
@@ -434,7 +411,7 @@ void setup() {
     digitalWrite(A4, HIGH);
     delay(500);
     #else
-    debugfln("test: Peripherals should always be on.");
+    Log::info("test: Peripherals should always be on.");
     #endif
 
     delay(100);
