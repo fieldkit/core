@@ -64,6 +64,8 @@ void gpsSerialBegin(int32_t baud) {
 
 #endif
 
+Adafruit_NeoPixel pixel(1, A3, NEO_GRB + NEO_KHZ400);
+
 constexpr const char LogName[] = "Check";
 
 using Log = SimpleLog<LogName>;
@@ -159,10 +161,9 @@ public:
 
         leds(true);
 
-        Adafruit_NeoPixel pixels(1, A3, NEO_GRB + NEO_KHZ400);
-        pixels.begin();
-        pixels.setPixelColor(0, pixels.Color(0, 32, 0));
-        pixels.show();
+        pixel.begin();
+        pixel.setPixelColor(0, pixel.Color(0, 0, 0));
+        pixel.show();
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
         #ifdef FK_ENABLE_RADIO
@@ -205,27 +206,27 @@ public:
     }
 
     bool fuelGauge() {
-        Log::info("test: Checking gauge...");
+        Log::info("Checking gauge...");
 
         Wire.begin();
 
         gauge.powerOn();
 
         if (gauge.version() != 3) {
-            Log::info("test: Gauge FAILED");
+            Log::info("Gauge FAILED");
             return true;
         }
 
-        Log::info("test: Gauge PASSED");
+        Log::info("Gauge PASSED");
 
         return true;
     }
 
     bool flashMemory() {
-        Log::info("test: Checking flash memory...");
+        Log::info("Checking flash memory...");
 
         if (!SerialFlash.begin(PIN_FLASH_CS)) {
-            Log::info("test: Flash memory FAILED");
+            Log::info("Flash memory FAILED");
             return false;
         }
 
@@ -233,13 +234,13 @@ public:
 
         SerialFlash.readID(buffer);
         if (buffer[0] == 0) {
-            Log::info("test: Flash memory FAILED");
+            Log::info("Flash memory FAILED");
             return false;
         }
 
         uint32_t chipSize = SerialFlash.capacity(buffer);
         if (chipSize == 0) {
-            Log::info("test: Flash memory FAILED");
+            Log::info("Flash memory FAILED");
             return false;
         }
 
@@ -247,13 +248,13 @@ public:
         Log::info("  JEDEC ID:     %x %x %x", buffer[0], buffer[1], buffer[2]);
         Log::info("  Part Nummber: %s", id2chip(buffer));
         Log::info("  Memory Size:  %d bytes Block Size: %d bytes", chipSize, SerialFlash.blockSize());
-        Log::info("test: Flash memory PASSED");
+        Log::info("Flash memory PASSED");
 
         return true;
     }
 
     bool gps() {
-        Log::info("test: Checking gps...");
+        Log::info("Checking gps...");
 
         gpsSerialBegin(9600);
 
@@ -269,54 +270,54 @@ public:
         Log::info("");
 
         if (charactersRead < 100) {
-            Log::info("test: GPS FAILED");
+            Log::info("GPS FAILED");
             return false;
         }
 
-        Log::info("test: GPS PASSED");
+        Log::info("GPS PASSED");
 
         return true;
     }
 
     bool sdCard() {
-        Log::info("test: Checking SD...");
+        Log::info("Checking SD...");
 
         phylum::Geometry g;
         phylum::ArduinoSdBackend storage;
         if (!storage.initialize(g, PIN_SD_CS)) {
-            Log::info("test: SD FAILED (to open)");
+            Log::info("SD FAILED (to open)");
             return false;
         }
 
         if (!storage.open()) {
-            Log::info("test: SD FAILED");
+            Log::info("SD FAILED");
             return false;
         }
 
         digitalWrite(PIN_SD_CS, HIGH);
-        Log::info("test: SD PASSED");
+        Log::info("SD PASSED");
 
         return true;
     }
 
     bool radio() {
-        Log::info("test: Checking radio...");
+        Log::info("Checking radio...");
 
         RH_RF95 rf95(PIN_RADIO_CS, PIN_RADIO_DIO0);
 
         if (!rf95.init()) {
-            Log::info("test: Radio FAILED");
+            Log::info("Radio FAILED");
             return false;
         }
 
         digitalWrite(PIN_RADIO_CS, HIGH);
-        Log::info("test: Radio PASSED");
+        Log::info("Radio PASSED");
 
         return true;
     }
 
     bool wifi() {
-        Log::info("test: Checking wifi...");
+        Log::info("Checking wifi...");
 
         delay(500);
 
@@ -332,14 +333,14 @@ public:
         delay(50);
 
         if (WiFi.status() == WL_NO_SHIELD) {
-            Log::info("test: Wifi FAILED");
+            Log::info("Wifi FAILED");
             return false;
         }
 
-        Log::info("test: Wifi firmware version: ");
+        Log::info("Wifi firmware version: ");
         auto fv = WiFi.firmwareVersion();
         Log::info("Version: %s", fv);
-        Log::info("test: Wifi PASSED");
+        Log::info("Wifi PASSED");
 
         return true;
     }
@@ -350,13 +351,13 @@ public:
 
         auto success = macEeprom.read128bMac(id);
         if (!success) {
-            Log::info("test: 128bMAC FAILED");
+            Log::info("128bMAC FAILED");
             return false;
         }
 
-        Log::info("test: 128bMAC: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x", id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7]);
+        Log::info("128bMAC: %02x:%02x:%02x:%02x:%02x:%02x:%02x:%02x", id[0], id[1], id[2], id[3], id[4], id[5], id[6], id[7]);
 
-        Log::info("test: 128bMAC PASSED");
+        Log::info("128bMAC PASSED");
 
         return success;
     }
@@ -369,13 +370,13 @@ public:
         success = macEeprom() && success;
 
         if (success) {
-            Log::info("test: Top PASSED");
+            Log::info("Top PASSED");
         }
 
         #ifdef FK_ENABLE_RADIO
         success = radio() && success;
         #else
-        Log::info("test: Radio disabled");
+        Log::info("Radio disabled");
         #endif
         success = gps() && success;
         success = sdCard() && success;
@@ -384,6 +385,21 @@ public:
         return success;
     }
 };
+
+// Input a value 0 to 255 to get a color value.
+// The colours are a transition r - g - b - back to r.
+uint32_t Wheel(byte WheelPos) {
+    WheelPos = 255 - WheelPos;
+    if(WheelPos < 85) {
+        return pixel.Color(255 - WheelPos * 3, 0, WheelPos * 3);
+    } else if(WheelPos < 170) {
+        WheelPos -= 85;
+        return pixel.Color(0, WheelPos * 3, 255 - WheelPos * 3);
+    } else {
+        WheelPos -= 170;
+        return pixel.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
+    }
+}
 
 void setup() {
     Serial.begin(115200);
@@ -398,8 +414,10 @@ void setup() {
         delay(100);
     }
 
+    pixel.begin();
+
     #ifdef FK_CORE_GENERATION_2
-    Log::info("test: Enabling peripherals!");
+    Log::info("Enabling peripherals!");
     pinMode(PIN_PERIPH_ENABLE, OUTPUT);
     pinMode(PIN_GPS_ENABLE, OUTPUT);
     digitalWrite(PIN_PERIPH_ENABLE, LOW);
@@ -411,7 +429,7 @@ void setup() {
     digitalWrite(A4, HIGH);
     delay(500);
     #else
-    Log::info("test: Peripherals should always be on.");
+    Log::info("Peripherals should always be on.");
     #endif
 
     delay(100);
@@ -423,10 +441,22 @@ void setup() {
         #endif
 
         while (true) {
-            delay(100);
-            check.leds(true);
-            delay(100);
-            check.leds(false);
+            pixel.setPixelColor(0, 32, 0, 0);
+            pixel.show();
+            delay(250);
+
+            pixel.setPixelColor(0, 0, 0, 0);
+            pixel.show();
+            delay(250);
+        }
+    }
+
+    while (true) {
+        for (auto color = 0; color < 255; color++) {
+            pixel.setBrightness(32);
+            pixel.setPixelColor(0, Wheel(color));
+            pixel.show();
+            delay(10);
         }
     }
 
@@ -440,7 +470,7 @@ void setup() {
         float voltage = gauge.cellVoltage();
         float stateOfCharge = gauge.stateOfCharge();
 
-        sdebug() << "test: Battery: " << stateOfCharge << " " << voltage << endl;
+        sdebug() << "Battery: " << stateOfCharge << " " << voltage << endl;
     }
 }
 
