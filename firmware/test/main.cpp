@@ -24,7 +24,8 @@ static constexpr uint8_t PIN_WINC_IRQ = 16;
 static constexpr uint8_t PIN_WINC_RST = 15;
 static constexpr uint8_t PIN_WINC_EN = 38;
 static constexpr uint8_t PIN_WINC_WAKE = 8;
-static constexpr uint8_t PIN_PERIPH_ENABLE = (25u); // PIN_LED_RXL;
+static constexpr uint8_t PIN_MODULES_ENABLE = (9);
+static constexpr uint8_t PIN_PERIPHERALS_ENABLE = (25u); // PIN_LED_RXL;
 static constexpr uint8_t PIN_GPS_ENABLE = A4;
 static constexpr uint8_t PIN_FLASH_CS = (26u); // PIN_LED_TXL;
 
@@ -418,13 +419,16 @@ void setup() {
 
     #ifdef FK_CORE_GENERATION_2
     Log::info("Enabling peripherals!");
-    pinMode(PIN_PERIPH_ENABLE, OUTPUT);
+    pinMode(PIN_PERIPHERALS_ENABLE, OUTPUT);
     pinMode(PIN_GPS_ENABLE, OUTPUT);
-    digitalWrite(PIN_PERIPH_ENABLE, LOW);
+    pinMode(PIN_MODULES_ENABLE, OUTPUT);
+    digitalWrite(PIN_MODULES_ENABLE, LOW);
+    digitalWrite(PIN_PERIPHERALS_ENABLE, LOW);
     digitalWrite(PIN_GPS_ENABLE, LOW);
     digitalWrite(A4, LOW);
     delay(500);
-    digitalWrite(PIN_PERIPH_ENABLE, HIGH);
+    digitalWrite(PIN_MODULES_ENABLE, HIGH);
+    digitalWrite(PIN_PERIPHERALS_ENABLE, HIGH);
     digitalWrite(PIN_GPS_ENABLE, HIGH);
     digitalWrite(A4, HIGH);
     delay(500);
@@ -436,8 +440,9 @@ void setup() {
 
     if (!check.check()) {
         #ifdef FK_CORE_GENERATION_2
-        digitalWrite(PIN_PERIPH_ENABLE, LOW);
+        digitalWrite(PIN_PERIPHERALS_ENABLE, LOW);
         digitalWrite(PIN_GPS_ENABLE, LOW);
+        digitalWrite(PIN_MODULES_ENABLE, LOW);
         #endif
 
         while (true) {
