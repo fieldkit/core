@@ -1,4 +1,4 @@
-#include <cstdarg>
+#include <fk-core.h>
 
 #include <Wire.h>
 #include <wiring_private.h>
@@ -7,7 +7,6 @@
 #include <RH_RF95.h>
 #include <SerialFlash.h>
 #include <WiFi101.h>
-#include <Adafruit_NeoPixel.h>
 
 #include <alogging/alogging.h>
 
@@ -64,8 +63,6 @@ void gpsSerialBegin(int32_t baud) {
 }
 
 #endif
-
-Adafruit_NeoPixel pixel(1, A3, NEO_GRB + NEO_KHZ400);
 
 constexpr const char LogName[] = "Check";
 
@@ -158,13 +155,7 @@ private:
 
 public:
     void setup() {
-        pinMode(13, OUTPUT);
-
-        leds(true);
-
-        pixel.begin();
-        pixel.setPixelColor(0, pixel.Color(0, 0, 0));
-        pixel.show();
+        leds.setup();
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
         #ifdef FK_ENABLE_RADIO
@@ -196,10 +187,7 @@ public:
         SPI.begin();
     }
 
-    void leds(bool on) {
-        digitalWrite(13, on ? HIGH : LOW);
-    }
-
+    fk::Leds leds;
     FuelGauge gauge;
 
     FuelGauge &getFuelGauge() {
@@ -383,12 +371,24 @@ public:
         success = sdCard() && success;
         success = wifi() && success;
 
+        if (!success) {
+            leds.notifyFatal();
+        }
+        else {
+            leds.notifyHappy();
+        }
+
         return success;
+    }
+
+    void task() {
+        leds.task();
     }
 };
 
 // Input a value 0 to 255 to get a color value.
 // The colours are a transition r - g - b - back to r.
+/*
 uint32_t Wheel(byte WheelPos) {
     WheelPos = 255 - WheelPos;
     if(WheelPos < 85) {
@@ -401,21 +401,16 @@ uint32_t Wheel(byte WheelPos) {
         return pixel.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
     }
 }
-
+*/
 void setup() {
     Serial.begin(115200);
 
-    Serial5.begin(115200);
-
     Check check;
     check.setup();
-    check.leds(false);
 
     while (!Serial && millis() < 2 * 1000) {
         delay(100);
     }
-
-    pixel.begin();
 
     #ifdef FK_CORE_GENERATION_2
     Log::info("Enabling peripherals!");
@@ -446,16 +441,12 @@ void setup() {
         #endif
 
         while (true) {
-            pixel.setPixelColor(0, 32, 0, 0);
-            pixel.show();
-            delay(250);
-
-            pixel.setPixelColor(0, 0, 0, 0);
-            pixel.show();
-            delay(250);
+            check.task();
+            delay(10);
         }
     }
 
+    /*
     while (true) {
         for (auto color = 0; color < 255; color++) {
             pixel.setBrightness(32);
@@ -466,6 +457,7 @@ void setup() {
     }
 
     check.leds(true);
+    */
 
     auto gauge = check.getFuelGauge();
 
