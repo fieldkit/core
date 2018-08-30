@@ -94,6 +94,9 @@ public:
 
 class Check {
 private:
+    fk::Leds leds;
+
+private:
     const char * id2chip(const unsigned char *id) {
         if (id[0] == 0xEF) {
             // Winbond
@@ -187,12 +190,7 @@ public:
         SPI.begin();
     }
 
-    fk::Leds leds;
     FuelGauge gauge;
-
-    FuelGauge &getFuelGauge() {
-        return gauge;
-    }
 
     bool fuelGauge() {
         Log::info("Checking gauge...");
@@ -386,31 +384,15 @@ public:
     }
 };
 
-// Input a value 0 to 255 to get a color value.
-// The colours are a transition r - g - b - back to r.
-/*
-uint32_t Wheel(byte WheelPos) {
-    WheelPos = 255 - WheelPos;
-    if(WheelPos < 85) {
-        return pixel.Color(255 - WheelPos * 3, 0, WheelPos * 3);
-    } else if(WheelPos < 170) {
-        WheelPos -= 85;
-        return pixel.Color(0, WheelPos * 3, 255 - WheelPos * 3);
-    } else {
-        WheelPos -= 170;
-        return pixel.Color(WheelPos * 3, 255 - WheelPos * 3, 0);
-    }
-}
-*/
 void setup() {
     Serial.begin(115200);
-
-    Check check;
-    check.setup();
 
     while (!Serial && millis() < 2 * 1000) {
         delay(100);
     }
+
+    Check check;
+    check.setup();
 
     #ifdef FK_CORE_GENERATION_2
     Log::info("Enabling peripherals!");
@@ -429,9 +411,8 @@ void setup() {
     delay(500);
     #else
     Log::info("Peripherals should always be on.");
-    #endif
-
     delay(100);
+    #endif
 
     if (!check.check()) {
         #ifdef FK_CORE_GENERATION_2
@@ -446,28 +427,9 @@ void setup() {
         }
     }
 
-    /*
     while (true) {
-        for (auto color = 0; color < 255; color++) {
-            pixel.setBrightness(32);
-            pixel.setPixelColor(0, Wheel(color));
-            pixel.show();
-            delay(10);
-        }
-    }
-
-    check.leds(true);
-    */
-
-    auto gauge = check.getFuelGauge();
-
-    while (true) {
-        delay(5000);
-
-        float voltage = gauge.cellVoltage();
-        float stateOfCharge = gauge.stateOfCharge();
-
-        sdebug() << "Battery: " << stateOfCharge << " " << voltage << endl;
+        check.task();
+        delay(10);
     }
 }
 
