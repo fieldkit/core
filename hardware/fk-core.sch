@@ -3825,16 +3825,12 @@ Text Label 20900 9250 0    50   ~ 0
 SDA
 Text Label 20900 9350 0    50   ~ 0
 SCL
-Text Label 18350 6950 0    50   ~ 0
+Text Label 18200 6950 0    50   ~ 0
 GPS_TX
-Text Label 18350 7050 0    50   ~ 0
+Text Label 18200 7050 0    50   ~ 0
 GPS_RX
 Text Label 18600 6550 0    50   ~ 0
 GPS_FIX
-Text Notes 18200 7050 0    50   ~ 0
-TX1
-Text Notes 18200 6950 0    50   ~ 0
-RX1
 Text Label 5250 13300 0    50   ~ 0
 MOSI
 Text Label 5250 13200 0    50   ~ 0
@@ -3987,9 +3983,9 @@ Text Notes 8700 13500 0    180  ~ 36
 PERIPHERALS
 Text Label 16650 6150 0    60   ~ 0
 GPS_3V3
-Text Label 22100 6150 2    50   ~ 0
+Text Label 21850 6050 2    50   ~ 0
 GPS_TX
-Text Label 22100 6050 2    50   ~ 0
+Text Label 21850 6150 2    50   ~ 0
 GPS_RX
 Text Label 22100 6250 2    60   ~ 0
 BAT_BACKUP
@@ -5534,4 +5530,8 @@ Wire Wire Line
 Connection ~ 18800 6150
 Wire Wire Line
 	18800 6150 18900 6150
+Text Label 2350 3700 0    60   ~ 0
+UART2_RX
+Text Label 2350 3900 0    60   ~ 0
+UART2_TX
 $EndSCHEMATC
