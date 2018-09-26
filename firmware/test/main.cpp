@@ -13,6 +13,10 @@
 #include <phylum/phylum.h>
 #include <backends/arduino_sd/arduino_sd.h>
 
+#include <simple_ntp.h>
+
+#include "config.h"
+
 #ifdef FK_CORE_GENERATION_2
 
 static constexpr uint8_t PIN_RADIO_CS = 5;
@@ -328,6 +332,32 @@ public:
         auto fv = WiFi.firmwareVersion();
         Log::info("Version: %s", fv);
         Log::info("Wifi PASSED");
+
+        #if defined(FK_CONFIG_WIFI_1_SSID) && defined(FK_CONFIG_WIFI_1_PASSWORD)
+        Log::info("Connecting to %s", FK_CONFIG_WIFI_1_SSID);
+        if (WiFi.begin(FK_CONFIG_WIFI_1_SSID, FK_CONFIG_WIFI_1_PASSWORD) != WL_CONNECTED) {
+            Log::info("Connection failed!");
+            return false;
+        }
+        Log::info("Connected. Syncing time, check for a battery!");
+
+        fk::clock.begin();
+
+        fk::SimpleNTP ntp(fk::clock);
+
+        ntp.enqueued();
+
+        while (true) {
+            if (!simple_task_run(ntp)) {
+                break;
+            }
+        }
+
+        #else
+        Log::info("Skipping connection test, no config.");
+        #endif
+
+        Log::info("DONE");
 
         return true;
     }
