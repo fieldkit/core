@@ -2,8 +2,11 @@ BUILD=build
 
 default: all
 
-$(BUILD):
+$(BUILD): firmware/test/config.h
 	mkdir -p $(BUILD)
+
+firmware/test/config.h:
+	cp firmware/test/config.h.template firmware/test/config.h
 
 all: $(BUILD) gitdeps
 	cd $(BUILD) && cmake ../
