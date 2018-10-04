@@ -17,7 +17,7 @@
 
 #include "config.h"
 
-#ifdef FK_CORE_GENERATION_2
+#if defined(FK_CORE_GENERATION_2)
 
 static constexpr uint8_t PIN_RADIO_CS = 5;
 static constexpr uint8_t PIN_RADIO_DIO0 = 2;
@@ -32,21 +32,7 @@ static constexpr uint8_t PIN_PERIPHERALS_ENABLE = (25u); // PIN_LED_RXL;
 static constexpr uint8_t PIN_GPS_ENABLE = A4;
 static constexpr uint8_t PIN_FLASH_CS = (26u); // PIN_LED_TXL;
 
-Uart Serial2(&sercom1, 11, 10, SERCOM_RX_PAD_0, UART_TX_PAD_2);
-
-void SERCOM1_Handler() {
-    Serial2.IrqHandler();
-}
-
-void gpsSerialBegin(int32_t baud) {
-    Serial2.begin(baud);
-
-    // Order is very important here. This has to happen after the call to begin.
-    pinPeripheral(10, PIO_SERCOM);
-    pinPeripheral(11, PIO_SERCOM);
-}
-
-Uart& gpsSerial = Serial2;
+Uart& gpsSerial = fk::Serial2;
 
 #else
 
@@ -61,10 +47,6 @@ static constexpr uint8_t PIN_WINC_EN = 11;
 static constexpr uint8_t PIN_WINC_WAKE = 8;
 
 Uart& gpsSerial = Serial1;
-
-void gpsSerialBegin(int32_t baud) {
-    Serial1.begin(9600);
-}
 
 #endif
 
@@ -247,7 +229,7 @@ public:
     bool gps() {
         Log::info("Checking gps...");
 
-        gpsSerialBegin(9600);
+        gpsSerial.begin(9600);
 
         uint32_t charactersRead = 0;
         uint32_t start = millis();

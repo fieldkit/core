@@ -6,16 +6,16 @@ set(sources main.cpp)
 
 add_arduino_library(fk-core-test "${sources}")
 
-find_package(phylum)
-target_link_libraries(fk-core-test phylum)
-
 find_package(FkCore)
 
 fk_configure_core(fk-core-test)
 
+find_package(phylum)
+
+target_link_libraries(fk-core-test phylum)
+
 fk_core_apply_configuration(fk-core-test)
 
-find_package(Adafruit_NeoPixel)
-target_link_libraries(fk-core-test Adafruit_NeoPixel)
+fk_write_profile(fk-core-test)
 
 add_arduino_firmware(fk-core-test)

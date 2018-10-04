@@ -10,4 +10,6 @@ find_package(FkCore)
 
 fk_configure_core(fk-core)
 
+fk_core_apply_configuration(fk-core)
+
 add_arduino_firmware(fk-core)
