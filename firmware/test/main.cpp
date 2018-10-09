@@ -147,9 +147,7 @@ public:
         leds.setup();
 
         pinMode(PIN_FLASH_CS, INPUT_PULLUP);
-        #ifdef FK_ENABLE_RADIO
         pinMode(PIN_RADIO_CS, INPUT_PULLUP);
-        #endif
         pinMode(PIN_SD_CS, INPUT_PULLUP);
         pinMode(PIN_WINC_CS, INPUT_PULLUP);
 
@@ -160,16 +158,12 @@ public:
         digitalWrite(PIN_WINC_RST, LOW);
 
         pinMode(PIN_FLASH_CS, OUTPUT);
-        #ifdef FK_ENABLE_RADIO
         pinMode(PIN_RADIO_CS, OUTPUT);
-        #endif
         pinMode(PIN_SD_CS, OUTPUT);
         pinMode(PIN_WINC_CS, OUTPUT);
 
         digitalWrite(PIN_FLASH_CS, HIGH);
-        #ifdef FK_ENABLE_RADIO
         digitalWrite(PIN_RADIO_CS, HIGH);
-        #endif
         digitalWrite(PIN_SD_CS, HIGH);
         digitalWrite(PIN_WINC_CS, HIGH);
 
