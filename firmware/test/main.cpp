@@ -229,7 +229,8 @@ public:
     bool gps() {
         Log::info("Checking gps...");
 
-        gpsSerial.begin(9600);
+        fk::SerialPort gpsPort{ gpsSerial };
+        gpsPort.begin(9600);
 
         uint32_t charactersRead = 0;
         uint32_t start = millis();
