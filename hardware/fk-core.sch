@@ -3781,45 +3781,45 @@ Text Notes 4850 2700 0    50   ~ 0
 TX0
 Text Notes 4850 2800 0    50   ~ 0
 RX0
-Text Label 11100 2000 1    60   ~ 0
+Text Label 11100 2000 1    50   ~ 0
 PG
-Text Label 11200 2000 1    60   ~ 0
+Text Label 11200 2000 1    50   ~ 0
 CHG
-Text Notes 7600 2500 0    60   ~ 0
+Text Notes 7600 2500 0    50   ~ 0
 VIN:5-10.5V\n(OVP up to 28V)
-Text Notes 11950 9000 0    60   ~ 0
+Text Notes 11950 9000 0    50   ~ 0
 1. All capacitors are NP0/COG 50V unless specified.\n2. All resistors are 62.5mW 1% unless specified.
-Text Notes 9750 9800 0    60   ~ 0
+Text Notes 9750 9800 0    50   ~ 0
 16Mbit = 2Mbytes
-Text Notes 3750 6200 0    60   ~ 0
+Text Notes 3750 6200 0    50   ~ 0
 M2.5 size
-Text Notes 5700 10400 0    60   ~ 0
+Text Notes 5700 10400 0    50   ~ 0
 1.27 mm (0.05")
-Text Notes 7500 4375 0    60   ~ 0
+Text Notes 7500 4375 0    50   ~ 0
 EN2 EN1
-Text Notes 7500 4525 0    60   ~ 0
+Text Notes 7500 4525 0    50   ~ 0
 LOW LOW
-Text Notes 7500 4675 0    60   ~ 0
+Text Notes 7500 4675 0    50   ~ 0
 LOW  HI
-Text Notes 7500 4825 0    60   ~ 0
+Text Notes 7500 4825 0    50   ~ 0
  HI  LOW
-Text Notes 7500 4975 0    60   ~ 0
+Text Notes 7500 4975 0    50   ~ 0
  HI   HI
-Text Notes 8000 4375 0    60   ~ 0
+Text Notes 8000 4375 0    50   ~ 0
 I-INPUT LIMIT
-Text Notes 8175 4525 0    60   ~ 0
+Text Notes 8175 4525 0    50   ~ 0
 100mA
-Text Notes 8175 4675 0    60   ~ 0
+Text Notes 8175 4675 0    50   ~ 0
 500mA
-Text Notes 7950 4825 0    60   ~ 0
+Text Notes 7950 4825 0    50   ~ 0
  Set by R6:1.3A
-Text Notes 8100 4975 0    60   ~ 0
+Text Notes 8100 4975 0    50   ~ 0
  Standby
-Text Notes 8450 6050 0    60   ~ 0
+Text Notes 8450 6050 0    50   ~ 0
 500mA
-Text Notes 2150 1950 0    60   ~ 0
+Text Notes 2150 1950 0    50   ~ 0
 32.768kHz
-Text Notes 2250 2050 0    60   ~ 0
+Text Notes 2250 2050 0    50   ~ 0
 12.5pF
 Text Label 20900 9250 0    50   ~ 0
 SDA
@@ -3847,21 +3847,21 @@ Text Label 2000 4000 0    50   ~ 0
 D12_SD_CS
 Text Label 2000 3800 0    50   ~ 0
 D13
-Text Label 2050 12900 0    60   ~ 0
+Text Label 2050 12900 0    50   ~ 0
 D2_WIFI_EN
-Text Label 2050 12700 0    60   ~ 0
+Text Label 2050 12700 0    50   ~ 0
 A1_WIFI_RST
-Text Label 2050 13100 0    60   ~ 0
+Text Label 2050 13100 0    50   ~ 0
 SCK
-Text Label 4400 13400 0    60   ~ 0
+Text Label 4400 13400 0    50   ~ 0
 MISO
-Text Label 2050 13300 0    60   ~ 0
+Text Label 2050 13300 0    50   ~ 0
 D7_WIFI_CS
-Text Label 2050 13400 0    60   ~ 0
+Text Label 2050 13400 0    50   ~ 0
 MOSI
-Text Label 4400 13000 0    60   ~ 0
+Text Label 4400 13000 0    50   ~ 0
 A2_WIFI_IRQ
-Text Label 2050 12800 0    60   ~ 0
+Text Label 2050 12800 0    50   ~ 0
 D8_WIFI_WAKE
 Text Label 2000 2700 0    50   ~ 0
 D8_WIFI_WAKE
@@ -3935,9 +3935,9 @@ Text Label 4550 2800 0    50   ~ 0
 D31
 Text Label 4550 2700 0    50   ~ 0
 D30
-Text Label 18200 6450 0    60   ~ 0
+Text Label 18200 6450 0    50   ~ 0
 BAT_BACKUP
-Text Label 12200 6000 0    60   ~ 0
+Text Label 12200 6000 0    50   ~ 0
 BAT_BACKUP
 Text Label 17300 15150 0    50   ~ 0
 MISO
@@ -3957,15 +3957,15 @@ Text Label 4550 3300 0    50   ~ 0
 D25_PERIPH_EN
 Text Notes 3250 7000 0    180  ~ 36
 FIDUCIALS
-Text Label 8950 8900 0    60   ~ 0
+Text Label 8950 8900 0    50   ~ 0
 PERIPH_3V3
-Text Label 5300 14450 1    60   ~ 0
+Text Label 5300 14450 1    50   ~ 0
 PERIPH_3V3
-Text Label 3400 11900 2    60   ~ 0
+Text Label 3400 11900 2    50   ~ 0
 PERIPH_3V3
-Text Label 2150 15250 3    60   ~ 0
+Text Label 2150 15250 3    50   ~ 0
 PERIPH_3V3
-Text Label 1900 13300 3    60   ~ 0
+Text Label 1900 13300 3    50   ~ 0
 PERIPH_3V3
 Text Label 11200 14800 0    50   ~ 0
 PERIPH_3V3
@@ -3981,11 +3981,11 @@ Text Notes 8700 13500 0    180  ~ 36
 PERIPHERALS
 Text Label 16650 6150 0    60   ~ 0
 GPS_3V3
-Text Label 21850 6050 2    50   ~ 0
+Text Label 21750 6050 2    50   ~ 0
 GPS_TX
-Text Label 21850 6150 2    50   ~ 0
+Text Label 21800 6150 2    50   ~ 0
 GPS_RX
-Text Label 22100 6250 2    60   ~ 0
+Text Label 21950 6250 2    50   ~ 0
 BAT_BACKUP
 Text Label 15700 14850 0    50   ~ 0
 D1_RADIO_D1
@@ -3999,13 +3999,13 @@ Text Label 2000 2800 0    50   ~ 0
 D9_MODULE_EN
 Text Label 16650 3450 0    50   ~ 0
 D9_MODULE_EN
-Text Label 20350 3350 0    60   ~ 0
+Text Label 20350 3350 0    50   ~ 0
 MODULE_3V3
-Text Label 800  9250 0    60   ~ 0
+Text Label 800  9250 0    50   ~ 0
 MODULE_3V3
-Text Label 21500 3450 0    60   ~ 0
+Text Label 21500 3450 0    50   ~ 0
 MODULE_3V3
-Text Label 14400 4800 1    60   ~ 0
+Text Label 14400 4800 1    50   ~ 0
 BAT_BACKUP
 Wire Wire Line
 	900  2400 2850 2400
