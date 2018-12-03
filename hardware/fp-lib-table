@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name fk-core)(type KiCad)(uri "$(KIPRJMOD)")(options "")(descr ""))
+  (lib (name conservify)(type KiCad)(uri C:/Users/chris/PCBs/ALLLC/Conservify/kicad/conservify.pretty)(options "")(descr ""))
 )

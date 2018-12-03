@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L conservify:MICRO_USB J9
+L fk-core-rescue:MICRO_USB-conservify J9
 U 1 1 5A5961D4
 P 10550 6450
 F 0 "J9" H 10550 6800 60  0000 C CNN
@@ -36,7 +36,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:S2B_PH_SM4_TB J10
+L fk-core-rescue:S2B_PH_SM4_TB-conservify J10
 U 1 1 5A5961D5
 P 12650 2800
 F 0 "J10" H 12550 3000 60  0000 C CNN
@@ -57,7 +57,7 @@ F 13 "digikey" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:BQ24074 U6
+L fk-core-rescue:BQ24074-conservify U6
 U 1 1 5A5961D6
 P 11150 2600
 F 0 "U6" H 10850 3100 60  0000 C CNN
@@ -78,7 +78,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:S25FL1xxK0XM U5
+L fk-core-rescue:S25FL1xxK0XM-conservify U5
 U 1 1 5A5961D7
 P 10150 9350
 F 0 "U5" H 10150 9650 60  0000 C CNN
@@ -99,7 +99,7 @@ F 13 "mouser" H -3650 2450 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:SWITCH_CONN_02 SW1
+L fk-core-rescue:SWITCH_CONN_02-conservify SW1
 U 1 1 5A5961DA
 P 3700 1650
 F 0 "SW1" H 3700 1800 60  0000 C CNN
@@ -120,7 +120,7 @@ F 13 "digikey" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR01
+L fk-core-rescue:GND-conservify #PWR01
 U 1 1 5A5961DB
 P 3700 4850
 F 0 "#PWR01" H 3700 4600 50  0001 C CNN
@@ -131,7 +131,7 @@ F 3 "" H 3700 4850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CRYSTAL Y1
+L fk-core-rescue:CRYSTAL-conservify Y1
 U 1 1 5A5961DC
 P 2400 1650
 F 0 "Y1" H 2400 1800 50  0000 C CNN
@@ -152,7 +152,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C4
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C4
 U 1 1 5A5961DD
 P 2750 1400
 F 0 "C4" H 2775 1500 50  0000 L CNN
@@ -173,7 +173,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C3
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C3
 U 1 1 5A5961DE
 P 2050 1400
 F 0 "C3" H 2075 1500 50  0000 L CNN
@@ -194,7 +194,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR02
+L fk-core-rescue:GND-conservify #PWR02
 U 1 1 5A5961DF
 P 1850 1250
 F 0 "#PWR02" H 1850 1000 50  0001 C CNN
@@ -205,7 +205,7 @@ F 3 "" H 1850 1250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C5
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C5
 U 1 1 5A5961E0
 P 5150 1900
 F 0 "C5" V 5000 1850 50  0000 L CNN
@@ -226,7 +226,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C8
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C8
 U 1 1 5A5961E1
 P 5950 1900
 F 0 "C8" V 5800 1850 50  0000 L CNN
@@ -247,7 +247,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C9
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C9
 U 1 1 5A5961E2
 P 6350 1900
 F 0 "C9" V 6200 1850 50  0000 L CNN
@@ -268,7 +268,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C6
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C6
 U 1 1 5A5961E3
 P 5550 1900
 F 0 "C6" V 5400 1850 50  0000 L CNN
@@ -289,7 +289,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR03
+L fk-core-rescue:GND-conservify #PWR03
 U 1 1 5A5961E4
 P 5150 2150
 F 0 "#PWR03" H 5150 1900 50  0001 C CNN
@@ -300,7 +300,7 @@ F 3 "" H 5150 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR04
+L fk-core-rescue:GND-conservify #PWR04
 U 1 1 5A5961E5
 P 5550 2150
 F 0 "#PWR04" H 5550 1900 50  0001 C CNN
@@ -311,7 +311,7 @@ F 3 "" H 5550 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR05
+L fk-core-rescue:GND-conservify #PWR05
 U 1 1 5A5961E6
 P 5950 2150
 F 0 "#PWR05" H 5950 1900 50  0001 C CNN
@@ -322,7 +322,7 @@ F 3 "" H 5950 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR06
+L fk-core-rescue:GND-conservify #PWR06
 U 1 1 5A5961E7
 P 6350 2150
 F 0 "#PWR06" H 6350 1900 50  0001 C CNN
@@ -333,7 +333,7 @@ F 3 "" H 6350 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR07
+L fk-core-rescue:3V3-conservify #PWR07
 U 1 1 5A5961E8
 P 5150 1550
 F 0 "#PWR07" H 5150 1400 50  0001 C CNN
@@ -344,7 +344,7 @@ F 3 "" H 5150 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR08
+L fk-core-rescue:3V3-conservify #PWR08
 U 1 1 5A5961E9
 P 5950 1550
 F 0 "#PWR08" H 5950 1400 50  0001 C CNN
@@ -355,7 +355,7 @@ F 3 "" H 5950 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR09
+L fk-core-rescue:3V3-conservify #PWR09
 U 1 1 5A5961EA
 P 6350 1550
 F 0 "#PWR09" H 6350 1400 50  0001 C CNN
@@ -366,7 +366,7 @@ F 3 "" H 6350 1550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR010
+L fk-core-rescue:3V3-conservify #PWR010
 U 1 1 5A5961EB
 P 6350 2500
 F 0 "#PWR010" H 6350 2350 50  0001 C CNN
@@ -377,7 +377,7 @@ F 3 "" H 6350 2500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:INDUCTOR L1
+L fk-core-rescue:INDUCTOR-conservify L1
 U 1 1 5A5961EC
 P 5950 2600
 F 0 "L1" H 5950 2550 50  0000 C CNN
@@ -398,7 +398,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C7
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C7
 U 1 1 5A5961ED
 P 5550 2850
 F 0 "C7" H 5350 2850 50  0000 L CNN
@@ -419,7 +419,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR011
+L fk-core-rescue:GND-conservify #PWR011
 U 1 1 5A5961EE
 P 5550 3100
 F 0 "#PWR011" H 5550 2850 50  0001 C CNN
@@ -430,7 +430,7 @@ F 3 "" H 5550 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR012
+L fk-core-rescue:3V3-conservify #PWR012
 U 1 1 5A5961EF
 P 5400 7300
 F 0 "#PWR012" H 5400 7150 50  0001 C CNN
@@ -441,7 +441,7 @@ F 3 "" H 5400 7300 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R3
+L fk-core-rescue:RESISTOR-conservify R3
 U 1 1 5A5961F0
 P 6250 7300
 F 0 "R3" V 6250 7500 60  0000 C CNN
@@ -462,7 +462,7 @@ F 13 "mouser" H 4550 550 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOSFET_N Q1
+L fk-core-rescue:MOSFET_N-conservify Q1
 U 1 1 5A5961F1
 P 6600 7650
 F 0 "Q1" H 6850 7700 50  0000 R CNN
@@ -483,7 +483,7 @@ F 13 "mouser" H 4900 300 50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR013
+L fk-core-rescue:GND-conservify #PWR013
 U 1 1 5A5961F2
 P 6600 8000
 F 0 "#PWR013" H 6600 7750 50  0001 C CNN
@@ -494,7 +494,7 @@ F 3 "" H 6600 8000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VIN #PWR014
+L fk-core-rescue:VIN-conservify #PWR014
 U 1 1 5A5961F3
 P 8200 2250
 F 0 "#PWR014" H 8200 2100 50  0001 C CNN
@@ -505,7 +505,7 @@ F 3 "" H 8200 2250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR015
+L fk-core-rescue:GND-conservify #PWR015
 U 1 1 5A5961F4
 P 10550 3050
 F 0 "#PWR015" H 10550 2800 50  0001 C CNN
@@ -516,7 +516,7 @@ F 3 "" H 10550 3050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBUS #PWR016
+L fk-core-rescue:VBUS-conservify #PWR016
 U 1 1 5A5961F5
 P 10350 2950
 F 0 "#PWR016" H 10350 2800 50  0001 C CNN
@@ -527,7 +527,7 @@ F 3 "" H 10350 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R33
+L fk-core-rescue:RESISTOR-conservify R33
 U 1 1 5A5961F6
 P 11550 1900
 F 0 "R33" H 11650 2000 60  0000 C CNN
@@ -548,7 +548,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R32
+L fk-core-rescue:RESISTOR-conservify R32
 U 1 1 5A5961F7
 P 11550 1700
 F 0 "R32" H 11650 1800 60  0000 C CNN
@@ -569,7 +569,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R21
+L fk-core-rescue:RESISTOR-conservify R21
 U 1 1 5A5961F8
 P 9400 3050
 F 0 "R21" H 9250 3150 60  0000 C CNN
@@ -590,7 +590,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R22
+L fk-core-rescue:RESISTOR-conservify R22
 U 1 1 5A5961F9
 P 9600 3050
 F 0 "R22" H 9450 3150 60  0000 C CNN
@@ -611,7 +611,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R24
+L fk-core-rescue:RESISTOR-conservify R24
 U 1 1 5A5961FA
 P 9800 3050
 F 0 "R24" H 9650 3150 60  0000 C CNN
@@ -632,7 +632,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R25
+L fk-core-rescue:RESISTOR-conservify R25
 U 1 1 5A5961FB
 P 10000 3050
 F 0 "R25" H 9875 3150 60  0000 C CNN
@@ -653,7 +653,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:GND #PWR017
+L fk-core-rescue:GND-conservify #PWR017
 U 1 1 5A5961FC
 P 9800 3500
 F 0 "#PWR017" H 9800 3250 50  0001 C CNN
@@ -664,7 +664,7 @@ F 3 "" H 9800 3500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C12
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C12
 U 1 1 5A5961FD
 P 9100 2500
 F 0 "C12" H 9250 2500 50  0000 L CNN
@@ -685,7 +685,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR018
+L fk-core-rescue:GND-conservify #PWR018
 U 1 1 5A5961FE
 P 9100 2750
 F 0 "#PWR018" H 9100 2500 50  0001 C CNN
@@ -696,7 +696,7 @@ F 3 "" H 9100 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR019
+L fk-core-rescue:GND-conservify #PWR019
 U 1 1 5A5961FF
 P 11150 3400
 F 0 "#PWR019" H 11150 3150 50  0001 C CNN
@@ -707,7 +707,7 @@ F 3 "" H 11150 3400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R34
+L fk-core-rescue:RESISTOR-conservify R34
 U 1 1 5A596200
 P 11750 3300
 F 0 "R34" V 11750 3150 60  0000 C CNN
@@ -728,7 +728,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR020
+L fk-core-rescue:GND-conservify #PWR020
 U 1 1 5A596201
 P 11750 3650
 F 0 "#PWR020" H 11750 3400 50  0001 C CNN
@@ -739,7 +739,7 @@ F 3 "" H 11750 3650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C19
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C19
 U 1 1 5A596202
 P 12050 3000
 F 0 "C19" H 12100 3100 50  0000 L CNN
@@ -760,7 +760,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR021
+L fk-core-rescue:GND-conservify #PWR021
 U 1 1 5A596203
 P 12050 3250
 F 0 "#PWR021" H 12050 3000 50  0001 C CNN
@@ -771,7 +771,7 @@ F 3 "" H 12050 3250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C20
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C20
 U 1 1 5A596204
 P 13000 2500
 F 0 "C20" H 13100 2500 50  0000 L CNN
@@ -792,7 +792,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR022
+L fk-core-rescue:GND-conservify #PWR022
 U 1 1 5A596205
 P 12250 2950
 F 0 "#PWR022" H 12250 2700 50  0001 C CNN
@@ -803,7 +803,7 @@ F 3 "" H 12250 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR023
+L fk-core-rescue:GND-conservify #PWR023
 U 1 1 5A596206
 P 13000 2750
 F 0 "#PWR023" H 13000 2500 50  0001 C CNN
@@ -814,7 +814,7 @@ F 3 "" H 13000 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBAT #PWR024
+L fk-core-rescue:VBAT-conservify #PWR024
 U 1 1 5A596207
 P 12050 2650
 F 0 "#PWR024" H 12050 2500 50  0001 C CNN
@@ -825,7 +825,7 @@ F 3 "" H 12050 2650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBUS #PWR025
+L fk-core-rescue:VBUS-conservify #PWR025
 U 1 1 5A596208
 P 13000 2150
 F 0 "#PWR025" H 13000 2000 50  0001 C CNN
@@ -836,7 +836,7 @@ F 3 "" H 13000 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FUSE F1
+L fk-core-rescue:FUSE-conservify F1
 U 1 1 5A59620F
 P 8600 6250
 F 0 "F1" H 8600 6100 50  0000 C CNN
@@ -857,7 +857,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:INDUCTOR L2
+L fk-core-rescue:INDUCTOR-conservify L2
 U 1 1 5A596210
 P 7900 6250
 F 0 "L2" H 7900 6200 50  0000 C CNN
@@ -878,7 +878,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR030
+L fk-core-rescue:GND-conservify #PWR030
 U 1 1 5A596211
 P 7500 6750
 F 0 "#PWR030" H 7500 6500 50  0001 C CNN
@@ -889,7 +889,7 @@ F 3 "" H 7500 6750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:PRTR5V0U2X D8
+L fk-core-rescue:PRTR5V0U2X-conservify D8
 U 1 1 5A596212
 P 9150 6750
 F 0 "D8" H 9200 7100 60  0000 C CNN
@@ -910,7 +910,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR031
+L fk-core-rescue:GND-conservify #PWR031
 U 1 1 5A596213
 P 9000 7300
 F 0 "#PWR031" H 9000 7050 50  0001 C CNN
@@ -921,7 +921,7 @@ F 3 "" H 9000 7300 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR032
+L fk-core-rescue:GND-conservify #PWR032
 U 1 1 5A596214
 P 10050 6750
 F 0 "#PWR032" H 10050 6500 50  0001 C CNN
@@ -932,7 +932,7 @@ F 3 "" H 10050 6750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R30
+L fk-core-rescue:RESISTOR-conservify R30
 U 1 1 5A596215
 P 10300 7550
 F 0 "R30" H 10300 7650 60  0000 C CNN
@@ -953,7 +953,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C18
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C18
 U 1 1 5A596216
 P 11050 9200
 F 0 "C18" V 10900 9150 50  0000 L CNN
@@ -974,7 +974,7 @@ F 13 "mouser" H -3650 2450 50  0001 C CNN "supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C14
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C14
 U 1 1 5A596219
 P 11050 7000
 F 0 "C14" H 10800 7000 50  0000 L CNN
@@ -995,7 +995,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R31
+L fk-core-rescue:RESISTOR-conservify R31
 U 1 1 5A59621A
 P 11350 7000
 F 0 "R31" V 11350 7150 60  0000 C CNN
@@ -1016,7 +1016,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR033
+L fk-core-rescue:GND-conservify #PWR033
 U 1 1 5A59621B
 P 11200 7450
 F 0 "#PWR033" H 11200 7200 50  0001 C CNN
@@ -1027,7 +1027,7 @@ F 3 "" H 11200 7450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R23
+L fk-core-rescue:RESISTOR-conservify R23
 U 1 1 5A596225
 P 9600 7550
 F 0 "R23" H 9600 7450 60  0000 C CNN
@@ -1048,7 +1048,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR034
+L fk-core-rescue:3V3-conservify #PWR034
 U 1 1 5A596226
 P 9250 7450
 F 0 "#PWR034" H 9250 7300 50  0001 C CNN
@@ -1059,7 +1059,7 @@ F 3 "" H 9250 7450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R8
+L fk-core-rescue:RESISTOR-conservify R8
 U 1 1 5A596227
 P 4050 1300
 F 0 "R8" V 4000 1100 60  0000 C CNN
@@ -1080,7 +1080,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR035
+L fk-core-rescue:GND-conservify #PWR035
 U 1 1 5A596228
 P 3350 1750
 F 0 "#PWR035" H 3350 1500 50  0001 C CNN
@@ -1091,7 +1091,7 @@ F 3 "" H 3350 1750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR036
+L fk-core-rescue:3V3-conservify #PWR036
 U 1 1 5A596229
 P 4050 950
 F 0 "#PWR036" H 4050 800 50  0001 C CNN
@@ -1102,7 +1102,7 @@ F 3 "" H 4050 950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR038
+L fk-core-rescue:GND-conservify #PWR038
 U 1 1 5A59622D
 P 900 2950
 F 0 "#PWR038" H 900 2700 50  0001 C CNN
@@ -1113,7 +1113,7 @@ F 3 "" H 900 2950 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VEXT #PWR039
+L fk-core-rescue:VEXT-conservify #PWR039
 U 1 1 5A59622E
 P 9100 2150
 F 0 "#PWR039" H 9100 2000 50  0001 C CNN
@@ -1124,7 +1124,7 @@ F 3 "" H 9100 2150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M1
+L fk-core-rescue:MOUNT_HOLE-conservify M1
 U 1 1 5A59622F
 P 3500 6000
 F 0 "M1" H 3500 6150 50  0000 C CNN
@@ -1144,7 +1144,7 @@ F 12 " " H 3500 6250 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M3
+L fk-core-rescue:MOUNT_HOLE-conservify M3
 U 1 1 5A596230
 P 3800 6000
 F 0 "M3" H 3800 6150 50  0000 C CNN
@@ -1164,7 +1164,7 @@ F 12 " " H 3800 6250 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M4
+L fk-core-rescue:MOUNT_HOLE-conservify M4
 U 1 1 5A596231
 P 4100 6000
 F 0 "M4" H 4100 6150 50  0000 C CNN
@@ -1184,7 +1184,7 @@ F 12 " " H 4100 6250 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MOUNT_HOLE M6
+L fk-core-rescue:MOUNT_HOLE-conservify M6
 U 1 1 5A596232
 P 4400 6000
 F 0 "M6" H 4400 6150 50  0000 C CNN
@@ -1204,7 +1204,7 @@ F 12 " " H 4400 6250 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_02x05_SWD J7
+L fk-core-rescue:CONN_02x05_SWD-conservify J7
 U 1 1 5A596238
 P 6100 9900
 F 0 "J7" H 6100 10250 60  0000 C CNN
@@ -1225,7 +1225,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR040
+L fk-core-rescue:3V3-conservify #PWR040
 U 1 1 5A596239
 P 5750 9600
 F 0 "#PWR040" H 5750 9450 50  0001 C CNN
@@ -1236,7 +1236,7 @@ F 3 "" H 5750 9600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR041
+L fk-core-rescue:GND-conservify #PWR041
 U 1 1 5A59623A
 P 5750 10200
 F 0 "#PWR041" H 5750 9950 50  0001 C CNN
@@ -1247,7 +1247,7 @@ F 3 "" H 5750 10200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R9
+L fk-core-rescue:RESISTOR-conservify R9
 U 1 1 5A59623B
 P 4500 1650
 F 0 "R9" H 4500 1550 60  0000 C CNN
@@ -1268,7 +1268,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C10
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C10
 U 1 1 5A59623C
 P 7500 6500
 F 0 "C10" H 7650 6500 50  0000 L CNN
@@ -1289,7 +1289,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:ATSAMD21G18A_AU U2
+L fk-core-rescue:ATSAMD21G18A_AU-conservify U2
 U 1 1 5A59623F
 P 3700 3250
 F 0 "U2" H 3050 4550 60  0000 C CNN
@@ -1310,7 +1310,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VUSB #PWR042
+L fk-core-rescue:VUSB-conservify #PWR042
 U 1 1 5A596240
 P 10050 6150
 F 0 "#PWR042" H 10050 6000 50  0001 C CNN
@@ -1321,7 +1321,7 @@ F 3 "" H 10050 6150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:LED_SINGLE D1
+L fk-core-rescue:LED_SINGLE-conservify D1
 U 1 1 5A596241
 P 5700 7300
 F 0 "D1" V 5750 7100 50  0000 C CNN
@@ -1342,7 +1342,7 @@ F 13 "mouser" H 4000 1100 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:5V0 #PWR043
+L fk-core-rescue:5V0-conservify #PWR043
 U 1 1 5A596242
 P 8300 2050
 F 0 "#PWR043" H 8300 1900 50  0001 C CNN
@@ -1353,7 +1353,7 @@ F 3 "" H 8300 2050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:5V0 #PWR044
+L fk-core-rescue:5V0-conservify #PWR044
 U 1 1 5A596243
 P 7500 6150
 F 0 "#PWR044" H 7500 6000 50  0001 C CNN
@@ -1364,7 +1364,7 @@ F 3 "" H 7500 6150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:DIODE_DUAL_SCHOTTKY D7
+L fk-core-rescue:DIODE_DUAL_SCHOTTKY-conservify D7
 U 1 1 5A596245
 P 8700 2250
 F 0 "D7" H 8900 2250 50  0000 C CNN
@@ -1385,7 +1385,7 @@ F 13 "mouser" H 0   0   50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:MAX1704XX U11
+L fk-core-rescue:MAX1704XX-conservify U11
 U 1 1 5A596246
 P 20050 9500
 F 0 "U11" H 20050 9300 60  0000 C CNN
@@ -1406,7 +1406,7 @@ F 13 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR045
+L fk-core-rescue:GND-conservify #PWR045
 U 1 1 5A596247
 P 19150 9750
 F 0 "#PWR045" H 19150 9500 50  0001 C CNN
@@ -1417,7 +1417,7 @@ F 3 "" H 19150 9750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C27
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C27
 U 1 1 5A596248
 P 18850 9550
 F 0 "C27" V 18750 9600 50  0000 L CNN
@@ -1438,7 +1438,7 @@ F 13 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR046
+L fk-core-rescue:GND-conservify #PWR046
 U 1 1 5A596249
 P 18850 9750
 F 0 "#PWR046" H 18850 9500 50  0001 C CNN
@@ -1449,7 +1449,7 @@ F 3 "" H 18850 9750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R41
+L fk-core-rescue:RESISTOR-conservify R41
 U 1 1 5A59624A
 P 18850 9250
 F 0 "R41" H 18725 9350 60  0000 C CNN
@@ -1470,7 +1470,7 @@ F 13 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R40
+L fk-core-rescue:RESISTOR-conservify R40
 U 1 1 5A59624B
 P 18100 9350
 F 0 "R40" H 17975 9450 60  0000 C CNN
@@ -1491,7 +1491,7 @@ F 13 "mouser" H 5400 5050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBAT #PWR047
+L fk-core-rescue:VBAT-conservify #PWR047
 U 1 1 5A59624C
 P 17500 9350
 F 0 "#PWR047" H 17500 9200 50  0001 C CNN
@@ -1502,7 +1502,7 @@ F 3 "" H 17500 9350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR048
+L fk-core-rescue:3V3-conservify #PWR048
 U 1 1 5A59624D
 P 18400 9200
 F 0 "#PWR048" H 18400 9050 50  0001 C CNN
@@ -1513,7 +1513,7 @@ F 3 "" H 18400 9200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FGPMMOPA6H U10
+L fk-core-rescue:FGPMMOPA6H-conservify U10
 U 1 1 5A59624E
 P 19900 6600
 F 0 "U10" H 19900 6450 60  0000 C CNN
@@ -1534,7 +1534,7 @@ F 13 "various" H 11450 -5900 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RF_SMA_EDGE J11
+L fk-core-rescue:RF_SMA_EDGE-conservify J11
 U 1 1 5A59624F
 P 20950 7600
 F 0 "J11" H 20950 7850 60  0000 C CNN
@@ -1555,7 +1555,7 @@ F 13 "rf supplier" H 11450 -5900 50  0001 C CNN "supplier1"
 	0    -1   1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR049
+L fk-core-rescue:GND-conservify #PWR049
 U 1 1 5A596250
 P 21350 8000
 F 0 "#PWR049" H 21350 7750 50  0001 C CNN
@@ -1566,7 +1566,7 @@ F 3 "" H 21350 8000 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR050
+L fk-core-rescue:GND-conservify #PWR050
 U 1 1 5A596251
 P 17600 7100
 F 0 "#PWR050" H 17600 6850 50  0001 C CNN
@@ -1577,7 +1577,7 @@ F 3 "" H 17600 7100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R39
+L fk-core-rescue:RESISTOR-conservify R39
 U 1 1 5A596253
 P 17900 6550
 F 0 "R39" H 17900 6650 60  0000 C CNN
@@ -1598,7 +1598,7 @@ F 13 "mouser" H 11450 -5900 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:LED_SINGLE D11
+L fk-core-rescue:LED_SINGLE-conservify D11
 U 1 1 5A596254
 P 18400 6550
 F 0 "D11" V 18450 6350 50  0000 C CNN
@@ -1619,7 +1619,7 @@ F 13 "mouser" H 11450 -5900 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MICRO_SD M7
+L fk-core-rescue:MICRO_SD-conservify M7
 U 1 1 5A596255
 P 6400 13500
 F 0 "M7" H 6400 13500 45  0001 C CNN
@@ -1640,7 +1640,7 @@ F 13 "digikey" H -5750 700 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R35
+L fk-core-rescue:RESISTOR-conservify R35
 U 1 1 5A596258
 P 12500 7650
 F 0 "R35" H 12400 7500 60  0000 C CNN
@@ -1661,7 +1661,7 @@ F 13 "mouser" H 1100 3400 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:RESISTOR R36
+L fk-core-rescue:RESISTOR-conservify R36
 U 1 1 5A596259
 P 12500 8050
 F 0 "R36" H 12400 7900 60  0000 C CNN
@@ -1682,7 +1682,7 @@ F 13 "mouser" H 1100 3400 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR051
+L fk-core-rescue:3V3-conservify #PWR051
 U 1 1 5A59625A
 P 12850 7650
 F 0 "#PWR051" H 12850 7500 50  0001 C CNN
@@ -1693,7 +1693,7 @@ F 3 "" H 12850 7650 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR052
+L fk-core-rescue:3V3-conservify #PWR052
 U 1 1 5A59625B
 P 12850 8050
 F 0 "#PWR052" H 12850 7900 50  0001 C CNN
@@ -1704,7 +1704,7 @@ F 3 "" H 12850 8050 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C28
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C28
 U 1 1 5A59625D
 P 19200 8950
 F 0 "C28" H 19250 9050 50  0000 L CNN
@@ -1725,7 +1725,7 @@ F 13 "mouser" H 5750 4450 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR053
+L fk-core-rescue:GND-conservify #PWR053
 U 1 1 5A59625E
 P 19400 8700
 F 0 "#PWR053" H 19400 8450 50  0001 C CNN
@@ -1736,7 +1736,7 @@ F 3 "" H 19400 8700 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R2
+L fk-core-rescue:RESISTOR-conservify R2
 U 1 1 5A596260
 P 1600 13950
 F 0 "R2" H 1600 14050 60  0000 C CNN
@@ -1757,7 +1757,7 @@ F 13 "mouser" H -4850 1500 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R1
+L fk-core-rescue:RESISTOR-conservify R1
 U 1 1 5A596262
 P 800 13500
 F 0 "R1" H 800 13600 60  0000 C CNN
@@ -1778,7 +1778,7 @@ F 13 "mouser" H -5650 1050 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:ATWINC1500_MR210PA U1
+L fk-core-rescue:ATWINC1500_MR210PA-conservify U1
 U 1 1 5A596263
 P 3500 13700
 F 0 "U1" H 2900 15300 50  0000 L CNN
@@ -1801,7 +1801,7 @@ F 15 "digikey" H 3500 13700 60  0001 C CNN "supplier2"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R5
+L fk-core-rescue:RESISTOR-conservify R5
 U 1 1 5A596266
 P 2450 14350
 F 0 "R5" H 2450 14450 60  0000 C CNN
@@ -1822,7 +1822,7 @@ F 13 "mouser" H -4000 1900 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:LED_SINGLE D3
+L fk-core-rescue:LED_SINGLE-conservify D3
 U 1 1 5A596267
 P 2450 14900
 F 0 "D3" V 2500 14700 50  0000 C CNN
@@ -1843,7 +1843,7 @@ F 13 "mouser" H 750 8700 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R4
+L fk-core-rescue:RESISTOR-conservify R4
 U 1 1 5A596269
 P 2150 14350
 F 0 "R4" H 2150 14450 60  0000 C CNN
@@ -1864,7 +1864,7 @@ F 13 "mouser" H -4300 1900 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:LED_SINGLE D2
+L fk-core-rescue:LED_SINGLE-conservify D2
 U 1 1 5A59626A
 P 2150 14900
 F 0 "D2" V 2200 14700 50  0000 C CNN
@@ -1885,7 +1885,7 @@ F 13 "mouser" H 450 8700 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:LED_SINGLE D9
+L fk-core-rescue:LED_SINGLE-conservify D9
 U 1 1 5A59627C
 P 12200 1700
 F 0 "D9" V 12250 1500 50  0000 C CNN
@@ -1906,7 +1906,7 @@ F 13 "mouser" H 10500 -4500 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:LED_SINGLE D10
+L fk-core-rescue:LED_SINGLE-conservify D10
 U 1 1 5A59627D
 P 12200 1900
 F 0 "D10" V 12250 1700 50  0000 C CNN
@@ -1927,7 +1927,7 @@ F 13 "mouser" H 10500 -4300 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:24AA02E64 U4
+L fk-core-rescue:24AA02E64-conservify U4
 U 1 1 5A59627E
 P 10200 12250
 F 0 "U4" H 10200 12150 60  0000 C CNN
@@ -1948,7 +1948,7 @@ F 13 "mouser" H 10200 12250 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C11
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C11
 U 1 1 5A596280
 P 8700 12400
 F 0 "C11" V 8550 12350 50  0000 L CNN
@@ -1969,7 +1969,7 @@ F 13 "mouser" H -6000 5650 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:3V3 #PWR054
+L fk-core-rescue:3V3-conservify #PWR054
 U 1 1 5A596281
 P 8950 12350
 F 0 "#PWR054" H 8950 12200 50  0001 C CNN
@@ -1980,7 +1980,7 @@ F 3 "" H 8950 12350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR055
+L fk-core-rescue:GND-conservify #PWR055
 U 1 1 5A596282
 P 9250 12200
 F 0 "#PWR055" H 9250 11950 50  0001 C CNN
@@ -1991,7 +1991,7 @@ F 3 "" H 9250 12200 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR056
+L fk-core-rescue:GND-conservify #PWR056
 U 1 1 5A596283
 P 8300 12400
 F 0 "#PWR056" H 8300 12150 50  0001 C CNN
@@ -2002,7 +2002,7 @@ F 3 "" H 8300 12400 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:SWITCH_CONN_02 SW2
+L fk-core-rescue:SWITCH_CONN_02-conservify SW2
 U 1 1 5A596284
 P 6550 4200
 F 0 "SW2" H 6550 4350 60  0000 C CNN
@@ -2023,7 +2023,7 @@ F 13 "digikey" H 2850 2550 50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R17
+L fk-core-rescue:RESISTOR-conservify R17
 U 1 1 5A596285
 P 6200 3850
 F 0 "R17" V 6150 3650 60  0000 C CNN
@@ -2044,7 +2044,7 @@ F 13 "mouser" H 2150 2550 50  0001 C CNN "supplier1"
 	0    -1   1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R10
+L fk-core-rescue:RESISTOR-conservify R10
 U 1 1 5A596286
 P 5750 4200
 F 0 "R10" H 5750 4100 60  0000 C CNN
@@ -2065,7 +2065,7 @@ F 13 "mouser" H 1250 2550 50  0001 C CNN "supplier1"
 	1    0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR057
+L fk-core-rescue:3V3-conservify #PWR057
 U 1 1 5A596287
 P 6200 3500
 F 0 "#PWR057" H 6200 3350 50  0001 C CNN
@@ -2076,7 +2076,7 @@ F 3 "" H 6200 3500 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR058
+L fk-core-rescue:GND-conservify #PWR058
 U 1 1 5A596288
 P 7000 4250
 F 0 "#PWR058" H 7000 4000 50  0001 C CNN
@@ -2087,7 +2087,7 @@ F 3 "" H 7000 4250 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR062
+L fk-core-rescue:GND-conservify #PWR062
 U 1 1 5A596297
 P 21700 9550
 F 0 "#PWR062" H 21700 9300 50  0001 C CNN
@@ -2098,7 +2098,7 @@ F 3 "" H 21700 9550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R43
+L fk-core-rescue:RESISTOR-conservify R43
 U 1 1 5A596298
 P 21400 9450
 F 0 "R43" H 21275 9550 60  0000 C CNN
@@ -2119,7 +2119,7 @@ F 13 "mouser" H 8700 5150 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R42
+L fk-core-rescue:RESISTOR-conservify R42
 U 1 1 5A596299
 P 21150 9550
 F 0 "R42" H 21025 9650 60  0000 C CNN
@@ -2140,7 +2140,7 @@ F 13 "mouser" H 8450 5250 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR063
+L fk-core-rescue:3V3-conservify #PWR063
 U 1 1 5A59629A
 P 21400 9650
 F 0 "#PWR063" H 21400 9500 50  0001 C CNN
@@ -2151,7 +2151,7 @@ F 3 "" H 21400 9650 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR064
+L fk-core-rescue:GND-conservify #PWR064
 U 1 1 5A59629F
 P 1100 10050
 F 0 "#PWR064" H 1100 9800 50  0001 C CNN
@@ -2162,7 +2162,7 @@ F 3 "" H 1100 10050 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:CONN_01x05 J6
+L fk-core-rescue:CONN_01x05-conservify J6
 U 1 1 5A5962A1
 P 1550 9450
 F 0 "J6" H 1550 9750 50  0000 C CNN
@@ -2182,7 +2182,7 @@ F 12 "mouser" H 1550 9450 60  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR065
+L fk-core-rescue:GND-conservify #PWR065
 U 1 1 5A5962A2
 P 1100 9350
 F 0 "#PWR065" H 1100 9100 50  0001 C CNN
@@ -2193,7 +2193,7 @@ F 3 "" H 1100 9350 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:PCF8523 U7
+L fk-core-rescue:PCF8523-conservify U7
 U 1 1 5A5E1669
 P 13400 5950
 F 0 "U7" H 13400 6250 60  0000 C CNN
@@ -2213,7 +2213,7 @@ F 12 "mouser" H 13400 5950 60  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CRYSTAL Y2
+L fk-core-rescue:CRYSTAL-conservify Y2
 U 1 1 5A5E2970
 P 12450 5600
 F 0 "Y2" H 12450 5750 50  0000 C CNN
@@ -2234,7 +2234,7 @@ F 13 "mouser" H 10050 3950 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C24
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C24
 U 1 1 5A5E5236
 P 15400 5950
 F 0 "C24" V 15250 5900 50  0000 L CNN
@@ -2255,7 +2255,7 @@ F 13 "mouser" H 3000 3850 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C22
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C22
 U 1 1 5A5E5890
 P 14550 5950
 F 0 "C22" V 14400 5900 50  0000 L CNN
@@ -2276,7 +2276,7 @@ F 13 "mouser" H 2150 3850 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:BATTERY_CELL BT1
+L fk-core-rescue:BATTERY_CELL-conservify BT1
 U 1 1 5A5E75DB
 P 12200 6550
 F 0 "BT1" H 12300 6650 50  0000 L CNN
@@ -2296,7 +2296,7 @@ F 12 "mouser" H 12200 6550 60  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR067
+L fk-core-rescue:GND-conservify #PWR067
 U 1 1 5A5E9631
 P 12200 6800
 F 0 "#PWR067" H 12200 6550 50  0001 C CNN
@@ -2307,7 +2307,7 @@ F 3 "" H 12200 6800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R37
+L fk-core-rescue:RESISTOR-conservify R37
 U 1 1 5A5EB7C2
 P 14950 5800
 F 0 "R37" H 14950 5900 60  0000 C CNN
@@ -2328,7 +2328,7 @@ F 13 "mouser" H 5100 -3650 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR068
+L fk-core-rescue:3V3-conservify #PWR068
 U 1 1 5A5A35CC
 P 15400 5700
 F 0 "#PWR068" H 15400 5550 50  0001 C CNN
@@ -2339,7 +2339,7 @@ F 3 "" H 15400 5700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C1
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C1
 U 1 1 5A59CEFB
 P 900 2650
 F 0 "C1" V 750 2600 50  0000 L CNN
@@ -2360,7 +2360,7 @@ F 13 "mouser" H -10450 -1100 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RFM9xW U3
+L fk-core-rescue:RFM9xW-conservify U3
 U 1 1 5AA2375A
 P 16800 15000
 F 0 "U3" H 16450 15500 60  0000 C CNN
@@ -2381,7 +2381,7 @@ F 13 "various" H 6850 4850 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RF_SMA_EDGE J1
+L fk-core-rescue:RF_SMA_EDGE-conservify J1
 U 1 1 5AA2375B
 P 15000 14900
 F 0 "J1" H 15000 15150 60  0000 C CNN
@@ -2402,7 +2402,7 @@ F 13 "rf supplier" H 6250 4850 50  0001 C CNN "supplier1"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C2
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C2
 U 1 1 5AA23799
 P 17150 14000
 F 0 "C2" V 17000 13950 50  0000 L CNN
@@ -2423,7 +2423,7 @@ F 13 "mouser" H 6850 4850 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C13
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C13
 U 1 1 5AA2379A
 P 17150 14300
 F 0 "C13" V 17000 14250 50  0000 L CNN
@@ -2444,7 +2444,7 @@ F 13 "mouser" H 6850 4850 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR069
+L fk-core-rescue:GND-conservify #PWR069
 U 1 1 5AA237A2
 P 17400 15450
 F 0 "#PWR069" H 17400 15200 50  0001 C CNN
@@ -2455,7 +2455,7 @@ F 3 "" H 17400 15450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR070
+L fk-core-rescue:GND-conservify #PWR070
 U 1 1 5AA237A3
 P 16900 14400
 F 0 "#PWR070" H 16900 14150 50  0001 C CNN
@@ -2466,7 +2466,7 @@ F 3 "" H 16900 14400 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR071
+L fk-core-rescue:GND-conservify #PWR071
 U 1 1 5AA237A4
 P 16150 15450
 F 0 "#PWR071" H 16150 15200 50  0001 C CNN
@@ -2477,7 +2477,7 @@ F 3 "" H 16150 15450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR072
+L fk-core-rescue:GND-conservify #PWR072
 U 1 1 5AA237A5
 P 15000 15450
 F 0 "#PWR072" H 15000 15200 50  0001 C CNN
@@ -2488,7 +2488,7 @@ F 3 "" H 15000 15450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR073
+L fk-core-rescue:3V3-conservify #PWR073
 U 1 1 5AA237A6
 P 17400 13900
 F 0 "#PWR073" H 17400 13750 50  0001 C CNN
@@ -2499,7 +2499,7 @@ F 3 "" H 17400 13900 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_01x01 J4
+L fk-core-rescue:CONN_01x01-conservify J4
 U 1 1 5AA23822
 P 15550 14350
 F 0 "J4" H 15550 14450 50  0000 C CNN
@@ -2519,7 +2519,7 @@ F 12 " " H 15550 14550 50  0001 C CNN "Supplier1"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:RESISTOR R6
+L fk-core-rescue:RESISTOR-conservify R6
 U 1 1 5AF0C200
 P 10600 14100
 F 0 "R6" H 10400 14050 60  0000 C CNN
@@ -2540,7 +2540,7 @@ F 13 "mouser" H -1150 10800 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_01x02 J2
+L fk-core-rescue:CONN_01x02-conservify J2
 U 1 1 5AF12C1F
 P 7800 15300
 F 0 "J2" H 7800 15400 50  0000 C CNN
@@ -2560,7 +2560,7 @@ F 12 " " H 7800 15500 50  0001 C CNN "Supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:VBUS #PWR074
+L fk-core-rescue:VBUS-conservify #PWR074
 U 1 1 5B28222B
 P 800 9450
 F 0 "#PWR074" H 800 9300 50  0001 C CNN
@@ -2571,7 +2571,7 @@ F 3 "" H 800 9450 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M2
+L fk-core-rescue:FIDUCIAL-conservify M2
 U 1 1 5B2838D8
 P 3200 7800
 F 0 "M2" H 3200 7950 60  0000 C CNN
@@ -2591,7 +2591,7 @@ F 12 " " H 3200 8050 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M5
+L fk-core-rescue:FIDUCIAL-conservify M5
 U 1 1 5B283A60
 P 3650 7800
 F 0 "M5" H 3650 7950 60  0000 C CNN
@@ -2611,7 +2611,7 @@ F 12 " " H 3650 8050 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M8
+L fk-core-rescue:FIDUCIAL-conservify M8
 U 1 1 5B283BE0
 P 4100 7800
 F 0 "M8" H 4100 7950 60  0000 C CNN
@@ -2631,7 +2631,7 @@ F 12 " " H 4100 8050 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M9
+L fk-core-rescue:FIDUCIAL-conservify M9
 U 1 1 5B352D1B
 P 3200 7300
 F 0 "M9" H 3200 7450 60  0000 C CNN
@@ -2651,7 +2651,7 @@ F 12 " " H 3200 7550 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M10
+L fk-core-rescue:FIDUCIAL-conservify M10
 U 1 1 5B352D21
 P 3650 7300
 F 0 "M10" H 3650 7450 60  0000 C CNN
@@ -2671,7 +2671,7 @@ F 12 " " H 3650 7550 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:FIDUCIAL M11
+L fk-core-rescue:FIDUCIAL-conservify M11
 U 1 1 5B352D27
 P 4100 7300
 F 0 "M11" H 4100 7450 60  0000 C CNN
@@ -2691,7 +2691,7 @@ F 12 " " H 4100 7550 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:S2B_PH_SM4_TB J3
+L fk-core-rescue:S2B_PH_SM4_TB-conservify J3
 U 1 1 5B36FB86
 P 8700 1300
 F 0 "J3" H 8600 1500 60  0000 C CNN
@@ -2712,7 +2712,7 @@ F 13 "digikey" H -3950 -1500 50  0001 C CNN "supplier1"
 	1    0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR075
+L fk-core-rescue:GND-conservify #PWR075
 U 1 1 5B37042D
 P 9150 1200
 F 0 "#PWR075" H 9150 950 50  0001 C CNN
@@ -2723,7 +2723,7 @@ F 3 "" H 9150 1200 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:VIN #PWR076
+L fk-core-rescue:VIN-conservify #PWR076
 U 1 1 5B372483
 P 9150 1450
 F 0 "#PWR076" H 9150 1300 50  0001 C CNN
@@ -2734,7 +2734,7 @@ F 3 "" H 9150 1450 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR077
+L fk-core-rescue:GND-conservify #PWR077
 U 1 1 5B3EEF35
 P 4450 15750
 F 0 "#PWR077" H 4450 15500 50  0001 C CNN
@@ -2745,7 +2745,7 @@ F 3 "" H 4450 15750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR078
+L fk-core-rescue:GND-conservify #PWR078
 U 1 1 5B3EFE71
 P 5450 14700
 F 0 "#PWR078" H 5450 14450 50  0001 C CNN
@@ -2756,7 +2756,7 @@ F 3 "" H 5450 14700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR079
+L fk-core-rescue:GND-conservify #PWR079
 U 1 1 5B3F3D2A
 P 9500 9800
 F 0 "#PWR079" H 9500 9550 50  0001 C CNN
@@ -2767,7 +2767,7 @@ F 3 "" H 9500 9800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR080
+L fk-core-rescue:GND-conservify #PWR080
 U 1 1 5B3F3EA1
 P 11300 9800
 F 0 "#PWR080" H 11300 9550 50  0001 C CNN
@@ -2778,7 +2778,7 @@ F 3 "" H 11300 9800 60  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR081
+L fk-core-rescue:GND-conservify #PWR081
 U 1 1 5B3F644E
 P 1600 15750
 F 0 "#PWR081" H 1600 15500 50  0001 C CNN
@@ -2789,7 +2789,7 @@ F 3 "" H 1600 15750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR082
+L fk-core-rescue:3V3-conservify #PWR082
 U 1 1 5B3FC692
 P 8050 15350
 F 0 "#PWR082" H 8050 15200 50  0001 C CNN
@@ -2800,7 +2800,7 @@ F 3 "" H 8050 15350 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C16
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C16
 U 1 1 5B41717D
 P 11350 14200
 F 0 "C16" V 11200 14150 50  0000 L CNN
@@ -2821,7 +2821,7 @@ F 13 "mouser" H -3350 7450 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C17
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C17
 U 1 1 5B41D47B
 P 11750 14200
 F 0 "C17" H 11850 14200 50  0000 L CNN
@@ -2842,7 +2842,7 @@ F 13 "mouser" H -3450 11700 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR083
+L fk-core-rescue:GND-conservify #PWR083
 U 1 1 5B41EDF9
 P 11750 14550
 F 0 "#PWR083" H 11750 14300 50  0001 C CNN
@@ -2853,7 +2853,7 @@ F 3 "" H 11750 14550 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR084
+L fk-core-rescue:3V3-conservify #PWR084
 U 1 1 5B420B7E
 P 10900 14100
 F 0 "#PWR084" H 10900 13950 50  0001 C CNN
@@ -2864,7 +2864,7 @@ F 3 "" H 10900 14100 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:SK6812 U13
+L fk-core-rescue:SK6812-conservify U13
 U 1 1 5B568D4B
 P 6350 6350
 F 0 "U13" H 6350 6300 60  0000 C CNN
@@ -2884,7 +2884,7 @@ F 12 "digikey" H 6350 6400 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR085
+L fk-core-rescue:GND-conservify #PWR085
 U 1 1 5B569369
 P 6600 6850
 F 0 "#PWR085" H 6600 6600 50  0001 C CNN
@@ -2895,7 +2895,7 @@ F 3 "" H 6600 6850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR086
+L fk-core-rescue:3V3-conservify #PWR086
 U 1 1 5B56953C
 P 6600 5750
 F 0 "#PWR086" H 6600 5600 50  0001 C CNN
@@ -2906,7 +2906,7 @@ F 3 "" H 6600 5750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_01x03_SERIAL J5
+L fk-core-rescue:CONN_01x03_SERIAL-conservify J5
 U 1 1 5B56F81E
 P 1550 10200
 F 0 "J5" H 1550 10400 50  0000 C CNN
@@ -2926,7 +2926,7 @@ F 12 "mouser" H 1550 10500 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_01x02 J8
+L fk-core-rescue:CONN_01x02-conservify J8
 U 1 1 5B572177
 P 6600 4750
 F 0 "J8" H 6600 4850 50  0000 C CNN
@@ -2946,7 +2946,7 @@ F 12 "digikey" H 6600 4950 50  0001 C CNN "Supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R7
+L fk-core-rescue:RESISTOR-conservify R7
 U 1 1 5B56D4CE
 P 10600 14400
 F 0 "R7" H 10400 14350 60  0000 C CNN
@@ -2967,7 +2967,7 @@ F 13 "mouser" H -1150 11100 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR087
+L fk-core-rescue:3V3-conservify #PWR087
 U 1 1 5B57030B
 P 10900 14400
 F 0 "#PWR087" H 10900 14250 50  0001 C CNN
@@ -2978,7 +2978,7 @@ F 3 "" H 10900 14400 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C33
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C33
 U 1 1 5B5738BD
 P 11350 15000
 F 0 "C33" V 11200 14950 50  0000 L CNN
@@ -2999,7 +2999,7 @@ F 13 "mouser" H -3350 8250 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C34
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C34
 U 1 1 5B5738C6
 P 11750 15000
 F 0 "C34" H 11850 15000 50  0000 L CNN
@@ -3020,7 +3020,7 @@ F 13 "mouser" H -3450 12500 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR088
+L fk-core-rescue:GND-conservify #PWR088
 U 1 1 5B5738CF
 P 11750 15350
 F 0 "#PWR088" H 11750 15100 50  0001 C CNN
@@ -3031,7 +3031,7 @@ F 3 "" H 11750 15350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR089
+L fk-core-rescue:GND-conservify #PWR089
 U 1 1 5B57926E
 P 8050 14800
 F 0 "#PWR089" H 8050 14550 50  0001 C CNN
@@ -3042,7 +3042,7 @@ F 3 "" H 8050 14800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR090
+L fk-core-rescue:3V3-conservify #PWR090
 U 1 1 5B57A74D
 P 7750 14000
 F 0 "#PWR090" H 7750 13850 50  0001 C CNN
@@ -3053,7 +3053,7 @@ F 3 "" H 7750 14000 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C15
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C15
 U 1 1 5B57B6B6
 P 7950 14300
 F 0 "C15" V 7800 14250 50  0000 L CNN
@@ -3074,7 +3074,7 @@ F 13 "mouser" H -6750 7550 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_01x02 J12
+L fk-core-rescue:CONN_01x02-conservify J12
 U 1 1 5B57CC94
 P 8850 15300
 F 0 "J12" H 8850 15400 50  0000 C CNN
@@ -3094,7 +3094,7 @@ F 12 " " H 8850 15500 50  0001 C CNN "Supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR091
+L fk-core-rescue:3V3-conservify #PWR091
 U 1 1 5B57CC9A
 P 9100 15350
 F 0 "#PWR091" H 9100 15200 50  0001 C CNN
@@ -3105,7 +3105,7 @@ F 3 "" H 9100 15350 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:TPS2052B U12
+L fk-core-rescue:TPS2052B-conservify U12
 U 1 1 5B56CC9D
 P 9500 14350
 F 0 "U12" H 9100 13900 60  0000 C CNN
@@ -3125,7 +3125,7 @@ F 12 "digikey" H 9100 14000 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CONN_01x06 J13
+L fk-core-rescue:CONN_01x06-conservify J13
 U 1 1 5B6988D1
 P 22350 6050
 F 0 "J13" H 22270 5525 50  0000 C CNN
@@ -3145,7 +3145,7 @@ F 12 "digikey" H 22270 5625 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0101
+L fk-core-rescue:GND-conservify #PWR0101
 U 1 1 5B699CD3
 P 21500 5800
 F 0 "#PWR0101" H 21500 5550 50  0001 C CNN
@@ -3156,7 +3156,7 @@ F 3 "" H 21500 5800 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:TL5209 U8
+L fk-core-rescue:TL5209-conservify U8
 U 1 1 5B6B01E2
 P 18000 1950
 F 0 "U8" H 17450 1750 60  0000 C CNN
@@ -3176,7 +3176,7 @@ F 12 "mouser" H 17450 1850 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0102
+L fk-core-rescue:GND-conservify #PWR0102
 U 1 1 5B6B0456
 P 18000 2600
 F 0 "#PWR0102" H 18000 2350 50  0001 C CNN
@@ -3187,7 +3187,7 @@ F 3 "" H 18000 2600 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR0103
+L fk-core-rescue:3V3-conservify #PWR0103
 U 1 1 5B6EF128
 P 20750 1700
 F 0 "#PWR0103" H 20750 1550 50  0001 C CNN
@@ -3198,7 +3198,7 @@ F 3 "" H 20750 1700 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:VBUS #PWR0104
+L fk-core-rescue:VBUS-conservify #PWR0104
 U 1 1 5B72FB6C
 P 16550 1700
 F 0 "#PWR0104" H 16550 1550 50  0001 C CNN
@@ -3209,7 +3209,7 @@ F 3 "" H 16550 1700 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C21
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C21
 U 1 1 5B8B13EB
 P 16600 1950
 F 0 "C21" H 16700 1950 50  0000 L CNN
@@ -3230,7 +3230,7 @@ F 13 "mouser" H 1400 -550 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C23
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C23
 U 1 1 5B8F2761
 P 19100 2600
 F 0 "C23" H 19200 2600 50  0000 L CNN
@@ -3251,7 +3251,7 @@ F 13 "digikey" H 3900 100 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C25
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C25
 U 1 1 5B8F2A17
 P 20250 1900
 F 0 "C25" H 20350 1900 50  0000 L CNN
@@ -3272,7 +3272,7 @@ F 13 "digikey" H 5050 -600 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R11
+L fk-core-rescue:RESISTOR-conservify R11
 U 1 1 5B9B7FA2
 P 19650 2150
 F 0 "R11" V 19650 2000 60  0000 C CNN
@@ -3293,7 +3293,7 @@ F 13 "mouser" H 7900 -1150 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R12
+L fk-core-rescue:RESISTOR-conservify R12
 U 1 1 5B9B83AB
 P 19650 2700
 F 0 "R12" V 19650 2550 60  0000 C CNN
@@ -3314,7 +3314,7 @@ F 13 "digikey" H 7900 -600 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:TL5209 U9
+L fk-core-rescue:TL5209-conservify U9
 U 1 1 5BF35137
 P 18000 3600
 F 0 "U9" H 17450 3400 60  0000 C CNN
@@ -3334,7 +3334,7 @@ F 12 "mouser" H 17450 3500 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0105
+L fk-core-rescue:GND-conservify #PWR0105
 U 1 1 5BF3513E
 P 18000 4250
 F 0 "#PWR0105" H 18000 4000 50  0001 C CNN
@@ -3345,7 +3345,7 @@ F 3 "" H 18000 4250 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBUS #PWR0107
+L fk-core-rescue:VBUS-conservify #PWR0107
 U 1 1 5BF3514A
 P 16550 3350
 F 0 "#PWR0107" H 16550 3200 50  0001 C CNN
@@ -3356,7 +3356,7 @@ F 3 "" H 16550 3350 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C26
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C26
 U 1 1 5BF35158
 P 16600 3600
 F 0 "C26" H 16700 3600 50  0000 L CNN
@@ -3377,7 +3377,7 @@ F 13 "mouser" H 1400 1100 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C29
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C29
 U 1 1 5BF35164
 P 19100 4250
 F 0 "C29" H 19200 4250 50  0000 L CNN
@@ -3398,7 +3398,7 @@ F 13 "digikey" H 3900 1750 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C30
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C30
 U 1 1 5BF3516D
 P 20250 3550
 F 0 "C30" H 20350 3550 50  0000 L CNN
@@ -3419,7 +3419,7 @@ F 13 "digikey" H 5050 1050 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R13
+L fk-core-rescue:RESISTOR-conservify R13
 U 1 1 5BF35176
 P 19650 3800
 F 0 "R13" V 19650 3650 60  0000 C CNN
@@ -3440,7 +3440,7 @@ F 13 "mouser" H 7900 500 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:RESISTOR R14
+L fk-core-rescue:RESISTOR-conservify R14
 U 1 1 5BF3517F
 P 19650 4350
 F 0 "R14" V 19650 4200 60  0000 C CNN
@@ -3461,7 +3461,7 @@ F 13 "digikey" H 7900 1050 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:CONN_01x02 J14
+L fk-core-rescue:CONN_01x02-conservify J14
 U 1 1 5C0ECFE8
 P 21300 3450
 F 0 "J14" H 21300 3550 50  0000 C CNN
@@ -3481,7 +3481,7 @@ F 12 " " H 21300 3650 50  0001 C CNN "Supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:3V3 #PWR0106
+L fk-core-rescue:3V3-conservify #PWR0106
 U 1 1 5C0EF322
 P 21800 3200
 F 0 "#PWR0106" H 21800 3050 50  0001 C CNN
@@ -3492,7 +3492,7 @@ F 3 "" H 21800 3200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:MCP1700T-XXX2E U14
+L fk-core-rescue:MCP1700T-XXX2E-conservify U14
 U 1 1 5B75E778
 P 14050 2250
 F 0 "U14" H 14050 2537 60  0000 C CNN
@@ -3512,7 +3512,7 @@ F 12 "mouser" H 14050 2637 50  0001 C CNN "Supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0108
+L fk-core-rescue:GND-conservify #PWR0108
 U 1 1 5B7A6193
 P 14050 2750
 F 0 "#PWR0108" H 14050 2500 50  0001 C CNN
@@ -3523,7 +3523,7 @@ F 3 "" H 14050 2750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:3V3 #PWR0109
+L fk-core-rescue:3V3-conservify #PWR0109
 U 1 1 5B836304
 P 15100 2250
 F 0 "#PWR0109" H 15100 2100 50  0001 C CNN
@@ -3534,7 +3534,7 @@ F 3 "" H 15100 2250 60  0000 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR0110
+L fk-core-rescue:GND-conservify #PWR0110
 U 1 1 5B7FDA2D
 P 19650 3150
 F 0 "#PWR0110" H 19650 2900 50  0001 C CNN
@@ -3545,7 +3545,7 @@ F 3 "" H 19650 3150 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0111
+L fk-core-rescue:GND-conservify #PWR0111
 U 1 1 5B846737
 P 19650 4800
 F 0 "#PWR0111" H 19650 4550 50  0001 C CNN
@@ -3556,7 +3556,7 @@ F 3 "" H 19650 4800 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0112
+L fk-core-rescue:GND-conservify #PWR0112
 U 1 1 5B890BB9
 P 16600 3850
 F 0 "#PWR0112" H 16600 3600 50  0001 C CNN
@@ -3567,7 +3567,7 @@ F 3 "" H 16600 3850 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0113
+L fk-core-rescue:GND-conservify #PWR0113
 U 1 1 5B890DA4
 P 16600 2200
 F 0 "#PWR0113" H 16600 1950 50  0001 C CNN
@@ -3578,7 +3578,7 @@ F 3 "" H 16600 2200 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:5V0 #PWR0115
+L fk-core-rescue:5V0-conservify #PWR0115
 U 1 1 5BE76D5B
 P 15200 4700
 F 0 "#PWR0115" H 15200 4550 50  0001 C CNN
@@ -3589,7 +3589,7 @@ F 3 "" H 15200 4700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VIN #PWR0116
+L fk-core-rescue:VIN-conservify #PWR0116
 U 1 1 5BE76E56
 P 14800 4700
 F 0 "#PWR0116" H 14800 4550 50  0001 C CNN
@@ -3600,7 +3600,7 @@ F 3 "" H 14800 4700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0102
+L fk-core-rescue:PWR_FLAG-conservify #FLG0102
 U 1 1 5BE7742D
 P 15200 4800
 F 0 "#FLG0102" H 15200 4875 50  0001 C CNN
@@ -3611,7 +3611,7 @@ F 3 "~" H 15200 4800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0103
+L fk-core-rescue:PWR_FLAG-conservify #FLG0103
 U 1 1 5BE77528
 P 14800 4800
 F 0 "#FLG0103" H 14800 4875 50  0001 C CNN
@@ -3622,7 +3622,7 @@ F 3 "~" H 14800 4800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0104
+L fk-core-rescue:PWR_FLAG-conservify #FLG0104
 U 1 1 5BF9ECDF
 P 14400 4800
 F 0 "#FLG0104" H 14400 4875 50  0001 C CNN
@@ -3633,7 +3633,7 @@ F 3 "~" H 14400 4800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:VBAT #PWR0117
+L fk-core-rescue:VBAT-conservify #PWR0117
 U 1 1 5C03A622
 P 14000 4700
 F 0 "#PWR0117" H 14000 4550 50  0001 C CNN
@@ -3644,7 +3644,7 @@ F 3 "" H 14000 4700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0105
+L fk-core-rescue:PWR_FLAG-conservify #FLG0105
 U 1 1 5C03EC7D
 P 14000 4800
 F 0 "#FLG0105" H 14000 4875 50  0001 C CNN
@@ -3655,7 +3655,7 @@ F 3 "~" H 14000 4800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:GND #PWR0118
+L fk-core-rescue:GND-conservify #PWR0118
 U 1 1 5C0D35EF
 P 13600 4650
 F 0 "#PWR0118" H 13600 4400 50  0001 C CNN
@@ -3666,7 +3666,7 @@ F 3 "" H 13600 4650 60  0000 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0106
+L fk-core-rescue:PWR_FLAG-conservify #FLG0106
 U 1 1 5C0D39BA
 P 13600 4800
 F 0 "#FLG0106" H 13600 4875 50  0001 C CNN
@@ -3677,7 +3677,7 @@ F 3 "~" H 13600 4800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0107
+L fk-core-rescue:PWR_FLAG-conservify #FLG0107
 U 1 1 5C120974
 P 14550 5700
 F 0 "#FLG0107" H 14550 5775 50  0001 C CNN
@@ -3688,7 +3688,7 @@ F 3 "~" H 14550 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0101
+L fk-core-rescue:PWR_FLAG-conservify #FLG0101
 U 1 1 5BC10710
 P 19000 9750
 F 0 "#FLG0101" H 19000 9825 50  0001 C CNN
@@ -3699,7 +3699,7 @@ F 3 "~" H 19000 9750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:PWR_FLAG #FLG0108
+L fk-core-rescue:PWR_FLAG-conservify #FLG0108
 U 1 1 5BCA8F7A
 P 19700 8950
 F 0 "#FLG0108" H 19700 9025 50  0001 C CNN
@@ -5406,7 +5406,7 @@ NoConn ~ 3200 7950
 NoConn ~ 3650 7950
 NoConn ~ 4100 7950
 $Comp
-L conservify:CAPACITOR_CERAMIC C31
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C31
 U 1 1 5B97DF6E
 P 17900 5750
 F 0 "C31" V 17750 5700 50  0000 L CNN
@@ -5427,7 +5427,7 @@ F 13 "mouser" H 7600 -3400 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:CAPACITOR_CERAMIC C32
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C32
 U 1 1 5B97E0F4
 P 18200 5750
 F 0 "C32" V 18050 5700 50  0000 L CNN
@@ -5448,7 +5448,7 @@ F 13 "mouser" H 7900 -3700 50  0001 C CNN "supplier1"
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:GND #PWR0114
+L fk-core-rescue:GND-conservify #PWR0114
 U 1 1 5BA649F7
 P 17900 5400
 F 0 "#PWR0114" H 17900 5150 50  0001 C CNN
@@ -5469,7 +5469,7 @@ Wire Wire Line
 	17900 5400 17900 5600
 Connection ~ 17900 5600
 $Comp
-L conservify:CAPACITOR_CERAMIC C35
+L fk-core-rescue:CAPACITOR_CERAMIC-conservify C35
 U 1 1 5BBEB100
 P 17500 5750
 F 0 "C35" V 17350 5700 50  0000 L CNN
@@ -5498,7 +5498,7 @@ Wire Wire Line
 Wire Wire Line
 	17600 6150 17900 6150
 $Comp
-L conservify:INDUCTOR L3
+L fk-core-rescue:INDUCTOR-conservify L3
 U 1 1 5BABB303
 P 17300 6150
 F 0 "L3" H 17300 6100 50  0000 C CNN
@@ -5533,7 +5533,7 @@ UART2_RX
 Text Label 2350 3900 0    50   ~ 0
 UART2_TX
 $Comp
-L conservify:RESISTOR R19
+L fk-core-rescue:RESISTOR-conservify R19
 U 1 1 5BE9EEAE
 P 12100 15050
 F 0 "R19" H 11900 15000 60  0000 C CNN
@@ -5554,7 +5554,7 @@ F 13 "mouser" H 350 11750 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR0119
+L fk-core-rescue:GND-conservify #PWR0119
 U 1 1 5BE9FC68
 P 12100 15350
 F 0 "#PWR0119" H 12100 15100 50  0001 C CNN
@@ -5565,7 +5565,7 @@ F 3 "" H 12100 15350 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:RESISTOR R18
+L fk-core-rescue:RESISTOR-conservify R18
 U 1 1 5BEF18CE
 P 12100 14250
 F 0 "R18" H 11900 14200 60  0000 C CNN
@@ -5586,7 +5586,7 @@ F 13 "mouser" H 350 10950 50  0001 C CNN "supplier1"
 	0    1    1    0   
 $EndComp
 $Comp
-L conservify:GND #PWR0120
+L fk-core-rescue:GND-conservify #PWR0120
 U 1 1 5BF40BF8
 P 12100 14550
 F 0 "#PWR0120" H 12100 14300 50  0001 C CNN
@@ -5607,7 +5607,7 @@ Wire Wire Line
 	12100 14800 11750 14800
 Connection ~ 11750 14800
 $Comp
-L conservify:RESISTOR R20
+L fk-core-rescue:RESISTOR-conservify R20
 U 1 1 5C0D0CB1
 P 20900 3650
 F 0 "R20" V 20900 3500 60  0000 C CNN
@@ -5635,7 +5635,7 @@ Wire Wire Line
 	20900 4700 20250 4700
 Connection ~ 20250 4700
 $Comp
-L conservify:RESISTOR R16
+L fk-core-rescue:RESISTOR-conservify R16
 U 1 1 5C177D29
 P 10650 15600
 F 0 "R16" H 10450 15550 60  0000 C CNN
@@ -5656,7 +5656,7 @@ F 13 "mouser" H -1100 12300 50  0001 C CNN "supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L conservify:RESISTOR R15
+L fk-core-rescue:RESISTOR-conservify R15
 U 1 1 5C17880F
 P 10650 15400
 F 0 "R15" H 10450 15350 60  0000 C CNN
@@ -5687,7 +5687,7 @@ Wire Wire Line
 Wire Wire Line
 	10400 15600 9750 15600
 $Comp
-L conservify:GND #PWR0121
+L fk-core-rescue:GND-conservify #PWR0121
 U 1 1 5C4F5FEB
 P 11050 15700
 F 0 "#PWR0121" H 11050 15450 50  0001 C CNN
