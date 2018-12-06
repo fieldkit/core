@@ -1,4 +1,5 @@
 (sym_lib_table
   (lib (name fk-core-rescue)(type Legacy)(uri ${KIPRJMOD}/fk-core-rescue.lib)(options "")(descr ""))
   (lib (name conservify)(type Legacy)(uri /home/jlewallen/conservify/kicad/conservify.lib)(options "")(descr ""))
+  (lib (name minimus-prime)(type Legacy)(uri ${KIPRJMOD}/minimus-prime.lib)(options "")(descr ""))
 )
