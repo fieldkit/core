@@ -5373,12 +5373,7 @@ Wire Wire Line
 Wire Wire Line
 	21900 6575 22200 6575
 Wire Wire Line
-	18050 6850 18100 6850
-Wire Wire Line
-	18050 6850 18050 7100
-Connection ~ 18050 6850
-Wire Wire Line
-	18000 6850 18050 6850
+	18050 7050 18050 7300
 Wire Wire Line
 	19700 6400 19700 6200
 Wire Wire Line
@@ -5418,7 +5413,7 @@ Connection ~ 16650 6200
 Wire Wire Line
 	16650 6300 16650 6200
 Text Label 21900 6675 0    50   ~ 0
-MODULE_3V3
+GPS_3V3
 Text Label 16700 6300 0    50   ~ 0
 D9_MODULE_EN
 $Comp
@@ -5595,14 +5590,18 @@ $EndComp
 $Comp
 L fk-core-rescue:GND-conservify #PWR0123
 U 1 1 5C316F8A
-P 18050 7100
-F 0 "#PWR0123" H 18050 6850 50  0001 C CNN
-F 1 "GND" H 18050 6950 50  0001 C CNN
-F 2 "" H 18050 7100 60  0000 C CNN
-F 3 "" H 18050 7100 60  0000 C CNN
-	1    18050 7100
+P 18050 7300
+F 0 "#PWR0123" H 18050 7050 50  0001 C CNN
+F 1 "GND" H 18050 7150 50  0001 C CNN
+F 2 "" H 18050 7300 60  0000 C CNN
+F 3 "" H 18050 7300 60  0000 C CNN
+	1    18050 7300
 	1    0    0    -1  
 $EndComp
+Text Label 21500 6200 2    50   ~ 0
+GPS_3V3
+Text Label 16700 6200 0    50   ~ 0
+A4_GPS_EN
 $Comp
 L fk-core-rescue:TL5209-conservify U11
 U 1 1 5C316F84
@@ -5623,8 +5622,23 @@ F 12 "mouser" H 17500 6350 50  0001 C CNN "Supplier1"
 	1    18050 6450
 	1    0    0    -1  
 $EndComp
-Text Label 21500 6200 2    50   ~ 0
-GPS_3V3
-Text Label 16700 6200 0    50   ~ 0
-A4_GPS_EN
+Wire Wire Line
+	18200 6850 18200 7050
+Wire Wire Line
+	18200 7050 18100 7050
+Wire Wire Line
+	18050 7050 18000 7050
+Wire Wire Line
+	17900 7050 17900 6850
+Connection ~ 18050 7050
+Wire Wire Line
+	18000 6850 18000 7050
+Connection ~ 18000 7050
+Wire Wire Line
+	18000 7050 17900 7050
+Wire Wire Line
+	18100 6850 18100 7050
+Connection ~ 18100 7050
+Wire Wire Line
+	18100 7050 18050 7050
 $EndSCHEMATC
