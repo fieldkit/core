@@ -1,6 +1,41 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# conservify:STC3100IQT
+#
+DEF conservify:STC3100IQT U 0 40 Y Y 1 F N
+F0 "U" 500 -700 60 H V C CNN
+F1 "conservify:STC3100IQT" 0 0 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S 550 500 -500 -650 0 1 0 f
+X IO0 1 650 -500 100 L 50 50 1 1 I
+X ROSC 2 -600 250 100 R 50 50 1 1 I
+X SDA 3 -600 -500 100 R 50 50 1 1 I
+X SCL 4 -600 -400 100 R 50 50 1 1 I
+X GND 5 0 -750 100 U 50 50 1 1 I
+X CG 6 650 -250 100 L 50 50 1 1 I
+X VCC 7 650 250 100 L 50 50 1 1 I
+X VIN 8 650 0 100 L 50 50 1 1 I
+X EP 9 150 -750 100 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# conservify:VBAT
+#
+DEF conservify:VBAT #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -150 50 H I C CNN
+F1 "conservify:VBAT" 0 140 50 H V C CNN
+F2 "" 0 0 60 H V C CNN
+F3 "" 0 0 60 H V C CNN
+DRAW
+P 2 0 1 0 -50 100 50 100 N
+P 2 0 1 0 0 0 0 100 N
+X VBAT 1 0 0 0 U 50 50 1 1 W N
+ENDDRAW
+ENDDEF
+#
 # fk-core-rescue:24AA02E64-conservify
 #
 DEF fk-core-rescue:24AA02E64-conservify U 0 40 Y Y 1 F N
