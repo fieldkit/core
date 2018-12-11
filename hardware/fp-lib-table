@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name fk-core)(type KiCad)(uri "$(KIPRJMOD)")(options "")(descr ""))
   (lib (name conservify)(type KiCad)(uri C:/Users/chris/PCBs/ALLLC/Conservify/kicad/conservify.pretty)(options "")(descr ""))
+  (lib (name B2B-PH-SM4-TB_LF__SN_)(type Legacy)(uri C:/Users/chris/PCBs/ALLLC/Conservify/kicad/conservify.pretty/B2B-PH-SM4-TB_LF__SN_.mod)(options "")(descr ""))
 )
