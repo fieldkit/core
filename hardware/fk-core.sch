@@ -5826,7 +5826,7 @@ Wire Notes Line
 Text Notes 13475 7975 0    180  ~ 36
 BUTTONS
 $Comp
-L conservify:STC3100IQT U15
+L fk-core-rescue:STC3100IQT-conservify U15
 U 1 1 5C24E051
 P 9050 9675
 F 0 "U15" H 9075 10362 60  0000 C CNN
@@ -5923,7 +5923,7 @@ F 3 "" H 11025 10675 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L conservify:VBAT #PWR022
+L fk-core-rescue:VBAT-conservify #PWR022
 U 1 1 5C519D93
 P 11225 9300
 F 0 "#PWR022" H 11225 9150 50  0001 C CNN

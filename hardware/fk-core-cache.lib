@@ -1,46 +1,11 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# conservify:STC3100IQT
+# fk-core-rescue_24AA02E64-conservify
 #
-DEF conservify:STC3100IQT U 0 40 Y Y 1 F N
-F0 "U" 500 -700 60 H V C CNN
-F1 "conservify:STC3100IQT" 0 0 60 H V C CNN
-F2 "" 0 0 60 H I C CNN
-F3 "" 0 0 60 H I C CNN
-DRAW
-S 550 500 -500 -650 0 1 0 f
-X IO0 1 650 -500 100 L 50 50 1 1 I
-X ROSC 2 -600 250 100 R 50 50 1 1 I
-X SDA 3 -600 -500 100 R 50 50 1 1 I
-X SCL 4 -600 -400 100 R 50 50 1 1 I
-X GND 5 0 -750 100 U 50 50 1 1 I
-X CG 6 650 -250 100 L 50 50 1 1 I
-X VCC 7 650 250 100 L 50 50 1 1 I
-X VIN 8 650 0 100 L 50 50 1 1 I
-X EP 9 150 -750 100 U 50 50 1 1 I
-ENDDRAW
-ENDDEF
-#
-# conservify:VBAT
-#
-DEF conservify:VBAT #PWR 0 0 Y Y 1 F P
-F0 "#PWR" 0 -150 50 H I C CNN
-F1 "conservify:VBAT" 0 140 50 H V C CNN
-F2 "" 0 0 60 H V C CNN
-F3 "" 0 0 60 H V C CNN
-DRAW
-P 2 0 1 0 -50 100 50 100 N
-P 2 0 1 0 0 0 0 100 N
-X VBAT 1 0 0 0 U 50 50 1 1 W N
-ENDDRAW
-ENDDEF
-#
-# fk-core-rescue:24AA02E64-conservify
-#
-DEF fk-core-rescue:24AA02E64-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_24AA02E64-conservify U 0 40 Y Y 1 F N
 F0 "U" 0 -100 60 H V C CNN
-F1 "fk-core-rescue:24AA02E64-conservify" 0 0 60 H V C CNN
+F1 "fk-core-rescue_24AA02E64-conservify" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -53,11 +18,11 @@ X NC 5 700 0 200 L 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:3V3-conservify
+# fk-core-rescue_3V3-conservify
 #
-DEF fk-core-rescue:3V3-conservify #PWR 0 0 Y Y 1 F P
+DEF fk-core-rescue_3V3-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "fk-core-rescue:3V3-conservify" 0 140 50 H V C CNN
+F1 "fk-core-rescue_3V3-conservify" 0 140 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -67,11 +32,11 @@ X 3V3 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:5V0-conservify
+# fk-core-rescue_5V0-conservify
 #
-DEF fk-core-rescue:5V0-conservify #PWR 0 0 Y Y 1 F P
+DEF fk-core-rescue_5V0-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "fk-core-rescue:5V0-conservify" 0 140 50 H V C CNN
+F1 "fk-core-rescue_5V0-conservify" 0 140 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -81,11 +46,11 @@ X 5V0 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:ATSAMD21G18A_AU-conservify
+# fk-core-rescue_ATSAMD21G18A_AU-conservify
 #
-DEF fk-core-rescue:ATSAMD21G18A_AU-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_ATSAMD21G18A_AU-conservify U 0 40 Y Y 1 F N
 F0 "U" -650 1300 60 H V C CNN
-F1 "fk-core-rescue:ATSAMD21G18A_AU-conservify" 0 0 60 H V C CNN
+F1 "fk-core-rescue_ATSAMD21G18A_AU-conservify" 0 0 60 H V C CNN
 F2 "conservify:TQFP-48_7x7mm_Pitch0.5mm" 0 -1550 60 H I C CNN
 F3 "" 0 450 60 H V C CNN
 $FPLIST
@@ -144,11 +109,11 @@ X PA04 9 -850 750 150 R 40 40 1 1 B
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:ATWINC1500_MR210PA-conservify
+# fk-core-rescue_ATWINC1500_MR210PA-conservify
 #
-DEF fk-core-rescue:ATWINC1500_MR210PA-conservify U 0 40 Y Y 1 L N
+DEF fk-core-rescue_ATWINC1500_MR210PA-conservify U 0 40 Y Y 1 L N
 F0 "U" -600 1600 50 H V L CNN
-F1 "fk-core-rescue:ATWINC1500_MR210PA-conservify" -600 -2000 50 H V L CNN
+F1 "fk-core-rescue_ATWINC1500_MR210PA-conservify" -600 -2000 50 H V L CNN
 F2 "ATMEL_ATWINC1500_MR210PA" 0 0 50 H I L CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -182,11 +147,11 @@ X GND_1 9 800 -1700 200 L 40 40 0 0 W
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:BATTERY_CELL-conservify
+# fk-core-rescue_BATTERY_CELL-conservify
 #
-DEF fk-core-rescue:BATTERY_CELL-conservify BT 0 0 N N 1 F N
+DEF fk-core-rescue_BATTERY_CELL-conservify BT 0 0 N N 1 F N
 F0 "BT" 100 100 50 H V L CNN
-F1 "fk-core-rescue:BATTERY_CELL-conservify" 100 0 50 H V L CNN
+F1 "fk-core-rescue_BATTERY_CELL-conservify" 100 0 50 H V L CNN
 F2 "" 0 60 50 V I C CNN
 F3 "" 0 60 50 V I C CNN
 DRAW
@@ -201,11 +166,11 @@ X - 2 0 -100 100 U 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:BQ24074-conservify
+# fk-core-rescue_BQ24074-conservify
 #
-DEF fk-core-rescue:BQ24074-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_BQ24074-conservify U 0 40 Y Y 1 F N
 F0 "U" -300 500 60 H V C CNN
-F1 "fk-core-rescue:BQ24074-conservify" 0 0 60 V V C CNN
+F1 "fk-core-rescue_BQ24074-conservify" 0 0 60 V V C CNN
 F2 "conservify:QFN-16_3x3mm" 0 -700 60 H I C CNN
 F3 "" 50 0 60 H V C CNN
 $FPLIST
@@ -233,11 +198,11 @@ X ~CHG~ 9 50 600 150 D 40 40 1 1 O
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CAPACITOR_CERAMIC-conservify
+# fk-core-rescue_CAPACITOR_CERAMIC-conservify
 #
-DEF fk-core-rescue:CAPACITOR_CERAMIC-conservify C 0 10 Y Y 1 F N
+DEF fk-core-rescue_CAPACITOR_CERAMIC-conservify C 0 10 Y Y 1 F N
 F0 "C" 25 100 50 H V L CNN
-F1 "fk-core-rescue:CAPACITOR_CERAMIC-conservify" 25 -100 50 H V L CNN
+F1 "fk-core-rescue_CAPACITOR_CERAMIC-conservify" 25 -100 50 H V L CNN
 F2 "conservify:CAP-0603" 0 -200 30 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -256,11 +221,11 @@ X ~ 2 0 -150 110 U 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CONN_01x01-conservify
+# fk-core-rescue_CONN_01x01-conservify
 #
-DEF fk-core-rescue:CONN_01x01-conservify J 0 40 Y N 1 F N
+DEF fk-core-rescue_CONN_01x01-conservify J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "fk-core-rescue:CONN_01x01-conservify" 0 -100 50 H V C CNN
+F1 "fk-core-rescue_CONN_01x01-conservify" 0 -100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -278,11 +243,11 @@ X Pin_1 1 -200 0 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CONN_01x02-conservify
+# fk-core-rescue_CONN_01x02-conservify
 #
-DEF fk-core-rescue:CONN_01x02-conservify J 0 40 Y N 1 F N
+DEF fk-core-rescue_CONN_01x02-conservify J 0 40 Y N 1 F N
 F0 "J" 0 100 50 H V C CNN
-F1 "fk-core-rescue:CONN_01x02-conservify" 0 -200 50 H V C CNN
+F1 "fk-core-rescue_CONN_01x02-conservify" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -302,11 +267,11 @@ X Pin_2 2 -200 -100 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CONN_01x03_SERIAL-conservify
+# fk-core-rescue_CONN_01x03_SERIAL-conservify
 #
-DEF fk-core-rescue:CONN_01x03_SERIAL-conservify J 0 0 N Y 1 F N
+DEF fk-core-rescue_CONN_01x03_SERIAL-conservify J 0 0 N Y 1 F N
 F0 "J" 0 200 50 H V C CNN
-F1 "fk-core-rescue:CONN_01x03_SERIAL-conservify" 0 -200 50 H V C CNN
+F1 "fk-core-rescue_CONN_01x03_SERIAL-conservify" 0 -200 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -328,11 +293,11 @@ X D30 3 -200 -100 150 R 50 39 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CONN_01x05-conservify
+# fk-core-rescue_CONN_01x05-conservify
 #
-DEF fk-core-rescue:CONN_01x05-conservify J 0 40 Y N 1 F N
+DEF fk-core-rescue_CONN_01x05-conservify J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "fk-core-rescue:CONN_01x05-conservify" 0 -300 50 H V C CNN
+F1 "fk-core-rescue_CONN_01x05-conservify" 0 -300 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -358,11 +323,11 @@ X Pin_5 5 -200 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CONN_01x06-conservify
+# fk-core-rescue_CONN_01x06-conservify
 #
-DEF fk-core-rescue:CONN_01x06-conservify J 0 40 Y N 1 F N
+DEF fk-core-rescue_CONN_01x06-conservify J 0 40 Y N 1 F N
 F0 "J" 0 300 50 H V C CNN
-F1 "fk-core-rescue:CONN_01x06-conservify" 0 -400 50 H V C CNN
+F1 "fk-core-rescue_CONN_01x06-conservify" 0 -400 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 $FPLIST
@@ -390,11 +355,11 @@ X Pin_6 6 -200 -300 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CONN_02x05_SWD-conservify
+# fk-core-rescue_CONN_02x05_SWD-conservify
 #
-DEF ~fk-core-rescue:CONN_02x05_SWD-conservify J 0 40 Y N 1 F N
+DEF ~fk-core-rescue_CONN_02x05_SWD-conservify J 0 40 Y N 1 F N
 F0 "J" 0 300 60 H V C CNN
-F1 "fk-core-rescue:CONN_02x05_SWD-conservify" -50 -350 60 H I C CNN
+F1 "fk-core-rescue_CONN_02x05_SWD-conservify" -50 -350 60 H I C CNN
 F2 "" 0 -450 60 H I C CNN
 F3 "" -50 -150 60 H V C CNN
 $FPLIST
@@ -430,11 +395,11 @@ X Pin_9 9 -250 -200 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:CRYSTAL-conservify
+# fk-core-rescue_CRYSTAL-conservify
 #
-DEF fk-core-rescue:CRYSTAL-conservify Y 0 40 N N 1 F N
+DEF fk-core-rescue_CRYSTAL-conservify Y 0 40 N N 1 F N
 F0 "Y" 0 150 50 H V C CNN
-F1 "fk-core-rescue:CRYSTAL-conservify" 0 -150 50 H V C CNN
+F1 "fk-core-rescue_CRYSTAL-conservify" 0 -150 50 H V C CNN
 F2 "conservify:ABS07" 0 -250 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -449,11 +414,11 @@ X 2 2 250 0 150 L 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:DIODE_DUAL_SCHOTTKY-conservify
+# fk-core-rescue_DIODE_DUAL_SCHOTTKY-conservify
 #
-DEF fk-core-rescue:DIODE_DUAL_SCHOTTKY-conservify D 0 40 N N 1 F N
+DEF fk-core-rescue_DIODE_DUAL_SCHOTTKY-conservify D 0 40 N N 1 F N
 F0 "D" 0 250 50 H V C CNN
-F1 "fk-core-rescue:DIODE_DUAL_SCHOTTKY-conservify" 0 -250 50 H V C CNN
+F1 "fk-core-rescue_DIODE_DUAL_SCHOTTKY-conservify" 0 -250 50 H V C CNN
 F2 "conservify:SOT-1016" 0 -350 60 H I C CNN
 F3 "" 0 100 60 H V C CNN
 $FPLIST
@@ -476,11 +441,11 @@ X K 3 -300 0 150 R 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:FGPMMOPA6H-conservify
+# fk-core-rescue_FGPMMOPA6H-conservify
 #
-DEF fk-core-rescue:FGPMMOPA6H-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_FGPMMOPA6H-conservify U 0 40 Y Y 1 F N
 F0 "U" 0 -150 60 H V C CNN
-F1 "fk-core-rescue:FGPMMOPA6H-conservify" 0 0 60 H V C CNN
+F1 "fk-core-rescue_FGPMMOPA6H-conservify" 0 0 60 H V C CNN
 F2 "" 0 0 60 H I C CNN
 F3 "" 0 0 60 H I C CNN
 DRAW
@@ -508,11 +473,11 @@ X TX 9 -1000 -350 200 R 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:FIDUCIAL-conservify
+# fk-core-rescue_FIDUCIAL-conservify
 #
-DEF fk-core-rescue:FIDUCIAL-conservify M 0 40 Y Y 1 F N
+DEF fk-core-rescue_FIDUCIAL-conservify M 0 40 Y Y 1 F N
 F0 "M" 0 150 60 H V C CNN
-F1 "fk-core-rescue:FIDUCIAL-conservify" 0 -225 60 H V C CNN
+F1 "fk-core-rescue_FIDUCIAL-conservify" 0 -225 60 H V C CNN
 F2 "conservify:FIDUCIAL-1MM" 0 -300 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -521,11 +486,11 @@ X ~ ~ 0 -150 150 U 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:FUSE-conservify
+# fk-core-rescue_FUSE-conservify
 #
-DEF fk-core-rescue:FUSE-conservify F 0 10 Y Y 1 F N
+DEF fk-core-rescue_FUSE-conservify F 0 10 Y Y 1 F N
 F0 "F" 100 50 50 H V C CNN
-F1 "fk-core-rescue:FUSE-conservify" -100 -50 50 H V C CNN
+F1 "fk-core-rescue_FUSE-conservify" -100 -50 50 H V C CNN
 F2 "conservify:MF-PSMF020X" 0 -150 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -539,11 +504,11 @@ X ~ 2 300 0 150 L 40 40 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:GND-conservify
+# fk-core-rescue_GND-conservify
 #
-DEF ~fk-core-rescue:GND-conservify #PWR 0 0 Y Y 1 F P
+DEF ~fk-core-rescue_GND-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
-F1 "fk-core-rescue:GND-conservify" 0 -150 50 H I C CNN
+F1 "fk-core-rescue_GND-conservify" 0 -150 50 H I C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -555,11 +520,11 @@ X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:INDUCTOR-conservify
+# fk-core-rescue_INDUCTOR-conservify
 #
-DEF fk-core-rescue:INDUCTOR-conservify L 0 40 N N 1 F N
+DEF fk-core-rescue_INDUCTOR-conservify L 0 40 N N 1 F N
 F0 "L" 0 -50 50 H V C CNN
-F1 "fk-core-rescue:INDUCTOR-conservify" 0 100 50 H V C CNN
+F1 "fk-core-rescue_INDUCTOR-conservify" 0 100 50 H V C CNN
 F2 "conservify:IND-0603" 0 -150 60 H I C CNN
 F3 "" 0 0 60 V V C CNN
 $FPLIST
@@ -580,11 +545,11 @@ X 2 2 300 0 150 L 70 70 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:LED_SINGLE-conservify
+# fk-core-rescue_LED_SINGLE-conservify
 #
-DEF fk-core-rescue:LED_SINGLE-conservify D 0 40 Y N 1 F N
+DEF fk-core-rescue_LED_SINGLE-conservify D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
-F1 "fk-core-rescue:LED_SINGLE-conservify" 0 -140 50 H V C CNN
+F1 "fk-core-rescue_LED_SINGLE-conservify" 0 -140 50 H V C CNN
 F2 "conservify:LED-0603" 0 -250 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -602,11 +567,11 @@ X A 2 200 0 150 L 40 40 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:MCP1700T-XXX2E-conservify
+# fk-core-rescue_MCP1700T-XXX2E-conservify
 #
-DEF fk-core-rescue:MCP1700T-XXX2E-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_MCP1700T-XXX2E-conservify U 0 40 Y Y 1 F N
 F0 "U" 0 150 60 H V C CNN
-F1 "fk-core-rescue:MCP1700T-XXX2E-conservify" 0 -550 60 H V C CNN
+F1 "fk-core-rescue_MCP1700T-XXX2E-conservify" 0 -550 60 H V C CNN
 F2 "conservify:SOT-89" 0 -650 60 H I C CNN
 F3 "" -100 0 60 H V C CNN
 $FPLIST
@@ -620,11 +585,11 @@ X VOUT 3 350 0 150 L 50 50 1 1 w
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:MICRO_SD-conservify
+# fk-core-rescue_MICRO_SD-conservify
 #
-DEF ~fk-core-rescue:MICRO_SD-conservify M 0 40 Y Y 1 L N
+DEF ~fk-core-rescue_MICRO_SD-conservify M 0 40 Y Y 1 L N
 F0 "M" 0 0 45 H I C CNN
-F1 "fk-core-rescue:MICRO_SD-conservify" 0 0 45 H I C CNN
+F1 "fk-core-rescue_MICRO_SD-conservify" 0 0 45 H I C CNN
 F2 "" 30 150 20 H I C CNN
 F3 "" 0 0 60 H I C CNN
 $FPLIST
@@ -657,11 +622,11 @@ X GND1 MT2 -700 -700 100 R 40 40 1 1 W
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:MICRO_USB-conservify
+# fk-core-rescue_MICRO_USB-conservify
 #
-DEF fk-core-rescue:MICRO_USB-conservify J 0 40 Y Y 1 F N
+DEF fk-core-rescue_MICRO_USB-conservify J 0 40 Y Y 1 F N
 F0 "J" 0 350 60 H V C CNN
-F1 "fk-core-rescue:MICRO_USB-conservify" 0 -350 60 H V C CNN
+F1 "fk-core-rescue_MICRO_USB-conservify" 0 -350 60 H V C CNN
 F2 "conservify:MICRO-USB" 0 -450 60 H I C CNN
 F3 "" 50 200 60 H V C CNN
 $FPLIST
@@ -681,11 +646,11 @@ X SHIELD 9 -400 100 150 R 40 40 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:MOSFET_N-conservify
+# fk-core-rescue_MOSFET_N-conservify
 #
-DEF fk-core-rescue:MOSFET_N-conservify Q 0 0 Y Y 1 F N
+DEF fk-core-rescue_MOSFET_N-conservify Q 0 0 Y Y 1 F N
 F0 "Q" 250 50 50 H V R CNN
-F1 "fk-core-rescue:MOSFET_N-conservify" 550 -50 50 H V R CNN
+F1 "fk-core-rescue_MOSFET_N-conservify" 550 -50 50 H V R CNN
 F2 "conservify:SOT-23" 0 -300 29 H I C CNN
 F3 "" -100 0 60 H V C CNN
 $FPLIST
@@ -716,11 +681,11 @@ X D 3 0 250 150 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:MOUNT_HOLE-conservify
+# fk-core-rescue_MOUNT_HOLE-conservify
 #
-DEF ~fk-core-rescue:MOUNT_HOLE-conservify M 0 40 Y Y 1 F N
+DEF ~fk-core-rescue_MOUNT_HOLE-conservify M 0 40 Y Y 1 F N
 F0 "M" 0 150 50 H V C CNN
-F1 "fk-core-rescue:MOUNT_HOLE-conservify" 0 -150 50 H I C CNN
+F1 "fk-core-rescue_MOUNT_HOLE-conservify" 0 -150 50 H I C CNN
 F2 "conservify:HOLE_PTH_3.2MM" 25 -225 50 H I C CNN
 F3 "" 0 0 50 H V C CNN
 $FPLIST
@@ -736,11 +701,11 @@ P 2 0 1 0 25 25 -25 -25 N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:PCF8523-conservify
+# fk-core-rescue_PCF8523-conservify
 #
-DEF fk-core-rescue:PCF8523-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_PCF8523-conservify U 0 40 Y Y 1 F N
 F0 "U" 0 300 60 H V C CNN
-F1 "fk-core-rescue:PCF8523-conservify" 0 -300 60 H V C CNN
+F1 "fk-core-rescue_PCF8523-conservify" 0 -300 60 H V C CNN
 F2 "conservify:SOIC-8-N" 0 -400 60 H I C CNN
 F3 "" -200 50 60 H V C CNN
 $FPLIST
@@ -759,11 +724,11 @@ X VDD 8 550 150 150 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:PRTR5V0U2X-conservify
+# fk-core-rescue_PRTR5V0U2X-conservify
 #
-DEF fk-core-rescue:PRTR5V0U2X-conservify D 0 40 Y Y 1 F N
+DEF fk-core-rescue_PRTR5V0U2X-conservify D 0 40 Y Y 1 F N
 F0 "D" 50 350 60 H V C CNN
-F1 "fk-core-rescue:PRTR5V0U2X-conservify" 0 -600 60 H V C CNN
+F1 "fk-core-rescue_PRTR5V0U2X-conservify" 0 -600 60 H V C CNN
 F2 "conservify:SOT-143B" 0 -500 60 H I C CNN
 F3 "" -150 0 60 H V C CNN
 $FPLIST
@@ -804,11 +769,11 @@ X ~ 4 -150 400 150 D 50 50 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:PWR_FLAG-conservify
+# fk-core-rescue_PWR_FLAG-conservify
 #
-DEF fk-core-rescue:PWR_FLAG-conservify #FLG 0 0 N N 1 F P
+DEF fk-core-rescue_PWR_FLAG-conservify #FLG 0 0 N N 1 F P
 F0 "#FLG" 0 75 50 H I C CNN
-F1 "fk-core-rescue:PWR_FLAG-conservify" 0 150 50 H V C CNN
+F1 "fk-core-rescue_PWR_FLAG-conservify" 0 150 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -817,11 +782,11 @@ X pwr 1 0 0 0 U 50 50 0 0 w
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:RESISTOR-conservify
+# fk-core-rescue_RESISTOR-conservify
 #
-DEF fk-core-rescue:RESISTOR-conservify R 0 40 Y Y 1 F N
+DEF fk-core-rescue_RESISTOR-conservify R 0 40 Y Y 1 F N
 F0 "R" 0 100 60 H V C CNN
-F1 "fk-core-rescue:RESISTOR-conservify" 0 -100 60 H V C CNN
+F1 "fk-core-rescue_RESISTOR-conservify" 0 -100 60 H V C CNN
 F2 "conservify:RES-0603" 0 -200 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -836,11 +801,11 @@ X ~ 2 250 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:RFM9xW-conservify
+# fk-core-rescue_RFM9xW-conservify
 #
-DEF fk-core-rescue:RFM9xW-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_RFM9xW-conservify U 0 40 Y Y 1 F N
 F0 "U" -350 500 60 H V C CNN
-F1 "fk-core-rescue:RFM9xW-conservify" 0 50 60 H V C CNN
+F1 "fk-core-rescue_RFM9xW-conservify" 0 50 60 H V C CNN
 F2 "conservify:RFM9xW" 0 -500 60 H I C CNN
 F3 "" 0 300 60 H V C CNN
 $FPLIST
@@ -867,11 +832,11 @@ X ANT 9 -550 350 150 R 40 40 1 1 O
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:RF_UFL_SMD-conservify
+# fk-core-rescue_RF_UFL_SMD-conservify
 #
-DEF fk-core-rescue:RF_UFL_SMD-conservify J 0 40 Y Y 1 F N
+DEF fk-core-rescue_RF_UFL_SMD-conservify J 0 40 Y Y 1 F N
 F0 "J" 0 250 60 H V C CNN
-F1 "fk-core-rescue:RF_UFL_SMD-conservify" 0 -450 60 H V C CNN
+F1 "fk-core-rescue_RF_UFL_SMD-conservify" 0 -450 60 H V C CNN
 F2 "conservify:RF_UFL_SMD" 0 -550 60 H I C CNN
 F3 "" -50 -50 60 H V C CNN
 $FPLIST
@@ -888,11 +853,11 @@ X ~ 4 100 -350 150 U 40 40 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:S25FL1xxK0XM-conservify
+# fk-core-rescue_S25FL1xxK0XM-conservify
 #
-DEF fk-core-rescue:S25FL1xxK0XM-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_S25FL1xxK0XM-conservify U 0 40 Y Y 1 F N
 F0 "U" 0 300 60 H V C CNN
-F1 "fk-core-rescue:S25FL1xxK0XM-conservify" 0 -300 60 H V C CNN
+F1 "fk-core-rescue_S25FL1xxK0XM-conservify" 0 -300 60 H V C CNN
 F2 "conservify:SOIC-8-N" 0 -400 60 H I C CNN
 F3 "" -200 50 60 H V C CNN
 $FPLIST
@@ -911,11 +876,11 @@ X VCC 8 550 150 150 L 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:S2B_PH_SM4_TB-conservify
+# fk-core-rescue_S2B_PH_SM4_TB-conservify
 #
-DEF fk-core-rescue:S2B_PH_SM4_TB-conservify J 0 40 Y Y 1 F N
+DEF fk-core-rescue_S2B_PH_SM4_TB-conservify J 0 40 Y Y 1 F N
 F0 "J" -100 200 60 H V C CNN
-F1 "fk-core-rescue:S2B_PH_SM4_TB-conservify" 0 -350 60 H V C CNN
+F1 "fk-core-rescue_S2B_PH_SM4_TB-conservify" 0 -350 60 H V C CNN
 F2 "conservify:S2B-PH-SM4-TB" 0 -450 60 H I C CNN
 F3 "" -50 0 60 H V C CNN
 $FPLIST
@@ -930,11 +895,11 @@ X ~ 4 0 300 150 D 40 40 1 1 I
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:SK6812-conservify
+# fk-core-rescue_SK6812-conservify
 #
-DEF fk-core-rescue:SK6812-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_SK6812-conservify U 0 40 Y Y 1 F N
 F0 "U" 0 -50 60 H V C CNN
-F1 "fk-core-rescue:SK6812-conservify" 0 250 60 H V C CNN
+F1 "fk-core-rescue_SK6812-conservify" 0 250 60 H V C CNN
 F2 "" 0 300 60 H I C CNN
 F3 "" 0 300 60 H I C CNN
 DRAW
@@ -960,11 +925,32 @@ X NC 4 150 -400 200 U 50 50 1 1 N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:SWITCH_CONN_02-conservify
+# fk-core-rescue_STC3100IQT-conservify
 #
-DEF fk-core-rescue:SWITCH_CONN_02-conservify SW 0 40 Y Y 1 F N
+DEF fk-core-rescue_STC3100IQT-conservify U 0 40 Y Y 1 F N
+F0 "U" 500 -700 60 H V C CNN
+F1 "fk-core-rescue_STC3100IQT-conservify" 0 0 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S 550 500 -500 -650 0 1 0 f
+X IO0 1 650 -500 100 L 50 50 1 1 I
+X ROSC 2 -600 250 100 R 50 50 1 1 I
+X SDA 3 -600 -500 100 R 50 50 1 1 I
+X SCL 4 -600 -400 100 R 50 50 1 1 I
+X GND 5 0 -750 100 U 50 50 1 1 I
+X CG 6 650 -250 100 L 50 50 1 1 I
+X VCC 7 650 250 100 L 50 50 1 1 I
+X VIN 8 650 0 100 L 50 50 1 1 I
+X EP 9 150 -750 100 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# fk-core-rescue_SWITCH_CONN_02-conservify
+#
+DEF fk-core-rescue_SWITCH_CONN_02-conservify SW 0 40 Y Y 1 F N
 F0 "SW" 0 150 60 H V C CNN
-F1 "fk-core-rescue:SWITCH_CONN_02-conservify" 50 -100 60 H V C CNN
+F1 "fk-core-rescue_SWITCH_CONN_02-conservify" 50 -100 60 H V C CNN
 F2 "conservify:TS-107A" 0 -200 60 H I C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -983,11 +969,11 @@ X ~ 2 250 0 125 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:TL5209-conservify
+# fk-core-rescue_TL5209-conservify
 #
-DEF fk-core-rescue:TL5209-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_TL5209-conservify U 0 40 Y Y 1 F N
 F0 "U" 0 300 60 H V C CNN
-F1 "fk-core-rescue:TL5209-conservify" 0 100 60 H V C CNN
+F1 "fk-core-rescue_TL5209-conservify" 0 100 60 H V C CNN
 F2 "SOIC-8-N" 0 400 60 H I C CNN
 F3 "" -450 50 60 H V C CNN
 $FPLIST
@@ -1006,11 +992,11 @@ X GND 8 -150 -400 150 U 50 50 1 1 W
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:TPS2052B-conservify
+# fk-core-rescue_TPS2052B-conservify
 #
-DEF fk-core-rescue:TPS2052B-conservify U 0 40 Y Y 1 F N
+DEF fk-core-rescue_TPS2052B-conservify U 0 40 Y Y 1 F N
 F0 "U" -400 -450 60 H V C CNN
-F1 "fk-core-rescue:TPS2052B-conservify" 0 0 60 H V C CNN
+F1 "fk-core-rescue_TPS2052B-conservify" 0 0 60 H V C CNN
 F2 "" 0 200 60 H I C CNN
 F3 "" 0 200 60 H I C CNN
 DRAW
@@ -1026,11 +1012,11 @@ X OC1 8 700 250 200 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:VBAT-conservify
+# fk-core-rescue_VBAT-conservify
 #
-DEF fk-core-rescue:VBAT-conservify #PWR 0 0 Y Y 1 F P
+DEF fk-core-rescue_VBAT-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "fk-core-rescue:VBAT-conservify" 0 140 50 H V C CNN
+F1 "fk-core-rescue_VBAT-conservify" 0 140 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -1040,11 +1026,11 @@ X VBAT 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:VBUS-conservify
+# fk-core-rescue_VBUS-conservify
 #
-DEF fk-core-rescue:VBUS-conservify #PWR 0 0 Y Y 1 F P
+DEF fk-core-rescue_VBUS-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "fk-core-rescue:VBUS-conservify" 0 140 50 H V C CNN
+F1 "fk-core-rescue_VBUS-conservify" 0 140 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -1054,11 +1040,11 @@ X VBUS 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:VEXT-conservify
+# fk-core-rescue_VEXT-conservify
 #
-DEF fk-core-rescue:VEXT-conservify #PWR 0 0 Y Y 1 F P
+DEF fk-core-rescue_VEXT-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "fk-core-rescue:VEXT-conservify" 0 140 50 H V C CNN
+F1 "fk-core-rescue_VEXT-conservify" 0 140 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -1068,11 +1054,11 @@ X VEXT 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:VIN-conservify
+# fk-core-rescue_VIN-conservify
 #
-DEF fk-core-rescue:VIN-conservify #PWR 0 0 Y Y 1 F P
+DEF fk-core-rescue_VIN-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "fk-core-rescue:VIN-conservify" 0 140 50 H V C CNN
+F1 "fk-core-rescue_VIN-conservify" 0 140 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
@@ -1082,11 +1068,11 @@ X VIN 1 0 0 0 U 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #
-# fk-core-rescue:VUSB-conservify
+# fk-core-rescue_VUSB-conservify
 #
-DEF fk-core-rescue:VUSB-conservify #PWR 0 0 Y Y 1 F P
+DEF fk-core-rescue_VUSB-conservify #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
-F1 "fk-core-rescue:VUSB-conservify" 0 140 50 H V C CNN
+F1 "fk-core-rescue_VUSB-conservify" 0 140 50 H V C CNN
 F2 "" 0 0 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 DRAW
