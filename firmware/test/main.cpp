@@ -17,8 +17,6 @@
 
 #include "config.h"
 
-#if defined(FK_CORE_GENERATION_2)
-
 static constexpr uint8_t PIN_RADIO_CS = 5;
 static constexpr uint8_t PIN_RADIO_DIO0 = 2;
 static constexpr uint8_t PIN_SD_CS = 12;
@@ -33,22 +31,6 @@ static constexpr uint8_t PIN_GPS_ENABLE = A4;
 static constexpr uint8_t PIN_FLASH_CS = (26u); // PIN_LED_TXL;
 
 Uart& gpsSerial = fk::Serial2;
-
-#else
-
-static constexpr uint8_t PIN_RADIO_CS = 5;
-static constexpr uint8_t PIN_RADIO_DIO0 = 2;
-static constexpr uint8_t PIN_SD_CS = 12;
-static constexpr uint8_t PIN_FLASH_CS = 4;
-static constexpr uint8_t PIN_WINC_CS = 7;
-static constexpr uint8_t PIN_WINC_IRQ = 9;
-static constexpr uint8_t PIN_WINC_RST = 10;
-static constexpr uint8_t PIN_WINC_EN = 11;
-static constexpr uint8_t PIN_WINC_WAKE = 8;
-
-Uart& gpsSerial = Serial1;
-
-#endif
 
 constexpr const char LogName[] = "Check";
 
@@ -401,7 +383,6 @@ void setup() {
     Check check;
     check.setup();
 
-    #ifdef FK_CORE_GENERATION_2
     Log::info("Enabling peripherals!");
     pinMode(PIN_PERIPHERALS_ENABLE, OUTPUT);
     pinMode(PIN_GPS_ENABLE, OUTPUT);
@@ -416,17 +397,11 @@ void setup() {
     digitalWrite(PIN_GPS_ENABLE, HIGH);
     digitalWrite(A4, HIGH);
     delay(500);
-    #else
-    Log::info("Peripherals should always be on.");
-    delay(100);
-    #endif
 
     if (!check.check()) {
-        #ifdef FK_CORE_GENERATION_2
         digitalWrite(PIN_PERIPHERALS_ENABLE, LOW);
         digitalWrite(PIN_GPS_ENABLE, LOW);
         digitalWrite(PIN_MODULES_ENABLE, LOW);
-        #endif
 
         while (true) {
             check.task();
