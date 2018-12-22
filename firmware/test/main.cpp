@@ -36,6 +36,28 @@ constexpr const char LogName[] = "Check";
 
 using Log = SimpleLog<LogName>;
 
+class BatteryGauge {
+private:
+public:
+    bool available() {
+        uint8_t address = 0x70;
+
+        Wire.beginTransmission(address);
+        Wire.write((byte)24);
+        Wire.endTransmission();
+        Wire.requestFrom(address, (byte)8);
+
+        uint8_t id[8];
+
+        for (auto i = 0; i < sizeof(id); ++i) {
+            id[i] = Wire.read();
+        }
+
+        return id[0] == 0x10;
+    }
+
+};
+
 class MacEeprom {
 private:
     uint8_t address;
@@ -152,18 +174,16 @@ public:
         SPI.begin();
     }
 
-    FuelGauge gauge;
+    BatteryGauge gauge;
 
     bool fuelGauge() {
         Log::info("Checking gauge...");
 
         Wire.begin();
 
-        gauge.powerOn();
-
-        if (gauge.version() != 3) {
+        if (!gauge.available()) {
             Log::info("Gauge FAILED");
-            return true;
+            return false;
         }
 
         Log::info("Gauge PASSED");
@@ -349,7 +369,7 @@ public:
             Log::info("Top PASSED");
         }
 
-        #ifdef FK_ENABLE_RADIO
+        #if defined(FK_ENABLE_RADIO)
         success = radio() && success;
         #else
         Log::info("Radio disabled");
