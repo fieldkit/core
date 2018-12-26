@@ -13,3 +13,4 @@ firmware/*/config.h.conservify
 firmware/*/config.h.jacob
 firmware/*/config.h.shah
 firmware/*/config.h
+firmware/*/seed.h
