@@ -2,7 +2,7 @@ include(Arduino)
 
 enable_arduino_toolchain()
 
-set(sources main.cpp)
+file(GLOB sources *.cpp ../common/*.cpp)
 
 add_arduino_library(fk-core-test "${sources}")
 
