@@ -14,6 +14,7 @@
 #include <backends/arduino_sd/arduino_sd.h>
 
 #include <simple_ntp.h>
+#include <battery_gauge.h>
 
 #include "board_definition.h"
 
@@ -26,28 +27,6 @@ Uart& gpsSerial = Serial2;
 constexpr const char LogName[] = "Check";
 
 using Log = SimpleLog<LogName>;
-
-class BatteryGauge {
-private:
-public:
-    bool available() {
-        uint8_t address = 0x70;
-
-        Wire.beginTransmission(address);
-        Wire.write((byte)24);
-        Wire.endTransmission();
-        Wire.requestFrom(address, (byte)8);
-
-        uint8_t id[8];
-
-        for (auto i = 0; i < sizeof(id); ++i) {
-            id[i] = Wire.read();
-        }
-
-        return id[0] == 0x10;
-    }
-
-};
 
 class MacEeprom {
 private:
@@ -150,12 +129,12 @@ public:
         delay(100);
     }
 
-    BatteryGauge gauge;
-
     bool fuelGauge() {
         Log::info("Checking gauge...");
 
         Wire.begin();
+
+        fk::BatteryGauge gauge;
 
         if (!gauge.available()) {
             Log::info("Gauge FAILED");
@@ -380,9 +359,21 @@ void setup() {
         }
     }
 
+    fk::BatteryGauge gauge;
+
+    uint32_t checked = 0;
+
     while (true) {
         check.task();
         delay(10);
+
+        if (fk::fk_uptime() - checked > 5000) {
+            auto voltage = gauge.voltage();
+            auto stateOfCharge = gauge.stateOfCharge();
+            auto current = gauge.current();
+            fk::Log::info("Battery: %fmv %fmAh %fmA", voltage, stateOfCharge, current);
+            checked = fk::fk_uptime();
+        }
     }
 }
 
