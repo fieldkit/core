@@ -21,7 +21,12 @@ CoreBoard board{
                 0,
                 0,
             }
-        }
+        },
+        Hardware::SD_PIN_CS,
+        Hardware::WIFI_PIN_CS,
+        Hardware::WIFI_PIN_EN,
+        Hardware::GPS_ENABLE_PIN,
+        Hardware::MODULES_ENABLE_PIN,
     }
 };
 

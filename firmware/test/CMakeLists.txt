@@ -6,6 +6,8 @@ file(GLOB sources *.cpp ../common/*.cpp)
 
 add_arduino_library(fk-core-test "${sources}")
 
+target_include_directories(fk-core-test PRIVATE "../common")
+
 find_package(FkCore)
 
 fk_configure_core(fk-core-test)

@@ -15,22 +15,13 @@
 
 #include <simple_ntp.h>
 
+#include "board_definition.h"
+
 #include "config.h"
 
-static constexpr uint8_t PIN_RADIO_CS = 5;
-static constexpr uint8_t PIN_RADIO_DIO0 = 2;
-static constexpr uint8_t PIN_SD_CS = 12;
-static constexpr uint8_t PIN_WINC_CS = 7;
-static constexpr uint8_t PIN_WINC_IRQ = 16;
-static constexpr uint8_t PIN_WINC_RST = 15;
-static constexpr uint8_t PIN_WINC_EN = 38;
-static constexpr uint8_t PIN_WINC_WAKE = 8;
-static constexpr uint8_t PIN_MODULES_ENABLE = (9);
-static constexpr uint8_t PIN_PERIPHERALS_ENABLE = (25u); // PIN_LED_RXL;
-static constexpr uint8_t PIN_GPS_ENABLE = A4;
-static constexpr uint8_t PIN_FLASH_CS = (26u); // PIN_LED_TXL;
+namespace fk {
 
-Uart& gpsSerial = fk::Serial2;
+Uart& gpsSerial = Serial2;
 
 constexpr const char LogName[] = "Check";
 
@@ -150,28 +141,13 @@ public:
     void setup() {
         leds.setup();
 
-        pinMode(PIN_FLASH_CS, INPUT_PULLUP);
-        pinMode(PIN_RADIO_CS, INPUT_PULLUP);
-        pinMode(PIN_SD_CS, INPUT_PULLUP);
-        pinMode(PIN_WINC_CS, INPUT_PULLUP);
+        board.disable_everything();
 
-        pinMode(PIN_WINC_EN, OUTPUT);
-        digitalWrite(PIN_WINC_EN, LOW);
+        delay(100);
 
-        pinMode(PIN_WINC_RST, OUTPUT);
-        digitalWrite(PIN_WINC_RST, LOW);
+        board.enable_everything();
 
-        pinMode(PIN_FLASH_CS, OUTPUT);
-        pinMode(PIN_RADIO_CS, OUTPUT);
-        pinMode(PIN_SD_CS, OUTPUT);
-        pinMode(PIN_WINC_CS, OUTPUT);
-
-        digitalWrite(PIN_FLASH_CS, HIGH);
-        digitalWrite(PIN_RADIO_CS, HIGH);
-        digitalWrite(PIN_SD_CS, HIGH);
-        digitalWrite(PIN_WINC_CS, HIGH);
-
-        SPI.begin();
+        delay(100);
     }
 
     BatteryGauge gauge;
@@ -194,7 +170,7 @@ public:
     bool flashMemory() {
         Log::info("Checking flash memory...");
 
-        if (!SerialFlash.begin(PIN_FLASH_CS)) {
+        if (!SerialFlash.begin(Hardware::FLASH_PIN_CS)) {
             Log::info("Flash memory FAILED");
             return false;
         }
@@ -254,7 +230,7 @@ public:
 
         phylum::Geometry g;
         phylum::ArduinoSdBackend storage;
-        if (!storage.initialize(g, PIN_SD_CS)) {
+        if (!storage.initialize(g, Hardware::SD_PIN_CS)) {
             Log::info("SD FAILED (to open)");
             return false;
         }
@@ -264,7 +240,7 @@ public:
             return false;
         }
 
-        digitalWrite(PIN_SD_CS, HIGH);
+        digitalWrite(Hardware::SD_PIN_CS, HIGH);
         Log::info("SD PASSED");
 
         return true;
@@ -273,14 +249,14 @@ public:
     bool radio() {
         Log::info("Checking radio...");
 
-        RH_RF95 rf95(PIN_RADIO_CS, PIN_RADIO_DIO0);
+        RH_RF95 rf95(Hardware::RFM95_PIN_CS, Hardware::RFM95_PIN_D0);
 
         if (!rf95.init()) {
             Log::info("Radio FAILED");
             return false;
         }
 
-        digitalWrite(PIN_RADIO_CS, HIGH);
+        digitalWrite(Hardware::RFM95_PIN_CS, HIGH);
         Log::info("Radio PASSED");
 
         return true;
@@ -289,18 +265,8 @@ public:
     bool wifi() {
         Log::info("Checking wifi...");
 
-        delay(500);
-
-        digitalWrite(PIN_WINC_RST, HIGH);
-
-        WiFi.setPins(PIN_WINC_CS, PIN_WINC_IRQ, PIN_WINC_RST);
-
-        digitalWrite(PIN_WINC_EN, LOW);
-        delay(50);
-
-        digitalWrite(PIN_WINC_EN, HIGH);
-
-        delay(50);
+        // TODO: Move this into CoreBoard?
+        WiFi.setPins(Hardware::WIFI_PIN_CS, Hardware::WIFI_PIN_IRQ, Hardware::WIFI_PIN_RST);
 
         if (WiFi.status() == WL_NO_SHIELD) {
             Log::info("Wifi FAILED");
@@ -393,6 +359,8 @@ public:
     }
 };
 
+}
+
 void setup() {
     Serial.begin(115200);
 
@@ -400,28 +368,11 @@ void setup() {
         delay(100);
     }
 
-    Check check;
+    fk::Check check;
     check.setup();
 
-    Log::info("Enabling peripherals!");
-    pinMode(PIN_PERIPHERALS_ENABLE, OUTPUT);
-    pinMode(PIN_GPS_ENABLE, OUTPUT);
-    pinMode(PIN_MODULES_ENABLE, OUTPUT);
-    digitalWrite(PIN_MODULES_ENABLE, LOW);
-    digitalWrite(PIN_PERIPHERALS_ENABLE, LOW);
-    digitalWrite(PIN_GPS_ENABLE, LOW);
-    digitalWrite(A4, LOW);
-    delay(500);
-    digitalWrite(PIN_MODULES_ENABLE, HIGH);
-    digitalWrite(PIN_PERIPHERALS_ENABLE, HIGH);
-    digitalWrite(PIN_GPS_ENABLE, HIGH);
-    digitalWrite(A4, HIGH);
-    delay(500);
-
     if (!check.check()) {
-        digitalWrite(PIN_PERIPHERALS_ENABLE, LOW);
-        digitalWrite(PIN_GPS_ENABLE, LOW);
-        digitalWrite(PIN_MODULES_ENABLE, LOW);
+        fk::board.disable_everything();
 
         while (true) {
             check.task();

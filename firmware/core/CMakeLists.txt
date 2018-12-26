@@ -30,6 +30,8 @@ option(FK_PROFILE_STANDARD "Standard Profile" ON)
 if(FK_PROFILE_STANDARD)
   add_arduino_library(fk-core-standard "${sources}")
 
+  target_include_directories(fk-core-standard PRIVATE "../common")
+
   fk_configure_core(fk-core-standard)
 
   target_compile_options(firmware-common-fk-core-standard PUBLIC -DFK_PROFILE_STANDARD)
@@ -53,6 +55,8 @@ endif(FK_PROFILE_STANDARD)
 option(FK_PROFILE_AMAZON "Amazon Profile" ON)
 if(FK_PROFILE_AMAZON)
   add_arduino_library(fk-core-amazon "${sources}")
+
+  target_include_directories(fk-core-standard PRIVATE "../common")
 
   fk_configure_core(fk-core-amazon)
 
