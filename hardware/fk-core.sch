@@ -1284,7 +1284,7 @@ P 3700 3250
 F 0 "U2" H 3050 4550 60  0000 C CNN
 F 1 "ATSAMD21G18A-AU" H 3700 3250 60  0000 C CNN
 F 2 "conservify:TQFP-48_7x7mm_Pitch0.5mm" H 3700 1700 60  0001 C CNN
-F 3 "" H 3700 3700 60  0000 C CNN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/SAMD21-Family-DataSheet-DS40001882D.pdf" H 3700 3700 60  0001 C CNN
 F 4 " " H 3050 4650 50  0001 C CNN "Critical"
 F 5 "Microchip Technology / Atmel" H 3050 4650 50  0001 C CNN "MFN"
 F 6 "ATSAMD21G18A-AU" H 3050 4650 50  0001 C CNN "MFP"
@@ -3387,7 +3387,7 @@ F 3 "~" H 14550 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 2000 2500 0    50   ~ 0
-A3
+A3_STATUS
 Text Label 2000 2600 0    50   ~ 0
 A4_GPS_EN
 Text Label 2000 3300 0    50   ~ 0
@@ -3396,21 +3396,21 @@ Text Label 2000 4300 0    50   ~ 0
 SDA1
 Text Label 2000 4400 0    50   ~ 0
 SCL1
-Text Label 4550 3000 0    50   ~ 0
+Text Label 5100 3000 2    50   ~ 0
 MOSI
-Text Label 4550 2900 0    50   ~ 0
+Text Label 5100 2900 2    50   ~ 0
 SCK
-Text Label 4550 3400 0    50   ~ 0
-A5
-Text Label 4550 4000 0    50   ~ 0
+Text Label 5100 3400 2    50   ~ 0
+A5_MODUL_EN
+Text Label 5100 4000 2    50   ~ 0
 USB+
-Text Label 4550 3900 0    50   ~ 0
+Text Label 5100 3900 2    50   ~ 0
 USB-
-Text Label 4550 3500 0    50   ~ 0
+Text Label 5100 3500 2    50   ~ 0
 SWDIO
-Text Label 4550 3600 0    50   ~ 0
+Text Label 5100 3600 2    50   ~ 0
 SWCLK
-Text Label 4550 2100 0    50   ~ 0
+Text Label 4850 2100 2    50   ~ 0
 RESET
 Text Label 6950 7650 0    50   ~ 0
 D13
@@ -3440,8 +3440,8 @@ Text Notes 5400 8650 0    180  ~ 36
 SWD/JTAG
 Text Notes 850  9100 0    180  ~ 36
 CORE\nCONNECTOR
-Text Notes 1400 5550 0    180  ~ 36
-LED
+Text Notes 1000 6075 0    180  ~ 36
+NATURALIST\nCONNECTOR
 Text Notes 13350 10625 0    180  ~ 36
 SERIAL FLASH
 Text Notes 10150 950  0    180  ~ 36
@@ -3452,11 +3452,11 @@ Text Notes 2075 950  0    180  ~ 36
 MCU
 Text Label 10600 7875 0    50   ~ 0
 USB_ID
-Text Label 4550 3700 0    50   ~ 0
-USB_ID
-Text Notes 4850 2700 0    50   ~ 0
+Text Label 5100 3700 2    50   ~ 0
+LORA_D1
+Text Notes 5225 2700 0    50   ~ 0
 TX0
-Text Notes 4850 2800 0    50   ~ 0
+Text Notes 5225 2800 0    50   ~ 0
 RX0
 Text Label 11100 2000 1    50   ~ 0
 PG
@@ -3518,8 +3518,6 @@ Text Label 8625 12400 2    50   ~ 0
 SCL1
 Text Label 2000 4000 0    50   ~ 0
 D12_SD_CS
-Text Label 2000 3800 0    50   ~ 0
-D13
 Text Label 2050 12900 0    50   ~ 0
 D2_WIFI_EN
 Text Label 2050 12700 0    50   ~ 0
@@ -3538,9 +3536,9 @@ Text Label 2050 12800 0    50   ~ 0
 D8_WIFI_WAKE
 Text Label 2000 2700 0    50   ~ 0
 D8_WIFI_WAKE
-Text Label 4550 3100 0    50   ~ 0
+Text Label 5100 3100 2    50   ~ 0
 A2_WIFI_IRQ
-Text Label 4550 3200 0    50   ~ 0
+Text Label 5100 3200 2    50   ~ 0
 A1_WIFI_RST
 Text Label 2000 3400 0    50   ~ 0
 D2_WIFI_EN
@@ -3557,7 +3555,7 @@ D6_USER_SW
 Text Label 2000 4100 0    50   ~ 0
 D6_USER_SW
 Text Label 2000 3500 0    50   ~ 0
-D2_RADIO_D0
+LORA_D0
 Text Label 2000 3600 0    50   ~ 0
 D5_RADIO_CS
 Text Label 2000 3900 0    50   ~ 0
@@ -3574,7 +3572,7 @@ Text Notes 19075 7900 0    180  ~ 36
 GPS
 Text Notes 18350 1050 0    180  ~ 36
 Power Conversion
-Text Label 4550 3800 0    50   ~ 0
+Text Label 5100 3800 2    50   ~ 0
 D26_FLASH_CS
 Text Label 3500 9975 0    50   ~ 0
 D31
@@ -3596,9 +3594,9 @@ Text Label 2000 2900 0    50   ~ 0
 SDA2
 Text Label 2000 3000 0    50   ~ 0
 SCL2
-Text Label 4550 2800 0    50   ~ 0
+Text Label 5100 2800 2    50   ~ 0
 D31
-Text Label 4550 2700 0    50   ~ 0
+Text Label 5100 2700 2    50   ~ 0
 D30
 Text Label 18175 8800 0    50   ~ 0
 BAT_BACKUP
@@ -3610,15 +3608,13 @@ Text Label 20525 12525 0    50   ~ 0
 MOSI
 Text Label 20525 12425 0    50   ~ 0
 SCK
-Text Label 18650 12225 0    50   ~ 0
-D2_RADIO_D0
 Text Label 20525 12325 0    50   ~ 0
 D5_RADIO_CS
 Text Notes 18575 10975 0    180  ~ 36
 RFM95W (LoRa)\n
 Text Label 8050 15200 0    50   ~ 0
 PERIPH_3V3
-Text Label 4550 3300 0    50   ~ 0
+Text Label 5100 3300 2    50   ~ 0
 D25_PERIPH_EN
 Text Notes 3250 7000 0    180  ~ 36
 FIDUCIALS
@@ -3648,14 +3644,10 @@ Text Label 21475 8500 0    50   ~ 0
 GPS_RX
 Text Label 21475 8600 0    50   ~ 0
 BAT_BACKUP
-Text Label 18650 12325 0    50   ~ 0
-D1_RADIO_D1
-Text Label 18650 12425 0    50   ~ 0
-D0_RADIO_D2
 Text Label 2000 3200 0    50   ~ 0
-D0
+D0_I2S_WS
 Text Label 2000 2800 0    50   ~ 0
-D9
+D9_I2S_DATA
 Text Label 16550 3525 0    50   ~ 0
 MODULE_EN
 Text Label 21475 3425 2    50   ~ 0
@@ -5155,7 +5147,7 @@ Connection ~ 11050 15600
 Wire Wire Line
 	11050 15600 11050 15700
 Text Label 2000 3100 0    50   ~ 0
-D1
+D1_I2S_BCLK
 $Comp
 L fk-core-rescue:RESISTOR-conservify R26
 U 1 1 5CDA265E
@@ -6218,87 +6210,63 @@ Wire Wire Line
 	11350 6975 11350 7075
 NoConn ~ 10950 6875
 $Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5C86609F
-P 15275 15525
-F 0 "R?" H 15275 15625 60  0000 C CNN
-F 1 "0" H 15275 15425 60  0000 C CNN
-F 2 "conservify:RES-0603" H 15275 15325 60  0001 C CNN
-F 3 "" H 15275 15525 60  0000 C CNN
-F 4 "DNP" H 15450 15425 50  0000 C CNN "Population"
-F 5 " " H 15275 15725 50  0001 C CNN "Critical"
-F 6 " " H 15275 15725 50  0001 C CNN "MFN"
-F 7 " " H 15275 15725 50  0001 C CNN "MFP"
-F 8 " " H 15275 15725 50  0001 C CNN "Notes"
-F 9 " " H 15275 15725 50  0001 C CNN "Package"
-F 10 "ANY" H 15275 15725 50  0001 C CNN "Source"
-F 11 " " H 15275 15725 50  0001 C CNN "Subsystem"
-F 12 "0.1" H 15275 15725 50  0001 C CNN "price"
-F 13 "603-RC0603FR-07330RL" H 15775 1375 50  0001 C CNN "spn1"
-F 14 "mouser" H 8825 3075 50  0001 C CNN "supplier1"
-	1    15275 15525
-	-1   0    0    1   
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x09 J?
 U 1 1 5C8686BE
-P 12925 14500
-F 0 "J?" H 12845 13875 50  0000 C CNN
-F 1 "Conn_01x09" H 12845 13966 50  0000 C CNN
-F 2 "conservify:Molex_CLIK-Mate_502382-0970_1x09_P1.25mm_Vertical" H 12925 14500 50  0001 C CNN
-F 3 "~" H 12925 14500 50  0001 C CNN
-	1    12925 14500
+P 1400 6950
+F 0 "J?" H 1320 6325 50  0000 C CNN
+F 1 "Conn_01x09" H 1320 6416 50  0000 C CNN
+F 2 "conservify:Molex_CLIK-Mate_502382-0970_1x09_P1.25mm_Vertical" H 1400 6950 50  0001 C CNN
+F 3 "~" H 1400 6950 50  0001 C CNN
+	1    1400 6950
 	-1   0    0    1   
 $EndComp
-Text Label 13725 14100 2    60   ~ 0
+Text Label 2200 6550 2    60   ~ 0
 MODULE_3V3
 Wire Wire Line
-	13125 14100 13725 14100
+	1600 6550 2200 6550
 Wire Wire Line
-	13125 14200 13725 14200
+	1600 6650 2200 6650
 Wire Wire Line
-	13125 14300 13725 14300
+	1600 6750 2200 6750
 Wire Wire Line
-	13125 14400 13725 14400
-Text Label 13725 14200 2    60   ~ 0
+	1600 6850 2200 6850
+Text Label 2200 6650 2    60   ~ 0
 SCL2
-Text Label 13725 14300 2    60   ~ 0
+Text Label 2200 6750 2    60   ~ 0
 SDA2
-Text Label 13725 14400 2    60   ~ 0
+Text Label 2200 6850 2    60   ~ 0
 SCL1
-Text Label 13725 14500 2    60   ~ 0
+Text Label 2200 6950 2    60   ~ 0
 SDA1
 Wire Wire Line
-	13125 14500 13725 14500
-Text Label 13725 14600 2    60   ~ 0
+	1600 6950 2200 6950
+Text Label 2200 7050 2    60   ~ 0
 I2S_DATA
 Wire Wire Line
-	13125 14600 13725 14600
+	1600 7050 2200 7050
 Wire Wire Line
-	13125 14700 13725 14700
-Text Label 13725 14700 2    60   ~ 0
+	1600 7150 2200 7150
+Text Label 2200 7150 2    60   ~ 0
 I2S_WS
-Text Label 13725 14800 2    60   ~ 0
+Text Label 2200 7250 2    60   ~ 0
 I2S_BCLK
 Wire Wire Line
-	13125 14800 13725 14800
+	1600 7250 2200 7250
 Wire Wire Line
-	13125 14900 13725 14900
+	1600 7350 2200 7350
 $Comp
 L fk-core-rescue:GND-conservify #PWR?
 U 1 1 5D1687F1
-P 13725 14975
-F 0 "#PWR?" H 13725 14725 50  0001 C CNN
-F 1 "GND" H 13725 14825 50  0001 C CNN
-F 2 "" H 13725 14975 60  0000 C CNN
-F 3 "" H 13725 14975 60  0000 C CNN
-	1    13725 14975
+P 2200 7425
+F 0 "#PWR?" H 2200 7175 50  0001 C CNN
+F 1 "GND" H 2200 7275 50  0001 C CNN
+F 2 "" H 2200 7425 60  0000 C CNN
+F 3 "" H 2200 7425 60  0000 C CNN
+	1    2200 7425
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	13725 14975 13725 14900
-Wire Wire Line
-	14025 15525 15025 15525
+	2200 7425 2200 7350
 Wire Wire Line
 	950  1400 950  1275
 Wire Wire Line
@@ -6319,226 +6287,18 @@ Wire Wire Line
 	2850 2900 2000 2900
 Wire Wire Line
 	2850 3000 2000 3000
-Text Label 16125 14825 0    50   ~ 0
-D1
-$Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5D9CDE1C
-P 15300 14825
-F 0 "R?" H 15300 14925 60  0000 C CNN
-F 1 "0" H 15300 14725 60  0000 C CNN
-F 2 "conservify:RES-0603" H 15300 14625 60  0001 C CNN
-F 3 "" H 15300 14825 60  0000 C CNN
-F 4 "DNP" H 15475 14725 50  0000 C CNN "Population"
-F 5 " " H 15300 15025 50  0001 C CNN "Critical"
-F 6 " " H 15300 15025 50  0001 C CNN "MFN"
-F 7 " " H 15300 15025 50  0001 C CNN "MFP"
-F 8 " " H 15300 15025 50  0001 C CNN "Notes"
-F 9 " " H 15300 15025 50  0001 C CNN "Package"
-F 10 "ANY" H 15300 15025 50  0001 C CNN "Source"
-F 11 " " H 15300 15025 50  0001 C CNN "Subsystem"
-F 12 "0.1" H 15300 15025 50  0001 C CNN "price"
-F 13 "603-RC0603FR-07330RL" H 15800 675 50  0001 C CNN "spn1"
-F 14 "mouser" H 8850 2375 50  0001 C CNN "supplier1"
-	1    15300 14825
-	-1   0    0    1   
-$EndComp
-Text Label 14025 14825 0    50   ~ 0
-D1_I2S_BCLK
-Wire Wire Line
-	14025 14825 15050 14825
-$Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5DB106AC
-P 17200 15525
-F 0 "R?" H 17200 15625 60  0000 C CNN
-F 1 "0" H 17200 15425 60  0000 C CNN
-F 2 "conservify:RES-0603" H 17200 15325 60  0001 C CNN
-F 3 "" H 17200 15525 60  0000 C CNN
-F 4 " " H 17200 15725 50  0001 C CNN "Critical"
-F 5 " " H 17200 15725 50  0001 C CNN "MFN"
-F 6 " " H 17200 15725 50  0001 C CNN "MFP"
-F 7 " " H 17200 15725 50  0001 C CNN "Notes"
-F 8 " " H 17200 15725 50  0001 C CNN "Package"
-F 9 "ANY" H 17200 15725 50  0001 C CNN "Source"
-F 10 " " H 17200 15725 50  0001 C CNN "Subsystem"
-F 11 "0.1" H 17200 15725 50  0001 C CNN "price"
-F 12 "603-RC0603FR-07330RL" H 17700 1375 50  0001 C CNN "spn1"
-F 13 "mouser" H 10750 3075 50  0001 C CNN "supplier1"
-	1    17200 15525
-	-1   0    0    1   
-$EndComp
-$Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5DB7A035
-P 17225 14825
-F 0 "R?" H 17225 14925 60  0000 C CNN
-F 1 "0" H 17225 14725 60  0000 C CNN
-F 2 "conservify:RES-0603" H 17225 14625 60  0001 C CNN
-F 3 "" H 17225 14825 60  0000 C CNN
-F 4 " " H 17225 15025 50  0001 C CNN "Critical"
-F 5 " " H 17225 15025 50  0001 C CNN "MFN"
-F 6 " " H 17225 15025 50  0001 C CNN "MFP"
-F 7 " " H 17225 15025 50  0001 C CNN "Notes"
-F 8 " " H 17225 15025 50  0001 C CNN "Package"
-F 9 "ANY" H 17225 15025 50  0001 C CNN "Source"
-F 10 " " H 17225 15025 50  0001 C CNN "Subsystem"
-F 11 "0.1" H 17225 15025 50  0001 C CNN "price"
-F 12 "603-RC0603FR-07330RL" H 17725 675 50  0001 C CNN "spn1"
-F 13 "mouser" H 10775 2375 50  0001 C CNN "supplier1"
-	1    17225 14825
-	-1   0    0    1   
-$EndComp
-Text Label 16125 15175 0    50   ~ 0
-D0
-$Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5E0187F5
-P 15300 15175
-F 0 "R?" H 15300 15275 60  0000 C CNN
-F 1 "0" H 15300 15075 60  0000 C CNN
-F 2 "conservify:RES-0603" H 15300 14975 60  0001 C CNN
-F 3 "" H 15300 15175 60  0000 C CNN
-F 4 "DNP" H 15500 15075 50  0000 C CNN "Population"
-F 5 " " H 15300 15375 50  0001 C CNN "Critical"
-F 6 " " H 15300 15375 50  0001 C CNN "MFN"
-F 7 " " H 15300 15375 50  0001 C CNN "MFP"
-F 8 " " H 15300 15375 50  0001 C CNN "Notes"
-F 9 " " H 15300 15375 50  0001 C CNN "Package"
-F 10 "ANY" H 15300 15375 50  0001 C CNN "Source"
-F 11 " " H 15300 15375 50  0001 C CNN "Subsystem"
-F 12 "0.1" H 15300 15375 50  0001 C CNN "price"
-F 13 "603-RC0603FR-07330RL" H 15800 1025 50  0001 C CNN "spn1"
-F 14 "mouser" H 8850 2725 50  0001 C CNN "supplier1"
-	1    15300 15175
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	15050 15175 14025 15175
-Text Label 18475 15175 2    50   ~ 0
-D0_RADIO_D2
-$Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5E0FD53A
-P 17225 15175
-F 0 "R?" H 17225 15275 60  0000 C CNN
-F 1 "0" H 17225 15075 60  0000 C CNN
-F 2 "conservify:RES-0603" H 17225 14975 60  0001 C CNN
-F 3 "" H 17225 15175 60  0000 C CNN
-F 4 " " H 17225 15375 50  0001 C CNN "Critical"
-F 5 " " H 17225 15375 50  0001 C CNN "MFN"
-F 6 " " H 17225 15375 50  0001 C CNN "MFP"
-F 7 " " H 17225 15375 50  0001 C CNN "Notes"
-F 8 " " H 17225 15375 50  0001 C CNN "Package"
-F 9 "ANY" H 17225 15375 50  0001 C CNN "Source"
-F 10 " " H 17225 15375 50  0001 C CNN "Subsystem"
-F 11 "0.1" H 17225 15375 50  0001 C CNN "price"
-F 12 "603-RC0603FR-07330RL" H 17725 1025 50  0001 C CNN "spn1"
-F 13 "mouser" H 10775 2725 50  0001 C CNN "supplier1"
-	1    17225 15175
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	18650 12225 19475 12225
 Wire Wire Line
 	18650 12325 19475 12325
 Wire Wire Line
 	18650 12425 19475 12425
-Wire Wire Line
-	15550 14825 16975 14825
-Wire Wire Line
-	15550 15175 16975 15175
-Wire Wire Line
-	15525 15525 16950 15525
-Text Label 14025 15175 0    50   ~ 0
-D0_I2S_WS
-Text Label 16125 14500 0    50   ~ 0
-D9
-$Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5E61862D
-P 17225 14500
-F 0 "R?" H 17225 14600 60  0000 C CNN
-F 1 "0" H 17225 14400 60  0000 C CNN
-F 2 "conservify:RES-0603" H 17225 14300 60  0001 C CNN
-F 3 "" H 17225 14500 60  0000 C CNN
-F 4 " " H 17225 14700 50  0001 C CNN "Critical"
-F 5 " " H 17225 14700 50  0001 C CNN "MFN"
-F 6 " " H 17225 14700 50  0001 C CNN "MFP"
-F 7 " " H 17225 14700 50  0001 C CNN "Notes"
-F 8 " " H 17225 14700 50  0001 C CNN "Package"
-F 9 "ANY" H 17225 14700 50  0001 C CNN "Source"
-F 10 " " H 17225 14700 50  0001 C CNN "Subsystem"
-F 11 "0.1" H 17225 14700 50  0001 C CNN "price"
-F 12 "603-RC0603FR-07330RL" H 17725 350 50  0001 C CNN "spn1"
-F 13 "mouser" H 10775 2050 50  0001 C CNN "supplier1"
-	1    17225 14500
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	16975 14500 15575 14500
-$Comp
-L fk-core-rescue:RESISTOR-conservify R?
-U 1 1 5E6845C1
-P 15325 14500
-F 0 "R?" H 15325 14600 60  0000 C CNN
-F 1 "0" H 15325 14400 60  0000 C CNN
-F 2 "conservify:RES-0603" H 15325 14300 60  0001 C CNN
-F 3 "" H 15325 14500 60  0000 C CNN
-F 4 "DNP" H 15500 14400 50  0000 C CNN "Population"
-F 5 " " H 15325 14700 50  0001 C CNN "Critical"
-F 6 " " H 15325 14700 50  0001 C CNN "MFN"
-F 7 " " H 15325 14700 50  0001 C CNN "MFP"
-F 8 " " H 15325 14700 50  0001 C CNN "Notes"
-F 9 " " H 15325 14700 50  0001 C CNN "Package"
-F 10 "ANY" H 15325 14700 50  0001 C CNN "Source"
-F 11 " " H 15325 14700 50  0001 C CNN "Subsystem"
-F 12 "0.1" H 15325 14700 50  0001 C CNN "price"
-F 13 "603-RC0603FR-07330RL" H 15825 350 50  0001 C CNN "spn1"
-F 14 "mouser" H 8875 2050 50  0001 C CNN "supplier1"
-	1    15325 14500
-	-1   0    0    1   
-$EndComp
-Text Label 14050 14500 0    50   ~ 0
-D9_I2S_DATA
-Wire Wire Line
-	14050 14500 15075 14500
-Text Label 18475 14500 2    50   ~ 0
-MODULE_EN
-Wire Wire Line
-	17475 14500 18475 14500
-Text Label 18500 14825 2    50   ~ 0
-D1_RADIO_D1
-Wire Wire Line
-	17475 14825 18500 14825
-Wire Wire Line
-	18475 15525 17450 15525
-Text Label 16125 15525 0    50   ~ 0
-A5
-Wire Wire Line
-	18475 15175 17475 15175
-Text Label 14025 15525 0    50   ~ 0
-MODULE_EN
-Text Label 18475 15525 2    60   ~ 0
-A5_BATT_V
-Wire Notes Line
-	14700 13600 14700 15850
-Wire Notes Line
-	14700 15850 15900 15850
-Wire Notes Line
-	15900 15850 15900 13600
-Wire Notes Line
-	15900 13600 14700 13600
-Text Notes 14900 13875 0    60   ~ 0
-Populate for \nNaturalist verison\n(and depop others)
-Text Notes 16850 13875 0    60   ~ 0
-Populate for \nCore verison\n(and depop others)
-Wire Notes Line
-	16600 13575 17925 13575
-Wire Notes Line
-	17925 13575 17925 15875
-Wire Notes Line
-	17925 15875 16600 15875
-Wire Notes Line
-	16600 15875 16600 13600
+Text Label 2000 3800 0    50   ~ 0
+LORA_D2
+Text Label 18650 12325 0    50   ~ 0
+LORA_D1
+Text Label 18650 12225 0    50   ~ 0
+LORA_D0
+Text Label 18650 12425 0    50   ~ 0
+LORA_D2
 $EndSCHEMATC
