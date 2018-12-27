@@ -3401,7 +3401,7 @@ MOSI
 Text Label 5100 2900 2    50   ~ 0
 SCK
 Text Label 5100 3400 2    50   ~ 0
-A5_MODUL_EN
+A5_MODULE_EN
 Text Label 5100 4000 2    50   ~ 0
 USB+
 Text Label 5100 3900 2    50   ~ 0
@@ -6210,17 +6210,17 @@ Wire Wire Line
 	11350 6975 11350 7075
 NoConn ~ 10950 6875
 $Comp
-L Connector_Generic:Conn_01x09 J?
+L Connector_Generic:Conn_01x09 J17
 U 1 1 5C8686BE
 P 1400 6950
-F 0 "J?" H 1320 6325 50  0000 C CNN
+F 0 "J17" H 1320 6325 50  0000 C CNN
 F 1 "Conn_01x09" H 1320 6416 50  0000 C CNN
 F 2 "conservify:Molex_CLIK-Mate_502382-0970_1x09_P1.25mm_Vertical" H 1400 6950 50  0001 C CNN
 F 3 "~" H 1400 6950 50  0001 C CNN
 	1    1400 6950
 	-1   0    0    1   
 $EndComp
-Text Label 2200 6550 2    60   ~ 0
+Text Label 2200 6550 2    50   ~ 0
 MODULE_3V3
 Wire Wire Line
 	1600 6550 2200 6550
@@ -6230,35 +6230,29 @@ Wire Wire Line
 	1600 6750 2200 6750
 Wire Wire Line
 	1600 6850 2200 6850
-Text Label 2200 6650 2    60   ~ 0
+Text Label 2200 6650 2    50   ~ 0
 SCL2
-Text Label 2200 6750 2    60   ~ 0
+Text Label 2200 6750 2    50   ~ 0
 SDA2
-Text Label 2200 6850 2    60   ~ 0
+Text Label 2200 6850 2    50   ~ 0
 SCL1
-Text Label 2200 6950 2    60   ~ 0
+Text Label 2200 6950 2    50   ~ 0
 SDA1
 Wire Wire Line
 	1600 6950 2200 6950
-Text Label 2200 7050 2    60   ~ 0
-I2S_DATA
 Wire Wire Line
 	1600 7050 2200 7050
 Wire Wire Line
 	1600 7150 2200 7150
-Text Label 2200 7150 2    60   ~ 0
-I2S_WS
-Text Label 2200 7250 2    60   ~ 0
-I2S_BCLK
 Wire Wire Line
 	1600 7250 2200 7250
 Wire Wire Line
 	1600 7350 2200 7350
 $Comp
-L fk-core-rescue:GND-conservify #PWR?
+L fk-core-rescue:GND-conservify #PWR0131
 U 1 1 5D1687F1
 P 2200 7425
-F 0 "#PWR?" H 2200 7175 50  0001 C CNN
+F 0 "#PWR0131" H 2200 7175 50  0001 C CNN
 F 1 "GND" H 2200 7275 50  0001 C CNN
 F 2 "" H 2200 7425 60  0000 C CNN
 F 3 "" H 2200 7425 60  0000 C CNN
@@ -6301,4 +6295,26 @@ Text Label 18650 12225 0    50   ~ 0
 LORA_D0
 Text Label 18650 12425 0    50   ~ 0
 LORA_D2
+$Comp
+L fk-core-rescue:3V3-conservify #PWR0132
+U 1 1 5F72C583
+P 5550 1550
+F 0 "#PWR0132" H 5550 1400 50  0001 C CNN
+F 1 "3V3" H 5550 1690 50  0000 C CNN
+F 2 "" H 5550 1550 60  0000 C CNN
+F 3 "" H 5550 1550 60  0000 C CNN
+	1    5550 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 1550 5550 1650
+Connection ~ 5550 1650
+Text Label 11475 14000 0    60   ~ 0
+MODULE_3V3
+Text Label 2200 7050 2    50   ~ 0
+D9_I2S_DATA
+Text Label 2200 7250 2    50   ~ 0
+D1_I2S_BCLK
+Text Label 2200 7150 2    50   ~ 0
+D0_I2S_WS
 $EndSCHEMATC
