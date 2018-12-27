@@ -2261,17 +2261,6 @@ F 12 " " H 7800 15500 50  0001 C CNN "Supplier1"
 	-1   0    0    1   
 $EndComp
 $Comp
-L fk-core-rescue:VBUS-conservify #PWR074
-U 1 1 5B28222B
-P 1175 9975
-F 0 "#PWR074" H 1175 9825 50  0001 C CNN
-F 1 "VBUS" H 1175 10115 50  0000 C CNN
-F 2 "" H 1175 9975 60  0000 C CNN
-F 3 "" H 1175 9975 60  0000 C CNN
-	1    1175 9975
-	1    0    0    -1  
-$EndComp
-$Comp
 L fk-core-rescue:FIDUCIAL-conservify M2
 U 1 1 5B2838D8
 P 3200 7800
@@ -3965,10 +3954,6 @@ Wire Wire Line
 Wire Wire Line
 	5850 9900 5750 9900
 Wire Wire Line
-	6350 9700 6650 9700
-Wire Wire Line
-	6650 9800 6350 9800
-Wire Wire Line
 	6650 10100 6350 10100
 Wire Wire Line
 	8900 6575 9000 6575
@@ -4344,8 +4329,6 @@ Wire Wire Line
 	4550 3300 5100 3300
 Wire Wire Line
 	800  14300 1600 14300
-Wire Wire Line
-	1725 9975 1175 9975
 Wire Wire Line
 	9000 1350 9150 1350
 Wire Wire Line
@@ -6415,4 +6398,53 @@ Text Label 9750 15600 0    60   ~ 0
 UNUSED
 Text Label 10950 14000 0    60   ~ 0
 UNUSED_3V3
+NoConn ~ 1725 9975
+$Comp
+L fk-core-rescue:CONN_01x01-conservify J18
+U 1 1 603AC709
+P 6825 9325
+F 0 "J18" H 6825 9425 50  0000 C CNN
+F 1 "Conn_01x01" H 6825 9225 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 6825 9325 50  0001 C CNN
+F 3 "" H 6825 9325 50  0001 C CNN
+F 4 " " H 6825 9525 50  0001 C CNN "Critical"
+F 5 " " H 6825 9525 50  0001 C CNN "MFN"
+F 6 " " H 6825 9525 50  0001 C CNN "MFP"
+F 7 " " H 6825 9525 50  0001 C CNN "Notes"
+F 8 " " H 6825 9525 50  0001 C CNN "Package"
+F 9 " " H 6825 9525 50  0001 C CNN "SPN1"
+F 10 "ANY" H 6825 9525 50  0001 C CNN "Source"
+F 11 " " H 6825 9525 50  0001 C CNN "Subsystem"
+F 12 " " H 6825 9525 50  0001 C CNN "Supplier1"
+	1    6825 9325
+	0    -1   -1   0   
+$EndComp
+$Comp
+L fk-core-rescue:CONN_01x01-conservify J19
+U 1 1 603ADBDF
+P 7025 9325
+F 0 "J19" H 7025 9425 50  0000 C CNN
+F 1 "Conn_01x01" H 7025 9225 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D2.0mm" H 7025 9325 50  0001 C CNN
+F 3 "" H 7025 9325 50  0001 C CNN
+F 4 " " H 7025 9525 50  0001 C CNN "Critical"
+F 5 " " H 7025 9525 50  0001 C CNN "MFN"
+F 6 " " H 7025 9525 50  0001 C CNN "MFP"
+F 7 " " H 7025 9525 50  0001 C CNN "Notes"
+F 8 " " H 7025 9525 50  0001 C CNN "Package"
+F 9 " " H 7025 9525 50  0001 C CNN "SPN1"
+F 10 "ANY" H 7025 9525 50  0001 C CNN "Source"
+F 11 " " H 7025 9525 50  0001 C CNN "Subsystem"
+F 12 " " H 7025 9525 50  0001 C CNN "Supplier1"
+	1    7025 9325
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6825 9525 6825 9700
+Wire Wire Line
+	6350 9700 6825 9700
+Wire Wire Line
+	7025 9525 7025 9800
+Wire Wire Line
+	6350 9800 7025 9800
 $EndSCHEMATC
