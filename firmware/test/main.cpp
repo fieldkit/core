@@ -375,10 +375,11 @@ void setup() {
         delay(10);
 
         if (fk::fk_uptime() - checked > 5000) {
-            auto voltage = gauge.voltage();
-            auto stateOfCharge = gauge.stateOfCharge();
-            auto current = gauge.current();
-            fk::Log::info("Battery: %fmv %fmAh %fmA", voltage, stateOfCharge, current);
+            auto reading = gauge.read();
+
+            fk::Log::info("Battery: v=%fmv i=%fmA soc=%fmAh c=%d",
+                          reading.voltage, reading.current, reading.charge, reading.counter);
+
             checked = fk::fk_uptime();
         }
     }
