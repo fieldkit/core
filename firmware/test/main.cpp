@@ -347,6 +347,13 @@ void setup() {
         delay(100);
     }
 
+    if (!Serial) {
+        // The call to end here seems to free up some memory.
+        Serial.end();
+        Serial5.begin(115200);
+        log_uart_set(Serial5);
+    }
+
     fk::Check check;
     check.setup();
 
