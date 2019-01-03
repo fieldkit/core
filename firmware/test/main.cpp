@@ -54,7 +54,12 @@ public:
 
 class Check {
 private:
-    fk::Leds leds;
+    fk::Leds leds_;
+
+public:
+    fk::Leds& leds() {
+        return leds_;
+    }
 
 private:
     const char * id2chip(const unsigned char *id) {
@@ -118,7 +123,7 @@ private:
 
 public:
     void setup() {
-        leds.setup();
+        leds_.setup();
 
         board.disable_everything();
 
@@ -324,17 +329,17 @@ public:
         success = wifi() && success;
 
         if (!success) {
-            leds.notifyFatal();
+            leds_.notifyFatal();
         }
         else {
-            leds.notifyHappy();
+            leds_.notifyHappy();
         }
 
         return success;
     }
 
     void task() {
-        leds.task();
+        leds_.task();
     }
 };
 
@@ -368,13 +373,36 @@ void setup() {
 
     fk::BatteryGauge gauge;
 
-    uint32_t checked = 0;
+    auto checked = fk::fk_uptime();
+    auto toggled = fk::fk_uptime();
+    auto enabled = true;
 
     while (true) {
         check.task();
         delay(10);
 
-        if (fk::fk_uptime() - checked > 5000) {
+        if (fk::fk_uptime() - toggled > 20000) {
+            enabled = !enabled;
+
+            if (enabled) {
+                fk::Log::info("Enable Peripherals");
+                fk::board.enable_spi();
+                fk::board.enable_gps();
+                fk::board.enable_wifi();
+                check.leds().notifyHappy();
+            }
+            else {
+                fk::Log::info("Disable Peripherals");
+                fk::board.disable_spi();
+                fk::board.disable_gps();
+                fk::board.disable_wifi();
+                check.leds().off();
+            }
+
+            toggled = fk::fk_uptime();
+        }
+
+        if (fk::fk_uptime() - checked > 2500) {
             auto reading = gauge.read();
 
             fk::Log::info("Battery: v=%fmv i=%fmA soc=%fmAh c=%d",
