@@ -376,6 +376,7 @@ void setup() {
     auto checked = fk::fk_uptime();
     auto toggled = fk::fk_uptime();
     auto enabled = true;
+    auto previous = 0.0f;
 
     while (true) {
         check.task();
@@ -393,10 +394,10 @@ void setup() {
             }
             else {
                 fk::Log::info("Disable Peripherals");
-                fk::board.disable_spi();
-                fk::board.disable_gps();
-                fk::board.disable_wifi();
                 check.leds().off();
+                fk::board.disable_wifi();
+                fk::board.disable_gps();
+                fk::board.disable_spi();
             }
 
             toggled = fk::fk_uptime();
@@ -405,10 +406,12 @@ void setup() {
         if (fk::fk_uptime() - checked > 2500) {
             auto reading = gauge.read();
 
-            fk::Log::info("Battery: v=%fmv i=%fmA soc=%fmAh c=%d",
-                          reading.voltage, reading.current, reading.charge, reading.counter);
+            fk::Log::info("Battery: v=%fmv i=%fmA cc=%fmAh (%fmAh) c=%d",
+                          reading.voltage, reading.ma, reading.coulombs,
+                          reading.coulombs - previous, reading.counter);
 
             checked = fk::fk_uptime();
+            previous = reading.coulombs;
         }
     }
 }
