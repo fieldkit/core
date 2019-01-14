@@ -179,6 +179,24 @@ public:
         Log::info("  Memory Size:  %d bytes Block Size: %d bytes", chipSize, SerialFlash.blockSize());
         Log::info("Flash memory PASSED");
 
+        if (false) {
+            if (chipSize > 0) {
+                Log::info("Erasing ALL Flash Memory (%lu)", chipSize);
+
+                SerialFlash.eraseAll();
+
+                delay(1000);
+
+                uint32_t dotMillis = millis();
+                while (SerialFlash.ready() == false) {
+                    if (millis() - dotMillis > 1000) {
+                        dotMillis = dotMillis + 1000;
+                    }
+                }
+                Log::info("Erase completed");
+            }
+        }
+
         return true;
     }
 
@@ -291,6 +309,16 @@ public:
         return true;
     }
 
+    bool rtc() {
+        RTC_PCF8523 rtc;
+        if (!rtc.begin()) {
+            Log::info("RTC FAILED");
+            return false;
+        }
+        Log::info("RTC PASSED");
+        return true;
+    }
+
     bool macEeprom() {
         MacEeprom macEeprom;
         uint8_t id[8] = { 0 };
@@ -311,9 +339,22 @@ public:
     bool check() {
         auto success = true;
 
+        #ifdef PIN_LED_RXL
+        Log::info("Please undefine PIN_LED_RXL in variant.h.");
+        #else
+        Log::info("PIN_LED_RXL is undefined. Good!");
+        #endif
+
+        #ifdef PIN_LED_TXL
+        Log::info("Please undefine PIN_LED_TXL in variant.h, otherwise SerialFlash and other SPI devices may work incorrectly.");
+        #else
+        Log::info("PIN_LED_TXL is undefined. Good!");
+        #endif
+
         success = flashMemory() && success;
         success = fuelGauge() && success;
         success = macEeprom() && success;
+        success = rtc() && success;
 
         if (success) {
             Log::info("Top PASSED");
