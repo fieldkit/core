@@ -34,6 +34,18 @@ public:
 };
 
 void CheckCore::setup() {
+    #ifdef PIN_LED_RXL
+    Log::info("Please undefine PIN_LED_RXL in variant.h.");
+    #else
+    Log::info("PIN_LED_RXL is undefined. Good!");
+    #endif
+
+    #ifdef PIN_LED_TXL
+    Log::info("Please undefine PIN_LED_TXL in variant.h, otherwise SerialFlash and other SPI devices may work incorrectly.");
+    #else
+    Log::info("PIN_LED_TXL is undefined. Good!");
+    #endif
+
     leds_.setup();
 
     board.disable_everything();
@@ -47,8 +59,6 @@ void CheckCore::setup() {
 
 bool CheckCore::fuelGauge() {
     Log::info("Checking gauge...");
-
-    Wire.begin();
 
     BatteryGauge gauge;
 
@@ -87,7 +97,7 @@ bool CheckCore::flashMemory() {
     Log::info("Read Chip Identification:");
     Log::info("  JEDEC ID:     %x %x %x", buffer[0], buffer[1], buffer[2]);
     Log::info("  Part Nummber: %s", id2chip(buffer));
-    Log::info("  Memory Size:  %d bytes Block Size: %d bytes", chipSize, SerialFlash.blockSize());
+    Log::info("  Memory Size:  %lu bytes Block Size: %lu bytes", chipSize, SerialFlash.blockSize());
     Log::info("Flash memory PASSED");
 
     if (false) {
@@ -127,7 +137,12 @@ bool CheckCore::gps() {
         }
     }
 
-    Log::info("");
+    if (Serial) {
+        Serial.println();
+    }
+    else {
+        Serial5.println();
+    }
 
     if (charactersRead < 100) {
         Log::info("GPS FAILED");
@@ -223,11 +238,13 @@ bool CheckCore::wifi() {
 
 bool CheckCore::rtc() {
     RTC_PCF8523 rtc;
+
     if (!rtc.begin()) {
         Log::info("RTC FAILED");
         return false;
     }
     Log::info("RTC PASSED");
+
     return true;
 }
 
@@ -249,50 +266,69 @@ bool CheckCore::macEeprom() {
 }
 
 bool CheckCore::check() {
-    auto success = true;
+    success_ = true;
 
-    #ifdef PIN_LED_RXL
-    Log::info("Please undefine PIN_LED_RXL in variant.h.");
-    #else
-    Log::info("PIN_LED_RXL is undefined. Good!");
-    #endif
+    success_ = flashMemory() && success_;
+    success_ = fuelGauge() && success_;
+    success_ = macEeprom() && success_;
+    success_ = rtc() && success_;
 
-    #ifdef PIN_LED_TXL
-    Log::info("Please undefine PIN_LED_TXL in variant.h, otherwise SerialFlash and other SPI devices may work incorrectly.");
-    #else
-    Log::info("PIN_LED_TXL is undefined. Good!");
-    #endif
-
-    success = flashMemory() && success;
-    success = fuelGauge() && success;
-    success = macEeprom() && success;
-    success = rtc() && success;
-
-    if (success) {
+    if (success_) {
         Log::info("Top PASSED");
     }
 
     #if defined(FK_ENABLE_RADIO)
-    success = radio() && success;
+    success_ = radio() && success_;
     #else
     Log::info("Radio disabled");
     #endif
-    success = gps() && success;
-    success = sdCard() && success;
-    success = wifi() && success;
+    success_ = gps() && success_;
+    success_ = sdCard() && success_;
+    success_ = wifi() && success_;
 
-    if (!success) {
-        leds_.notifyFatal();
-    }
-    else {
-        leds_.notifyHappy();
-    }
-
-    return success;
+    return success_;
 }
 
 void CheckCore::task() {
     leds_.task();
+
+    if (success()) {
+        if (toggle_peripherals()) {
+            if (fk_uptime() - toggled_ > 20000) {
+                enabled_ = !enabled_;
+
+                if (enabled_) {
+                    Log::info("Enable Peripherals");
+                    board.enable_spi();
+                    board.enable_gps();
+                    board.enable_wifi();
+                    leds().notifyHappy();
+                }
+                else {
+                    Log::info("Disable Peripherals");
+                    leds().off();
+                    board.disable_wifi();
+                    board.disable_gps();
+                    board.disable_spi();
+                }
+
+                toggled_ = fk_uptime();
+            }
+        }
+
+        if (fk_uptime() - checked_ > 2500) {
+            sample();
+            checked_ = fk_uptime();
+        }
+    }
+}
+
+void CheckCore::sample() {
+    auto reading = gauge_.read();
+    Log::info("Battery: v=%fmv i=%fmA cc=%fmAh (%fmAh) c=%d",
+              reading.voltage, reading.ma, reading.coulombs,
+              reading.coulombs - previous_, reading.counter);
+    previous_ = reading.coulombs;
 }
 
 const char *CheckCore::id2chip(const unsigned char *id) {
