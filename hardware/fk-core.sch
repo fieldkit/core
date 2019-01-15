@@ -6179,7 +6179,7 @@ Wire Wire Line
 	11350 6975 11350 7075
 NoConn ~ 10950 6875
 $Comp
-L Connector_Generic:Conn_01x09 J17
+L fk-core-rescue:Conn_01x09-Connector_Generic J17
 U 1 1 5C8686BE
 P 1400 6950
 F 0 "J17" H 1320 6325 50  0000 C CNN
