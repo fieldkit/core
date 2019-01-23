@@ -1,4 +1,3 @@
 (sym_lib_table
   (lib (name fk-core-rescue)(type Legacy)(uri ${KIPRJMOD}/fk-core-rescue.lib)(options "")(descr ""))
-  (lib (name conservify)(type Legacy)(uri C:/Users/chris/PCBs/ALLLC/Conservify/kicad/conservify.lib)(options "")(descr ""))
 )
