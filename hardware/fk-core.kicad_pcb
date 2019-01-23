@@ -71,7 +71,7 @@
     (mod_text_size 0.8 0.8)
     (mod_text_width 0.15)
     (pad_size 2.7 2.7)
-    (pad_drill 2.54)
+    (pad_drill 2.7)
     (pad_to_mask_clearance 0)
     (solder_mask_min_width 0.25)
     (pad_to_paste_clearance_ratio -0.05)
@@ -4720,7 +4720,7 @@
       (net 1 GND))
   )
 
-  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C489C42) (tstamp 5C09C2F8)
+  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C48AC44) (tstamp 5C09C2F8)
     (at 201.2984 141.0844)
     (path /5A59622F)
     (fp_text reference M1 (at 0 -2.54) (layer F.SilkS) hide
@@ -4729,10 +4729,10 @@
     (fp_text value MOUNT_HOLE (at 0 2.54) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad "" np_thru_hole circle (at -26.4334 3.2806) (size 2.7 2.7) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
+    (pad "" np_thru_hole circle (at -26.4334 3.2806) (size 2.7 2.7) (drill 2.7) (layers *.Cu *.Mask F.SilkS))
   )
 
-  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C489C37) (tstamp 5C270669)
+  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C48AC3A) (tstamp 5C270669)
     (at 202.1084 138.5444)
     (path /5A596230)
     (fp_text reference M3 (at 0 -2.54) (layer F.SilkS) hide
@@ -4741,10 +4741,10 @@
     (fp_text value MOUNT_HOLE (at 0 2.54) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad "" np_thru_hole circle (at -125.9734 5.8206) (size 2.7 2.7) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
+    (pad "" np_thru_hole circle (at -125.9734 5.8206) (size 2.7 2.7) (drill 2.7) (layers *.Cu *.Mask F.SilkS))
   )
 
-  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C489C3E) (tstamp 5C0B5B11)
+  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C48AC40) (tstamp 5C0B5B11)
     (at 203.8384 141.0844)
     (path /5A596231)
     (fp_text reference M4 (at 0 -2.54) (layer F.SilkS) hide
@@ -4753,10 +4753,10 @@
     (fp_text value MOUNT_HOLE (at 0 2.54) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad "" np_thru_hole circle (at -28.9734 -29.9494) (size 2.7 2.7) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
+    (pad "" np_thru_hole circle (at -28.9734 -29.9494) (size 2.7 2.7) (drill 2.7) (layers *.Cu *.Mask F.SilkS))
   )
 
-  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C489C32) (tstamp 5C09C307)
+  (module conservify:HOLE_NPTH_2.54MM (layer F.Cu) (tedit 5C48AC35) (tstamp 5C09C307)
     (at 198.7584 140.0944)
     (path /5A596232)
     (fp_text reference M6 (at 0 -2.54) (layer F.SilkS) hide
@@ -4765,7 +4765,7 @@
     (fp_text value MOUNT_HOLE (at 0 2.54) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
-    (pad "" np_thru_hole circle (at -122.6234 -28.9594) (size 2.7 2.7) (drill 2.54) (layers *.Cu *.Mask F.SilkS))
+    (pad "" np_thru_hole circle (at -122.6234 -28.9594) (size 2.7 2.7) (drill 2.7) (layers *.Cu *.Mask F.SilkS))
   )
 
   (module conservify:RES-0603 (layer B.Cu) (tedit 5B561D1D) (tstamp 5C09C323)
