@@ -326,9 +326,9 @@ void CheckCore::task() {
 void CheckCore::sample() {
     auto reading = gauge_.read();
     Log::info("Battery: v=%fmv i=%fmA cc=%fmAh (%fmAh) c=%d",
-              reading.voltage, reading.ma, reading.coulombs,
-              reading.coulombs - previous_, reading.counter);
-    previous_ = reading.coulombs;
+              reading.voltage, 0.0f, 0.0f,
+              0.0f - previous_, 0);
+    previous_ = 0.0f;
 }
 
 const char *CheckCore::id2chip(const unsigned char *id) {
