@@ -1,5 +1,6 @@
 #include "check_core.h"
 #include "board_definition.h"
+#include "config.h"
 
 #include <RH_RF95.h>
 
