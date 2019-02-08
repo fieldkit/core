@@ -26,18 +26,7 @@ void setup() {
     CheckCore check;
     check.setup();
 
-    if (!check.check()) {
-        check.leds().notifyFatal();
-
-        board.disable_everything();
-
-        while (true) {
-            check.task();
-            delay(10);
-        }
-    }
-
-    check.leds().notifyHappy();
+    check.check();
 
     while (true) {
         check.task();
