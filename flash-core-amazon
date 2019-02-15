@@ -1,0 +1,11 @@
+#!/bin/bash
+
+PORT=$1
+
+if [ -z "$PORT" ]; then
+  exit 2
+fi
+
+pushd build
+make -j2 && flasher --binary firmware/core/fk-core-amazon.bin --tail --port ~/devices/$PORT
+popd
