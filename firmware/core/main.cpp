@@ -38,7 +38,6 @@ public:
         };
 
         services().state->configure(NetworkSettings{ false, networks });
-
         log("Configured compile time networks.");
         #endif
 

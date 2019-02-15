@@ -90,34 +90,41 @@ bool CheckCore::flashMemory() {
         return false;
     }
 
-    uint32_t chipSize = SerialFlash.capacity(buffer);
+    auto chipSize = SerialFlash.capacity(buffer);
     if (chipSize == 0) {
         Log::info("Flash memory FAILED");
         return false;
     }
 
+    auto blockSize = SerialFlash.blockSize();
+
     Log::info("Read Chip Identification:");
     Log::info("  JEDEC ID:     %x %x %x", buffer[0], buffer[1], buffer[2]);
     Log::info("  Part Nummber: %s", id2chip(buffer));
-    Log::info("  Memory Size:  %lu bytes Block Size: %lu bytes", chipSize, SerialFlash.blockSize());
+    Log::info("  Memory Size:  %lu bytes Block Size: %lu bytes", chipSize, blockSize);
     Log::info("Flash memory PASSED");
 
-    if (false) {
-        if (chipSize > 0) {
+    if (chipSize > 0) {
+        if (false) {
             Log::info("Erasing ALL Flash Memory (%lu)", chipSize);
 
             SerialFlash.eraseAll();
 
-            delay(1000);
-
-            uint32_t dotMillis = millis();
+            auto started = millis();
             while (SerialFlash.ready() == false) {
-                if (millis() - dotMillis > 1000) {
-                    dotMillis = dotMillis + 1000;
+                if (millis() - started > 1000) {
+                    started = millis();
                 }
             }
-            Log::info("Erase completed");
         }
+        else {
+            for (auto i = 0; i < 10; ++i) {
+                Log::info("Erasing block %d (%lu)", i, i * blockSize);
+                SerialFlash.eraseBlock(i * blockSize);
+            }
+        }
+
+        Log::info("Erase completed");
     }
 
     return true;
