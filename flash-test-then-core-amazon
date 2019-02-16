@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -xe
+
+PORT=$1
+
+if [ -z "$PORT" ]; then
+  exit 2
+fi
+
+pushd build
+make -j2
+flasher --binary firmware/test/fk-core-test.bin --tail -tail-inactivity 3 --port $PORT
+flasher --binary firmware/core/fk-core-amazon.bin --tail --port $PORT
+popd

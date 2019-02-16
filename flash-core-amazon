@@ -7,5 +7,5 @@ if [ -z "$PORT" ]; then
 fi
 
 pushd build
-make -j2 && flasher --binary firmware/core/fk-core-amazon.bin --tail --port ~/devices/$PORT
+make -j2 && flasher --binary firmware/core/fk-core-amazon.bin --tail --port $PORT
 popd
