@@ -290,6 +290,12 @@ bool CheckCore::check() {
 
     if (success_) {
         Log::info("Top PASSED");
+        leds().notifyCaution();
+        leds().task();
+    }
+    else {
+        leds().notifyFatal();
+        leds().task();
     }
 
     #if defined(FK_ENABLE_RADIO)
