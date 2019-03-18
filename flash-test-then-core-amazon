@@ -5,13 +5,13 @@ set -e
 PORT=$1
 
 if [ -z "$PORT" ]; then
-  exit 2
+    exit 2
 fi
 
 PATH=~/tools/JLink_Linux_V640b_x86_64:$PATH
 BOOTLOADER=../bootloaders/build/zero/fk-bootloaders-samd21large.bin
-CORE_TEST=build/firmware/test/fk-core-test.bin
-CORE_MAIN=build/firmware/core/fk-core-amazon.bin
+TEST=build/firmware/test/fk-core-test.bin
+MAIN=build/firmware/core/fk-core-amazon.bin
 
 pushd build
 make -j2
@@ -22,34 +22,31 @@ echo Writing bootloader firmware...
 JLinkExe -if SWD -device ATSAMD21G18 -speed 4000 -autoconnect 1 <<EOF
 exitonerror 1
 connect
+r
+sleep 100
 loadfile $BOOTLOADER
+sleep 100
+loadfile $TEST,0x8000
+r
 q
 EOF
 
 sleep 1
 
-echo Writing TEST firmware...
+echo Tailing...
+
+flasher --tail --tail-trigger-pass "SUCCESS" --tail-trigger-fail "FATAL" --port $PORT
 
 JLinkExe -if SWD -device ATSAMD21G18 -speed 4000 -autoconnect 1 <<EOF
 exitonerror 1
 connect
-loadfile $CORE_TEST,0x8000
+r
+sleep 100
+loadfile $MAIN,0x8000
 r
 q
 EOF
 
 echo Tailing...
 
-flasher --tail -tail-trigger-stop DONE --port $PORT
-
-JLinkExe -if SWD -device ATSAMD21G18 -speed 4000 -autoconnect 1 <<EOF
-exitonerror 1
-connect
-loadfile $CORE_MAIN,0x8000
-r
-q
-EOF
-
-echo Tailing...
-
-flasher --tail -tail-trigger-stop ASSERT --port $PORT
+flasher --tail --tail-trigger-stop "(ASSERT|CheckPower)" --port $PORT
