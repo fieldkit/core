@@ -63,15 +63,28 @@ bool CheckCore::fuelGauge() {
 
     BatteryGauge gauge;
 
-    if (!gauge.available()) {
-        Log::info("Gauge FAILED");
-        success_enough_to_sample_ = false;
-        return false;
+    for (auto i = 0; i < 5; ++i) {
+        if (!gauge.available()) {
+            Log::info("Gauge FAILED (MISSING)");
+            return false;
+        }
+
+        delay(1000);
+
+        auto reading = gauge_.read();
+        Log::info("Gauge %fmv", reading.voltage);
+        if (reading.voltage > 2500.0f) {
+            Log::info("Gauge PASSED");
+            return true;
+        }
+
+        gauge.disable();
+
+        delay(500);
     }
 
-    Log::info("Gauge PASSED");
-
-    return true;
+    Log::info("Gauge FAILED (VOLTAGE)");
+    return false;
 }
 
 bool CheckCore::flashMemory() {
@@ -240,8 +253,6 @@ bool CheckCore::wifi() {
     Log::info("Skipping connection test, no config.");
     #endif
 
-    Log::info("DONE");
-
     return true;
 }
 
@@ -275,14 +286,17 @@ bool CheckCore::macEeprom() {
 }
 
 bool CheckCore::check() {
+    auto have_gauge = false;
+    auto have_sd = false;
+
     success_ = true;
-    success_ignoring_sd_card_ = true;
-    success_enough_to_sample_ = true;
     caution_ = false;
+    sampling_ = true;
 
     if (!fuelGauge()) {
-        success_enough_to_sample_ = false;
+        have_gauge = false;
         success_ = false;
+        sampling_ = false;
     }
     success_ = macEeprom() && success_;
     success_ = rtc() && success_;
@@ -305,21 +319,28 @@ bool CheckCore::check() {
     #endif
     success_ = gps() && success_;
     if (!sdCard()) {
-        if (success_) {
-            success_ignoring_sd_card_ = true;
-        }
+        have_sd = false;
         success_ = false;
     }
     success_ = wifi() && success_;
 
+    leds().off();
+
     if (success_) {
+        Log::info("test: SUCCESS");
         leds().notifyHappy();
     }
     else {
-        if (success_ignoring_sd_card_) {
+        if (!have_gauge) {
+            Log::info("test: FATAL");
+            leds().notifyFatal();
+        }
+        else if (!have_sd) {
+            Log::info("test: PARTIAL SUCCESS (SD)");
             leds().notifyCaution();
         }
         else {
+            Log::info("test: FATAL");
             leds().notifyFatal();
         }
     }
@@ -330,7 +351,7 @@ bool CheckCore::check() {
 void CheckCore::task() {
     leds_.task();
 
-    if (success_enough_to_sample()) {
+    if (sampling()) {
         if (toggle_peripherals()) {
             if (fk_uptime() - toggled_ > 20000) {
                 enabled_ = !enabled_;

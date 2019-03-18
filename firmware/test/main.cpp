@@ -25,7 +25,6 @@ void setup() {
 
     CheckCore check;
     check.setup();
-
     check.check();
 
     while (true) {
