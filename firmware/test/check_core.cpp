@@ -63,22 +63,22 @@ bool CheckCore::fuelGauge() {
 
     BatteryGauge gauge;
 
-    for (auto i = 0; i < 5; ++i) {
-        if (!gauge.available()) {
-            Log::info("Gauge FAILED (MISSING)");
-            return false;
-        }
+    if (!gauge.available()) {
+        Log::info("Gauge FAILED (MISSING)");
+        return false;
+    }
 
-        delay(1000);
-
+    for (auto i = 0; i < 10; ++i) {
         auto reading = gauge_.read();
-        Log::info("Gauge %fmv", reading.voltage);
+
+        Log::info("Battery: v=%fmv i=%fmA cc=%fmAh (%fmAh) c=%d",
+                  reading.voltage, reading.ma, reading.coulombs,
+                  reading.coulombs - previous_, reading.counter);
+
         if (reading.voltage > 2500.0f) {
             Log::info("Gauge PASSED");
             return true;
         }
-
-        gauge.disable();
 
         delay(500);
     }
