@@ -293,11 +293,15 @@ bool CheckCore::check() {
     caution_ = false;
     sampling_ = true;
 
+    #if defined(FK_ENABLE_FUEL_GAUGE)
     if (!fuelGauge()) {
         have_gauge = false;
         success_ = false;
         sampling_ = false;
     }
+    #else
+    Log::info("Fuel gauge disabled.");
+    #endif
     success_ = macEeprom() && success_;
     success_ = rtc() && success_;
     success_ = flashMemory() && success_;
