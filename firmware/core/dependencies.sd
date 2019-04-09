@@ -1,22 +1,22 @@
-https://github.com/fieldkit/firmware-common.git *
-https://github.com/fieldkit/module-protocol.git *
-https://github.com/fieldkit/app-protocol.git *
-https://github.com/fieldkit/data-protocol.git *
-https://github.com/Conservify/phylum.git *
-https://github.com/Conservify/simple-lora-comms.git *
-https://github.com/Conservify/arduino-logging.git *
-https://github.com/Conservify/lwstreams.git *
-https://github.com/Conservify/lwcron.git *
-https://github.com/nanopb/nanopb.git d1305ddef1c18b4cb33992254494ccd255701aaa
-https://github.com/arduino-libraries/RTCZero.git 618d53117e94c85141b362c121497c0acf07ce29
-https://github.com/adafruit/RTClib.git 82d00a1a15bcf738b001e42bf26a3d1f1a15be32
-https://github.com/Conservify/WiFi101.git af0ac6cde94c114d8692f0c12b809709386fe730
-https://github.com/adafruit/Adafruit_ASFcore.git 99f9be5465caad6e368102b5465b30aa9b07a26e
-https://github.com/PaulStoffregen/SerialFlash.git a3508c30be8d8a3c705572d0bfc8d048adcd29ff
-https://github.com/Conservify/AtSamd.git 60a93e97c87e31e6095af12e0036b43755867c52
-https://github.com/Conservify/FuelGauge.git c597e032ca7113cfbe899fe60839ae83ecc3ca45
-https://github.com/mikalhart/TinyGPS.git db4ef9c97af767e7345f5ccb277ac3bd1a2eb81f
-https://github.com/adamvr/arduino-base64.git 999595783185a0afcba156d7276dfeaa9cb5382f
-https://github.com/Conservify/RadioHead.git 1af5fd0bfa32389d1348114d93e88211f39f4f6c
-https://github.com/arduino-libraries/ArduinoSound.git 80f7202303598749162372bc2a65c2130474e73a
-https://github.com/adafruit/Adafruit_NeoPixel.git ec3c77e28e84b221dc159b48358929cb24ba97bd
+https://github.com/fieldkit/firmware-common.git * / norecurse
+https://github.com/fieldkit/module-protocol.git * / norecurse
+https://github.com/fieldkit/app-protocol.git * / norecurse
+https://github.com/fieldkit/data-protocol.git * / norecurse
+https://github.com/Conservify/phylum.git * / norecurse
+https://github.com/Conservify/simple-lora-comms.git * / norecurse
+https://github.com/Conservify/arduino-logging.git * / norecurse
+https://github.com/Conservify/lwstreams.git * / norecurse
+https://github.com/Conservify/lwcron.git * / norecurse
+https://github.com/nanopb/nanopb.git 72f45943056e1d887862d2011a9d5b229aa4ca91 / norecurse
+https://github.com/arduino-libraries/RTCZero.git de4016b9899301c09d32fb804a482d27a318dab9 / norecurse
+https://github.com/adafruit/RTClib.git 8ff0034c319b1b4126afcaba2c0b25c0f2f6f439 / norecurse
+https://github.com/Conservify/WiFi101.git 9f2f7035db00dd52af0d675cfb21b8f8f37bbca0 / norecurse
+https://github.com/adafruit/Adafruit_ASFcore.git 99f9be5465caad6e368102b5465b30aa9b07a26e / norecurse
+https://github.com/PaulStoffregen/SerialFlash.git 71cfa7a738f7ec8ae5e670b0a10e7c9fdd0e8139 / norecurse
+https://github.com/Conservify/AtSamd.git 60a93e97c87e31e6095af12e0036b43755867c52 / norecurse
+https://github.com/Conservify/FuelGauge.git c597e032ca7113cfbe899fe60839ae83ecc3ca45 / norecurse
+https://github.com/mikalhart/TinyGPS.git db4ef9c97af767e7345f5ccb277ac3bd1a2eb81f / norecurse
+https://github.com/adamvr/arduino-base64.git 999595783185a0afcba156d7276dfeaa9cb5382f / norecurse
+https://github.com/Conservify/RadioHead.git 1af5fd0bfa32389d1348114d93e88211f39f4f6c / norecurse
+https://github.com/arduino-libraries/ArduinoSound.git 644fda3b6784a741fd6f9df65b84218ad07f2d3f / norecurse
+https://github.com/adafruit/Adafruit_NeoPixel.git 187572e4aa668d1b2e595c019e6e2c68cdc94bdf / norecurse
