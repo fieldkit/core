@@ -1,0 +1,16 @@
+#!/bin/bash
+
+set -xe
+
+make -j4
+
+flasher --binary build/firmware/core/fk-core-amazon.bin --port $1
+
+while true; do
+    if [ -f $1 ]; then
+        echo "No port $1"
+    else
+        flasher --tail --port $1
+    fi
+    sleep 1
+done
