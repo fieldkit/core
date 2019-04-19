@@ -1,10 +1,10 @@
 #!/bin/bash
 
-set -xe
-
 make -j4
 
 flasher --binary build/firmware/core/fk-core-amazon.bin --port $1
+
+sleep 0.5
 
 while true; do
     if [ -f $1 ]; then
@@ -12,5 +12,5 @@ while true; do
     else
         flasher --tail --port $1
     fi
-    sleep 1
+    sleep 0.5
 done
