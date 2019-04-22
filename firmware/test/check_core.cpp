@@ -61,14 +61,15 @@ void CheckCore::setup() {
 bool CheckCore::fuelGauge() {
     Log::info("Checking gauge...");
 
-    BatteryGauge gauge;
-
-    if (!gauge.available()) {
-        Log::info("Gauge FAILED (MISSING)");
-        return false;
-    }
-
     for (auto i = 0; i < 10; ++i) {
+        BatteryGauge gauge;
+
+        if (!gauge.available()) {
+            Log::info("Gauge FAILED (MISSING)");
+            delay(50);
+            continue;
+        }
+
         auto reading = gauge_.read();
 
         Log::info("Battery: v=%fmv i=%fmA cc=%fmAh (%fmAh) c=%d",
