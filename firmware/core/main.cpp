@@ -2,6 +2,7 @@
  * @file
  */
 #include <Arduino.h>
+#include <SEGGER_RTT.h>
 
 #include <fk-core.h>
 
@@ -56,6 +57,9 @@ void setup() {
     REG_MTB_FLOW = ((uint32_t) mtb + DEBUG_MTB_SIZE * sizeof(uint32_t)) & 0xFFFFFFF8;
     REG_MTB_MASTER = 0x80000000 + 6;
     #endif
+
+    SEGGER_RTT_Init();
+    SEGGER_RTT_SetFlagsUpBuffer(0, SEGGER_RTT_MODE_NO_BLOCK_SKIP);
 
     setup_serial();
     setup_env();
